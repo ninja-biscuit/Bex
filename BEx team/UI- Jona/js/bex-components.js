@@ -36,7 +36,15 @@ $(document).ready(function(){
 		$(this).siblings().removeClass('active');
 		$(this).addClass('active');
 	});
-
+// error
+	var errorMessage = 'Error message displayed here';
+	$('.form-control.error').after('<span class="text-error">' + errorMessage + '</span>');
+// search 	
+	var searchStructureFront = '<div class="search-field-content">';
+	var searchStructureBack = '<span class="icon-magnifier"></span></div>';
+	var originalContent = $('input.search-field').parents('.form-group').html();
+	$('input.search-field').parents('.form-group').html(searchStructureFront + originalContent + searchStructureBack);
+	
 
 
 });

@@ -13,7 +13,15 @@
 		.list-container > ul > li {font-size: 16px; color: #888888; font-family: Arial, Helvetica, sans-serif; cursor: pointer; margin-bottom: 10px}
 		.list-container > ul > li:last-child { margin-bottom: 0px}
 		.tip {content: ""; position: absolute; width: 0; height: 0; border-width: 10px; border-style: solid; border-color: transparent transparent #FFFFFF transparent; top: -2px; right: 16px}
+
+		/*--- search ---*/
+		.search-field-content {background-color: #fff; display: inline-block; border: 1px solid #2c7bc7; border-radius: 5px; padding: 1px}
+		.search-field-content .search-field {border:none; background-color: none; padding: 5px 5px 6px; border: 1px solid #fff;}
+		.search-field-content span {cursor: pointer; display: inline-block; width:16px; height:16px; vertical-align: middle; margin-right: 3px}
+		.icon-magnifier:before {color: #2c7bc7;}
+
 	</style>
+	<link rel="stylesheet" href="css/fonts.css">
 	<link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
 	<link href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' rel='stylesheet' type='text/css'>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>	
@@ -23,7 +31,7 @@
 </head>
 <body bgcolor="#ececec">
 
-<div class="drop" style="float:left">	
+<!--div class="drop" style="float:left">	
 	<select class="bex-assets">
 		<option value="sumatra">Sumatra</option>
 		<option value="Maracaibo">Maracaibo</option>
@@ -39,13 +47,18 @@
 		<option value="Cualalumpur">Cualalumpur</option>
 		<option value="Java">Isla de Java</option>
 	</select>
+</div-->
+<div style="clear:both; margin-top:25px">
+	<div class="form-group">	
+		<input type="text" class="search-field" name="" placeholder="Search">
+	</div>
+	
 </div>
-
-
 <script type="text/javascript">
 	$(document).ready(function(){
 		
 		//diego: aca el problema era que dentro de la function que itera por cada elemento tiene que usar this en vez de otra vez el selector
+		/*
 		$('.drop').each(function(){
 			var dropStructure = '<span class="button"><span class="selected_option"></span><i class="drop-trigger ion-chevron-down"></i></span><div class="list-container"><span class="tip"></span><ul></ul></div>';
 			var $drop = $(this);
@@ -80,6 +93,13 @@
 			dropMaster.find('select option').attr("selected",false); // remueve el attr selected de todas las option del select
 			dropMaster.find('select option:nth-child(' + childrenOrder + ')').attr("selected",true); // agrega el attr selected
 		});		
+	*/
+	var searchStructureFront = '<div class="search-field-content">';
+	var searchStructureBack = '<span class="icon-magnifier"></span></div>';
+	var originalContent = $('input.search-field').parents('.form-group').html();
+	$('input.search-field').parents('.form-group').html(searchStructureFront + originalContent + searchStructureBack);
+	
+	// .prepend(searchStructureFront).append(searchStructureBack);
 
 	});
 </script>

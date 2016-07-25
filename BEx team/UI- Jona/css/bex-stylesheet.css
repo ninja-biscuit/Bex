@@ -20,6 +20,7 @@ html {font-family: 'Open Sans', sans-serif; margin: 0; padding: 0}
 .bex-styles a {color: #2c7bc7; font-size: 16px; font-family: Arial, Helvetica, sans-serif; text-decoration: none;}
 .bex-styles a:hover {color: #23629e; text-decoration: underline;}
 .bex-styles code {background-color: #223a67; color: #adbfde; font-size: 12px; width: 100%; padding: 8px 10px;}
+.bex-styles label {display: inline-block; font-weight: 400; margin-bottom: 5px; max-width: 100%; color: #2c7bc7}
 .bex-styles .captions {font-size: 14px; font-family: Arial, Helvetica, sans-serif; color: #888; font-weight: 400}
 .bex-styles .declaimers {font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: #888;}
 .bex-styles .number-big {color: #2c7bc7; font-family: "Fjalla One",sans-serif; font-size: 28px;}
@@ -72,5 +73,18 @@ html {font-family: 'Open Sans', sans-serif; margin: 0; padding: 0}
 .bex-styles .table-panel table tbody tr:last-child td { border-bottom:none;}
 
 .bex-styles .table-panel.dark table thead {background-color:#326aa8; color: #fff;}
-.bex-styles .table-panel.dark table tbody {background: #235fa0; background: -moz-linear-gradient(top,  #235fa0 0%, #142e5d 100%); background: -webkit-linear-gradient(top,  #235fa0 0%,#142e5d 100%); background: linear-gradient(to bottom,  #235fa0 0%,#142e5d 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#235fa0', endColorstr='#142e5d',GradientType=0 );}
+.bex-styles .table-panel.dark table {border-bottom-left-radius:5px; border-bottom-right-radius:5px; background: #235fa0; background: -moz-linear-gradient(top,  #235fa0 0%, #142e5d 100%); background: -webkit-linear-gradient(top,  #235fa0 0%,#142e5d 100%); background: linear-gradient(to bottom,  #235fa0 0%,#142e5d 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#235fa0', endColorstr='#142e5d',GradientType=0 );}
 .bex-styles .table-panel.dark table tbody td {color: #fff; border-bottom: 1px solid #346095}
+.bex-styles .progress {background-color: #d6dfee; border-radius: 20px; box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1) inset; height: 11px; margin-bottom: 0px; overflow: hidden;}
+.bex-styles .light .progress-bar {background-color: #586c8f; box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15) inset; color: #fff; float: left; font-size: 12px; height: 100%; line-height: 20px; text-align: center; transition: width 0.6s ease 0s;}
+
+.bex-styles input.form-control {background-color: #fff; background-image: none; border: 1px solid #2c7bc7; border-radius: 4px; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset; color: #555; display: block; font-size: 14px; height: 34px; line-height: 1.42857; padding: 6px 12px; transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s; width: 100%;}
+.bex-styles .form-control.error {background-color: #f4e9ea; border: 1px solid #e8101f;}
+.bex-styles .text-error {color:#e8101f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; display: block; margin-top: 8px}
+.bex-styles .form-control.success {background-color: #fff; border: 1px solid #12c862;}
+.bex-styles textarea.form-control {background-color: #fff; background-image: none; border: 1px solid #2c7bc7; border-radius: 4px; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset; color: #555; display: block; font-size: 14px; line-height: 1.42857; padding: 6px 12px; transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s; width: 100%;}
+
+.bex-styles .search-field-content {background-color: #fff; display: inline-block; border: 1px solid #2c7bc7; border-radius: 5px; padding: 1px}
+.bex-styles .search-field-content .search-field {border:none; background-color: none; padding: 4px 5px 4px 12px;}
+.bex-styles .search-field-content span {cursor: pointer; display: inline-block; width:16px; height:16px; vertical-align: middle; margin-right: 3px}
+.bex-styles .icon-magnifier:before {color: #2c7bc7;}
