@@ -1,0 +1,2076 @@
+
+<!-- saved from url=(0078)http://localhost/ServerStatus/Liquidity/LiquidityByLP.php?beginDate=2016-07-01 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="refresh" content="900">
+	<link rel="stylesheet" href="./liquidity_files/bootstrap.min.css">
+	<link rel="stylesheet" href="./liquidity_files/font-awesome.min.css">
+	<link rel="stylesheet" href="./liquidity_files/HealthPlatform.css" type="text/css">
+	<link rel="stylesheet" href="./liquidity_files/StatTables.css" type="text/css">
+	<link rel="stylesheet" href="./liquidity_files/subPages.css" type="text/css">
+	<link rel="stylesheet" href="./liquidity_files/topBar.css" type="text/css">
+	<script src="./liquidity_files/jquery.min.js"></script>
+	<script src="./liquidity_files/bootstrap.min.js"></script>
+	<script src="./liquidity_files/jquery.min.js"></script>
+	<script type="text/javascript" src="./liquidity_files/jsapi"></script>
+	<script type="text/javascript" src="./liquidity_files/loader.js"></script>
+	<script type="text/javascript">google.charts.load('current', {'packages':['corechart']});</script><link id="load-css-0" rel="stylesheet" type="text/css" href="./liquidity_files/util.css">
+<link id="load-css-1" rel="stylesheet" type="text/css" href="./liquidity_files/tooltip.css"></head>
+
+
+
+<!-- This is the beginning of the body. It is in top bar so we don't have to put it in every page -->
+<body>
+<script type="text/javascript" src="./liquidity_files/jsapi_compiled_format_module.js"></script><script type="text/javascript" src="./liquidity_files/jsapi_compiled_default_module.js"></script><script type="text/javascript" src="./liquidity_files/jsapi_compiled_ui_module.js"></script><script type="text/javascript" src="./liquidity_files/jsapi_compiled_corechart_module.js"></script><div class="container-fluid" style="background-color: rgb(228,228,228);">
+<div class="row" style="margin: 5px 5px 5px 5px;">
+<div class="col-xs-10">
+
+<!-- Beginning of the top bar -->
+<div class="row" style="max-height: 5%;">
+	<div class="col-xs-2">
+		<div class="row">
+			<div class="col-xs-4">
+				<button id="homeButton" class="topBarButton">Home Page</button>
+			</div>
+			<div class="col-xs-4">
+				
+
+
+  <link rel="stylesheet" href="./liquidity_files/jquery-ui.css">
+  <script src="./liquidity_files/jquery-1.10.2.js"></script>
+  <script src="./liquidity_files/jquery-ui.js"></script>
+  <link rel="stylesheet" href="./liquidity_files/topBar.css" type="text/css">
+
+
+
+<button id="contact-support" class="topBarButton ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button"><span class="ui-button-text">Contact Us</span></button>
+
+    <script>
+  $(function() {
+    var dialog, form,
+ 
+      // From http://www.whatwg.org/specs/web-apps/current-work/multipage/states-of-the-type-attribute.html#e-mail-state-%28type=email%29
+      subject = $( "#subject" ),
+      msg = $( "#msg" ),
+      allFields = $( [] ).add( subject ).add( msg ),
+      tips = $( ".validateTips" );
+ 
+    function updateTips( t ) {
+      tips
+        .text( t )
+        .addClass( "ui-state-highlight" );
+      setTimeout(function() {
+        tips.removeClass( "ui-state-highlight", 1500 );
+      }, 500 );
+    }
+ 
+    function checkLength( o, n, min, max ) {
+      if ( o.val().length > max || o.val().length < min ) {
+        o.addClass( "ui-state-error" );
+        updateTips( "Length of " + n + " must be between " +
+          min + " and " + max + "." );
+        return false;
+      } else {
+        return true;
+      }
+    }
+    function submitContact() {
+    	
+      var valid = true;
+      allFields.removeClass( "ui-state-error" );
+      valid = valid && checkLength( subject, "subject", 2, 50 );
+      valid = valid && checkLength( msg, "msg", 3, 500 );
+      if ( valid ) {
+    	 // dialog.dialog( "close" );
+         var frm = document.getElementsByName('contactUsFormName')[0];
+    	  frm.submit(); // Submit
+    	  frm.reset();  // Reset
+      }
+      return valid;
+    }
+    dialog = $( "#dialog-form" ).dialog({
+      autoOpen: false,
+      height: 400,
+      width: 525,
+      modal: true,
+      buttons: {
+        "Send Message": submitContact,
+        Cancel: function() {
+        dialog.dialog( "close" );
+        }
+      },
+      close: function() {
+    	var frm = document.getElementsByName('contactUsFormName')[0];
+        frm.reset();
+        allFields.removeClass( "ui-state-error" );
+      }
+    });
+ 
+    $( "#btnSubmit" ).button().on( "click", function() {
+    	 event.preventDefault();
+    	 $(function() {
+ 		    $('form').submit(function() {
+ 		        $.ajax({
+ 		            type: 'POST',
+ 		            url: 'ContactUs.php',
+ 		            data: { subject: $(this).subject.value, 
+ 		                    msg: $(this).msg.value }
+ 		        });
+ 		        return false;
+ 		    }); 
+ 		})
+    	
+    });
+ 
+    $( "#contact-support" ).button().on( "click", function() {
+      dialog.dialog( "open" );
+    });
+  });
+  </script>			</div>
+			<div class="col-xs-4"></div>
+		</div>
+	</div>
+	<div class="col-xs-10"></div>
+</div>
+<div class="row" style="max-height: 10%;background-color: rgb(255,255,255); margin-bottom: 20px; padding-top: 5px;">
+	<div class="col-xs-3" align="left">
+		<a href="http://localhost/ServerStatus/HealthPlatform.php"><img src="./liquidity_files/bexllc-logo.jpg" height="65px" width="65px" style="margin-left:20px;"></a>
+	</div>
+	<div class="col-md-9" align="right">
+		<form method="get" style="margin-top: 10px;">
+			<label class="radio-inline">
+				<input type="radio" name="beginDate" class="radio timePeriod" value="2016-07-07"> <span><b>TOD</b></span>        
+			</label>
+			<label class="radio-inline">
+				<input type="radio" id="weekRadioButton" name="beginDate" class="radio timePeriod" value="2016-07-03"><span><b>WTD</b></span>
+			</label>
+			<label class="radio-inline">
+				<input type="radio" id="monthRadioButton" name="beginDate" class="radio timePeriod" value="2016-07-01" checked=""><span><b>MTD</b></span>
+			</label>
+			<label class="radio-inline">
+				<input type="radio" id="yearRadioButton" name="beginDate" class="radio timePeriod" value="2016-01-01"><span><b>YTD</b></span>
+			</label>
+			<input id="updateDate" type="button" value="Update Date">
+		</form>
+	</div>
+</div>
+<div id="MainInfo">
+<script>
+	$("[id=homeButton]").on("click", function(event){
+		var homeurl = "..\/";
+		window.location.href = homeurl+"HealthPlatform.php";
+	});
+	
+	$("[id=updateDate]").on("click", function(event){
+		var url = decodeURIComponent(window.location),
+		urlComps = url.split('?'),
+		finalurl = urlComps[0] + "?",
+		i;
+		
+		if(urlComps.length > 1){
+			var querysplit = urlComps[1].split('&');
+			for(i = 0 ; i < querysplit.length ; i++){
+				var curcomp = querysplit[i].split('=');
+				
+				if(curcomp[0] != 'beginDate' != 0){
+					finalurl = finalurl + querysplit[i] + "&";
+				}
+			}
+		}
+		
+		var beginDate = '',
+		updater = document.forms[0];
+		for(i = 0 ; i < updater.length ; i++){
+			if(updater[i].checked){
+				beginDate = updater[i].value;
+			}
+		}
+		
+		finalurl = finalurl + "beginDate=" + beginDate;
+		window.location.href = finalurl;
+	});
+	
+	var getUrlParameter = function getUrlParameter(sParam) {
+		var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+			sURLVariables = sPageURL.split('&'),
+			sParameterName,
+			i;
+		for (i = 0; i < sURLVariables.length; i++) {
+			sParameterName = sURLVariables[i].split('=');
+
+			if (sParameterName[0] === sParam) {
+				return sParameterName[1] === undefined ? true : sParameterName[1];
+			}
+		}
+	};
+</script><div class="row">
+	<div class="col-md-6" align="left">
+		<div class="titleDiv titleDivLarge backlight" align="center">
+			<p><b><font size="4">LP LIQUIDITY TABLE</font></b></p>
+		</div>
+	</div>
+</div>
+<div class="row subRow subHeight25">
+	<div class="col-md-6  subDiv  subWidth49 backlight" align="center">	
+		<div class="smallHeader">
+			<p>NEW YORK</p>
+		</div>
+		<table class="table table-hover table-bordered table-striped stattable">
+			<thead>
+				<tr>
+					<th class="tw15">From Date</th>
+					<th class="tw20">LP Name</th>
+					<th class="tw15">NB Pairs</th>
+					<th class="tw15">NB Compo.</th>
+					<th class="tw15">AVG Tier</th>
+					<th class="tw20">Liq. Quotient</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+	    		<td class="tw15"><b>2016-07-01</b></td>
+	    		<td class="tw20"><b><a href="http://localhost/ServerStatus/Liquidity/Liquidity_LP_Specific.php?beginDate=2016-07-01&amp;liquiditySource=NewYork&amp;lpname=LP04">LP04</a></b></td>
+	    		<td class="tw15"><b>23</b></td>
+	    		<td class="tw15"><b>153</b></td>
+	    		<td class="tw15"><b>2.4</b></td>
+	    		<td class="tw20"><b>0.15</b></td> 
+	    	</tr><tr>
+	    		<td class="tw15"><b>2016-07-01</b></td>
+	    		<td class="tw20"><b><a href="http://localhost/ServerStatus/Liquidity/Liquidity_LP_Specific.php?beginDate=2016-07-01&amp;liquiditySource=NewYork&amp;lpname=LP01">LP01</a></b></td>
+	    		<td class="tw15"><b>23</b></td>
+	    		<td class="tw15"><b>148</b></td>
+	    		<td class="tw15"><b>2.9</b></td>
+	    		<td class="tw20"><b>0.2</b></td> 
+	    	</tr><tr>
+	    		<td class="tw15"><b>2016-07-01</b></td>
+	    		<td class="tw20"><b><a href="http://localhost/ServerStatus/Liquidity/Liquidity_LP_Specific.php?beginDate=2016-07-01&amp;liquiditySource=NewYork&amp;lpname=LP03">LP03</a></b></td>
+	    		<td class="tw15"><b>23</b></td>
+	    		<td class="tw15"><b>143</b></td>
+	    		<td class="tw15"><b>4.8</b></td>
+	    		<td class="tw20"><b>0.34</b></td> 
+	    	</tr><tr>
+	    		<td class="tw15"><b>2016-07-01</b></td>
+	    		<td class="tw20"><b><a href="http://localhost/ServerStatus/Liquidity/Liquidity_LP_Specific.php?beginDate=2016-07-01&amp;liquiditySource=NewYork&amp;lpname=LP08">LP08</a></b></td>
+	    		<td class="tw15"><b>19</b></td>
+	    		<td class="tw15"><b>121</b></td>
+	    		<td class="tw15"><b>4.6</b></td>
+	    		<td class="tw20"><b>0.38</b></td> 
+	    	</tr><tr>
+	    		<td class="tw15"><b>2016-07-01</b></td>
+	    		<td class="tw20"><b><a href="http://localhost/ServerStatus/Liquidity/Liquidity_LP_Specific.php?beginDate=2016-07-01&amp;liquiditySource=NewYork&amp;lpname=LP10">LP10</a></b></td>
+	    		<td class="tw15"><b>23</b></td>
+	    		<td class="tw15"><b>120</b></td>
+	    		<td class="tw15"><b>4.7</b></td>
+	    		<td class="tw20"><b>0.39</b></td> 
+	    	</tr><tr>
+	    		<td class="tw15"><b>2016-07-01</b></td>
+	    		<td class="tw20"><b><a href="http://localhost/ServerStatus/Liquidity/Liquidity_LP_Specific.php?beginDate=2016-07-01&amp;liquiditySource=NewYork&amp;lpname=LP12">LP12</a></b></td>
+	    		<td class="tw15"><b>23</b></td>
+	    		<td class="tw15"><b>127</b></td>
+	    		<td class="tw15"><b>5.3</b></td>
+	    		<td class="tw20"><b>0.42</b></td> 
+	    	</tr><tr>
+	    		<td class="tw15"><b>2016-07-01</b></td>
+	    		<td class="tw20"><b><a href="http://localhost/ServerStatus/Liquidity/Liquidity_LP_Specific.php?beginDate=2016-07-01&amp;liquiditySource=NewYork&amp;lpname=LP02">LP02</a></b></td>
+	    		<td class="tw15"><b>21</b></td>
+	    		<td class="tw15"><b>106</b></td>
+	    		<td class="tw15"><b>4.8</b></td>
+	    		<td class="tw20"><b>0.46</b></td> 
+	    	</tr><tr>
+	    		<td class="tw15"><b>2016-07-01</b></td>
+	    		<td class="tw20"><b><a href="http://localhost/ServerStatus/Liquidity/Liquidity_LP_Specific.php?beginDate=2016-07-01&amp;liquiditySource=NewYork&amp;lpname=LP11">LP11</a></b></td>
+	    		<td class="tw15"><b>19</b></td>
+	    		<td class="tw15"><b>118</b></td>
+	    		<td class="tw15"><b>5.4</b></td>
+	    		<td class="tw20"><b>0.46</b></td> 
+	    	</tr><tr>
+	    		<td class="tw15"><b>2016-07-01</b></td>
+	    		<td class="tw20"><b><a href="http://localhost/ServerStatus/Liquidity/Liquidity_LP_Specific.php?beginDate=2016-07-01&amp;liquiditySource=NewYork&amp;lpname=LP07">LP07</a></b></td>
+	    		<td class="tw15"><b>22</b></td>
+	    		<td class="tw15"><b>111</b></td>
+	    		<td class="tw15"><b>6.4</b></td>
+	    		<td class="tw20"><b>0.58</b></td> 
+	    	</tr><tr>
+	    		<td class="tw15"><b>2016-07-01</b></td>
+	    		<td class="tw20"><b><a href="http://localhost/ServerStatus/Liquidity/Liquidity_LP_Specific.php?beginDate=2016-07-01&amp;liquiditySource=NewYork&amp;lpname=LP06">LP06</a></b></td>
+	    		<td class="tw15"><b>20</b></td>
+	    		<td class="tw15"><b>73</b></td>
+	    		<td class="tw15"><b>5.8</b></td>
+	    		<td class="tw20"><b>0.79</b></td> 
+	    	</tr><tr>
+	    		<td class="tw15"><b>2016-07-01</b></td>
+	    		<td class="tw20"><b><a href="http://localhost/ServerStatus/Liquidity/Liquidity_LP_Specific.php?beginDate=2016-07-01&amp;liquiditySource=NewYork&amp;lpname=LP09">LP09</a></b></td>
+	    		<td class="tw15"><b>21</b></td>
+	    		<td class="tw15"><b>78</b></td>
+	    		<td class="tw15"><b>8.1</b></td>
+	    		<td class="tw20"><b>1.04</b></td> 
+	    	</tr>			</tbody>		
+		</table>
+	</div>
+	<div class="col-md-6  subDiv subWidth49 backlight" align="center">	
+		<div class="smallHeader">
+			<p>LONDON</p>
+		</div>
+		<table align="center" class="table table-hover table-bordered table-striped stattable">
+			<thead class="statTableHead">
+				<tr>
+					<th class="tw15">From Date</th>
+					<th class="tw20">LP Name</th>
+					<th class="tw15">NB Pairs</th>
+					<th class="tw15">NB Compo.</th>
+					<th class="tw15">AVG Tier</th>
+					<th class="tw20">Liq. Quotient</th>
+				</tr>
+			</thead>
+			<tbody class="statTableBody">
+				<tr>
+	    		<td class="tw15"><b>2016-07-01</b></td>
+	    		<td class="tw20"><b><a href="http://localhost/ServerStatus/Liquidity/Liquidity_LP_Specific.php?beginDate=2016-07-01&amp;liquiditySource=London&amp;lpname=LP04">LP04</a></b></td>
+	    		<td class="tw15"><b>23</b></td>
+	    		<td class="tw15"><b>150</b></td>
+	    		<td class="tw15"><b>2.1</b></td>
+	    		<td class="tw20"><b>0.14</b></td> 
+	    	</tr><tr>
+	    		<td class="tw15"><b>2016-07-01</b></td>
+	    		<td class="tw20"><b><a href="http://localhost/ServerStatus/Liquidity/Liquidity_LP_Specific.php?beginDate=2016-07-01&amp;liquiditySource=London&amp;lpname=LP01">LP01</a></b></td>
+	    		<td class="tw15"><b>23</b></td>
+	    		<td class="tw15"><b>148</b></td>
+	    		<td class="tw15"><b>2.6</b></td>
+	    		<td class="tw20"><b>0.17</b></td> 
+	    	</tr><tr>
+	    		<td class="tw15"><b>2016-07-01</b></td>
+	    		<td class="tw20"><b><a href="http://localhost/ServerStatus/Liquidity/Liquidity_LP_Specific.php?beginDate=2016-07-01&amp;liquiditySource=London&amp;lpname=LP03">LP03</a></b></td>
+	    		<td class="tw15"><b>23</b></td>
+	    		<td class="tw15"><b>148</b></td>
+	    		<td class="tw15"><b>4.2</b></td>
+	    		<td class="tw20"><b>0.28</b></td> 
+	    	</tr><tr>
+	    		<td class="tw15"><b>2016-07-01</b></td>
+	    		<td class="tw20"><b><a href="http://localhost/ServerStatus/Liquidity/Liquidity_LP_Specific.php?beginDate=2016-07-01&amp;liquiditySource=London&amp;lpname=LP12">LP12</a></b></td>
+	    		<td class="tw15"><b>19</b></td>
+	    		<td class="tw15"><b>106</b></td>
+	    		<td class="tw15"><b>3.6</b></td>
+	    		<td class="tw20"><b>0.34</b></td> 
+	    	</tr><tr>
+	    		<td class="tw15"><b>2016-07-01</b></td>
+	    		<td class="tw20"><b><a href="http://localhost/ServerStatus/Liquidity/Liquidity_LP_Specific.php?beginDate=2016-07-01&amp;liquiditySource=London&amp;lpname=LP10">LP10</a></b></td>
+	    		<td class="tw15"><b>15</b></td>
+	    		<td class="tw15"><b>78</b></td>
+	    		<td class="tw15"><b>3.6</b></td>
+	    		<td class="tw20"><b>0.46</b></td> 
+	    	</tr><tr>
+	    		<td class="tw15"><b>2016-07-01</b></td>
+	    		<td class="tw20"><b><a href="http://localhost/ServerStatus/Liquidity/Liquidity_LP_Specific.php?beginDate=2016-07-01&amp;liquiditySource=London&amp;lpname=LP07">LP07</a></b></td>
+	    		<td class="tw15"><b>22</b></td>
+	    		<td class="tw15"><b>118</b></td>
+	    		<td class="tw15"><b>6.7</b></td>
+	    		<td class="tw20"><b>0.57</b></td> 
+	    	</tr><tr>
+	    		<td class="tw15"><b>2016-07-01</b></td>
+	    		<td class="tw20"><b><a href="http://localhost/ServerStatus/Liquidity/Liquidity_LP_Specific.php?beginDate=2016-07-01&amp;liquiditySource=London&amp;lpname=LP08">LP08</a></b></td>
+	    		<td class="tw15"><b>17</b></td>
+	    		<td class="tw15"><b>80</b></td>
+	    		<td class="tw15"><b>6.7</b></td>
+	    		<td class="tw20"><b>0.84</b></td> 
+	    	</tr><tr>
+	    		<td class="tw15"><b>2016-07-01</b></td>
+	    		<td class="tw20"><b><a href="http://localhost/ServerStatus/Liquidity/Liquidity_LP_Specific.php?beginDate=2016-07-01&amp;liquiditySource=London&amp;lpname=LP02">LP02</a></b></td>
+	    		<td class="tw15"><b>18</b></td>
+	    		<td class="tw15"><b>70</b></td>
+	    		<td class="tw15"><b>7.6</b></td>
+	    		<td class="tw20"><b>1.08</b></td> 
+	    	</tr><tr>
+	    		<td class="tw15"><b>2016-07-01</b></td>
+	    		<td class="tw20"><b><a href="http://localhost/ServerStatus/Liquidity/Liquidity_LP_Specific.php?beginDate=2016-07-01&amp;liquiditySource=London&amp;lpname=LP11">LP11</a></b></td>
+	    		<td class="tw15"><b>17</b></td>
+	    		<td class="tw15"><b>64</b></td>
+	    		<td class="tw15"><b>7.5</b></td>
+	    		<td class="tw20"><b>1.17</b></td> 
+	    	</tr>			</tbody>		
+		</table>
+	</div>
+</div>
+<div class="row">
+	<div class="col-md-6" align="left">
+		<div class="titleDiv titleDivLarge backlight" align="center">
+			<p><b><font size="4">Pair01 NewYork LIQUIDITY</font></b></p>
+		</div>
+	</div>
+	<div class="col-md-6 selectionDiv">
+		<div class="row">
+			<font size="3">
+				<div class="col-md-4" align="center">
+					<p>PAIR</p>
+					<select id="pairSelection">
+							<option value="Pair01" selected="">Pair01</option><option value="Pair02">Pair02</option><option value="Pair03">Pair03</option><option value="Pair04">Pair04</option><option value="Pair05">Pair05</option><option value="Pair06">Pair06</option><option value="Pair07">Pair07</option><option value="Pair08">Pair08</option><option value="Pair09">Pair09</option><option value="Pair10">Pair10</option><option value="Pair11">Pair11</option>					</select>
+				</div>
+				<div class="col-md-4" align="center">
+					<p>LOCATION</p>
+					<select id="locationSelection">
+							<option value="NewYork" selected="">NewYork</option><option value="London">London</option>					</select>
+				</div>
+				<div class="col-md-4" align="center">
+					<p>LEVEL</p>
+					<select id="spreadSelection">
+							<option value="1M_Spread" selected="">1M_Spread</option><option value="3M_Spread">3M_Spread</option><option value="5M_Spread">5M_Spread</option><option value="10M_Spread">10M_Spread</option>					</select>
+				</div>
+			</font>
+		</div>
+	</div>
+</div>
+<div class="row subRow subHeight25">
+	<div class="col-md-6 subDiv subWidth49 backlight" align="center">
+		<div class="smallHeader">
+			<p>MEDIAN SPREADS FOR NewYork LPs (TICKS)</p>
+		</div>
+		<table id="spreadsTable" align="center" class="table table-hover table-bordered table-striped stattable">
+			<thead>
+				<tr>
+				  <th class="tw25">From Date</th>
+				  <th class="tw25">Time Interval</th>
+				  <th class="tw25">LP Name</th>
+				  <th class="tw25">Med_1M_Spread</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:00 - 06:45</b></td>
+						<td class="tw25"><b>LP01</b></td>
+						<td class="tw25"><b>12.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:00 - 06:45</b></td>
+						<td class="tw25"><b>LP02</b></td>
+						<td class="tw25"><b>31.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:00 - 06:45</b></td>
+						<td class="tw25"><b>LP03</b></td>
+						<td class="tw25"><b>21.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:00 - 06:45</b></td>
+						<td class="tw25"><b>LP04</b></td>
+						<td class="tw25"><b>0.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:00 - 06:45</b></td>
+						<td class="tw25"><b>LP06</b></td>
+						<td class="tw25"><b>19.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:00 - 06:45</b></td>
+						<td class="tw25"><b>LP07</b></td>
+						<td class="tw25"><b>13.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:00 - 06:45</b></td>
+						<td class="tw25"><b>LP08</b></td>
+						<td class="tw25"><b>14.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:00 - 06:45</b></td>
+						<td class="tw25"><b>LP09</b></td>
+						<td class="tw25"><b>23.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:00 - 06:45</b></td>
+						<td class="tw25"><b>LP10</b></td>
+						<td class="tw25"><b>16.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:00 - 06:45</b></td>
+						<td class="tw25"><b>LP11</b></td>
+						<td class="tw25"><b>29.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:00 - 06:45</b></td>
+						<td class="tw25"><b>LP12</b></td>
+						<td class="tw25"><b>73.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:45 - 07:30</b></td>
+						<td class="tw25"><b>LP01</b></td>
+						<td class="tw25"><b>12.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:45 - 07:30</b></td>
+						<td class="tw25"><b>LP02</b></td>
+						<td class="tw25"><b>39.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:45 - 07:30</b></td>
+						<td class="tw25"><b>LP03</b></td>
+						<td class="tw25"><b>16.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:45 - 07:30</b></td>
+						<td class="tw25"><b>LP04</b></td>
+						<td class="tw25"><b>0.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:45 - 07:30</b></td>
+						<td class="tw25"><b>LP06</b></td>
+						<td class="tw25"><b>16.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:45 - 07:30</b></td>
+						<td class="tw25"><b>LP07</b></td>
+						<td class="tw25"><b>11.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:45 - 07:30</b></td>
+						<td class="tw25"><b>LP08</b></td>
+						<td class="tw25"><b>14.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:45 - 07:30</b></td>
+						<td class="tw25"><b>LP09</b></td>
+						<td class="tw25"><b>24.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:45 - 07:30</b></td>
+						<td class="tw25"><b>LP10</b></td>
+						<td class="tw25"><b>16.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:45 - 07:30</b></td>
+						<td class="tw25"><b>LP11</b></td>
+						<td class="tw25"><b>22.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:45 - 07:30</b></td>
+						<td class="tw25"><b>LP12</b></td>
+						<td class="tw25"><b>63.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>07:30 - 08:15</b></td>
+						<td class="tw25"><b>LP01</b></td>
+						<td class="tw25"><b>13.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>07:30 - 08:15</b></td>
+						<td class="tw25"><b>LP02</b></td>
+						<td class="tw25"><b>32.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>07:30 - 08:15</b></td>
+						<td class="tw25"><b>LP03</b></td>
+						<td class="tw25"><b>16.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>07:30 - 08:15</b></td>
+						<td class="tw25"><b>LP04</b></td>
+						<td class="tw25"><b>0.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>07:30 - 08:15</b></td>
+						<td class="tw25"><b>LP06</b></td>
+						<td class="tw25"><b>18.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>07:30 - 08:15</b></td>
+						<td class="tw25"><b>LP07</b></td>
+						<td class="tw25"><b>12.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>07:30 - 08:15</b></td>
+						<td class="tw25"><b>LP08</b></td>
+						<td class="tw25"><b>14.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>07:30 - 08:15</b></td>
+						<td class="tw25"><b>LP09</b></td>
+						<td class="tw25"><b>31.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>07:30 - 08:15</b></td>
+						<td class="tw25"><b>LP10</b></td>
+						<td class="tw25"><b>16.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>07:30 - 08:15</b></td>
+						<td class="tw25"><b>LP11</b></td>
+						<td class="tw25"><b>26.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>07:30 - 08:15</b></td>
+						<td class="tw25"><b>LP12</b></td>
+						<td class="tw25"><b>74.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>08:15 - 09:00</b></td>
+						<td class="tw25"><b>LP01</b></td>
+						<td class="tw25"><b>12.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>08:15 - 09:00</b></td>
+						<td class="tw25"><b>LP02</b></td>
+						<td class="tw25"><b>28.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>08:15 - 09:00</b></td>
+						<td class="tw25"><b>LP03</b></td>
+						<td class="tw25"><b>17.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>08:15 - 09:00</b></td>
+						<td class="tw25"><b>LP04</b></td>
+						<td class="tw25"><b>0.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>08:15 - 09:00</b></td>
+						<td class="tw25"><b>LP06</b></td>
+						<td class="tw25"><b>16.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>08:15 - 09:00</b></td>
+						<td class="tw25"><b>LP07</b></td>
+						<td class="tw25"><b>11.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>08:15 - 09:00</b></td>
+						<td class="tw25"><b>LP08</b></td>
+						<td class="tw25"><b>14.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>08:15 - 09:00</b></td>
+						<td class="tw25"><b>LP09</b></td>
+						<td class="tw25"><b>26.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>08:15 - 09:00</b></td>
+						<td class="tw25"><b>LP10</b></td>
+						<td class="tw25"><b>12.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>08:15 - 09:00</b></td>
+						<td class="tw25"><b>LP11</b></td>
+						<td class="tw25"><b>18.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>08:15 - 09:00</b></td>
+						<td class="tw25"><b>LP12</b></td>
+						<td class="tw25"><b>61.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:00 - 09:45</b></td>
+						<td class="tw25"><b>LP01</b></td>
+						<td class="tw25"><b>11.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:00 - 09:45</b></td>
+						<td class="tw25"><b>LP02</b></td>
+						<td class="tw25"><b>25.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:00 - 09:45</b></td>
+						<td class="tw25"><b>LP03</b></td>
+						<td class="tw25"><b>16.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:00 - 09:45</b></td>
+						<td class="tw25"><b>LP04</b></td>
+						<td class="tw25"><b>0.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:00 - 09:45</b></td>
+						<td class="tw25"><b>LP06</b></td>
+						<td class="tw25"><b>18.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:00 - 09:45</b></td>
+						<td class="tw25"><b>LP07</b></td>
+						<td class="tw25"><b>10.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:00 - 09:45</b></td>
+						<td class="tw25"><b>LP08</b></td>
+						<td class="tw25"><b>15.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:00 - 09:45</b></td>
+						<td class="tw25"><b>LP09</b></td>
+						<td class="tw25"><b>33.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:00 - 09:45</b></td>
+						<td class="tw25"><b>LP10</b></td>
+						<td class="tw25"><b>18.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:00 - 09:45</b></td>
+						<td class="tw25"><b>LP11</b></td>
+						<td class="tw25"><b>26.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:00 - 09:45</b></td>
+						<td class="tw25"><b>LP12</b></td>
+						<td class="tw25"><b>68.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:45 - 10:30</b></td>
+						<td class="tw25"><b>LP01</b></td>
+						<td class="tw25"><b>13.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:45 - 10:30</b></td>
+						<td class="tw25"><b>LP02</b></td>
+						<td class="tw25"><b>31.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:45 - 10:30</b></td>
+						<td class="tw25"><b>LP03</b></td>
+						<td class="tw25"><b>16.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:45 - 10:30</b></td>
+						<td class="tw25"><b>LP04</b></td>
+						<td class="tw25"><b>0.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:45 - 10:30</b></td>
+						<td class="tw25"><b>LP06</b></td>
+						<td class="tw25"><b>17.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:45 - 10:30</b></td>
+						<td class="tw25"><b>LP07</b></td>
+						<td class="tw25"><b>13.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:45 - 10:30</b></td>
+						<td class="tw25"><b>LP08</b></td>
+						<td class="tw25"><b>17.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:45 - 10:30</b></td>
+						<td class="tw25"><b>LP09</b></td>
+						<td class="tw25"><b>36.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:45 - 10:30</b></td>
+						<td class="tw25"><b>LP10</b></td>
+						<td class="tw25"><b>18.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:45 - 10:30</b></td>
+						<td class="tw25"><b>LP11</b></td>
+						<td class="tw25"><b>24.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:45 - 10:30</b></td>
+						<td class="tw25"><b>LP12</b></td>
+						<td class="tw25"><b>63.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>10:30 - 11:15</b></td>
+						<td class="tw25"><b>LP01</b></td>
+						<td class="tw25"><b>13.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>10:30 - 11:15</b></td>
+						<td class="tw25"><b>LP02</b></td>
+						<td class="tw25"><b>31.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>10:30 - 11:15</b></td>
+						<td class="tw25"><b>LP03</b></td>
+						<td class="tw25"><b>15.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>10:30 - 11:15</b></td>
+						<td class="tw25"><b>LP04</b></td>
+						<td class="tw25"><b>0.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>10:30 - 11:15</b></td>
+						<td class="tw25"><b>LP06</b></td>
+						<td class="tw25"><b>16.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>10:30 - 11:15</b></td>
+						<td class="tw25"><b>LP07</b></td>
+						<td class="tw25"><b>12.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>10:30 - 11:15</b></td>
+						<td class="tw25"><b>LP08</b></td>
+						<td class="tw25"><b>17.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>10:30 - 11:15</b></td>
+						<td class="tw25"><b>LP09</b></td>
+						<td class="tw25"><b>29.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>10:30 - 11:15</b></td>
+						<td class="tw25"><b>LP10</b></td>
+						<td class="tw25"><b>17.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>10:30 - 11:15</b></td>
+						<td class="tw25"><b>LP11</b></td>
+						<td class="tw25"><b>21.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>10:30 - 11:15</b></td>
+						<td class="tw25"><b>LP12</b></td>
+						<td class="tw25"><b>62.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>11:15 - 12:00</b></td>
+						<td class="tw25"><b>LP01</b></td>
+						<td class="tw25"><b>13.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>11:15 - 12:00</b></td>
+						<td class="tw25"><b>LP02</b></td>
+						<td class="tw25"><b>24.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>11:15 - 12:00</b></td>
+						<td class="tw25"><b>LP03</b></td>
+						<td class="tw25"><b>17.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>11:15 - 12:00</b></td>
+						<td class="tw25"><b>LP04</b></td>
+						<td class="tw25"><b>0.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>11:15 - 12:00</b></td>
+						<td class="tw25"><b>LP06</b></td>
+						<td class="tw25"><b>12.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>11:15 - 12:00</b></td>
+						<td class="tw25"><b>LP07</b></td>
+						<td class="tw25"><b>13.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>11:15 - 12:00</b></td>
+						<td class="tw25"><b>LP08</b></td>
+						<td class="tw25"><b>17.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>11:15 - 12:00</b></td>
+						<td class="tw25"><b>LP09</b></td>
+						<td class="tw25"><b>24.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>11:15 - 12:00</b></td>
+						<td class="tw25"><b>LP10</b></td>
+						<td class="tw25"><b>17.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>11:15 - 12:00</b></td>
+						<td class="tw25"><b>LP11</b></td>
+						<td class="tw25"><b>19.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>11:15 - 12:00</b></td>
+						<td class="tw25"><b>LP12</b></td>
+						<td class="tw25"><b>64.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:00 - 12:45</b></td>
+						<td class="tw25"><b>LP01</b></td>
+						<td class="tw25"><b>14.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:00 - 12:45</b></td>
+						<td class="tw25"><b>LP02</b></td>
+						<td class="tw25"><b>29.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:00 - 12:45</b></td>
+						<td class="tw25"><b>LP03</b></td>
+						<td class="tw25"><b>18.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:00 - 12:45</b></td>
+						<td class="tw25"><b>LP04</b></td>
+						<td class="tw25"><b>0.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:00 - 12:45</b></td>
+						<td class="tw25"><b>LP06</b></td>
+						<td class="tw25"><b>17.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:00 - 12:45</b></td>
+						<td class="tw25"><b>LP07</b></td>
+						<td class="tw25"><b>12.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:00 - 12:45</b></td>
+						<td class="tw25"><b>LP08</b></td>
+						<td class="tw25"><b>17.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:00 - 12:45</b></td>
+						<td class="tw25"><b>LP09</b></td>
+						<td class="tw25"><b>33.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:00 - 12:45</b></td>
+						<td class="tw25"><b>LP10</b></td>
+						<td class="tw25"><b>19.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:00 - 12:45</b></td>
+						<td class="tw25"><b>LP11</b></td>
+						<td class="tw25"><b>22.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:00 - 12:45</b></td>
+						<td class="tw25"><b>LP12</b></td>
+						<td class="tw25"><b>65.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:45 - 13:30</b></td>
+						<td class="tw25"><b>LP01</b></td>
+						<td class="tw25"><b>15.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:45 - 13:30</b></td>
+						<td class="tw25"><b>LP02</b></td>
+						<td class="tw25"><b>37.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:45 - 13:30</b></td>
+						<td class="tw25"><b>LP03</b></td>
+						<td class="tw25"><b>24.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:45 - 13:30</b></td>
+						<td class="tw25"><b>LP04</b></td>
+						<td class="tw25"><b>0.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:45 - 13:30</b></td>
+						<td class="tw25"><b>LP06</b></td>
+						<td class="tw25"><b>26.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:45 - 13:30</b></td>
+						<td class="tw25"><b>LP07</b></td>
+						<td class="tw25"><b>13.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:45 - 13:30</b></td>
+						<td class="tw25"><b>LP08</b></td>
+						<td class="tw25"><b>17.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:45 - 13:30</b></td>
+						<td class="tw25"><b>LP09</b></td>
+						<td class="tw25"><b>45.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:45 - 13:30</b></td>
+						<td class="tw25"><b>LP10</b></td>
+						<td class="tw25"><b>23.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:45 - 13:30</b></td>
+						<td class="tw25"><b>LP11</b></td>
+						<td class="tw25"><b>28.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:45 - 13:30</b></td>
+						<td class="tw25"><b>LP12</b></td>
+						<td class="tw25"><b>65.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>13:30 - 14:15</b></td>
+						<td class="tw25"><b>LP01</b></td>
+						<td class="tw25"><b>16.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>13:30 - 14:15</b></td>
+						<td class="tw25"><b>LP02</b></td>
+						<td class="tw25"><b>31.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>13:30 - 14:15</b></td>
+						<td class="tw25"><b>LP03</b></td>
+						<td class="tw25"><b>19.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>13:30 - 14:15</b></td>
+						<td class="tw25"><b>LP04</b></td>
+						<td class="tw25"><b>0.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>13:30 - 14:15</b></td>
+						<td class="tw25"><b>LP06</b></td>
+						<td class="tw25"><b>18.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>13:30 - 14:15</b></td>
+						<td class="tw25"><b>LP07</b></td>
+						<td class="tw25"><b>13.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>13:30 - 14:15</b></td>
+						<td class="tw25"><b>LP08</b></td>
+						<td class="tw25"><b>17.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>13:30 - 14:15</b></td>
+						<td class="tw25"><b>LP09</b></td>
+						<td class="tw25"><b>37.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>13:30 - 14:15</b></td>
+						<td class="tw25"><b>LP10</b></td>
+						<td class="tw25"><b>20.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>13:30 - 14:15</b></td>
+						<td class="tw25"><b>LP11</b></td>
+						<td class="tw25"><b>27.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>13:30 - 14:15</b></td>
+						<td class="tw25"><b>LP12</b></td>
+						<td class="tw25"><b>70.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>14:15 - 15:00</b></td>
+						<td class="tw25"><b>LP01</b></td>
+						<td class="tw25"><b>16.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>14:15 - 15:00</b></td>
+						<td class="tw25"><b>LP02</b></td>
+						<td class="tw25"><b>31.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>14:15 - 15:00</b></td>
+						<td class="tw25"><b>LP03</b></td>
+						<td class="tw25"><b>18.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>14:15 - 15:00</b></td>
+						<td class="tw25"><b>LP04</b></td>
+						<td class="tw25"><b>0.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>14:15 - 15:00</b></td>
+						<td class="tw25"><b>LP06</b></td>
+						<td class="tw25"><b>21.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>14:15 - 15:00</b></td>
+						<td class="tw25"><b>LP07</b></td>
+						<td class="tw25"><b>15.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>14:15 - 15:00</b></td>
+						<td class="tw25"><b>LP08</b></td>
+						<td class="tw25"><b>17.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>14:15 - 15:00</b></td>
+						<td class="tw25"><b>LP09</b></td>
+						<td class="tw25"><b>33.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>14:15 - 15:00</b></td>
+						<td class="tw25"><b>LP10</b></td>
+						<td class="tw25"><b>19.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>14:15 - 15:00</b></td>
+						<td class="tw25"><b>LP11</b></td>
+						<td class="tw25"><b>25.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>14:15 - 15:00</b></td>
+						<td class="tw25"><b>LP12</b></td>
+						<td class="tw25"><b>64.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:00 - 06:45</b></td>
+						<td class="tw25"><b>LP01</b></td>
+						<td class="tw25"><b>15.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:00 - 06:45</b></td>
+						<td class="tw25"><b>LP02</b></td>
+						<td class="tw25"><b>35.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:00 - 06:45</b></td>
+						<td class="tw25"><b>LP03</b></td>
+						<td class="tw25"><b>16.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:00 - 06:45</b></td>
+						<td class="tw25"><b>LP04</b></td>
+						<td class="tw25"><b>34.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:00 - 06:45</b></td>
+						<td class="tw25"><b>LP06</b></td>
+						<td class="tw25"><b>19.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:00 - 06:45</b></td>
+						<td class="tw25"><b>LP07</b></td>
+						<td class="tw25"><b>13.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:00 - 06:45</b></td>
+						<td class="tw25"><b>LP08</b></td>
+						<td class="tw25"><b>14.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:00 - 06:45</b></td>
+						<td class="tw25"><b>LP09</b></td>
+						<td class="tw25"><b>23.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:00 - 06:45</b></td>
+						<td class="tw25"><b>LP10</b></td>
+						<td class="tw25"><b>17.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:00 - 06:45</b></td>
+						<td class="tw25"><b>LP11</b></td>
+						<td class="tw25"><b>30.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:00 - 06:45</b></td>
+						<td class="tw25"><b>LP12</b></td>
+						<td class="tw25"><b>71.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:45 - 07:30</b></td>
+						<td class="tw25"><b>LP01</b></td>
+						<td class="tw25"><b>13.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:45 - 07:30</b></td>
+						<td class="tw25"><b>LP02</b></td>
+						<td class="tw25"><b>33.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:45 - 07:30</b></td>
+						<td class="tw25"><b>LP03</b></td>
+						<td class="tw25"><b>15.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:45 - 07:30</b></td>
+						<td class="tw25"><b>LP04</b></td>
+						<td class="tw25"><b>38.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:45 - 07:30</b></td>
+						<td class="tw25"><b>LP06</b></td>
+						<td class="tw25"><b>19.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:45 - 07:30</b></td>
+						<td class="tw25"><b>LP07</b></td>
+						<td class="tw25"><b>11.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:45 - 07:30</b></td>
+						<td class="tw25"><b>LP08</b></td>
+						<td class="tw25"><b>10.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:45 - 07:30</b></td>
+						<td class="tw25"><b>LP09</b></td>
+						<td class="tw25"><b>31.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:45 - 07:30</b></td>
+						<td class="tw25"><b>LP10</b></td>
+						<td class="tw25"><b>17.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:45 - 07:30</b></td>
+						<td class="tw25"><b>LP11</b></td>
+						<td class="tw25"><b>22.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:45 - 07:30</b></td>
+						<td class="tw25"><b>LP12</b></td>
+						<td class="tw25"><b>66.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>07:30 - 08:15</b></td>
+						<td class="tw25"><b>LP01</b></td>
+						<td class="tw25"><b>13.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>07:30 - 08:15</b></td>
+						<td class="tw25"><b>LP02</b></td>
+						<td class="tw25"><b>29.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>07:30 - 08:15</b></td>
+						<td class="tw25"><b>LP03</b></td>
+						<td class="tw25"><b>15.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>07:30 - 08:15</b></td>
+						<td class="tw25"><b>LP04</b></td>
+						<td class="tw25"><b>31.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>07:30 - 08:15</b></td>
+						<td class="tw25"><b>LP06</b></td>
+						<td class="tw25"><b>16.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>07:30 - 08:15</b></td>
+						<td class="tw25"><b>LP07</b></td>
+						<td class="tw25"><b>11.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>07:30 - 08:15</b></td>
+						<td class="tw25"><b>LP08</b></td>
+						<td class="tw25"><b>10.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>07:30 - 08:15</b></td>
+						<td class="tw25"><b>LP09</b></td>
+						<td class="tw25"><b>37.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>07:30 - 08:15</b></td>
+						<td class="tw25"><b>LP10</b></td>
+						<td class="tw25"><b>17.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>07:30 - 08:15</b></td>
+						<td class="tw25"><b>LP11</b></td>
+						<td class="tw25"><b>21.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>07:30 - 08:15</b></td>
+						<td class="tw25"><b>LP12</b></td>
+						<td class="tw25"><b>61.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>08:15 - 09:00</b></td>
+						<td class="tw25"><b>LP01</b></td>
+						<td class="tw25"><b>14.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>08:15 - 09:00</b></td>
+						<td class="tw25"><b>LP02</b></td>
+						<td class="tw25"><b>24.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>08:15 - 09:00</b></td>
+						<td class="tw25"><b>LP03</b></td>
+						<td class="tw25"><b>17.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>08:15 - 09:00</b></td>
+						<td class="tw25"><b>LP04</b></td>
+						<td class="tw25"><b>29.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>08:15 - 09:00</b></td>
+						<td class="tw25"><b>LP06</b></td>
+						<td class="tw25"><b>16.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>08:15 - 09:00</b></td>
+						<td class="tw25"><b>LP07</b></td>
+						<td class="tw25"><b>11.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>08:15 - 09:00</b></td>
+						<td class="tw25"><b>LP08</b></td>
+						<td class="tw25"><b>14.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>08:15 - 09:00</b></td>
+						<td class="tw25"><b>LP09</b></td>
+						<td class="tw25"><b>35.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>08:15 - 09:00</b></td>
+						<td class="tw25"><b>LP10</b></td>
+						<td class="tw25"><b>15.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>08:15 - 09:00</b></td>
+						<td class="tw25"><b>LP11</b></td>
+						<td class="tw25"><b>26.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>08:15 - 09:00</b></td>
+						<td class="tw25"><b>LP12</b></td>
+						<td class="tw25"><b>64.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:00 - 09:45</b></td>
+						<td class="tw25"><b>LP01</b></td>
+						<td class="tw25"><b>16.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:00 - 09:45</b></td>
+						<td class="tw25"><b>LP02</b></td>
+						<td class="tw25"><b>29.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:00 - 09:45</b></td>
+						<td class="tw25"><b>LP03</b></td>
+						<td class="tw25"><b>15.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:00 - 09:45</b></td>
+						<td class="tw25"><b>LP04</b></td>
+						<td class="tw25"><b>30.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:00 - 09:45</b></td>
+						<td class="tw25"><b>LP06</b></td>
+						<td class="tw25"><b>16.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:00 - 09:45</b></td>
+						<td class="tw25"><b>LP07</b></td>
+						<td class="tw25"><b>12.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:00 - 09:45</b></td>
+						<td class="tw25"><b>LP08</b></td>
+						<td class="tw25"><b>14.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:00 - 09:45</b></td>
+						<td class="tw25"><b>LP09</b></td>
+						<td class="tw25"><b>27.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:00 - 09:45</b></td>
+						<td class="tw25"><b>LP10</b></td>
+						<td class="tw25"><b>16.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:00 - 09:45</b></td>
+						<td class="tw25"><b>LP11</b></td>
+						<td class="tw25"><b>23.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:00 - 09:45</b></td>
+						<td class="tw25"><b>LP12</b></td>
+						<td class="tw25"><b>68.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:45 - 10:30</b></td>
+						<td class="tw25"><b>LP01</b></td>
+						<td class="tw25"><b>16.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:45 - 10:30</b></td>
+						<td class="tw25"><b>LP02</b></td>
+						<td class="tw25"><b>21.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:45 - 10:30</b></td>
+						<td class="tw25"><b>LP03</b></td>
+						<td class="tw25"><b>15.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:45 - 10:30</b></td>
+						<td class="tw25"><b>LP04</b></td>
+						<td class="tw25"><b>31.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:45 - 10:30</b></td>
+						<td class="tw25"><b>LP06</b></td>
+						<td class="tw25"><b>16.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:45 - 10:30</b></td>
+						<td class="tw25"><b>LP07</b></td>
+						<td class="tw25"><b>11.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:45 - 10:30</b></td>
+						<td class="tw25"><b>LP08</b></td>
+						<td class="tw25"><b>14.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:45 - 10:30</b></td>
+						<td class="tw25"><b>LP09</b></td>
+						<td class="tw25"><b>31.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:45 - 10:30</b></td>
+						<td class="tw25"><b>LP10</b></td>
+						<td class="tw25"><b>16.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:45 - 10:30</b></td>
+						<td class="tw25"><b>LP11</b></td>
+						<td class="tw25"><b>25.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:45 - 10:30</b></td>
+						<td class="tw25"><b>LP12</b></td>
+						<td class="tw25"><b>64.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>10:30 - 11:15</b></td>
+						<td class="tw25"><b>LP01</b></td>
+						<td class="tw25"><b>15.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>10:30 - 11:15</b></td>
+						<td class="tw25"><b>LP02</b></td>
+						<td class="tw25"><b>16.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>10:30 - 11:15</b></td>
+						<td class="tw25"><b>LP03</b></td>
+						<td class="tw25"><b>18.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>10:30 - 11:15</b></td>
+						<td class="tw25"><b>LP04</b></td>
+						<td class="tw25"><b>32.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>10:30 - 11:15</b></td>
+						<td class="tw25"><b>LP06</b></td>
+						<td class="tw25"><b>15.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>10:30 - 11:15</b></td>
+						<td class="tw25"><b>LP07</b></td>
+						<td class="tw25"><b>13.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>10:30 - 11:15</b></td>
+						<td class="tw25"><b>LP08</b></td>
+						<td class="tw25"><b>14.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>10:30 - 11:15</b></td>
+						<td class="tw25"><b>LP09</b></td>
+						<td class="tw25"><b>32.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>10:30 - 11:15</b></td>
+						<td class="tw25"><b>LP10</b></td>
+						<td class="tw25"><b>16.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>10:30 - 11:15</b></td>
+						<td class="tw25"><b>LP11</b></td>
+						<td class="tw25"><b>19.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>10:30 - 11:15</b></td>
+						<td class="tw25"><b>LP12</b></td>
+						<td class="tw25"><b>67.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>11:15 - 12:00</b></td>
+						<td class="tw25"><b>LP01</b></td>
+						<td class="tw25"><b>17.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>11:15 - 12:00</b></td>
+						<td class="tw25"><b>LP02</b></td>
+						<td class="tw25"><b>32.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>11:15 - 12:00</b></td>
+						<td class="tw25"><b>LP03</b></td>
+						<td class="tw25"><b>22.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>11:15 - 12:00</b></td>
+						<td class="tw25"><b>LP04</b></td>
+						<td class="tw25"><b>31.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>11:15 - 12:00</b></td>
+						<td class="tw25"><b>LP06</b></td>
+						<td class="tw25"><b>16.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>11:15 - 12:00</b></td>
+						<td class="tw25"><b>LP07</b></td>
+						<td class="tw25"><b>14.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>11:15 - 12:00</b></td>
+						<td class="tw25"><b>LP08</b></td>
+						<td class="tw25"><b>14.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>11:15 - 12:00</b></td>
+						<td class="tw25"><b>LP09</b></td>
+						<td class="tw25"><b>44.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>11:15 - 12:00</b></td>
+						<td class="tw25"><b>LP10</b></td>
+						<td class="tw25"><b>16.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>11:15 - 12:00</b></td>
+						<td class="tw25"><b>LP11</b></td>
+						<td class="tw25"><b>19.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>11:15 - 12:00</b></td>
+						<td class="tw25"><b>LP12</b></td>
+						<td class="tw25"><b>61.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:00 - 12:45</b></td>
+						<td class="tw25"><b>LP01</b></td>
+						<td class="tw25"><b>18.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:00 - 12:45</b></td>
+						<td class="tw25"><b>LP02</b></td>
+						<td class="tw25"><b>45.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:00 - 12:45</b></td>
+						<td class="tw25"><b>LP03</b></td>
+						<td class="tw25"><b>24.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:00 - 12:45</b></td>
+						<td class="tw25"><b>LP04</b></td>
+						<td class="tw25"><b>24.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:00 - 12:45</b></td>
+						<td class="tw25"><b>LP06</b></td>
+						<td class="tw25"><b>31.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:00 - 12:45</b></td>
+						<td class="tw25"><b>LP07</b></td>
+						<td class="tw25"><b>16.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:00 - 12:45</b></td>
+						<td class="tw25"><b>LP08</b></td>
+						<td class="tw25"><b>14.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:00 - 12:45</b></td>
+						<td class="tw25"><b>LP09</b></td>
+						<td class="tw25"><b>49.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:00 - 12:45</b></td>
+						<td class="tw25"><b>LP10</b></td>
+						<td class="tw25"><b>22.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:00 - 12:45</b></td>
+						<td class="tw25"><b>LP11</b></td>
+						<td class="tw25"><b>29.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:00 - 12:45</b></td>
+						<td class="tw25"><b>LP12</b></td>
+						<td class="tw25"><b>71.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:45 - 13:30</b></td>
+						<td class="tw25"><b>LP01</b></td>
+						<td class="tw25"><b>19.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:45 - 13:30</b></td>
+						<td class="tw25"><b>LP02</b></td>
+						<td class="tw25"><b>82.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:45 - 13:30</b></td>
+						<td class="tw25"><b>LP03</b></td>
+						<td class="tw25"><b>32.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:45 - 13:30</b></td>
+						<td class="tw25"><b>LP04</b></td>
+						<td class="tw25"><b>27.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:45 - 13:30</b></td>
+						<td class="tw25"><b>LP06</b></td>
+						<td class="tw25"><b>113.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:45 - 13:30</b></td>
+						<td class="tw25"><b>LP07</b></td>
+						<td class="tw25"><b>25.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:45 - 13:30</b></td>
+						<td class="tw25"><b>LP08</b></td>
+						<td class="tw25"><b>14.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:45 - 13:30</b></td>
+						<td class="tw25"><b>LP09</b></td>
+						<td class="tw25"><b>101.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:45 - 13:30</b></td>
+						<td class="tw25"><b>LP10</b></td>
+						<td class="tw25"><b>53.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:45 - 13:30</b></td>
+						<td class="tw25"><b>LP11</b></td>
+						<td class="tw25"><b>77.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:45 - 13:30</b></td>
+						<td class="tw25"><b>LP12</b></td>
+						<td class="tw25"><b>130.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>13:30 - 14:15</b></td>
+						<td class="tw25"><b>LP01</b></td>
+						<td class="tw25"><b>19.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>13:30 - 14:15</b></td>
+						<td class="tw25"><b>LP02</b></td>
+						<td class="tw25"><b>0.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>13:30 - 14:15</b></td>
+						<td class="tw25"><b>LP03</b></td>
+						<td class="tw25"><b>0.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>13:30 - 14:15</b></td>
+						<td class="tw25"><b>LP04</b></td>
+						<td class="tw25"><b>0.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>13:30 - 14:15</b></td>
+						<td class="tw25"><b>LP06</b></td>
+						<td class="tw25"><b>113.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>13:30 - 14:15</b></td>
+						<td class="tw25"><b>LP07</b></td>
+						<td class="tw25"><b>0.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>13:30 - 14:15</b></td>
+						<td class="tw25"><b>LP08</b></td>
+						<td class="tw25"><b>14.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>13:30 - 14:15</b></td>
+						<td class="tw25"><b>LP09</b></td>
+						<td class="tw25"><b>101.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>13:30 - 14:15</b></td>
+						<td class="tw25"><b>LP10</b></td>
+						<td class="tw25"><b>0.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>13:30 - 14:15</b></td>
+						<td class="tw25"><b>LP11</b></td>
+						<td class="tw25"><b>90.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>13:30 - 14:15</b></td>
+						<td class="tw25"><b>LP12</b></td>
+						<td class="tw25"><b>130.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>14:15 - 15:00</b></td>
+						<td class="tw25"><b>LP01</b></td>
+						<td class="tw25"><b>19.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>14:15 - 15:00</b></td>
+						<td class="tw25"><b>LP02</b></td>
+						<td class="tw25"><b>0.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>14:15 - 15:00</b></td>
+						<td class="tw25"><b>LP03</b></td>
+						<td class="tw25"><b>0.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>14:15 - 15:00</b></td>
+						<td class="tw25"><b>LP04</b></td>
+						<td class="tw25"><b>0.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>14:15 - 15:00</b></td>
+						<td class="tw25"><b>LP06</b></td>
+						<td class="tw25"><b>113.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>14:15 - 15:00</b></td>
+						<td class="tw25"><b>LP07</b></td>
+						<td class="tw25"><b>0.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>14:15 - 15:00</b></td>
+						<td class="tw25"><b>LP08</b></td>
+						<td class="tw25"><b>14.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>14:15 - 15:00</b></td>
+						<td class="tw25"><b>LP09</b></td>
+						<td class="tw25"><b>101.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>14:15 - 15:00</b></td>
+						<td class="tw25"><b>LP10</b></td>
+						<td class="tw25"><b>0.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>14:15 - 15:00</b></td>
+						<td class="tw25"><b>LP11</b></td>
+						<td class="tw25"><b>90.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>14:15 - 15:00</b></td>
+						<td class="tw25"><b>LP12</b></td>
+						<td class="tw25"><b>130.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:00 - 06:45</b></td>
+						<td class="tw25"><b>LP01</b></td>
+						<td class="tw25"><b>12.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:00 - 06:45</b></td>
+						<td class="tw25"><b>LP02</b></td>
+						<td class="tw25"><b>26.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:00 - 06:45</b></td>
+						<td class="tw25"><b>LP03</b></td>
+						<td class="tw25"><b>20.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:00 - 06:45</b></td>
+						<td class="tw25"><b>LP04</b></td>
+						<td class="tw25"><b>22.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:00 - 06:45</b></td>
+						<td class="tw25"><b>LP06</b></td>
+						<td class="tw25"><b>17.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:00 - 06:45</b></td>
+						<td class="tw25"><b>LP07</b></td>
+						<td class="tw25"><b>11.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:00 - 06:45</b></td>
+						<td class="tw25"><b>LP08</b></td>
+						<td class="tw25"><b>10.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:00 - 06:45</b></td>
+						<td class="tw25"><b>LP09</b></td>
+						<td class="tw25"><b>20.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:00 - 06:45</b></td>
+						<td class="tw25"><b>LP10</b></td>
+						<td class="tw25"><b>19.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:00 - 06:45</b></td>
+						<td class="tw25"><b>LP11</b></td>
+						<td class="tw25"><b>29.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:00 - 06:45</b></td>
+						<td class="tw25"><b>LP12</b></td>
+						<td class="tw25"><b>70.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:45 - 07:30</b></td>
+						<td class="tw25"><b>LP01</b></td>
+						<td class="tw25"><b>11.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:45 - 07:30</b></td>
+						<td class="tw25"><b>LP02</b></td>
+						<td class="tw25"><b>23.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:45 - 07:30</b></td>
+						<td class="tw25"><b>LP03</b></td>
+						<td class="tw25"><b>19.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:45 - 07:30</b></td>
+						<td class="tw25"><b>LP04</b></td>
+						<td class="tw25"><b>21.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:45 - 07:30</b></td>
+						<td class="tw25"><b>LP06</b></td>
+						<td class="tw25"><b>16.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:45 - 07:30</b></td>
+						<td class="tw25"><b>LP07</b></td>
+						<td class="tw25"><b>11.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:45 - 07:30</b></td>
+						<td class="tw25"><b>LP08</b></td>
+						<td class="tw25"><b>10.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:45 - 07:30</b></td>
+						<td class="tw25"><b>LP09</b></td>
+						<td class="tw25"><b>20.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:45 - 07:30</b></td>
+						<td class="tw25"><b>LP10</b></td>
+						<td class="tw25"><b>17.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:45 - 07:30</b></td>
+						<td class="tw25"><b>LP11</b></td>
+						<td class="tw25"><b>19.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>06:45 - 07:30</b></td>
+						<td class="tw25"><b>LP12</b></td>
+						<td class="tw25"><b>68.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>07:30 - 08:15</b></td>
+						<td class="tw25"><b>LP01</b></td>
+						<td class="tw25"><b>11.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>07:30 - 08:15</b></td>
+						<td class="tw25"><b>LP02</b></td>
+						<td class="tw25"><b>18.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>07:30 - 08:15</b></td>
+						<td class="tw25"><b>LP03</b></td>
+						<td class="tw25"><b>18.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>07:30 - 08:15</b></td>
+						<td class="tw25"><b>LP04</b></td>
+						<td class="tw25"><b>24.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>07:30 - 08:15</b></td>
+						<td class="tw25"><b>LP06</b></td>
+						<td class="tw25"><b>16.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>07:30 - 08:15</b></td>
+						<td class="tw25"><b>LP07</b></td>
+						<td class="tw25"><b>12.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>07:30 - 08:15</b></td>
+						<td class="tw25"><b>LP08</b></td>
+						<td class="tw25"><b>10.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>07:30 - 08:15</b></td>
+						<td class="tw25"><b>LP09</b></td>
+						<td class="tw25"><b>21.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>07:30 - 08:15</b></td>
+						<td class="tw25"><b>LP10</b></td>
+						<td class="tw25"><b>15.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>07:30 - 08:15</b></td>
+						<td class="tw25"><b>LP11</b></td>
+						<td class="tw25"><b>18.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>07:30 - 08:15</b></td>
+						<td class="tw25"><b>LP12</b></td>
+						<td class="tw25"><b>65.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>08:15 - 09:00</b></td>
+						<td class="tw25"><b>LP01</b></td>
+						<td class="tw25"><b>11.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>08:15 - 09:00</b></td>
+						<td class="tw25"><b>LP02</b></td>
+						<td class="tw25"><b>22.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>08:15 - 09:00</b></td>
+						<td class="tw25"><b>LP03</b></td>
+						<td class="tw25"><b>13.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>08:15 - 09:00</b></td>
+						<td class="tw25"><b>LP04</b></td>
+						<td class="tw25"><b>27.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>08:15 - 09:00</b></td>
+						<td class="tw25"><b>LP06</b></td>
+						<td class="tw25"><b>18.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>08:15 - 09:00</b></td>
+						<td class="tw25"><b>LP07</b></td>
+						<td class="tw25"><b>12.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>08:15 - 09:00</b></td>
+						<td class="tw25"><b>LP08</b></td>
+						<td class="tw25"><b>14.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>08:15 - 09:00</b></td>
+						<td class="tw25"><b>LP09</b></td>
+						<td class="tw25"><b>24.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>08:15 - 09:00</b></td>
+						<td class="tw25"><b>LP10</b></td>
+						<td class="tw25"><b>17.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>08:15 - 09:00</b></td>
+						<td class="tw25"><b>LP11</b></td>
+						<td class="tw25"><b>23.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>08:15 - 09:00</b></td>
+						<td class="tw25"><b>LP12</b></td>
+						<td class="tw25"><b>66.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:00 - 09:45</b></td>
+						<td class="tw25"><b>LP01</b></td>
+						<td class="tw25"><b>12.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:00 - 09:45</b></td>
+						<td class="tw25"><b>LP02</b></td>
+						<td class="tw25"><b>19.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:00 - 09:45</b></td>
+						<td class="tw25"><b>LP03</b></td>
+						<td class="tw25"><b>13.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:00 - 09:45</b></td>
+						<td class="tw25"><b>LP04</b></td>
+						<td class="tw25"><b>25.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:00 - 09:45</b></td>
+						<td class="tw25"><b>LP06</b></td>
+						<td class="tw25"><b>16.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:00 - 09:45</b></td>
+						<td class="tw25"><b>LP07</b></td>
+						<td class="tw25"><b>12.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:00 - 09:45</b></td>
+						<td class="tw25"><b>LP08</b></td>
+						<td class="tw25"><b>14.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:00 - 09:45</b></td>
+						<td class="tw25"><b>LP09</b></td>
+						<td class="tw25"><b>23.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:00 - 09:45</b></td>
+						<td class="tw25"><b>LP10</b></td>
+						<td class="tw25"><b>18.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:00 - 09:45</b></td>
+						<td class="tw25"><b>LP11</b></td>
+						<td class="tw25"><b>23.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:00 - 09:45</b></td>
+						<td class="tw25"><b>LP12</b></td>
+						<td class="tw25"><b>65.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:45 - 10:30</b></td>
+						<td class="tw25"><b>LP01</b></td>
+						<td class="tw25"><b>12.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:45 - 10:30</b></td>
+						<td class="tw25"><b>LP02</b></td>
+						<td class="tw25"><b>22.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:45 - 10:30</b></td>
+						<td class="tw25"><b>LP03</b></td>
+						<td class="tw25"><b>13.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:45 - 10:30</b></td>
+						<td class="tw25"><b>LP04</b></td>
+						<td class="tw25"><b>28.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:45 - 10:30</b></td>
+						<td class="tw25"><b>LP06</b></td>
+						<td class="tw25"><b>17.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:45 - 10:30</b></td>
+						<td class="tw25"><b>LP07</b></td>
+						<td class="tw25"><b>14.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:45 - 10:30</b></td>
+						<td class="tw25"><b>LP08</b></td>
+						<td class="tw25"><b>17.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:45 - 10:30</b></td>
+						<td class="tw25"><b>LP09</b></td>
+						<td class="tw25"><b>26.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:45 - 10:30</b></td>
+						<td class="tw25"><b>LP10</b></td>
+						<td class="tw25"><b>17.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:45 - 10:30</b></td>
+						<td class="tw25"><b>LP11</b></td>
+						<td class="tw25"><b>23.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>09:45 - 10:30</b></td>
+						<td class="tw25"><b>LP12</b></td>
+						<td class="tw25"><b>66.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>10:30 - 11:15</b></td>
+						<td class="tw25"><b>LP01</b></td>
+						<td class="tw25"><b>12.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>10:30 - 11:15</b></td>
+						<td class="tw25"><b>LP02</b></td>
+						<td class="tw25"><b>19.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>10:30 - 11:15</b></td>
+						<td class="tw25"><b>LP03</b></td>
+						<td class="tw25"><b>20.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>10:30 - 11:15</b></td>
+						<td class="tw25"><b>LP04</b></td>
+						<td class="tw25"><b>25.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>10:30 - 11:15</b></td>
+						<td class="tw25"><b>LP06</b></td>
+						<td class="tw25"><b>21.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>10:30 - 11:15</b></td>
+						<td class="tw25"><b>LP07</b></td>
+						<td class="tw25"><b>12.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>10:30 - 11:15</b></td>
+						<td class="tw25"><b>LP08</b></td>
+						<td class="tw25"><b>17.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>10:30 - 11:15</b></td>
+						<td class="tw25"><b>LP09</b></td>
+						<td class="tw25"><b>30.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>10:30 - 11:15</b></td>
+						<td class="tw25"><b>LP10</b></td>
+						<td class="tw25"><b>19.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>10:30 - 11:15</b></td>
+						<td class="tw25"><b>LP11</b></td>
+						<td class="tw25"><b>23.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>10:30 - 11:15</b></td>
+						<td class="tw25"><b>LP12</b></td>
+						<td class="tw25"><b>72.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>11:15 - 12:00</b></td>
+						<td class="tw25"><b>LP01</b></td>
+						<td class="tw25"><b>12.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>11:15 - 12:00</b></td>
+						<td class="tw25"><b>LP02</b></td>
+						<td class="tw25"><b>29.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>11:15 - 12:00</b></td>
+						<td class="tw25"><b>LP03</b></td>
+						<td class="tw25"><b>16.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>11:15 - 12:00</b></td>
+						<td class="tw25"><b>LP04</b></td>
+						<td class="tw25"><b>25.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>11:15 - 12:00</b></td>
+						<td class="tw25"><b>LP06</b></td>
+						<td class="tw25"><b>16.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>11:15 - 12:00</b></td>
+						<td class="tw25"><b>LP07</b></td>
+						<td class="tw25"><b>12.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>11:15 - 12:00</b></td>
+						<td class="tw25"><b>LP08</b></td>
+						<td class="tw25"><b>17.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>11:15 - 12:00</b></td>
+						<td class="tw25"><b>LP09</b></td>
+						<td class="tw25"><b>32.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>11:15 - 12:00</b></td>
+						<td class="tw25"><b>LP10</b></td>
+						<td class="tw25"><b>18.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>11:15 - 12:00</b></td>
+						<td class="tw25"><b>LP11</b></td>
+						<td class="tw25"><b>23.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>11:15 - 12:00</b></td>
+						<td class="tw25"><b>LP12</b></td>
+						<td class="tw25"><b>63.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:00 - 12:45</b></td>
+						<td class="tw25"><b>LP01</b></td>
+						<td class="tw25"><b>12.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:00 - 12:45</b></td>
+						<td class="tw25"><b>LP02</b></td>
+						<td class="tw25"><b>33.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:00 - 12:45</b></td>
+						<td class="tw25"><b>LP03</b></td>
+						<td class="tw25"><b>18.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:00 - 12:45</b></td>
+						<td class="tw25"><b>LP04</b></td>
+						<td class="tw25"><b>24.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:00 - 12:45</b></td>
+						<td class="tw25"><b>LP06</b></td>
+						<td class="tw25"><b>22.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:00 - 12:45</b></td>
+						<td class="tw25"><b>LP07</b></td>
+						<td class="tw25"><b>15.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:00 - 12:45</b></td>
+						<td class="tw25"><b>LP08</b></td>
+						<td class="tw25"><b>17.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:00 - 12:45</b></td>
+						<td class="tw25"><b>LP09</b></td>
+						<td class="tw25"><b>36.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:00 - 12:45</b></td>
+						<td class="tw25"><b>LP10</b></td>
+						<td class="tw25"><b>23.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:00 - 12:45</b></td>
+						<td class="tw25"><b>LP11</b></td>
+						<td class="tw25"><b>22.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:00 - 12:45</b></td>
+						<td class="tw25"><b>LP12</b></td>
+						<td class="tw25"><b>63.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:45 - 13:30</b></td>
+						<td class="tw25"><b>LP01</b></td>
+						<td class="tw25"><b>13.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:45 - 13:30</b></td>
+						<td class="tw25"><b>LP02</b></td>
+						<td class="tw25"><b>29.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:45 - 13:30</b></td>
+						<td class="tw25"><b>LP03</b></td>
+						<td class="tw25"><b>16.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:45 - 13:30</b></td>
+						<td class="tw25"><b>LP04</b></td>
+						<td class="tw25"><b>18.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:45 - 13:30</b></td>
+						<td class="tw25"><b>LP06</b></td>
+						<td class="tw25"><b>24.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:45 - 13:30</b></td>
+						<td class="tw25"><b>LP07</b></td>
+						<td class="tw25"><b>13.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:45 - 13:30</b></td>
+						<td class="tw25"><b>LP08</b></td>
+						<td class="tw25"><b>17.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:45 - 13:30</b></td>
+						<td class="tw25"><b>LP09</b></td>
+						<td class="tw25"><b>30.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:45 - 13:30</b></td>
+						<td class="tw25"><b>LP10</b></td>
+						<td class="tw25"><b>17.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:45 - 13:30</b></td>
+						<td class="tw25"><b>LP11</b></td>
+						<td class="tw25"><b>23.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>12:45 - 13:30</b></td>
+						<td class="tw25"><b>LP12</b></td>
+						<td class="tw25"><b>73.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>13:30 - 14:15</b></td>
+						<td class="tw25"><b>LP01</b></td>
+						<td class="tw25"><b>12.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>13:30 - 14:15</b></td>
+						<td class="tw25"><b>LP02</b></td>
+						<td class="tw25"><b>25.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>13:30 - 14:15</b></td>
+						<td class="tw25"><b>LP03</b></td>
+						<td class="tw25"><b>16.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>13:30 - 14:15</b></td>
+						<td class="tw25"><b>LP04</b></td>
+						<td class="tw25"><b>20.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>13:30 - 14:15</b></td>
+						<td class="tw25"><b>LP06</b></td>
+						<td class="tw25"><b>20.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>13:30 - 14:15</b></td>
+						<td class="tw25"><b>LP07</b></td>
+						<td class="tw25"><b>15.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>13:30 - 14:15</b></td>
+						<td class="tw25"><b>LP08</b></td>
+						<td class="tw25"><b>17.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>13:30 - 14:15</b></td>
+						<td class="tw25"><b>LP09</b></td>
+						<td class="tw25"><b>29.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>13:30 - 14:15</b></td>
+						<td class="tw25"><b>LP10</b></td>
+						<td class="tw25"><b>19.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>13:30 - 14:15</b></td>
+						<td class="tw25"><b>LP11</b></td>
+						<td class="tw25"><b>22.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>13:30 - 14:15</b></td>
+						<td class="tw25"><b>LP12</b></td>
+						<td class="tw25"><b>70.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>14:15 - 15:00</b></td>
+						<td class="tw25"><b>LP01</b></td>
+						<td class="tw25"><b>14.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>14:15 - 15:00</b></td>
+						<td class="tw25"><b>LP02</b></td>
+						<td class="tw25"><b>29.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>14:15 - 15:00</b></td>
+						<td class="tw25"><b>LP03</b></td>
+						<td class="tw25"><b>18.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>14:15 - 15:00</b></td>
+						<td class="tw25"><b>LP04</b></td>
+						<td class="tw25"><b>28.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>14:15 - 15:00</b></td>
+						<td class="tw25"><b>LP06</b></td>
+						<td class="tw25"><b>21.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>14:15 - 15:00</b></td>
+						<td class="tw25"><b>LP07</b></td>
+						<td class="tw25"><b>16.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>14:15 - 15:00</b></td>
+						<td class="tw25"><b>LP08</b></td>
+						<td class="tw25"><b>21.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>14:15 - 15:00</b></td>
+						<td class="tw25"><b>LP09</b></td>
+						<td class="tw25"><b>36.500</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>14:15 - 15:00</b></td>
+						<td class="tw25"><b>LP10</b></td>
+						<td class="tw25"><b>19.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>14:15 - 15:00</b></td>
+						<td class="tw25"><b>LP11</b></td>
+						<td class="tw25"><b>26.000</b></td></tr><tr><td class="tw25"><b>2016-07-01</b></td>
+						<td class="tw25"><b>14:15 - 15:00</b></td>
+						<td class="tw25"><b>LP12</b></td>
+						<td class="tw25"><b>74.000</b></td></tr>			</tbody>		
+		</table>
+		<div id="canvas-holder-spread" style="width: 90%; display: none;"><iframe class="chartjs-hidden-iframe" style="width: 100%; display: block; border: 0px; height: 0px; margin: 0px; position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px;" src="./liquidity_files/saved_resource.html"></iframe>
+			<canvas id="chart-area-spread" width="0" height="0" style="width: 0px; height: 0px;">
+		</canvas></div>			
+	</div>
+	<div class="col-md-12 subDiv subWidth49 backlight" align="center">	
+		<div class="smallHeader">
+			<p>AVERAGE SPREADS CHANGE BETWEEN LAST WEEK AND THIS WEEK (TICKS)</p>
+		</div>
+		<table align="right" class="table table-hover table-bordered table-striped stattable">
+			<thead>
+				<tr>
+				  <th class="tw25">LP</th>
+				  <th class="tw25">LAST WEEK</th>
+				  <th class="tw25">THIS WEEK</th>
+				  <th class="tw25">DIFFERENCE</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+			<td class="tw25"><b>LP01</b></td>
+			<td class="tw25"><b>12.736</b></td>
+			<td class="tw25"><b>14.188</b></td>
+			<td class="tw25"><b>1.451</b></td>
+		</tr><tr>
+			<td class="tw25"><b>LP02</b></td>
+			<td class="tw25"><b>31.900</b></td>
+			<td class="tw25"><b>26.938</b></td>
+			<td class="tw25"><b>-4.963</b></td>
+		</tr><tr>
+			<td class="tw25"><b>LP03</b></td>
+			<td class="tw25"><b>19.758</b></td>
+			<td class="tw25"><b>16.375</b></td>
+			<td class="tw25"><b>-3.383</b></td>
+		</tr><tr>
+			<td class="tw25"><b>LP04</b></td>
+			<td class="tw25"><b>45.194</b></td>
+			<td class="tw25"><b>25.000</b></td>
+			<td class="tw25"><b>-20.194</b></td>
+		</tr><tr>
+			<td class="tw25"><b>LP05</b></td>
+			<td class="tw25"><b> - </b></td>
+			<td class="tw25"><b>-</b></td>
+			<td class="tw25"><b> - </b></td>
+		</tr><tr>
+			<td class="tw25"><b>LP06</b></td>
+			<td class="tw25"><b>21.917</b></td>
+			<td class="tw25"><b>30.521</b></td>
+			<td class="tw25"><b>8.604</b></td>
+		</tr><tr>
+			<td class="tw25"><b>LP07</b></td>
+			<td class="tw25"><b>15.358</b></td>
+			<td class="tw25"><b>12.313</b></td>
+			<td class="tw25"><b>-3.046</b></td>
+		</tr><tr>
+			<td class="tw25"><b>LP08</b></td>
+			<td class="tw25"><b>15.425</b></td>
+			<td class="tw25"><b>14.208</b></td>
+			<td class="tw25"><b>-1.217</b></td>
+		</tr><tr>
+			<td class="tw25"><b>LP09</b></td>
+			<td class="tw25"><b>33.667</b></td>
+			<td class="tw25"><b>39.354</b></td>
+			<td class="tw25"><b>5.687</b></td>
+		</tr><tr>
+			<td class="tw25"><b>LP10</b></td>
+			<td class="tw25"><b>19.217</b></td>
+			<td class="tw25"><b>17.792</b></td>
+			<td class="tw25"><b>-1.425</b></td>
+		</tr><tr>
+			<td class="tw25"><b>LP11</b></td>
+			<td class="tw25"><b>25.808</b></td>
+			<td class="tw25"><b>31.188</b></td>
+			<td class="tw25"><b>5.379</b></td>
+		</tr><tr>
+			<td class="tw25"><b>LP12</b></td>
+			<td class="tw25"><b>67.475</b></td>
+			<td class="tw25"><b>75.063</b></td>
+			<td class="tw25"><b>7.587</b></td>
+		</tr>			</tbody>		
+		</table>
+	</div>
+</div>
+<div class="row subRow subHeight25">
+	<div class="col-xs-12 subDiv subWidth99 backlight" style="padding: 1%;">
+		<div id="spreadsDiffChart"><div style="position: relative;"><div dir="ltr" style="position: relative; width: 1400px; height: 200px;"><div style="position: absolute; left: 0px; top: 0px; width: 100%; height: 100%;" aria-label="A chart."><svg width="1400" height="200" aria-label="A chart." style="overflow: hidden;"><defs id="defs"><clippath id="_ABSTRACT_RENDERER_ID_1"><rect x="131" y="38" width="1139" height="124"></rect></clippath></defs><rect x="0" y="0" width="1400" height="200" stroke="none" stroke-width="0" fill="#f2f2f2"></rect><g><text text-anchor="start" x="131" y="24.25" font-family="Arial" font-size="15" font-weight="bold" stroke="none" stroke-width="0" fill="#000000">Spreads Comparison for Pair01</text><rect x="131" y="11.5" width="1139" height="15" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect></g><g><rect x="1285" y="38" width="100" height="79" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><rect x="1285" y="38" width="100" height="35" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="1321" y="50.75" font-family="Arial" font-size="15" stroke="none" stroke-width="0" fill="#222222">THIS</text><text text-anchor="start" x="1321" y="70.75" font-family="Arial" font-size="15" stroke="none" stroke-width="0" fill="#222222">WEEK</text></g><rect x="1285" y="38" width="30" height="15" stroke="none" stroke-width="0" fill="#3366cc"></rect></g><g><rect x="1285" y="82" width="100" height="35" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g><text text-anchor="start" x="1321" y="94.75" font-family="Arial" font-size="15" stroke="none" stroke-width="0" fill="#222222">LAST</text><text text-anchor="start" x="1321" y="114.75" font-family="Arial" font-size="15" stroke="none" stroke-width="0" fill="#222222">WEEK</text></g><rect x="1285" y="82" width="30" height="15" stroke="none" stroke-width="0" fill="#dc3912"></rect></g></g><g><rect x="131" y="38" width="1139" height="124" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect><g clip-path="url(http://localhost/ServerStatus/Liquidity/LiquidityByLP.php?beginDate=2016-07-01#_ABSTRACT_RENDERER_ID_1)"><g><rect x="131" y="161" width="1139" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="131" y="130" width="1139" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="131" y="100" width="1139" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="131" y="69" width="1139" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect><rect x="131" y="38" width="1139" height="1" stroke="none" stroke-width="0" fill="#cccccc"></rect></g><g><rect x="150" y="145" width="28" height="16" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="244" y="129" width="29" height="32" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="339" y="142" width="29" height="19" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="434" y="131" width="29" height="30" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="624" y="124" width="29" height="37" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="719" y="147" width="28" height="14" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="813" y="145" width="29" height="16" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="908" y="114" width="29" height="47" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="1003" y="140" width="29" height="21" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="1098" y="124" width="29" height="37" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="1193" y="70" width="29" height="91" stroke="none" stroke-width="0" fill="#3366cc"></rect><rect x="179" y="146" width="29" height="15" stroke="none" stroke-width="0" fill="#dc3912"></rect><rect x="274" y="123" width="29" height="38" stroke="none" stroke-width="0" fill="#dc3912"></rect><rect x="369" y="138" width="29" height="23" stroke="none" stroke-width="0" fill="#dc3912"></rect><rect x="464" y="106" width="29" height="55" stroke="none" stroke-width="0" fill="#dc3912"></rect><rect x="654" y="135" width="28" height="26" stroke="none" stroke-width="0" fill="#dc3912"></rect><rect x="748" y="143" width="29" height="18" stroke="none" stroke-width="0" fill="#dc3912"></rect><rect x="843" y="143" width="29" height="18" stroke="none" stroke-width="0" fill="#dc3912"></rect><rect x="938" y="121" width="29" height="40" stroke="none" stroke-width="0" fill="#dc3912"></rect><rect x="1033" y="138" width="29" height="23" stroke="none" stroke-width="0" fill="#dc3912"></rect><rect x="1128" y="130" width="29" height="31" stroke="none" stroke-width="0" fill="#dc3912"></rect><rect x="1223" y="79" width="28" height="82" stroke="none" stroke-width="0" fill="#dc3912"></rect></g><g><rect x="131" y="161" width="1139" height="1" stroke="none" stroke-width="0" fill="#333333"></rect></g></g><g></g><g><g><text text-anchor="middle" x="178.91666666666666" y="177.41666666666666" font-family="Arial" font-size="15" stroke="none" stroke-width="0" fill="#222222">LP01</text></g><g><text text-anchor="middle" x="273.75" y="177.41666666666666" font-family="Arial" font-size="15" stroke="none" stroke-width="0" fill="#222222">LP02</text></g><g><text text-anchor="middle" x="368.5833333333333" y="177.41666666666666" font-family="Arial" font-size="15" stroke="none" stroke-width="0" fill="#222222">LP03</text></g><g><text text-anchor="middle" x="463.41666666666663" y="177.41666666666666" font-family="Arial" font-size="15" stroke="none" stroke-width="0" fill="#222222">LP04</text></g><g><text text-anchor="middle" x="558.25" y="177.41666666666666" font-family="Arial" font-size="15" stroke="none" stroke-width="0" fill="#222222">LP05</text></g><g><text text-anchor="middle" x="653.0833333333333" y="177.41666666666666" font-family="Arial" font-size="15" stroke="none" stroke-width="0" fill="#222222">LP06</text></g><g><text text-anchor="middle" x="747.9166666666666" y="177.41666666666666" font-family="Arial" font-size="15" stroke="none" stroke-width="0" fill="#222222">LP07</text></g><g><text text-anchor="middle" x="842.75" y="177.41666666666666" font-family="Arial" font-size="15" stroke="none" stroke-width="0" fill="#222222">LP08</text></g><g><text text-anchor="middle" x="937.5833333333333" y="177.41666666666666" font-family="Arial" font-size="15" stroke="none" stroke-width="0" fill="#222222">LP09</text></g><g><text text-anchor="middle" x="1032.4166666666665" y="177.41666666666666" font-family="Arial" font-size="15" stroke="none" stroke-width="0" fill="#222222">LP10</text></g><g><text text-anchor="middle" x="1127.25" y="177.41666666666666" font-family="Arial" font-size="15" stroke="none" stroke-width="0" fill="#222222">LP11</text></g><g><text text-anchor="middle" x="1222.0833333333333" y="177.41666666666666" font-family="Arial" font-size="15" stroke="none" stroke-width="0" fill="#222222">LP12</text></g><g><text text-anchor="end" x="116" y="166.75" font-family="Arial" font-size="15" stroke="none" stroke-width="0" fill="#444444">0</text></g><g><text text-anchor="end" x="116" y="136" font-family="Arial" font-size="15" stroke="none" stroke-width="0" fill="#444444">25</text></g><g><text text-anchor="end" x="116" y="105.25" font-family="Arial" font-size="15" stroke="none" stroke-width="0" fill="#444444">50</text></g><g><text text-anchor="end" x="116" y="74.5" font-family="Arial" font-size="15" stroke="none" stroke-width="0" fill="#444444">75</text></g><g><text text-anchor="end" x="116" y="43.75" font-family="Arial" font-size="15" stroke="none" stroke-width="0" fill="#444444">100</text></g></g></g><g><g><text text-anchor="middle" x="700.5" y="195.08333333333331" font-family="Arial" font-size="15" font-style="italic" stroke="none" stroke-width="0" fill="#222222">Liquidity Provider</text><rect x="131" y="182.33333333333331" width="1139" height="15" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></rect></g><g><text text-anchor="middle" x="51.25" y="100" font-family="Arial" font-size="15" font-style="italic" transform="rotate(-90 51.25 100)" stroke="none" stroke-width="0" fill="#222222">Spread in ticks</text><path d="M38.5,162L38.50000000000001,38L53.50000000000001,38L53.5,162Z" stroke="none" stroke-width="0" fill-opacity="0" fill="#ffffff"></path></g></g><g></g></svg><div aria-label="A tabular representation of the data in the chart." style="position: absolute; left: -10000px; top: auto; width: 1px; height: 1px; overflow: hidden;"><table><thead><tr><th>LP</th><th>THIS WEEK</th><th>LAST WEEK</th></tr></thead><tbody><tr><td>LP01</td><td>14.188</td><td>12.736</td></tr><tr><td>LP02</td><td>26.938</td><td>31.9</td></tr><tr><td>LP03</td><td>16.375</td><td>19.758</td></tr><tr><td>LP04</td><td>25</td><td>45.194</td></tr><tr><td>LP05</td><td>NaN</td><td>NaN</td></tr><tr><td>LP06</td><td>30.521</td><td>21.917</td></tr><tr><td>LP07</td><td>12.313</td><td>15.358</td></tr><tr><td>LP08</td><td>14.208</td><td>15.425</td></tr><tr><td>LP09</td><td>39.354</td><td>33.667</td></tr><tr><td>LP10</td><td>17.792</td><td>19.217</td></tr><tr><td>LP11</td><td>31.188</td><td>25.808</td></tr><tr><td>LP12</td><td>75.063</td><td>67.475</td></tr></tbody></table></div></div></div><div aria-hidden="true" style="display: none; position: absolute; top: 210px; left: 1410px; white-space: nowrap; font-family: Arial; font-size: 15px;">LAST</div><div></div></div></div>
+	</div>
+</div>
+
+
+</div>
+</div> <!-- this is the end of the main section, it's in here so we don't have to put it in every page -->
+<div class="col-xs-2" id="vertical_data_bar">
+	<div class="row">
+		<div class="col-xs-12 verticalarea backlight rounded">
+			<div class="row">
+				<div class="col-xs-12 verticalsmall bg-danger">
+					<div class="row" align="left" style="padding-left: 15px;">
+						<font size="5"><b>MTD USD Volume</b></font>
+					</div>
+					<div class="row" align="center">
+						<div class="col-md-12 verticaltiny backlight">
+							<font size="5"><b>$4,048,622,829</b></font>
+						</div>
+					</div>
+					<div class="row" align="right">
+						<a href="http://localhost/ServerStatus/Liquidity/LiquidityByLP.php?beginDate=2016-07-01#" id="volumeDetails" class="viewDetails">View Details</a>
+					</div>
+					<div class="row" id="volumeStats" style="display: none;">
+						<div class="col-xs-12">
+							<table class="table table-striped table-bordered tableVolumestats">
+								<tbody><tr><td><b>VWAP</b></td><td>$3,898,500,705</td></tr>
+								<tr><td><b>ALGO</b></td><td>$150,122,124</td></tr>
+							</tbody></table>
+							<table class="table table-striped table-bordered tableVolumestats">
+								<tbody><tr><td><b>Lower Q.</b></td><td>$24,294,599,443</td></tr>
+								<tr><td><b>Median</b></td><td>$26,268,624,353</td></tr>
+								<tr><td><b>Upper Q.</b></td><td>$32,332,781,642</td></tr>
+							</tbody></table>
+						</div>
+					</div>
+				</div>
+			</div>		
+			<div class="row">
+				<div class="col-xs-12 verticalsmall backdark">
+					<div class="row" align="left" style="padding-left: 15px;">
+						<font size="5"><b>MTD Reject Items</b></font>
+					</div>
+					<div class="row" align="center">
+						<div class="col-xs-12 verticaltiny backlight">
+							<font size="5"><b>128 (3.6%)</b></font>
+						</div>
+					</div>
+					<div class="row" align="right">
+						<a href="http://localhost/ServerStatus/Liquidity/LiquidityByLP.php?beginDate=2016-07-01#" id="rejectDetails" class="viewDetails">View Details</a>
+					</div>
+					<div class="row" id="rejectStats" style="display: none;">
+						<div class="col-xs-12">
+							<table class="table table-striped table-bordered tableRejectstats">
+								<tbody><tr><td><b>Lower Q.</b></td><td>1125 </td></tr>
+								<tr><td><b>Median</b></td><td>1403</td></tr>
+								<tr><td><b>Upper Q.</b></td><td>2736 </td></tr>
+							</tbody></table>
+						</div>
+					</div>
+				</div>
+			</div>			
+			<div class="row">
+				<div class="col-xs-12 verticalsmall backdark">
+					<div class="row" align="left" style="padding-left: 15px;">
+						<font size="5"><b>Trader Actions Count</b></font>
+					</div>
+					<div class="row" align="center">
+						<div class="col-md-12 verticaltiny backlight">
+							<font size="5"><b>3563</b></font>
+						</div>
+					</div>
+					<div class="row" align="right">
+						<a href="http://localhost/ServerStatus/Liquidity/LiquidityByLP.php?beginDate=2016-07-01#" id="traderActionDetails" class="viewDetails">View Details</a>
+					</div>
+					<div class="row" id="traderActionStats" style="display: none;">
+						<div class="col-xs-12">
+							<table class="table table-striped table-bordered tableTraderActionStats">
+								<tbody><tr><td><b>Lower Q.</b></td><td>23724 </td></tr>
+								<tr><td><b>Median</b></td><td>24702</td></tr>
+								<tr><td><b>Upper Q.</b></td><td>29563 </td></tr>
+							</tbody></table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row" style="margin-top: 10px; margin-bottom: 5px;">
+		<div class="col-xs-6" align="center">
+			<a href="http://localhost/ServerStatus/Panel_Details/TraderActionsSpecific.php?beginDate=2016-07-01" class="btn btn-default subbtn">MTD ACTIVITY</a>
+		</div>
+		<div class="col-xs-6" align="center">
+			<a href="http://localhost/ServerStatus/Panel_Details/RejectStatsSpecific.php?beginDate=2016-07-01" class="btn btn-default subbtn">MTD REJECTS</a>
+		</div>
+	</div>
+	<div class="row" style="margin-top: 5px; margin-bottom: 5px;">
+		<div class="col-xs-6" align="center">
+			<a href="http://localhost/ServerStatus/Hit_Ratios/HitRatios.php?beginDate=2016-07-01" class="btn btn-default subbtn">CLIENT HIT RATIO</a>
+		</div>
+		<div class="col-xs-6" align="center">
+			<a href="http://localhost/ServerStatus/Panel_Details/VolumeStats.php" class="btn btn-default subbtn">VOLUME STATS</a>
+		</div>
+	</div>
+	<div class="row" style="margin-top: 5px; margin-bottom: 5px;">
+		<div class="col-xs-6" align="center">
+			<a href="http://localhost/ServerStatus/Panel_Details/BuySellGeneral.php?beginDate=2016-07-01" class="btn btn-default subbtn">BUYS AND SELLS</a>
+		</div>
+		<div class="col-xs-6" align="center">
+			<a href="http://localhost/ServerStatus/Positions/Positions.php?beginDate=2016-07-01" class="btn btn-default subbtn">TRADER POSITION</a>
+		</div>
+	</div>
+	<div class="row" style="margin-top: 5px; margin-bottom: 10px;">
+		<div class="col-xs-6" align="center">
+			<a href="http://localhost/ServerStatus/Liquidity/LiquidityByLP.php?beginDate=2016-07-01" class="btn btn-default subbtn">LIQUIDITY</a>
+		</div>
+		<div class="col-xs-6" align="center">
+			<a href="http://localhost/ServerStatus/Panel_Details/LS.php?beginDate=2016-07-01" class="btn btn-default subbtn">LS PAIRS</a>
+		</div>
+	</div>
+	<div id="server_data_table" class="row"><div class="col-md-12 verticalarea backlight rounded">
+	<div class="row">
+		<div align="center" style="margin-top: 10px;">
+			<p><font size="3">Server Connection Status</font></p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12 servertable">
+			<table id="servertable" class="table table-bordered">
+				<tbody>
+					<tr><td class="good"><b>mako</b></td><td class="good"><b>mackerel</b></td></tr><tr><td class="good"><b>cod</b></td><td class="good"><b>coho</b></td></tr><tr><td class="good"><b>tang</b></td><td class="good"><b>wahoo</b></td></tr><tr><td class="good"><b>cobia</b></td><td class="good"><b>goby</b></td></tr><tr><td class="good"><b>pike</b></td><td class="good"><b>koi</b></td></tr>	
+				</tbody>		
+			</table>
+		</div>
+	</div>
+</div></div>
+</div>
+
+<!-- This is the end of the body. It is in vertical bar so we don't have to put it in every page -->
+</div>
+</div>
+
+<script>
+    window.setInterval("refreshDiv()", 10000);
+    function refreshDiv(){
+		var mypath="..\/";
+    	 $("#server_data_table").load(mypath+"ServerData.php");
+    }
+	
+	$("#volumeStats").hide();
+	$("[id=volumeDetails]").on("click", function(event){
+        event.preventDefault();
+		if($("#volumeStats").is(':visible')){
+			$("#volumeStats").hide();
+		}
+		else{
+			$("#volumeStats").show();
+		}
+    });
+    $("#rejectStats").on("click", function(event){
+        $("#rejectStats").hide();
+    });
+	
+    $("#rejectStats").hide();
+    $("[id=rejectDetails]").on("click", function(event){
+        event.preventDefault();
+		if($("#rejectStats").is(':visible')){
+			$("#rejectStats").hide();
+		}
+		else{
+			$("#rejectStats").show();
+		}
+    });
+    $("#rejectStats").on("click", function(event){
+        $("#rejectStats").hide();
+    });
+
+    $("#traderActionStats").hide();
+    $("[id=traderActionDetails]").on("click", function(event){
+        event.preventDefault();
+		if($("#traderActionStats").is(':visible')){
+			$("#traderActionStats").hide();
+		}
+		else{
+			$("#traderActionStats").show();
+		}
+    });
+    $("#traderActionStats").on("click", function(event){
+        $("#traderActionStats").hide();
+    });
+</script><script src="./liquidity_files/Chart.bundle.js"></script>
+<script type="text/javascript">		
+	google.charts.setOnLoadCallback(drawChart);
+	if (document.addEventListener) {
+		window.addEventListener('resize', drawChart);
+	}
+	else if (document.attachEvent) {
+		window.attachEvent('onresize', drawChart);
+	}
+	else {
+		window.resize = drawChart;
+	}
+	
+	function drawChart() {
+		var lpNames = ["LP01","LP02","LP03","LP04","LP05","LP06","LP07","LP08","LP09","LP10","LP11","LP12"];
+		var lpOneSpreads = ["12.736","31.900","19.758","45.194"," - ","21.917","15.358","15.425","33.667","19.217","25.808","67.475"];
+		var lpTwoSpreads = ["14.188","26.938","16.375","25.000","-","30.521","12.313","14.208","39.354","17.792","31.188","75.063"];
+		var comparisonData = new google.visualization.DataTable();
+		comparisonData.addColumn('string', 'LP');
+		comparisonData.addColumn('number', "THIS WEEK");
+		comparisonData.addColumn('number', "LAST WEEK");
+		for(var j=0; j < lpOneSpreads.length; j++){    
+			yesterdaySpread = parseFloat(lpTwoSpreads[j]);
+			previousSpread = parseFloat(lpOneSpreads[j]);
+			comparisonData.addRows([
+				[lpNames[j], yesterdaySpread, previousSpread]
+			]);			
+		}
+
+		var spreadsComparisonOptions = {
+			title: "Spreads Comparison for Pair01",
+
+			vAxes: {
+				0:{
+					title: "Spread in ticks", 
+				}
+			},
+			hAxes: {
+				0: {
+					title: "Liquidity Provider",
+				}   
+			},
+			width: 1400,
+			height: 200,
+			backgroundColor: '#F2F2F2'
+		}
+		var spreadsDiffChart = new google.visualization.ColumnChart(document.getElementById('spreadsDiffChart'));       
+		spreadsDiffChart.draw(comparisonData, spreadsComparisonOptions);
+	}
+		
+	$("#pairSelection").change(updateSelection);
+	$("#locationSelection").change(updateSelection);
+	$("#spreadSelection").change(updateSelection);
+	function updateSelection(){
+		var curpair = document.getElementById("pairSelection").options[document.getElementById("pairSelection").selectedIndex].value;
+		var curclient = document.getElementById("locationSelection").options[document.getElementById("locationSelection").selectedIndex].value;
+		var curspread = document.getElementById("spreadSelection").options[document.getElementById("spreadSelection").selectedIndex].value;
+		window.location.href = "LiquidityByLP.php?pair="+curpair+"&spread="+curspread+"&bexclientid="+curclient+"&beginDate=2016-07-01";
+	};
+	var configSpreads = {
+			type: 'line',
+			data: {
+				labels: ["06:00","06:45","07:30","08:15","09:00","09:45","10:30","11:15","12:00","12:45","13:30","14:15"],
+				datasets: [{
+					label: "LP09",
+					fill: false,
+					backgroundColor: "red",
+					borderColor: "red",
+					pointStyle: 'rectRot',
+					pointRadius: 6,
+					borderWidth: 4,
+					data: ["23.000","24.000","31.000","26.500","33.500","36.500","29.500","24.500","33.500","45.500","37.000","33.000","23.500","31.000","37.500","35.500","27.000","31.000","32.500","44.000","49.000","101.000","101.000","101.000","20.500","20.500","21.500","24.000","23.000","26.000","30.500","32.500","36.000","30.000","29.500","36.500"],
+				},
+				{
+					label: "LP11",
+					fill: false,
+					backgroundColor: "darkgoldenrod",
+					pointStyle: 'rectRot',
+					pointRadius: 6,
+					borderWidth: 4,
+					borderColor: "darkgoldenrod",
+					data: ["29.000","22.000","26.000","18.000","26.000","24.500","21.000","19.500","22.000","28.000","27.000","25.000","30.000","22.500","21.500","26.000","23.500","25.000","19.000","19.500","29.000","77.000","90.000","90.000","29.000","19.500","18.000","23.000","23.000","23.000","23.500","23.000","22.000","23.500","22.000","26.000"],
+				},
+				{
+					label: "LP12",
+					fill: false,
+					backgroundColor: "green",
+					borderWidth: 4,
+					pointStyle: 'rectRot',
+					pointRadius: 6,
+					borderColor: "green",
+					data: ["73.000","63.500","74.500","61.500","68.500","63.000","62.500","64.000","65.500","65.500","70.000","64.000","71.000","66.000","61.000","64.000","68.000","64.000","67.500","61.500","71.500","130.000","130.000","130.000","70.000","68.000","65.000","66.500","65.000","66.000","72.000","63.000","63.500","73.500","70.500","74.000"],
+				},
+				{
+					label: "LP02",
+					fill: false,
+					backgroundColor: "teal",
+					borderWidth: 4,
+					pointStyle: 'rectRot',
+					pointRadius: 6,
+					borderColor: "teal",
+					data: ["31.500","39.500","32.000","28.000","25.500","31.000","31.000","24.500","29.000","37.000","31.000","31.000","35.000","33.500","29.500","24.000","29.500","21.000","16.500","32.500","45.000","82.000","0.000","0.000","26.500","23.500","18.500","22.500","19.000","22.000","19.000","29.500","33.500","29.500","25.000","29.500"],
+				},
+				{
+					label: "LP03",
+					fill: false,
+					backgroundColor: "lightblue",
+					borderWidth: 4,
+					pointStyle: 'rectRot',
+					pointRadius: 6,
+					borderColor: "lightblue",
+					data: ["21.000","16.500","16.500","17.000","16.000","16.000","15.000","17.500","18.500","24.500","19.000","18.000","16.000","15.000","15.500","17.000","15.000","15.000","18.500","22.000","24.000","32.000","0.000","0.000","20.000","19.000","18.000","13.500","13.000","13.500","20.000","16.500","18.500","16.000","16.500","18.500"],
+				}], 
+			},
+	    options: {
+	    	 scales: {
+	    	        xAxes: [{
+	    	          scaleLabel: {
+	    	        	        display: true,
+	    	        	        labelString: 'Time of Day',
+	    	       	  },
+	    	          ticks: {}
+	    	        }],
+	    	        yAxes: [{
+	    	       	  scaleLabel: {
+	    	        	        display: true,
+	    	        	        labelString: 'Ticks Spread',
+	    	       	  },
+	    	          ticks: {
+	    	        	  beginAtZero:true,
+	    	           	// Return an empty string to draw the tick line but hide the tick label
+	    	           	// Return `null` or `undefined` to hide the tick line entirely
+	    	           	userCallback: function(value, index, values) {
+	    	                // Convert the number to a string and splite the string every 3 charaters from the end
+	    	                value = value.toString();
+	    	                value = value.split(/(?=(?:...)*$)/);
+	    	                
+	    	                // Convert the array to a string and format the output
+	    	                value = value.join(',');
+	    	                return value;
+	    	            	}
+	    	          }
+	    	        }]
+	    	      },
+	        responsive: true,
+	    },
+	};
+	
+	$("#canvas-holder-spread").hide();
+	$("[id=canvas-holder-spread]").on("click", function(event){
+		event.preventDefault();
+		$("#canvas-holder-spread").hide();
+		$("#spreadsTable").show();
+	});
+	$("[id=spreadsTable]").on("click", function(event){
+		event.preventDefault();
+		$("#spreadsTable").hide();
+		$("#canvas-holder-spread").show();
+	});
+
+	 window.onload = function() {
+	        var ctxSpreads = document.getElementById("chart-area-spread").getContext("2d");
+	        window.myPie = new Chart(ctxSpreads, configSpreads);
+	 };
+</script><div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable ui-resizable" tabindex="-1" role="dialog" aria-describedby="dialog-form" aria-labelledby="ui-id-1" style="display: none; position: absolute;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix ui-draggable-handle"><span id="ui-id-1" class="ui-dialog-title">Contact Us</span><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close" role="button" title="Close"><span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span><span class="ui-button-text">Close</span></button></div><div id="dialog-form" class="ui-dialog-content ui-widget-content">
+  <p class="validateTips">All form fields are required.</p>
+  <form id="contactUsForm" name="contactUsFormName" action="http://localhost/ServerStatus/Liquidity/ContactUs.php" method="post">
+    <fieldset>
+      <label for="subject">Subject</label>
+      <input type="text" name="subject" id="subject" value="" class="text ui-widget-content ui-corner-all">
+      <label for="msg">Message</label>
+      <textarea rows="10" cols="50" name="msg" id="msg" value="" class="text ui-widget-content ui-corner-all"></textarea>
+      <!-- Allow form submission with keyboard without duplicating the dialog button -->
+      <input type="button" id="btnSubmit" name="btnSubmit" value="Submit" style="position:absolute; top:-1000px" class="ui-button ui-widget ui-state-default ui-corner-all" role="button">
+    </fieldset>
+  </form>
+</div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button"><span class="ui-button-text">Send Message</span></button><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button"><span class="ui-button-text">Cancel</span></button></div></div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div></div></body></html>

@@ -1,0 +1,89 @@
+@CHARSET "ISO-8859-1";
+
+#vertical_data_bar{
+	max-width: 18%;
+	max-height: 100%;
+	margin-top: 1%;
+}
+
+.backlight{
+	background-color: rgb(242,242,242);
+	border-radius: 10px;
+}
+
+.backdark {
+	background-color: rgb(228,228,228);
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-radius: 10px;
+}
+
+.subbtn{ 	width: 120%; }
+.subbtn2{	width: 110%; }
+
+.mainbtn{
+	margin-left: 5%;
+}
+
+.verticalarea{
+	max-width: 97%;
+	margin-left: 13px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+.verticalsmall{
+	margin-left: 5%;
+	margin-right: 5%;
+	margin-top: 5px;
+	margin-bottom: 5px;
+	padding-top:5px;
+	padding-bottom: 5px;
+	max-width: 90%;
+	border-radius: 10px;
+}
+
+.verticaltiny{
+	margin-right: 5px;
+	margin-left: 5px;
+	text-align: center;
+	max-width: 95%;
+}
+
+#servertable td{
+	width: 50%;
+	text-align: center;
+}
+
+.good{
+	background-color: 66CC00;
+}
+.bad{
+	background-color: red;
+}
+.reported{
+	background-color: yellow;
+}
+
+.table {
+	background-color: #EBECE4;
+}
+
+.smallUSD {
+	color:white;	
+}
+
+.smallHeader {
+	color: rgb(0, 0, 0);
+	max-height: 10%; 
+	margin: 5px 5px 5px 5px;
+}
+
+.viewDetails {
+	color: #0080ff;
+	padding-right: 20px;
+}
+
+.percentChecker {
+	color: grey;
+}

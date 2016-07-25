@@ -1,0 +1,10 @@
+#table-example {font-family: 'Open Sans', sans-serif;}
+#table-example .bs-table {width: 500px; border-collapse: collapse; border-spacing: 0;}
+#table-example .bs-table tbody, #table-example .bs-table thead {display: block; width: 500px;}
+#table-example .bs-table tbody {overflow-x: hidden; overflow-y: scroll;  max-height: 150px;}
+#table-example .bs-table tr {width: 100%;}
+#table-example .bs-table td {padding: 3px 0px; text-align: center;}
+#table-example .bs-table thead:last-child() td {padding-right: 17px}
+
+#table-example .bs-table {border: none}
+#table-example .bs-table td {border:1px solid #333;}

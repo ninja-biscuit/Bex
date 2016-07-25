@@ -1,0 +1,29 @@
+body {padding: 50px;}
+#styleguide section {display: block; float: left; width: 100%; padding-bottom: 30px}
+.styleguide-h1 {font-size: 54px; color:#999; font-weight: 300; margin-bottom:40px; display: block; font-family: 'Open Sans', sans-serif;}
+.styleguide-h1 small {color: #333; font-weight: 400; font-size: 26px; margin-left: 10px}
+.gray-bckgrnd {background-color: #f5f5f5; padding: 55px 45px; display: table;}
+.styleguide-h2 {color: #333; font-size: 30px; font-weight: 400; border-bottom: 1px solid #dcdcdc; padding-bottom: 10px; margin-bottom: 45px; display: block;}
+.styleguide-h2 span {font-size: 18px; color: #999; margin-right: 10px}
+.styleguide-h4 {font-size: 16px; color:#999; font-weight: 300}
+.styleguide-p {color: #999; display: block; font-size: 14px; margin-bottom: 35px; border-left: 2px solid #adbfde; padding-left: 10px; line-height: 20px}
+.styleguide-p strong {color: #888}
+
+dl.color-palette {display: table; margin-right: 70px; margin-bottom: 35px; float: left;}
+dl.color-palette dt {font-size: 16px; color: #999; margin-bottom: 12px}
+dl.color-palette dd {float: left; font-size:12px; color:#999; background-color: #fff; display: block; width: 64px; padding-bottom: 7px; text-align: center; margin-right: 16px}
+dl.color-palette dd span.color-box {display: block; width:64px; height:53px; background-color: ; float: left; margin-bottom: 7px}
+
+#fonts table {float: left; width: 440px}
+#fonts table {margin-right: 150px}
+.headers-list .font-style-descrption, .numbers-list .font-style-descrption, .body-txt .font-style-descrption {color: #999; display: inline-block; font-size: 14px;}
+.headers-list h1, .headers-list h2, .headers-list h3, .headers-list h4, .headers-list .captions, .headers-list .declaimers {display: inline-block; width: 140px;}
+.headers-list dt, .numbers-list dt, .body-txt dt, .tabs-list dt {margin-bottom: 35px}
+.headers-list dd, .numbers-list dd, .body-txt dd, .tabs-list dd {margin-bottom: 23px}
+.numbers-list .number-big, .numbers-list .number-med {display: inline-block; width: 140px;}
+.number-big {color: #2c7bc7; font-family: "Fjalla One",sans-serif; font-size: 28px;}
+.number-med {font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: #586c8f; font-weight: 600}
+#action-buttons {float: left;}
+#action-buttons td, #action-buttons-icon td {padding:5px 40px 17px 5px}
+.tabs-list dd {float: left; width: 50%}
+.pull-right {float: right;}

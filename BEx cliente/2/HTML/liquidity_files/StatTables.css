@@ -1,0 +1,77 @@
+@CHARSET "ISO-8859-1";
+
+table.stattable {
+    width: 100%;
+	height: 85%;
+    border-spacing: 0;
+    border: 1px solid lightgrey;
+    border-bottom: none;
+}
+
+table.stattable th,
+table.stattable td,
+table.stattable tr,
+table.stattable thead,
+table.stattable tbody { display: block; text-align: center; }
+
+table.voltable td{ 	text-align: left; }
+
+table.stattable thead tr {
+    /* fallback */
+    width: 97%;
+    /* minus stattable bar width */
+    width: -webkit-calc(100% - 16px);
+    width:    -moz-calc(100% - 16px);
+    width:         calc(100% - 16px);
+}
+
+table.stattable tr:after {
+    content: ' ';
+    display: block;
+    visibility: hidden;
+    clear: both;
+}
+
+table.stattable tbody {
+    height: 90%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+table.stattable tbody td,
+table.stattable thead th {
+    float: left;
+    border-right: 1px solid lightgrey;
+}
+
+.tw5{	width: 5%;		}
+.tw8{	width: 8%;		}
+.tw10{	width: 10%;		}
+.tw12{	width: 12%;		}
+.tw125{	width: 12.5%;	}
+.tw15{	width: 15%;		}
+.tw20{	width: 20%;		}
+.tw25{	width: 25%;		}
+.tw30{	width: 30%;		}
+.tw33{	width: 33%;		}
+.tw35{	width: 35%;		}
+.tw37{	width: 37%;		}
+.tw40{	width: 40%;		}
+.tw45{	width: 45%;		}
+.tw50{	width: 50%;		}
+.tw55{	width: 55%;		}
+.tw60{	width: 60%;		}
+
+table.stattable thead tr th { 
+    height: 30px;
+    line-height: 15px;
+}
+
+table.stattable tbody tr td { 
+    height: 30px;
+    line-height: 15px;
+}
+
+table.stattable tbody td:last-child, thead th:last-child {
+    border-right: none !important;
+}

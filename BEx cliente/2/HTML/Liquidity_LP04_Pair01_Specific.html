@@ -1,0 +1,472 @@
+
+<!-- saved from url=(0133)http://localhost/ServerStatus/Liquidity/Liquidity_LP_Specific.php?Pair=Pair01&lpname=LP04&liquiditySource=London&beginDate=2016-07-01 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<meta http-equiv="refresh" content="900">
+	<link rel="stylesheet" href="./Liquidity_LP04_Pair01_Specific_files/bootstrap.min.css">
+	<link rel="stylesheet" href="./Liquidity_LP04_Pair01_Specific_files/font-awesome.min.css">
+	<link rel="stylesheet" href="./Liquidity_LP04_Pair01_Specific_files/HealthPlatform.css" type="text/css">
+	<link rel="stylesheet" href="./Liquidity_LP04_Pair01_Specific_files/StatTables.css" type="text/css">
+	<link rel="stylesheet" href="./Liquidity_LP04_Pair01_Specific_files/subPages.css" type="text/css">
+	<link rel="stylesheet" href="./Liquidity_LP04_Pair01_Specific_files/topBar.css" type="text/css">
+	<script src="./Liquidity_LP04_Pair01_Specific_files/jquery.min.js"></script>
+	<script src="./Liquidity_LP04_Pair01_Specific_files/bootstrap.min.js"></script>
+	<script src="./Liquidity_LP04_Pair01_Specific_files/jquery.min.js"></script>
+	<script type="text/javascript" src="./Liquidity_LP04_Pair01_Specific_files/jsapi"></script>
+	<script type="text/javascript" src="./Liquidity_LP04_Pair01_Specific_files/loader.js"></script>
+	<script type="text/javascript">google.charts.load('current', {'packages':['corechart']});</script><link id="load-css-0" rel="stylesheet" type="text/css" href="./Liquidity_LP04_Pair01_Specific_files/util.css">
+<link id="load-css-1" rel="stylesheet" type="text/css" href="./Liquidity_LP04_Pair01_Specific_files/tooltip.css"></head>
+
+
+
+<!-- This is the beginning of the body. It is in top bar so we don't have to put it in every page -->
+<body>
+<script type="text/javascript" src="./Liquidity_LP04_Pair01_Specific_files/jsapi_compiled_format_module.js"></script><script type="text/javascript" src="./Liquidity_LP04_Pair01_Specific_files/jsapi_compiled_default_module.js"></script><script type="text/javascript" src="./Liquidity_LP04_Pair01_Specific_files/jsapi_compiled_ui_module.js"></script><script type="text/javascript" src="./Liquidity_LP04_Pair01_Specific_files/jsapi_compiled_corechart_module.js"></script><div class="container-fluid" style="background-color: rgb(228,228,228);">
+<div class="row" style="margin: 5px 5px 5px 5px;">
+<div class="col-xs-10">
+
+<!-- Beginning of the top bar -->
+<div class="row" style="max-height: 5%;">
+	<div class="col-xs-2">
+		<div class="row">
+			<div class="col-xs-4">
+				<button id="homeButton" class="topBarButton">Home Page</button>
+			</div>
+			<div class="col-xs-4">
+				
+
+
+  <link rel="stylesheet" href="./Liquidity_LP04_Pair01_Specific_files/jquery-ui.css">
+  <script src="./Liquidity_LP04_Pair01_Specific_files/jquery-1.10.2.js"></script>
+  <script src="./Liquidity_LP04_Pair01_Specific_files/jquery-ui.js"></script>
+  <link rel="stylesheet" href="./Liquidity_LP04_Pair01_Specific_files/topBar.css" type="text/css">
+
+
+
+<button id="contact-support" class="topBarButton ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button"><span class="ui-button-text">Contact Us</span></button>
+
+    <script>
+  $(function() {
+    var dialog, form,
+ 
+      // From http://www.whatwg.org/specs/web-apps/current-work/multipage/states-of-the-type-attribute.html#e-mail-state-%28type=email%29
+      subject = $( "#subject" ),
+      msg = $( "#msg" ),
+      allFields = $( [] ).add( subject ).add( msg ),
+      tips = $( ".validateTips" );
+ 
+    function updateTips( t ) {
+      tips
+        .text( t )
+        .addClass( "ui-state-highlight" );
+      setTimeout(function() {
+        tips.removeClass( "ui-state-highlight", 1500 );
+      }, 500 );
+    }
+ 
+    function checkLength( o, n, min, max ) {
+      if ( o.val().length > max || o.val().length < min ) {
+        o.addClass( "ui-state-error" );
+        updateTips( "Length of " + n + " must be between " +
+          min + " and " + max + "." );
+        return false;
+      } else {
+        return true;
+      }
+    }
+    function submitContact() {
+    	
+      var valid = true;
+      allFields.removeClass( "ui-state-error" );
+      valid = valid && checkLength( subject, "subject", 2, 50 );
+      valid = valid && checkLength( msg, "msg", 3, 500 );
+      if ( valid ) {
+    	 // dialog.dialog( "close" );
+         var frm = document.getElementsByName('contactUsFormName')[0];
+    	  frm.submit(); // Submit
+    	  frm.reset();  // Reset
+      }
+      return valid;
+    }
+    dialog = $( "#dialog-form" ).dialog({
+      autoOpen: false,
+      height: 400,
+      width: 525,
+      modal: true,
+      buttons: {
+        "Send Message": submitContact,
+        Cancel: function() {
+        dialog.dialog( "close" );
+        }
+      },
+      close: function() {
+    	var frm = document.getElementsByName('contactUsFormName')[0];
+        frm.reset();
+        allFields.removeClass( "ui-state-error" );
+      }
+    });
+ 
+    $( "#btnSubmit" ).button().on( "click", function() {
+    	 event.preventDefault();
+    	 $(function() {
+ 		    $('form').submit(function() {
+ 		        $.ajax({
+ 		            type: 'POST',
+ 		            url: 'ContactUs.php',
+ 		            data: { subject: $(this).subject.value, 
+ 		                    msg: $(this).msg.value }
+ 		        });
+ 		        return false;
+ 		    }); 
+ 		})
+    	
+    });
+ 
+    $( "#contact-support" ).button().on( "click", function() {
+      dialog.dialog( "open" );
+    });
+  });
+  </script>			</div>
+			<div class="col-xs-4"></div>
+		</div>
+	</div>
+	<div class="col-xs-10"></div>
+</div>
+<div class="row" style="max-height: 10%;background-color: rgb(255,255,255); margin-bottom: 20px; padding-top: 5px;">
+	<div class="col-xs-3" align="left">
+		<a href="http://localhost/ServerStatus/HealthPlatform.php"><img src="./Liquidity_LP04_Pair01_Specific_files/bexllc-logo.jpg" height="65px" width="65px" style="margin-left:20px;"></a>
+	</div>
+	<div class="col-md-9" align="right">
+		<form method="get" style="margin-top: 10px;">
+			<label class="radio-inline">
+				<input type="radio" name="beginDate" class="radio timePeriod" value="2016-07-07"> <span><b>TOD</b></span>        
+			</label>
+			<label class="radio-inline">
+				<input type="radio" id="weekRadioButton" name="beginDate" class="radio timePeriod" value="2016-07-03"><span><b>WTD</b></span>
+			</label>
+			<label class="radio-inline">
+				<input type="radio" id="monthRadioButton" name="beginDate" class="radio timePeriod" value="2016-07-01" checked=""><span><b>MTD</b></span>
+			</label>
+			<label class="radio-inline">
+				<input type="radio" id="yearRadioButton" name="beginDate" class="radio timePeriod" value="2016-01-01"><span><b>YTD</b></span>
+			</label>
+			<input id="updateDate" type="button" value="Update Date">
+		</form>
+	</div>
+</div>
+<div id="MainInfo">
+<script>
+	$("[id=homeButton]").on("click", function(event){
+		var homeurl = "..\/";
+		window.location.href = homeurl+"HealthPlatform.php";
+	});
+	
+	$("[id=updateDate]").on("click", function(event){
+		var url = decodeURIComponent(window.location),
+		urlComps = url.split('?'),
+		finalurl = urlComps[0] + "?",
+		i;
+		
+		if(urlComps.length > 1){
+			var querysplit = urlComps[1].split('&');
+			for(i = 0 ; i < querysplit.length ; i++){
+				var curcomp = querysplit[i].split('=');
+				
+				if(curcomp[0] != 'beginDate' != 0){
+					finalurl = finalurl + querysplit[i] + "&";
+				}
+			}
+		}
+		
+		var beginDate = '',
+		updater = document.forms[0];
+		for(i = 0 ; i < updater.length ; i++){
+			if(updater[i].checked){
+				beginDate = updater[i].value;
+			}
+		}
+		
+		finalurl = finalurl + "beginDate=" + beginDate;
+		window.location.href = finalurl;
+	});
+	
+	var getUrlParameter = function getUrlParameter(sParam) {
+		var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+			sURLVariables = sPageURL.split('&'),
+			sParameterName,
+			i;
+		for (i = 0; i < sURLVariables.length; i++) {
+			sParameterName = sURLVariables[i].split('=');
+
+			if (sParameterName[0] === sParam) {
+				return sParameterName[1] === undefined ? true : sParameterName[1];
+			}
+		}
+	};
+</script>
+<div class="row subTitleRow">
+	<div class="col-md-11" align="left">
+		<div class="titleDiv titleDivLarge backlight" align="center">
+			<p><b><font size="4">LP Liquidity Stats For LP04 In London On Pair01</font></b></p>
+		</div>
+	</div>
+</div>
+<div class="row subRow subHeight60">
+    <div class="col-md-12 subDiv subWidth100 backlight" align="center" style="padding: 2%;">	
+		<table align="center" class="table table-hover table-bordered table-striped stattable">
+			<thead>
+				<tr>
+					<th class="tw25">Date</th>
+										<th class="tw25">Rank Type</th>
+					<th class="tw25">Component Value</th>
+					<th class="tw25">Tier for Rank Type</th>
+				</tr>
+			</thead>
+			<tbody>	
+				<tr><td class="tw25"><b>2016-07-01</b></td>
+							<td class="tw25"><b>Quote Level</b> </td>
+							<td class="tw25"><b>0.05</b> </td>
+							<td class="tw25"><b>1</b> </td>
+						</tr><tr><td class="tw25"><b>2016-07-01</b></td>
+							<td class="tw25"><b>Percent Time Inside Bid</b> </td>
+							<td class="tw25"><b>35.8</b> </td>
+							<td class="tw25"><b>2</b> </td>
+						</tr><tr><td class="tw25"><b>2016-07-01</b></td>
+							<td class="tw25"><b>Percent Time Inside Ask</b> </td>
+							<td class="tw25"><b>36.7</b> </td>
+							<td class="tw25"><b>2</b> </td>
+						</tr><tr><td class="tw25"><b>2016-07-04</b></td>
+							<td class="tw25"><b>Percent Time Inside Ask</b> </td>
+							<td class="tw25"><b>40.4</b> </td>
+							<td class="tw25"><b>1</b> </td>
+						</tr><tr><td class="tw25"><b>2016-07-04</b></td>
+							<td class="tw25"><b>Quote Level</b> </td>
+							<td class="tw25"><b>0.04</b> </td>
+							<td class="tw25"><b>2</b> </td>
+						</tr><tr><td class="tw25"><b>2016-07-04</b></td>
+							<td class="tw25"><b>Percent Time Inside Bid</b> </td>
+							<td class="tw25"><b>27.9</b> </td>
+							<td class="tw25"><b>2</b> </td>
+						</tr><tr><td class="tw25"><b>2016-07-05</b></td>
+							<td class="tw25"><b>Quote Level</b> </td>
+							<td class="tw25"><b>0.02</b> </td>
+							<td class="tw25"><b>1</b> </td>
+						</tr><tr><td class="tw25"><b>2016-07-05</b></td>
+							<td class="tw25"><b>Percent Time Inside Bid</b> </td>
+							<td class="tw25"><b>33.3</b> </td>
+							<td class="tw25"><b>2</b> </td>
+						</tr><tr><td class="tw25"><b>2016-07-05</b></td>
+							<td class="tw25"><b>Percent Time Inside Ask</b> </td>
+							<td class="tw25"><b>50</b> </td>
+							<td class="tw25"><b>1</b> </td>
+						</tr>			</tbody>		
+		</table>
+		<div class="row">
+			<div class="col-md-3" id="backToLiqMain">
+				<a href="http://localhost/ServerStatus/Liquidity/LiquidityByLP.php" class="btn btn-default">MAIN LIQUIDITY PAGE</a> 
+			</div>
+			<div class="col-md-3" id="backToLiqSpe">
+				<a href="http://localhost/ServerStatus/Liquidity/Liquidity_LP_Specific.php?lpname=LP04&amp;liquiditySource=London" id="liqSpeBtn" class="btn btn-default">LP04 LIQUIDITY PAGE</a> 
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+</div> <!-- this is the end of the main section, it's in here so we don't have to put it in every page -->
+<div class="col-xs-2" id="vertical_data_bar">
+	<div class="row">
+		<div class="col-xs-12 verticalarea backlight rounded">
+			<div class="row">
+				<div class="col-xs-12 verticalsmall bg-danger">
+					<div class="row" align="left" style="padding-left: 15px;">
+						<font size="5"><b>MTD USD Volume</b></font>
+					</div>
+					<div class="row" align="center">
+						<div class="col-md-12 verticaltiny backlight">
+							<font size="5"><b>$4,048,622,829</b></font>
+						</div>
+					</div>
+					<div class="row" align="right">
+						<a href="http://localhost/ServerStatus/Liquidity/Liquidity_LP_Specific.php?Pair=Pair01&amp;lpname=LP04&amp;liquiditySource=London&amp;beginDate=2016-07-01#" id="volumeDetails" class="viewDetails">View Details</a>
+					</div>
+					<div class="row" id="volumeStats" style="display: none;">
+						<div class="col-xs-12">
+							<table class="table table-striped table-bordered tableVolumestats">
+								<tbody><tr><td><b>VWAP</b></td><td>$3,898,500,705</td></tr>
+								<tr><td><b>ALGO</b></td><td>$150,122,124</td></tr>
+							</tbody></table>
+							<table class="table table-striped table-bordered tableVolumestats">
+								<tbody><tr><td><b>Lower Q.</b></td><td>$24,294,599,443</td></tr>
+								<tr><td><b>Median</b></td><td>$26,268,624,353</td></tr>
+								<tr><td><b>Upper Q.</b></td><td>$32,332,781,642</td></tr>
+							</tbody></table>
+						</div>
+					</div>
+				</div>
+			</div>		
+			<div class="row">
+				<div class="col-xs-12 verticalsmall backdark">
+					<div class="row" align="left" style="padding-left: 15px;">
+						<font size="5"><b>MTD Reject Items</b></font>
+					</div>
+					<div class="row" align="center">
+						<div class="col-xs-12 verticaltiny backlight">
+							<font size="5"><b>128 (3.6%)</b></font>
+						</div>
+					</div>
+					<div class="row" align="right">
+						<a href="http://localhost/ServerStatus/Liquidity/Liquidity_LP_Specific.php?Pair=Pair01&amp;lpname=LP04&amp;liquiditySource=London&amp;beginDate=2016-07-01#" id="rejectDetails" class="viewDetails">View Details</a>
+					</div>
+					<div class="row" id="rejectStats" style="display: none;">
+						<div class="col-xs-12">
+							<table class="table table-striped table-bordered tableRejectstats">
+								<tbody><tr><td><b>Lower Q.</b></td><td>1125 </td></tr>
+								<tr><td><b>Median</b></td><td>1403</td></tr>
+								<tr><td><b>Upper Q.</b></td><td>2736 </td></tr>
+							</tbody></table>
+						</div>
+					</div>
+				</div>
+			</div>			
+			<div class="row">
+				<div class="col-xs-12 verticalsmall backdark">
+					<div class="row" align="left" style="padding-left: 15px;">
+						<font size="5"><b>Trader Actions Count</b></font>
+					</div>
+					<div class="row" align="center">
+						<div class="col-md-12 verticaltiny backlight">
+							<font size="5"><b>3563</b></font>
+						</div>
+					</div>
+					<div class="row" align="right">
+						<a href="http://localhost/ServerStatus/Liquidity/Liquidity_LP_Specific.php?Pair=Pair01&amp;lpname=LP04&amp;liquiditySource=London&amp;beginDate=2016-07-01#" id="traderActionDetails" class="viewDetails">View Details</a>
+					</div>
+					<div class="row" id="traderActionStats" style="display: none;">
+						<div class="col-xs-12">
+							<table class="table table-striped table-bordered tableTraderActionStats">
+								<tbody><tr><td><b>Lower Q.</b></td><td>23724 </td></tr>
+								<tr><td><b>Median</b></td><td>24702</td></tr>
+								<tr><td><b>Upper Q.</b></td><td>29563 </td></tr>
+							</tbody></table>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row" style="margin-top: 10px; margin-bottom: 5px;">
+		<div class="col-xs-6" align="center">
+			<a href="http://localhost/ServerStatus/Panel_Details/TraderActionsSpecific.php?beginDate=2016-07-01" class="btn btn-default subbtn">MTD ACTIVITY</a>
+		</div>
+		<div class="col-xs-6" align="center">
+			<a href="http://localhost/ServerStatus/Panel_Details/RejectStatsSpecific.php?beginDate=2016-07-01" class="btn btn-default subbtn">MTD REJECTS</a>
+		</div>
+	</div>
+	<div class="row" style="margin-top: 5px; margin-bottom: 5px;">
+		<div class="col-xs-6" align="center">
+			<a href="http://localhost/ServerStatus/Hit_Ratios/HitRatios.php?beginDate=2016-07-01" class="btn btn-default subbtn">CLIENT HIT RATIO</a>
+		</div>
+		<div class="col-xs-6" align="center">
+			<a href="http://localhost/ServerStatus/Panel_Details/VolumeStats.php" class="btn btn-default subbtn">VOLUME STATS</a>
+		</div>
+	</div>
+	<div class="row" style="margin-top: 5px; margin-bottom: 5px;">
+		<div class="col-xs-6" align="center">
+			<a href="http://localhost/ServerStatus/Panel_Details/BuySellGeneral.php?beginDate=2016-07-01" class="btn btn-default subbtn">BUYS AND SELLS</a>
+		</div>
+		<div class="col-xs-6" align="center">
+			<a href="http://localhost/ServerStatus/Positions/Positions.php?beginDate=2016-07-01" class="btn btn-default subbtn">TRADER POSITION</a>
+		</div>
+	</div>
+	<div class="row" style="margin-top: 5px; margin-bottom: 10px;">
+		<div class="col-xs-6" align="center">
+			<a href="http://localhost/ServerStatus/Liquidity/LiquidityByLP.php?beginDate=2016-07-01" class="btn btn-default subbtn">LIQUIDITY</a>
+		</div>
+		<div class="col-xs-6" align="center">
+			<a href="http://localhost/ServerStatus/Panel_Details/LS.php?beginDate=2016-07-01" class="btn btn-default subbtn">LS PAIRS</a>
+		</div>
+	</div>
+	<div id="server_data_table" class="row"><div class="col-md-12 verticalarea backlight rounded">
+	<div class="row">
+		<div align="center" style="margin-top: 10px;">
+			<p><font size="3">Server Connection Status</font></p>
+		</div>
+	</div>
+	<div class="row">
+		<div class="col-md-12 servertable">
+			<table id="servertable" class="table table-bordered">
+				<tbody>
+					<tr><td class="good"><b>mako</b></td><td class="good"><b>mackerel</b></td></tr><tr><td class="good"><b>cod</b></td><td class="good"><b>coho</b></td></tr><tr><td class="good"><b>tang</b></td><td class="good"><b>wahoo</b></td></tr><tr><td class="good"><b>cobia</b></td><td class="good"><b>goby</b></td></tr><tr><td class="good"><b>pike</b></td><td class="good"><b>koi</b></td></tr>	
+				</tbody>		
+			</table>
+		</div>
+	</div>
+</div></div>
+</div>
+
+<!-- This is the end of the body. It is in vertical bar so we don't have to put it in every page -->
+</div>
+</div>
+
+<script>
+    window.setInterval("refreshDiv()", 10000);
+    function refreshDiv(){
+		var mypath="..\/";
+    	 $("#server_data_table").load(mypath+"ServerData.php");
+    }
+	
+	$("#volumeStats").hide();
+	$("[id=volumeDetails]").on("click", function(event){
+        event.preventDefault();
+		if($("#volumeStats").is(':visible')){
+			$("#volumeStats").hide();
+		}
+		else{
+			$("#volumeStats").show();
+		}
+    });
+    $("#rejectStats").on("click", function(event){
+        $("#rejectStats").hide();
+    });
+	
+    $("#rejectStats").hide();
+    $("[id=rejectDetails]").on("click", function(event){
+        event.preventDefault();
+		if($("#rejectStats").is(':visible')){
+			$("#rejectStats").hide();
+		}
+		else{
+			$("#rejectStats").show();
+		}
+    });
+    $("#rejectStats").on("click", function(event){
+        $("#rejectStats").hide();
+    });
+
+    $("#traderActionStats").hide();
+    $("[id=traderActionDetails]").on("click", function(event){
+        event.preventDefault();
+		if($("#traderActionStats").is(':visible')){
+			$("#traderActionStats").hide();
+		}
+		else{
+			$("#traderActionStats").show();
+		}
+    });
+    $("#traderActionStats").on("click", function(event){
+        $("#traderActionStats").hide();
+    });
+</script><div class="ui-dialog ui-widget ui-widget-content ui-corner-all ui-front ui-dialog-buttons ui-draggable ui-resizable" tabindex="-1" role="dialog" aria-describedby="dialog-form" aria-labelledby="ui-id-1" style="display: none; position: absolute;"><div class="ui-dialog-titlebar ui-widget-header ui-corner-all ui-helper-clearfix ui-draggable-handle"><span id="ui-id-1" class="ui-dialog-title">Contact Us</span><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-icon-only ui-dialog-titlebar-close" role="button" title="Close"><span class="ui-button-icon-primary ui-icon ui-icon-closethick"></span><span class="ui-button-text">Close</span></button></div><div id="dialog-form" class="ui-dialog-content ui-widget-content">
+  <p class="validateTips">All form fields are required.</p>
+  <form id="contactUsForm" name="contactUsFormName" action="http://localhost/ServerStatus/Liquidity/ContactUs.php" method="post">
+    <fieldset>
+      <label for="subject">Subject</label>
+      <input type="text" name="subject" id="subject" value="" class="text ui-widget-content ui-corner-all">
+      <label for="msg">Message</label>
+      <textarea rows="10" cols="50" name="msg" id="msg" value="" class="text ui-widget-content ui-corner-all"></textarea>
+      <!-- Allow form submission with keyboard without duplicating the dialog button -->
+      <input type="button" id="btnSubmit" name="btnSubmit" value="Submit" style="position:absolute; top:-1000px" class="ui-button ui-widget ui-state-default ui-corner-all" role="button">
+    </fieldset>
+  </form>
+</div><div class="ui-dialog-buttonpane ui-widget-content ui-helper-clearfix"><div class="ui-dialog-buttonset"><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button"><span class="ui-button-text">Send Message</span></button><button type="button" class="ui-button ui-widget ui-state-default ui-corner-all ui-button-text-only" role="button"><span class="ui-button-text">Cancel</span></button></div></div><div class="ui-resizable-handle ui-resizable-n" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-e" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-s" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-w" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-se ui-icon ui-icon-gripsmall-diagonal-se" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-sw" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-ne" style="z-index: 90;"></div><div class="ui-resizable-handle ui-resizable-nw" style="z-index: 90;"></div></div></body></html>

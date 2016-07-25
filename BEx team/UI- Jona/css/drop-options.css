@@ -1,0 +1,10 @@
+
+.drop {position: relative;}
+select.bex-assets {display: none}
+.drop .button {background-color:#2c7bc7; color: #fff; font-family:'Fjalla One', sans-serif; font-size:16px; display: inline-block; text-transform: uppercase; padding: 8px 19px; border-radius: 5px; min-width: 160px}
+.button .ion-chevron-down {margin-left: 19px; cursor: pointer; float: right;}
+.list-container {position: absolute; display: none; min-width: 198px; padding-top: 18px}
+.list-container > ul {background-color:#fff; box-shadow: 0 5px 5px 0px #c5c5c5; list-style: none; padding: 20px; margin: 0; display: table; min-width: 158px; border-radius: 5px}
+.list-container > ul > li {font-size: 16px; color: #888888; font-family: Arial, Helvetica, sans-serif; cursor: pointer; margin-bottom: 10px}
+.list-container > ul > li:last-child { margin-bottom: 0px}
+.tip {content: ""; position: absolute; width: 0; height: 0; border-width: 10px; border-style: solid; border-color: transparent transparent #FFFFFF transparent; top: -2px; right: 16px}

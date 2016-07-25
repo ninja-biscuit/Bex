@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>table example</title>
+	<link rel="stylesheet" href="table_example.css">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700' rel='stylesheet' type='text/css'>
+	<!--link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>	
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body id="table-example">
+<table class="bs-table">
+	<thead>
+		<tr>
+			<td>col 1</td>
+			<td>col 2</td>
+			<td>col 3</td>
+			<td>col 4</td>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>col 1 fila 1</td>
+			<td>col 2 fila 1</td>
+			<td>col 3 fila 1</td>
+			<td>col 4 fila 1</td>
+		</tr>
+		<tr>
+			<td>col 1 fila 2</td>
+			<td>col 2 fila 2</td>
+			<td>col 3 fila 2</td>
+			<td>col 4 fila 2</td>
+		</tr>
+		<tr>
+			<td>col 1 fila 3</td>
+			<td>col 2 fila 3</td>
+			<td>col 3 fila 3</td>
+			<td>col 4 fila 3</td>
+		</tr>
+		<tr>
+			<td>col 1 fila 4</td>
+			<td>col 2 fila 4</td>
+			<td>col 3 fila 4</td>
+			<td>col 4 fila 4</td>
+		</tr>
+		<tr>
+			<td>col 1 fila 5</td>
+			<td>col 2 fila 5</td>
+			<td>col 3 fila 5</td>
+			<td>col 4 fila 5</td>
+		</tr>			
+		<tr>
+			<td>col 1 fila 6</td>
+			<td>col 2 fila 6</td>
+			<td>col 3 fila 6</td>
+			<td>col 4 fila 6</td>
+		</tr>
+		<tr>
+			<td>col 1 fila 7</td>
+			<td>col 2 fila 7</td>
+			<td>col 3 fila 7</td>
+			<td>col 4 fila 7</td>
+		</tr>	
+		<tr>
+			<td>col 1 fila 8</td>
+			<td>col 2 fila 8</td>
+			<td>col 3 fila 8</td>
+			<td>col 4 fila 8</td>
+		</tr>
+	</tbody>
+</table>
+<script type="text/javascript">
+	$(document).ready(function(){
+		// each col with the same width
+		var tableWidth = $('.bs-table').width();
+		var tdLength = $('.bs-table > thead td').length;
+		var tdAutoWidth = tableWidth / tdLength/* * 100 / tableWidth + "%"*/;
+		console.log("td width: " + tdAutoWidth);
+		$('.bs-table td').width(tdAutoWidth);
+		$('.bs-table thead td').last().css('padding-right', '17px');
+
+		
+		
+
+	});
+</script>
+</body>
+</html>

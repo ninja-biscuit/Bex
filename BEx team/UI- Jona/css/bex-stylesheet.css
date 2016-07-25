@@ -1,0 +1,76 @@
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0;  font-size: 100%; vertical-align: baseline;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {content: ''; content: none;}
+table {border-collapse: collapse; border-spacing: 0;}
+button {cursor: pointer}
+
+html {font-family: 'Open Sans', sans-serif; margin: 0; padding: 0}
+.bex-styles .no-block {display: inline-block;}
+.bex-styles h1 {font-family: 'Yanone Kaffeesatz', sans-serif; font-size:34px ; font-weight:400 ; color: #2c7bc7; text-transform: uppercase;}
+.bex-styles h2 {font-family: 'Yanone Kaffeesatz', sans-serif; font-size:32px; color: #586c8f; font-weight:400; margin-top: 0}
+.bex-styles h3 {color: #586c8f; font-family: 'Fjalla One', sans-serif; font-size: 20px; font-weight:400; display: block;}
+.bex-styles h4 {color: #2c7bc7; font-family: 'Fjalla One', sans-serif; font-size: 16px;  font-weight:400; display: block;}
+.bex-styles h5, .bex-styles h6 {color: #2c7bc7; font-family: 'Fjalla One', sans-serif; font-size: 16px;  font-weight:400; display: block;}
+.bex-styles p {color: #999; display: block; font-size: 14px; margin-bottom: 14px}
+.bex-styles p.inline {display: inline-block;}
+.bex-styles a {color: #2c7bc7; font-size: 16px; font-family: Arial, Helvetica, sans-serif; text-decoration: none;}
+.bex-styles a:hover {color: #23629e; text-decoration: underline;}
+.bex-styles code {background-color: #223a67; color: #adbfde; font-size: 12px; width: 100%; padding: 8px 10px;}
+.bex-styles .captions {font-size: 14px; font-family: Arial, Helvetica, sans-serif; color: #888; font-weight: 400}
+.bex-styles .declaimers {font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: #888;}
+.bex-styles .number-big {color: #2c7bc7; font-family: "Fjalla One",sans-serif; font-size: 28px;}
+.bex-styles .number-med {font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: #586c8f; font-weight: 600}
+.bex-styles .button {border-radius: 5px; display: inline-block; font-family: "Fjalla One",sans-serif; font-size: 16px; padding: 6px 50px; text-transform: uppercase;}
+.bex-styles .blue-button {background-color: #2c7bc7; border: none; color: #fff;}
+.bex-styles .gray-button {background-color: #ececec; border: 1px solid #586c8f; color: #586c8f; padding: 5px 50px;}
+.bex-styles .blue-button:hover {background-color: #23629e; color: #fff;}
+.bex-styles .gray-button:hover {background-color: #586c8f; border: 1px solid #586c8f; color: #fff; padding: 5px 50px;}
+.bex-styles #action-buttons-icon {float: right;}
+.bex-styles #action-buttons-icon td {padding-right: 30px}
+.bex-styles .blue-button .bex-icon-pin {display: inline-block; width: 14px; height: 20px; background-image: url("../img/iconmonstr-location-1.svg"); background-size: cover; margin-right: 15px; position: relative; top: 2px}
+.bex-styles .gray-button .bex-icon-pin {display: inline-block; width: 14px; height: 20px; background-image: url("../img/iconmonstr-location-2.svg"); background-size: cover; margin-right: 15px; position: relative; top: 2px}
+.bex-styles .gray-button:hover .bex-icon-pin {display: inline-block; width: 14px; height: 20px; background-image: url("../img/iconmonstr-location-1.svg"); background-size: cover; margin-right: 15px; position: relative; top: 2px}
+
+.bex-styles .drop {position: relative; display: inline-block;}
+.bex-styles select.bex-assets {display: none}
+.bex-styles .drop .button {background-color:#2c7bc7; color: #fff; font-family:'Fjalla One', sans-serif; font-size:16px; display: inline-block; text-transform: uppercase; padding: 8px 19px; border-radius: 5px; min-width: 160px}
+.bex-styles .button .ion-chevron-down {margin-left: 19px; cursor: pointer; float: right;}
+.bex-styles .list-container {position: absolute; display: none; min-width: 198px; padding-top: 18px}
+.bex-styles .list-container > ul {background-color:#fff; box-shadow: 0 5px 5px 0px #c5c5c5; list-style: none; padding: 20px; margin: 0; display: table; min-width: 158px; border-radius: 5px}
+.bex-styles .list-container > ul > li {font-size: 16px; color: #888888; font-family: Arial, Helvetica, sans-serif; cursor: pointer; margin-bottom: 10px}
+.bex-styles .list-container > ul > li:last-child { margin-bottom: 0px}
+.bex-styles .tip {content: ""; position: absolute; width: 0; height: 0; border-width: 10px; border-style: solid; border-color: transparent transparent #FFFFFF transparent; top: -2px; left: 163px}
+
+.bex-styles ul.tabs {border-radius: 5px; display: table; box-shadow:0 3px 4px 0px #c5c5c5}
+.bex-styles ul.tabs li {float: left; font-family: 'Fjalla One', sans-serif; font-size:16px; padding:24px;}
+.bex-styles ul li:first-child {border-bottom-left-radius:5px;; border-top-left-radius:5px;}
+.bex-styles ul li:last-child {border-bottom-right-radius:5px;; border-top-right-radius:5px;}
+.bex-styles ul.light {background-color: #fff}
+.bex-styles ul.light li {color: #2c7bc7; transition: background 0.3s ease;}
+.bex-styles ul.light li:hover, .bex-styles ul.light li.active {background-color: #f7f8fc;}
+.bex-styles ul.light li.active {border-bottom: 6px solid #2c7bc7;  padding-bottom:18px;}
+
+.bex-styles ul.dark {background-color: #142e5d}
+.bex-styles ul.dark li {color: #adbfde; transition: background 0.3s ease;}
+.bex-styles ul.dark li:hover, .bex-styles ul.dark li.active {background-color: #223a67;}
+.bex-styles ul.dark li.active {border-bottom: 6px solid #2c7bc7;  padding-bottom:18px;}
+
+.bex-styles .table-panel {padding-left:0; padding-right:0; box-shadow:0 1px 1px rgba(0, 0, 0, 0.05);}
+.bex-styles .table-panel .panel-heading {padding: 23px 23px 19px; background-color: #fff}
+.bex-styles .table-panel .panel-heading label {color:#2c7bc7; font-family:Arial, Helvetica, sans-serif ; font-size:16px; margin-right: 10px; font-weight:100;}
+.bex-styles .table-panel table {width: 100%}
+
+.bex-styles .table-panel table thead {font-size:18px; font-family:'Fjalla One', sans-serif;}
+.bex-styles .table-panel.light table thead {background-color:#f7f8fc; color: #2c7bc7;}
+.bex-styles .table-panel table thead td {padding:15px 0; text-align: center;}
+.bex-styles .table-panel table tbody td {padding:13px 10px; font-family: Arial, Helvetica, sans-serif ; font-size: 16px;}
+.bex-styles .table-panel.light table tbody td {color: #586c8f; border-bottom: 1px solid #ececec}
+.bex-styles .table-panel table tbody tr:last-child td { border-bottom:none;}
+
+.bex-styles .table-panel.dark table thead {background-color:#326aa8; color: #fff;}
+.bex-styles .table-panel.dark table tbody {background: #235fa0; background: -moz-linear-gradient(top,  #235fa0 0%, #142e5d 100%); background: -webkit-linear-gradient(top,  #235fa0 0%,#142e5d 100%); background: linear-gradient(to bottom,  #235fa0 0%,#142e5d 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#235fa0', endColorstr='#142e5d',GradientType=0 );}
+.bex-styles .table-panel.dark table tbody td {color: #fff; border-bottom: 1px solid #346095}

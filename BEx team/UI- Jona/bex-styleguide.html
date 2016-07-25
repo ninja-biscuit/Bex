@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>BEx style guide</title>
+	<link rel="stylesheet" href="css/bex-stylesheet.css">
+	<link rel="stylesheet" href="css/bex-styleguide.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+	<link href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	
+</head>
+<body id="styleguide" class="bex-styles">
+	<span class="styleguide-h1">BEx StyleGuides <small>IMS application</small></span>
+	<div class="gray-bckgrnd">
+		<section>
+			<span class="styleguide-h2"><span>01</span>Colors</span>
+			<dl class="color-palette">
+					<dt>Dark</dt>
+					<dd><span class="color-box"></span>#000000</dd>
+					<dd><span class="color-box"></span>#333333</dd>
+					<dd><span class="color-box"></span>#888888</dd>					
+				</dl>
+				<dl class="color-palette">
+					<dt>Light</dt>
+					<dd><span class="color-box"></span>#ececec</dd>
+					<dd><span class="color-box"></span>#ffffff</dd>										
+				</dl>
+				<dl class="color-palette">
+					<dt>Blue</dt>
+					<dd><span class="color-box"></span>#344159</dd>
+					<dd><span class="color-box"></span>#142e5d</dd>
+					<dd><span class="color-box"></span>#586c8f</dd>
+					<dd><span class="color-box"></span>#adbfde</dd>
+					<dd><span class="color-box"></span>#2c7bc7</dd>
+				</dl>
+				<dl class="color-palette">
+					<dt>Complementary</dt>
+					<dd><span class="color-box"></span>#12c862</dd>
+					<dd><span class="color-box"></span>#e8101f</dd>
+					<dd><span class="color-box"></span>#1dcbb8</dd>
+					<dd><span class="color-box"></span>#e8134a</dd>					
+				</dl>
+		</section>
+		<section id="fonts">
+			<span class="styleguide-h2"><span>02</span>Fonts</span>
+			<p class="styleguide-p">The HTML headings will take the styles automatically. You can use h1 to h6 but this style guide just set h1 to h4. Also you have preformatted text for captions and small text as declaimers. Using <strong>.number-big</strong> and <strong>.number-med</strong> classes you can highlight numbers. Each paragraph will take the style and generate a clear separation with the next object below.</p>
+			<table>
+				<tr>
+					<td>
+						<dl class="headers-list">
+							<dt><span class="styleguide-h4">Titles & headings</span></dt>
+							<dd><h1>Heading 1</h1> <span class="font-style-descrption">Yanone Kaffeesatz regular, 34px, uppercase</span></dd>
+							<dd><h2>Heading 2</h2><span class="font-style-descrption">Yanone Kaffeesatz regular, 32px</span></dd>
+							<dd><h3>Heading 3</h3><span class="font-style-descrption">Fjalla One, 20px</span></dd>
+							<dd><h4>Heading 4</h4><span class="font-style-descrption">Fjalla One, 16px</span></dd>									
+							<dd><span class="captions">Captions</span><span class="font-style-descrption">Arial, Helvetica, 14px</span></dd>
+							<dd><span class="declaimers">Declaimers</span><span class="font-style-descrption">Arial, Helvetica, 12px</span></dd>
+						</dl>
+					</td>
+					<td>
+
+					</td>				
+				</tr>
+			</table>
+			<table>
+				<tr>
+					<td>
+						<dl class="numbers-list">
+							<dt><span class="styleguide-h4">Numbers</span></dt>
+							<dd><span class="number-big">12.736</span><span class="font-style-descrption">Fjalla One, 28px</span></dd>
+							<dd><code>.number-big</code></dd>
+							<dd><span class="number-med">12.736</span><span class="font-style-descrption">Arial, Helvetica, 16px</span></dd>
+							<dd><code>.number-med</code></dd>
+						</dl>
+					</td>					
+				</tr>
+				<tr>
+					<td  style="padding-top:60px">
+						<dl class="body-txt">
+							<dt><span class="styleguide-h4">Body text</span></dt>
+							<dd><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></dd>
+							<dd><span class="font-style-descrption">Arial, Helvetica, 14px</span></dd>							
+						</dl>						
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section>
+			<span class="styleguide-h2"><span>03</span>Call to action</span>
+			<p class="styleguide-p">The class <strong>.button</strong> generates the pill shape and classes like <strong>.blue-button</strong> or <strong>.gray-button</strong> gives the color variation. Use it always together. In order to add an icon, put inside any button tag, the <strong>i</strong> or <strong>span</strong> tag (empty) with the <strong>.bex-icon-pin</strong> (or whichever) class before the text.</p>
+			<table id="action-buttons">
+				<tr>
+					<td><span class="styleguide-h4">Alpha</span></td>
+					<td><span class="styleguide-h4">Beta</span></td>
+					<td><span class="styleguide-h4">Gamma</span></td>
+				</tr>
+				<tr>
+					<td><button class="button blue-button">Primary</button></td>
+					<td><button class="button gray-button">Secondary</button></td>
+					<td><a href="#">Link</a></td>
+				</tr>
+				<tr>
+					<td><code>.button .blue-button</code></td>
+					<td><code>.button .gray-button</code></td>
+					<td><code>N/A</code></td>
+				</tr>
+			</table>
+			<table id="action-buttons-icon">
+				<tr>
+					<td><span class="styleguide-h4">Alpha</span></td>
+					<td><span class="styleguide-h4">Beta</span></td>
+					<td><span class="styleguide-h4">Gamma</span></td>
+				</tr>
+				<tr>
+					<td><button class="button blue-button"><i class="bex-icon-pin"></i>Primary</button></td>
+					<td><button class="button gray-button"><i class="bex-icon-pin"></i>Secondary</button></td>
+					<td><a href="#">Link</a></td>
+				</tr>
+				<tr>
+					<td><code>&#60;i class="bex-icon-pin">&#60;/i></code></td>
+					<td><code>&#60;i class="bex-icon-pin">&#60;/i></code></td>
+					<td><code>N/A</code></td>
+				</tr>
+			</table>
+		</section>
+		<section>
+			<span class="styleguide-h2"><span>04</span>Interactions</span>
+			<p class="styleguide-p">Some description dropdown</p>
+			<dl class="headers-list">
+				<dt><span class="styleguide-h4">Dropdown</span></dt>
+				<dd>
+					<div class="drop">
+						<select class="bex-assets">
+							<option>Hello</option>
+							<option>It's me</option>
+							<option>I was wondering if after all these years you'd like to meet</option>
+						</select>
+					</div>					
+				</dd>
+			</dl>
+			<p class="styleguide-p">Some description tabs</p>
+			<dl class="tabs-list">
+				<dt><span class="styleguide-h4">Tabs</span></dt>
+				<dd>
+					<ul class="tabs light" tabindex="0">
+						<li class="active">Item 1</li>
+						<li>Item 2</li>
+						<li>Item 3</li>
+						<li>Item 4</li>
+						<li>Item 5</li>
+					</ul>
+				</dd>
+				<dd>
+					<ul class="tabs dark" tabindex="0">
+						<li class="active">Item 1</li>
+						<li>Item 2</li>
+						<li>Item 3</li>
+						<li>Item 4</li>
+						<li>Item 5</li>
+					</ul>
+				</dd>
+			</dl>			
+		</section>
+		<section>
+			<span class="styleguide-h2"><span>05</span>Tables</span>
+			<p class="styleguide-p">Some description Tables</p>
+			<div class="panel panel-default table-panel light col-md-6"  width="550px">
+				<!-- Default panel contents -->
+				<div class="panel-heading">
+					<h2 class="no-block">Table headline</h2>
+					<div class="pull-right no-block">
+						<label>Sort by</label>
+						<div class="drop">
+							<select class="bex-assets">
+								<option>Hello</option>
+								<option>It's me</option>
+								<option>I was wondering if after all these years...</option>
+							</select>
+						</div>	
+						
+					</div>
+				</div>
+				<!-- Table -->
+				<table>
+					<thead>
+						<tr>
+							<td>Category1</td>
+							<td>Category2</td>
+							<td>Category3</td>
+							<td>Category4</td>
+						</tr>	
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>2</td>
+							<td>3</td>
+							<td>4</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>2</td>
+							<td>3</td>
+							<td>4</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>2</td>
+							<td>3</td>
+							<td>4</td>
+						</tr>						
+					</tbody>					
+				</table>
+			</div>
+			<p class="styleguide-p">Some description Tables</p>
+			<div class="panel panel-default table-panel dark col-md-6"  width="550px">
+				<!-- Default panel contents -->
+				<div class="panel-heading">
+					<h2 class="no-block">Table headline</h2>
+					<div class="pull-right no-block">
+						<label>Sort by</label>
+						<div class="drop">
+							<select class="bex-assets">
+								<option>Hello</option>
+								<option>It's me</option>
+								<option>I was wondering if after all these years...</option>
+							</select>
+						</div>	
+						
+					</div>
+				</div>
+				<!-- Table -->
+				<table>
+					<thead>
+						<tr>
+							<td>Category1</td>
+							<td>Category2</td>
+							<td>Category3</td>
+							<td>Category4</td>
+						</tr>	
+					</thead>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>2</td>
+							<td>3</td>
+							<td>4</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>2</td>
+							<td>3</td>
+							<td>4</td>
+						</tr>
+						<tr>
+							<td>1</td>
+							<td>2</td>
+							<td>3</td>
+							<td>4</td>
+						</tr>						
+					</tbody>					
+				</table>
+			</div>
+		</section>
+		<section>
+			<span class="styleguide-h2"><span>06</span>Colors</span>
+		</section>
+		<section>
+			<span class="styleguide-h2"><span>07</span>Colors</span>
+		</section>
+		
+	</div>
+<script type="text/javascript" src="js/bex-components.js"></script>
+</body>
+</html>

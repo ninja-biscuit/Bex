@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Drop example</title>
+	<link rel="stylesheet" href="css/drop-options.css">
+	<link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+	<link href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' rel='stylesheet' type='text/css'>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>	
+	<!--[if IE]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+</head>
+<body bgcolor="#ececec">
+
+<div class="drop">	
+	<select class="bex-assets">
+		<option value="sumatra">Sumatra</option>
+		<option value="Maracaibo">Maracaibo</option>
+		<option value="Cualalumpur">Cualalumpur</option>
+		<option value="Java">Isla de Java</option>
+	</select>
+</div>
+
+
+
+
+
+<script type="text/javascript">
+	$(document).ready(function(){
+		
+		
+		$('.drop').each(function(){
+			var dropStructure = '<span class="button"><span class="selected_option"></span><i class="drop-trigger ion-chevron-down"></i></span><div class="list-container"><span class="tip"></span><ul></ul></div>';
+			$('.drop').prepend(dropStructure);
+
+			// tomar el primer valor del select
+			var setFirstOption = $('select.bex-assets > option:first-child()').text();
+			$('.selected_option').text(setFirstOption);
+			// replicar los option en la nueva lista
+			$('select.bex-assets option').each(function(){
+				var textoOption = $(this).text();
+				$('.list-container ul').append('<li>' + textoOption + '</li>');
+			});
+		});
+
+		// show the list with arrow
+		$('.drop-trigger').each(function(){
+			$(this).on('click', function(){
+				var dropMaster = $(this).parents('.drop');
+				dropMaster.find('.list-container').toggle();
+			});
+		});
+		// on selection, change display, close list and add the selection on select
+		$('.list-container li').on('click', function(){
+			var selected = $(this).text(); // toma el texto del li cliqueado
+			var dropMaster = $(this).parents('.drop'); // guarda la ruta hacia drop
+			var childrenOrder = $(this).index() + 1;
+
+			// console.log('este es el hijo número: ' + childrenOrder);
+
+			dropMaster.find('.selected_option').text(selected); // cambia el texto al seleccionado
+			dropMaster.find('.list-container').toggle(); // oculta la lista
+			dropMaster.find('select option').attr("selected",false); // remueve el attr selected de todas las option del select
+			dropMaster.find('select option:nth-child(' + childrenOrder + ')').attr("selected",true); // agrega el attr selected
+		});		
+
+	});
+</script>
+</body>
+</html>

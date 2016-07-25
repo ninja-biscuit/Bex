@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<!-- saved from url=(0047)http://localhost:5000/auth/login?next=%2Fims%2F -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>BEx MIP  - Login</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link href="./login_files/bootstrap.min.css" rel="stylesheet">
+<link rel="shortcut icon" href="http://localhost:5000/static/bexllc-logo.ico" type="image/x-icon">
+<link rel="icon" href="http://localhost:5000/static/bexllc-logo.ico" type="image/x-icon">
+
+  </head>
+  <body>
+    
+<div class="navbar navbar-inverse" role="navigation">
+    <div class="container-fullwidth">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="http://localhost:5000/">BEx</a>
+        </div>
+
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav navbar-right">
+                
+                <li><a href="http://localhost:5000/auth/login">Log In</a></li>
+                
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+    
+<div class="container-fullwidth">
+    
+    <div class="alert alert-warning">
+        <button type="button" class="close" data-dismiss="alert">×</button>
+        Please log in to access this page.
+    </div>
+    
+
+    
+<div class="page-header">
+    <h1>Login</h1>
+</div>
+<div class="col-md-4">
+    
+<form action="http://localhost:5000/auth/login?next=%2Fims%2F" method="post" class="form" role="form">
+  <div style="display:none;"><input id="csrf_token" name="csrf_token" type="hidden" value="1467829562##ed402b753ec3c997d59d1656c48a5c7d009753b1"></div>
+  
+    
+    
+
+
+
+
+
+
+<div class="form-group  required"><label class="control-label" for="email">Email</label>
+        
+          <input class="form-control" id="email" name="email" required="" type="text" value="">
+        
+  </div>
+
+
+    
+
+
+
+
+
+
+<div class="form-group  required"><label class="control-label" for="password">Password</label>
+        
+          <input class="form-control" id="password" name="password" required="" type="password" value="">
+        
+  </div>
+
+
+    
+
+
+
+
+
+  
+
+
+    <div class="checkbox">
+      <label>
+        <input id="remember_me" name="remember_me" type="checkbox" value="y"> Keep me logged in
+      </label>
+    </div>
+  
+
+
+
+
+    
+
+
+
+
+
+  
+
+  
+  
+
+
+    <input class="btn btn-default" id="submit" name="submit" type="submit" value="Log In">
+  
+
+
+
+
+
+</form>
+    <br>
+    <p>Forgot your password? <a href="http://localhost:5000/auth/reset">Click here to reset it</a>.</p>
+    <!--
+        This will remain commented out until we add a permissioning system for users
+        <p>New user? <a href="/auth/register">Click here to register</a>.</p>
+    -->
+</div>
+
+</div>
+
+
+    
+
+    <script src="./login_files/jquery.min.js"></script>
+    <script src="./login_files/bootstrap.min.js"></script>
+<script src="./login_files/moment-with-locales.min.js"></script>
+<script>
+moment.locale("en");
+function flask_moment_render(elem) {
+    $(elem).text(eval('moment("' + $(elem).data('timestamp') + '").' + $(elem).data('format') + ';'));
+    $(elem).removeClass('flask-moment').show();
+}
+function flask_moment_render_all() {
+    $('.flask-moment').each(function() {
+        flask_moment_render(this);
+        if ($(this).data('refresh')) {
+            (function(elem, interval) { setInterval(function() { flask_moment_render(elem) }, interval); })(this, $(this).data('refresh'));
+        }
+    })
+}
+$(document).ready(function() {
+    flask_moment_render_all();
+});
+</script>
+<script>
+$(document).ready(function() {
+
+});
+</script>
+
+
+  
+
+</body></html>

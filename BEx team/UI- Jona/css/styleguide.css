@@ -1,0 +1,64 @@
+/*
+font-family: 'Yanone Kaffeesatz', sans-serif;
+font-family: 'Open Sans', sans-serif;
+font-family: 'Fjalla One', sans-serif;
+*/
+
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; border: 0;  font-size: 100%; vertical-align: baseline;}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {content: ''; content: none;}
+section {display: block; float: left; width: 100%}
+table {border-collapse: collapse; border-spacing: 0;}
+button {cursor: pointer}
+
+html {font-family: 'Open Sans', sans-serif;}
+#main-container {padding: 55px}
+#gray-container {background-color: #f5f5f5; padding: 55px 45px; position: relative; display: table;}
+h1 {font-size: 54px; color:#999; font-weight: 300; margin-bottom:40px;}
+h1 small {color: #333; font-weight: 400; font-size: 26px; margin-left: 10px}
+h2 {color: #333; font-size: 30px; font-weight: 400; border-bottom: 1px solid #dcdcdc; padding-bottom: 10px; margin-bottom: 30px}
+h2 span {font-size: 18px; color: #999; margin-right: 10px}
+h4 {font-size: 16px; color:#999; font-weight: 300}
+dl.color-palette {display: table; margin-right: 70px; margin-bottom: 35px; float: left;}
+dl.color-palette dt {font-size: 16px; color: #999; margin-bottom: 12px}
+dl.color-palette dd {float: left; font-size:12px; color:#999; background-color: #fff; display: block; width: 64px; padding-bottom: 7px; text-align: center; margin-right: 16px}
+dl.color-palette dd span.color-box {display: block; width:64px; height:53px; background-color: ; float: left; margin-bottom: 7px}
+#fonts {padding-bottom: 55px}
+#fonts table {width: 100%}
+#fonts table tr td {width: 50%}
+#fonts table tr td h4 {margin-bottom: 35px}
+#fonts table tr td span {display: inline-block; width: 140px;}
+#fonts table tr td p {display: inline-block; font-size: 14px; color: #999;}
+#fonts table tr td li {margin-bottom: 23px}
+.style-h1 {font-family: 'Yanone Kaffeesatz', sans-serif; font-size:34px ; font-weight:400 ; color: #2c7bc7; text-transform: uppercase;}
+.style-h2 {font-family: 'Yanone Kaffeesatz', sans-serif; font-size:32px; color: #586c8f;}
+.style-h3 {color: #586c8f; font-family: 'Fjalla One', sans-serif; font-size: 20px}
+.style-h4 {color: #2c7bc7; font-family: 'Fjalla One', sans-serif; font-size: 16px}
+.style-captions {font-size: 14px; font-family: Arial, Helvetica, sans-serif; color: #888; font-weight: 400}
+.style-declaimers {font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: #888;}
+.style-number-big {color: #2c7bc7; font-family: 'Fjalla One', sans-serif; font-size: 28px}
+.style-number-med {font-size: 16px; font-family: Arial, Helvetica, sans-serif; color: #586c8f; font-weight: 600}
+.style-p {font-size: 14px; font-family: Arial, Helvetica, sans-serif; color: #999;}
+#cta table {float: left; margin-right: 65px; margin-bottom: 35px;}
+#cta table tr:nth-child(2) td {padding-right: 40px}
+#cta h4 {margin-bottom:20px;}
+button {margin-right:0px}
+button img {width: 14px; height:auto; margin-right: 5px}
+.button-light .bex-icon.pin {display: inline-block; width: 14px; height: 20px; background-image: url("../img/iconmonstr-location-1.svg"); background-size: cover; margin-right: 15px; position: relative; top: 2px}
+.button-lighter .bex-icon.pin {display: inline-block; width: 14px; height: 20px; background-image: url("../img/iconmonstr-location-2.svg"); background-size: cover; margin-right: 15px; position: relative; top: 2px}
+.button-lighter:hover .bex-icon.pin {display: inline-block; width: 14px; height: 20px; background-image: url("../img/iconmonstr-location-1.svg"); background-size: cover; margin-right: 15px; position: relative; top: 2px}
+.button-light {background-color:#2c7bc7; color: #fff; font-family:'Fjalla One', sans-serif; font-size:16px; display: inline-block; text-transform: uppercase; padding: 6px 50px; border-radius: 5px; border:none;}
+.button-lighter {background-color:#ececec; color: #586c8f; font-family:'Fjalla One', sans-serif; font-size:16px; display: inline-block; text-transform: uppercase; padding: 5px 50px; border-radius: 5px; border:1px solid #586c8f;}
+.style-a {color: #2c7bc7; font-size: 16px; font-family: Arial, Helvetica, sans-serif; text-decoration: none;}
+.button-light:hover {background-color:#23629e;}
+.button-lighter:hover {background-color:#586c8f; color: #fff; border:1px solid #586c8f; padding: 5px 50px; }
+.style-a:hover {color: #23629e; text-decoration: underline;}
+
+.button-light.dummy-hover {background-color:#23629e;}
+.button-lighter.dummy-hover {background-color:#586c8f; color: #fff; border:1px solid #586c8f; padding: 5px 50px;}
+.style-a.dummy-hover {color: #23629e; text-decoration: underline;}
