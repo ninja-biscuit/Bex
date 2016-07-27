@@ -383,11 +383,16 @@
 						</div>
 					</td>	
 				</tr>
+								
+			</table>
+			<p class="styleguide-p">Inside a <strong>div.form-group</strong> as a wrapper, an <strong>input.search-field</strong> will display a complete search field with a magnifier icon as clickable button. The information sign/icon with description text works with <strong>bootstrap</strong></p>
+			<table>
 				<tr>
 					<td>
 						<div class="form-group">
-							<input type="text" class="search-field" placeholder="Search">
+							<input type="text" class="search-field" placeholder="Search">							
 						</div>
+						<code>input.search-field			</code>
 					</td>
 					<td rowspan="2" style="vertical-align:top"><textarea class="form-control" rows="3" placeholder="Text area"></textarea></td>
 					<td rowspan="2">
@@ -395,25 +400,38 @@
 							<tr>
 								<td>
 									<div class="radio-asset">
-										<span class="icon-radio-button"></span>
 										<input type="radio" name="">
-									</div>
+									</div>									
 								</td>
-								<td><input type="radio" name="" checked></td>
+								<td>
+									<div class="radio-asset">
+										<input type="radio" name="" checked="checked">
+									</div>									
+								</td>
 							</tr>
 							<tr>
-								<td><input type="checkbox" name=""></td>
-								<td><input type="checkbox" name="" checked></td>
+								<td>
+									<div class="check-asset">
+										<input type="checkbox" name="">
+									</div>
+								</td>
+								<td>
+									<div class="check-asset">
+										<input type="checkbox" name="" checked="checked">
+									</div>
+									
+								</td>
 							</tr>
 						</table>	
 					</td>
 				</tr>
 				<tr>
 					<td>
-						<span data-label="Information" data-toggle="tooltip" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam molestie blandit erat a venenatis. Aenean quis quam quis leo tincidunt mattis in nec erat. Proin in quam id est accumsan tristique id ac risus." class="icon-info"></span>				
+						<span data-label="Information" data-toggle="tooltip" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam molestie blandit erat a venenatis. Aenean quis quam quis leo tincidunt mattis in nec erat. Proin in quam id est accumsan tristique id ac risus." class="icon-info"></span>
+
 						
 					</td>					
-				</tr>				
+				</tr>
 			</table>
 		</section>
 		<section>

@@ -87,7 +87,7 @@ html {font-family: 'Open Sans', sans-serif; margin: 0; padding: 0}
 .bex-styles .search-field-content {background-color: #fff; display: inline-block; border: 1px solid #2c7bc7; border-radius: 5px; padding: 1px}
 .bex-styles .search-field-content .search-field {border:none; background-color: none; padding: 4px 5px 4px 12px;}
 .bex-styles .search-field-content span {cursor: pointer; display: inline-block; width:16px; height:16px; vertical-align: middle; margin-right: 3px}
-.bex-styles .icon-magnifier:before {color: #2c7bc7;}
+.bex-styles .icon-search:before {color: #2c7bc7;}
 .bex-styles .icon-info {position: relative;}
 .bex-styles .icon-info:before {color: #2c7bc7; font-size: 1.6em; position: relative; top: 4px; cursor: pointer}
 .bex-styles .tooltip-label {font-size: 16px; font-family: Arial, Helvetica, sans-serif; margin-left: 5px;  text-align: middle; margin-bottom: 0}
@@ -95,11 +95,16 @@ html {font-family: 'Open Sans', sans-serif; margin: 0; padding: 0}
 .bex-styles .tooltip.top .tooltip-arrow {border-top-color:#2c7bc7; bottom: 0px}
 .bex-styles .tooltip-inner {background-color: #2c7bc7; padding: 12px 18px; text-align: left}
 
-.bex-styles .radio-asset {}
-.bex-styles .radio-asset .icon-radio-button:before {cursor: pointer;}
+.bex-styles .radio-asset .icon-radio-button:before {color:#888;}
+.bex-styles .radio-asset .icon-radio-button-selected:before {color:#2c7bc7;}
+.bex-styles .radio-asset .icon-radio-button:before, .bex-styles .radio-asset .icon-radio-button-selected:before {cursor: pointer; background-color: #fff; border-radius: 500px}
 .bex-styles .radio-asset input[type="radio"] {display: none}
+.bex-styles .check-asset .icon-uncheck-mark:before {color:#888;}
+.bex-styles .check-asset .icon-check-mark:before {color:#2c7bc7; position: relative; left: 1px}
+.bex-styles .check-asset .icon-uncheck-mark:before, .bex-styles .check-asset .icon-check-mark:before {cursor: pointer; background-color: #fff}
+.bex-styles .check-asset input[type="checkbox"] {display: none}
 
 .bex-styles .bg-light {background-color: #ececec;}
 .bex-styles .bg-dark {background-color:#344159;}
-.bex-styles .bg-blue {background-color:#142e5d;}
 .bex-styles .bg-dark .panel {background-color: #586c8f; border-color: #586c8f}
+.bex-styles .bg-blue {background-color:#142e5d;}

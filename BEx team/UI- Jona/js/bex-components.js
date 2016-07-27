@@ -15,12 +15,12 @@ $(document).ready(function(){
 		});
 	});
 
-	// show the list with arrow
+// show the list with arrow
 	$('.drop-trigger').on('click', function(){
 		var dropMaster = $(this).parents('.drop');
 		dropMaster.find('.list-container').toggle();
 	});
-	// on selection, change display, close list and add the selection on select
+// on selection, change display, close list and add the selection on select
 	$('.list-container li').on('click', function(){
 		var selected = $(this).text(); // get text inside the li
 		var dropMaster = $(this).parents('.drop');
@@ -41,7 +41,7 @@ $(document).ready(function(){
 	$('.form-control.error').after('<span class="text-error">' + errorMessage + '</span>');
 // search 	
 	var searchStructureFront = '<div class="search-field-content">';
-	var searchStructureBack = '<span class="icon-magnifier"></span></div>';
+	var searchStructureBack = '<span class="icon-search"></span></div>';
 	var originalContent = $('input.search-field').parents('.form-group').html();
 	$('input.search-field').parents('.form-group').html(searchStructureFront + originalContent + searchStructureBack);
 // tooltip
@@ -51,6 +51,43 @@ $(document).ready(function(){
 		$(this).after('<p class="inline tooltip-label">' + dataLabel + '</p>');
 		//console.log(dataInfo);
 	});	
-
+// radio buttons
+	$('.radio-asset').each(function(){
+		var thisAsset = $(this);
+		if($('input', this).is(':checked')){
+			$(this).prepend("<span class='icon-radio-button-selected'></span>");
+		} else {
+			$(this).prepend("<span class='icon-radio-button'></span>");
+		}
+		
+		$(thisAsset).on('click', function(){
+			var dummyRadio = $('span', this);
+			$(dummyRadio).toggleClass('icon-radio-button icon-radio-button-selected');
+			if($(dummyRadio).siblings('input[type=radio]').prop('checked')){
+				$(this).prop('checked', false);
+			} else {
+				$(this).prop('checked', true);
+			}
+		});
+	});
+// checkboxes
+	$('.check-asset').each(function(){
+		var thisAsset = $(this);
+		if($('input', this).is(':checked')){
+			$(this).prepend("<span class='icon-check-mark'></span>");
+		} else {
+			$(this).prepend("<span class='icon-uncheck-mark'></span>");
+		}
+		
+		$(thisAsset).on('click', function(){
+			var dummyCheck = $('span', this);
+			$(dummyCheck).toggleClass('icon-uncheck-mark icon-check-mark');
+			if($(dummycheck).siblings('input[type=checkbox]').prop('checked')){
+				$(this).prop('checked', false);
+			} else {
+				$(this).prop('checked', true);
+			}
+		});
+	});
 
 });
