@@ -44,7 +44,13 @@ $(document).ready(function(){
 	var searchStructureBack = '<span class="icon-magnifier"></span></div>';
 	var originalContent = $('input.search-field').parents('.form-group').html();
 	$('input.search-field').parents('.form-group').html(searchStructureFront + originalContent + searchStructureBack);
-	
+// tooltip
+	$('.icon-info').each(function(){
+		var dataLabel = $(this).attr('data-label');		
+		var dataInfo = $(this).attr('data-info');
+		$(this).after('<p class="inline tooltip-label">' + dataLabel + '</p>');
+		//console.log(dataInfo);
+	});	
 
 
 });

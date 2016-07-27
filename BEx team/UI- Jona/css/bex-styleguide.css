@@ -10,7 +10,7 @@ body {padding: 50px;}
 .styleguide-p strong {color: #888}
 
 dl.color-palette {display: table; margin-right: 70px; margin-bottom: 35px; float: left;}
-dl.color-palette dt {font-size: 16px; color: #999; margin-bottom: 12px}
+dl.color-palette dt {font-size: 16px; color: #999; margin-bottom: 12px; font-weight: 400}
 dl.color-palette dd {float: left; font-size:12px; color:#999; background-color: #fff; display: block; width: 64px; padding-bottom: 7px; text-align: center; margin-right: 16px}
 dl.color-palette dd span.color-box {display: block; width:64px; height:53px; background-color: ; float: left; margin-bottom: 7px}
 
@@ -28,4 +28,11 @@ dl.color-palette dd span.color-box {display: block; width:64px; height:53px; bac
 .tabs-list dd {float: left; width: 50%}
 .pull-right {float: right;}
 #form-table {width: 100%;}
-#form-table td { padding: 5px 20px; vertical-align: top}
+
+#form-table td {padding: 5px 20px; vertical-align: top}
+#backgrounds {width: 100%;}
+#backgrounds tr td {padding: 15px 80px;}
+
+
+#backgrounds td > div {padding: 15%}
+.alt-panel1 {background:url("../img/chicago-skyline-from-navy-pier.jpg") no-repeat center; background-size: cover}

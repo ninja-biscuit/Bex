@@ -6,13 +6,17 @@
 	<link rel="stylesheet" href="css/bex-stylesheet.css">
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/bex-styleguide.css">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
 	<link href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' rel='stylesheet' type='text/css'>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	
+	
 	
 </head>
 <body id="styleguide" class="bex-styles">
@@ -340,6 +344,7 @@
 		</section>
 		<section>
 			<span class="styleguide-h2"><span>07</span>Forms</span>
+			<p class="styleguide-p">inside a <strong>div.form-group</strong> an <strong>input.form-control</strong> will display as the first example from the left in the first row. If you add the class <strong>.error</strong> to that input, will be appear like the second example (it will need by js the error message to display) in the same row. The third example in the first row is the success input, adding <strong>.success</strong></p>
 			<table id="form-table">
 				<tr>
 					<td>
@@ -388,24 +393,96 @@
 					<td rowspan="2">
 						<table>
 							<tr>
-								<td></td>
-								<td></td>
+								<td>
+									<div class="radio-asset">
+										<span class="icon-radio-button"></span>
+										<input type="radio" name="">
+									</div>
+								</td>
+								<td><input type="radio" name="" checked></td>
 							</tr>
 							<tr>
-								<td></td>
-								<td></td>
+								<td><input type="checkbox" name=""></td>
+								<td><input type="checkbox" name="" checked></td>
 							</tr>
 						</table>	
 					</td>
 				</tr>
 				<tr>
 					<td>
+						<span data-label="Information" data-toggle="tooltip" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam molestie blandit erat a venenatis. Aenean quis quam quis leo tincidunt mattis in nec erat. Proin in quam id est accumsan tristique id ac risus." class="icon-info"></span>				
+						
 					</td>					
 				</tr>				
 			</table>
 		</section>
+		<section>
+			<span class="styleguide-h2"><span>08</span>Backgrounds</span>
+			<p class="styleguide-p">Classes <strong>.bg-light</strong>, <strong>.bg-dark</strong> or <strong>.bg-blue</strong> must be added to the containers and the panels inside will be change depending each style.</p>
+			<table id="backgrounds">
+				<tr>
+					<td>
+						<div class="bg-light">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									Basic panel example
+								</div>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div class="bg-dark">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									Basic panel example
+								</div>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td><code>.bg-light</code></td>
+					<td><code>.bg-dark</code></td>
+				</tr>
+				<tr>
+					<td>
+						<div class="alt-panel1">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									Basic panel example
+								</div>
+							</div>
+						</div>
+					</td>
+					<td>
+						<div class="bg-blue">
+							<div class="panel panel-default">
+								<div class="panel-body">
+									Basic panel example
+								</div>
+							</div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td><code>N/A</code></td>
+					<td><code>.bg-blue</code></td>
+				</tr>
+			</table>
+
+
+		</section>
 		
 	</div>
 <script type="text/javascript" src="js/bex-components.js"></script>
+<script type="text/javascript">
+	$('[data-toggle="tooltip"]').tooltip();
+	$(document).ready(function(){
+		$('.color-palette dd').each(function(){
+			var bgColor = $(this).text();
+			$('.color-box', this).css('background-color', bgColor);	
+		});		
+	});
+</script>
 </body>
 </html>
