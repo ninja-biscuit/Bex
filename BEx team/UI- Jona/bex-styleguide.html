@@ -53,7 +53,7 @@
 		</section>
 		<section id="fonts">
 			<span class="styleguide-h2"><span>02</span>Fonts</span>
-			<p class="styleguide-p">The HTML headings will take the styles automatically. You can use h1 to h6 but this style guide just set h1 to h4. Also you have preformatted text for captions and small text as declaimers. Using <strong>.number-big</strong> and <strong>.number-med</strong> classes you can highlight numbers. Each paragraph will take the style and generate a clear separation with the next object below.</p>
+			<p class="styleguide-p">The HTML headings will take the styles automatically. You can use h1 to h6 but this style guide just set h1 to h4. Also you have preformatted text for captions and small text as declaimers. Using <strong>.number-big</strong> and <strong>.number-med</strong> classes will highlight numbers. Each paragraph will take the style and generate a clear separation with the next object below.</p>
 			<table>
 				<tr>
 					<td>
@@ -97,7 +97,7 @@
 		</section>
 		<section>
 			<span class="styleguide-h2"><span>03</span>Call to action</span>
-			<p class="styleguide-p">The class <strong>.button</strong> generates the pill shape and classes like <strong>.blue-button</strong> or <strong>.gray-button</strong> gives the color variation. Use it always together. In order to add an icon, put inside any button tag, the <strong>i</strong> or <strong>span</strong> tag (empty) with the <strong>.bex-icon-pin</strong> (or whichever) class before the text.</p>
+			<p class="styleguide-p">The class <strong>.button</strong> generates the pill shape and classes <strong>.blue-button</strong> or <strong>.gray-button</strong> gives the color variation. Use it always together. In order to add an icon, put inside any button tag, the <strong>i</strong> or <strong>span</strong> tag (empty) with the <strong>.icon-location</strong> (or whichever) class before the text.</p>
 			<table id="action-buttons">
 				<tr>
 					<td><span class="styleguide-h4">Alpha</span></td>
@@ -122,20 +122,20 @@
 					<td><span class="styleguide-h4">Gamma</span></td>
 				</tr>
 				<tr>
-					<td><button class="button blue-button"><i class="bex-icon-pin"></i>Primary</button></td>
-					<td><button class="button gray-button"><i class="bex-icon-pin"></i>Secondary</button></td>
+					<td><button class="button blue-button"><i class="icon-location"></i>Primary</button></td>
+					<td><button class="button gray-button"><i class="icon-location"></i>Secondary</button></td>
 					<td><a href="#">Link</a></td>
 				</tr>
 				<tr>
-					<td><code>&#60;i class="bex-icon-pin">&#60;/i></code></td>
-					<td><code>&#60;i class="bex-icon-pin">&#60;/i></code></td>
+					<td><code>&#60;i class="icon-location">&#60;/i></code></td>
+					<td><code>&#60;i class="icon-location">&#60;/i></code></td>
 					<td><code>N/A</code></td>
 				</tr>
 			</table>
 		</section>
 		<section>
 			<span class="styleguide-h2"><span>04</span>Interactions</span>
-			<p class="styleguide-p">Some description dropdown</p>
+			<p class="styleguide-p">Any <strong>select</strong> with the class <strong>bex-assets</strong> must be wrapped by a <strong>div.drop</strong> and will be replaced for the component.</p>
 			<dl class="headers-list">
 				<dt><span class="styleguide-h4">Dropdown</span></dt>
 				<dd>
@@ -148,7 +148,7 @@
 					</div>					
 				</dd>
 			</dl>
-			<p class="styleguide-p">Some description tabs</p>
+			<p class="styleguide-p">Tabs are simple <strong>ul</strong> with two classes: Always <strong>.tabs</strong>, and <strong>.light</strong> (in case you want the lighter one) or <strong>.dark</strong>. That <strong>ul</strong> will need always the attribute <strong>tabindex</strong> set on <strong>0</strong>.</p>
 			<dl class="tabs-list">
 				<dt><span class="styleguide-h4">Tabs</span></dt>
 				<dd>
@@ -174,7 +174,7 @@
 		<section>
 			<span class="styleguide-h2"><span>05</span>Tables</span>
 			<div style="clear:both">
-				<p class="styleguide-p">Some description Tables</p>
+				<p class="styleguide-p">You have 3 different types of tables by content. First example with <strong>.light</strong> style</p>
 				<div class="panel panel-default table-panel light col-md-6"  width="550px">
 					<!-- Default panel contents -->
 					<div class="panel-heading">
@@ -225,22 +225,12 @@
 				</div>
 			</div>
 			<div style="clear:both">				
-				<p class="styleguide-p">Some description Tables</p>
+				<p class="styleguide-p">The second example, the <strong>.dark</strong> one</p>
 				<div class="panel panel-default table-panel dark col-md-6"  width="550px">
 					<!-- Default panel contents -->
 					<div class="panel-heading">
 						<h2 class="no-block">Table headline</h2>
-						<div class="pull-right no-block">
-							<label>Sort by</label>
-							<div class="drop">
-								<select class="bex-assets">
-									<option>Hello</option>
-									<option>It's me</option>
-									<option>I was wondering if after all these years...</option>
-								</select>
-							</div>	
-							
-						</div>
+						
 					</div>
 					<!-- Table -->
 					<table>
@@ -276,7 +266,7 @@
 				</div>
 			</div>
 			<div style="clear:both">				
-				<p class="styleguide-p">Some description Tables</p>
+				<p class="styleguide-p">This example with status bars (a <strong>bootstrap</strong> component)</p>
 				<div class="panel panel-default table-panel light col-md-8"  width="550px">
 					<!-- Default panel contents -->
 					<div class="panel-heading">
@@ -341,10 +331,11 @@
 		</section>
 		<section>
 			<span class="styleguide-h2"><span>06</span>Graphics</span>
+			<p class="styleguide-p">This content isn't available now</p>
 		</section>
 		<section>
 			<span class="styleguide-h2"><span>07</span>Forms</span>
-			<p class="styleguide-p">inside a <strong>div.form-group</strong> an <strong>input.form-control</strong> will display as the first example from the left in the first row. If you add the class <strong>.error</strong> to that input, will be appear like the second example (it will need by js the error message to display) in the same row. The third example in the first row is the success input, adding <strong>.success</strong></p>
+			<p class="styleguide-p">inside a <strong>div.form-group</strong> an <strong>input.form-control</strong> will display as the first example from the left in the first row. If you add the class <strong>.error</strong> to that input, will be appear like the second example (it will need by js the error message to display) in the same row. The third example in the first row is the success input, adding <strong>.success</strong>. The second row shows the same examples but with a <strong>label</strong> above.</p>
 			<table id="form-table">
 				<tr>
 					<td>
@@ -385,14 +376,14 @@
 				</tr>
 								
 			</table>
-			<p class="styleguide-p">Inside a <strong>div.form-group</strong> as a wrapper, an <strong>input.search-field</strong> will display a complete search field with a magnifier icon as clickable button. The information sign/icon with description text works with <strong>bootstrap</strong></p>
-			<table>
+			<p class="styleguide-p">Inside a <strong>div.form-group</strong> as a wrapper, an <strong>input.search-field</strong> will display a complete search field with a magnifier icon (on mouse over will show the pointer). The information tooltip icon works only with <strong>bootstrap</strong>, the attribute <strong>data-label</strong> will display the label before the icon and the <strong>title</strong> attribute will show the tooltip content. Checkbox and radio buttons need a wrapper as <strong>div.radio-asset</strong> and <strong>div.check-asset</strong> to generates the style change</p>
+			<table id="form2">
 				<tr>
 					<td>
 						<div class="form-group">
 							<input type="text" class="search-field" placeholder="Search">							
 						</div>
-						<code>input.search-field			</code>
+						
 					</td>
 					<td rowspan="2" style="vertical-align:top"><textarea class="form-control" rows="3" placeholder="Text area"></textarea></td>
 					<td rowspan="2">
@@ -443,7 +434,7 @@
 						<div class="bg-light">
 							<div class="panel panel-default">
 								<div class="panel-body">
-									Basic panel example
+									<p>Basic panel example</p>
 								</div>
 							</div>
 						</div>
@@ -452,7 +443,7 @@
 						<div class="bg-dark">
 							<div class="panel panel-default">
 								<div class="panel-body">
-									Basic panel example
+									<p>Basic panel example</p>
 								</div>
 							</div>
 						</div>
@@ -467,7 +458,7 @@
 						<div class="alt-panel1">
 							<div class="panel panel-default">
 								<div class="panel-body">
-									Basic panel example
+									<p>Basic panel example</p>
 								</div>
 							</div>
 						</div>
@@ -476,7 +467,7 @@
 						<div class="bg-blue">
 							<div class="panel panel-default">
 								<div class="panel-body">
-									Basic panel example
+									<p>Basic panel example</p>
 								</div>
 							</div>
 						</div>

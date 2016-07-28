@@ -32,7 +32,8 @@ dl.color-palette dd span.color-box {display: block; width:64px; height:53px; bac
 #form-table td {padding: 5px 20px; vertical-align: top}
 #backgrounds {width: 100%;}
 #backgrounds tr td {padding: 15px 80px;}
-
+#form2 {width: 100%}
+#form2 td {width: 33%; padding: 5px 20px}
 
 #backgrounds td > div {padding: 15%}
 .alt-panel1 {background:url("../img/chicago-skyline-from-navy-pier.jpg") no-repeat center; background-size: cover}

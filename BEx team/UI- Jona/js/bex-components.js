@@ -48,7 +48,7 @@ $(document).ready(function(){
 	$('.icon-info').each(function(){
 		var dataLabel = $(this).attr('data-label');		
 		var dataInfo = $(this).attr('data-info');
-		$(this).after('<p class="inline tooltip-label">' + dataLabel + '</p>');
+		$(this).before('<p class="inline tooltip-label">' + dataLabel + '</p>');
 		//console.log(dataInfo);
 	});	
 // radio buttons
