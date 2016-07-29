@@ -81,6 +81,16 @@
 							<dd><code>.number-big</code></dd>
 							<dd><span class="number-med">12.736</span><span class="font-style-descrption">Arial, Helvetica, 16px</span></dd>
 							<dd><code>.number-med</code></dd>
+							<dd><p class="styleguide-p">In tables you can wrap a number with a <strong>span.negative-asset</strong> or <strong>span.positive-asset</strong> and generate this visual change over those numbers.</p></dd>
+							<dd><span class="negative-asset">1%</span></dd>
+							<dd><code>.negative-asset</code></dd>
+							<dd><span class="positive-asset">30%</span></dd>
+							<dd><code>.positive-asset</code></dd>
+							<dd><p class="styleguide-p">You can use the alternative colors too</p></dd>
+							<dd><span class="negative-asset-alt">1%</span></dd>
+							<dd><code>.negative-asset-alt</code></dd>
+							<dd><span class="positive-asset-alt">1%</span></dd>
+							<dd><code>.positive-asset-alt</code></dd>
 						</dl>
 					</td>					
 				</tr>
@@ -93,6 +103,43 @@
 						</dl>						
 					</td>
 				</tr>
+			</table>
+
+			
+			<table id="icons-grid">
+				<thead>
+					<tr>
+						<td colspan="8">
+							<span class="styleguide-h4">Icons</span>
+						</td>						
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td colspan="8" style="padding-top:15px">
+							<p class="styleguide-p">Using the correct class in a <strong>span</strong> or <strong>i</strong> tag you can display the different icons provided in this style guide.</p>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<ul>
+								<li><span class="icon-uncheck-mark"></span></li>
+								<li><span class="icon-check-mark"></span></li>
+								<li><span class="icon-chevron-left"></span></li>
+								<li><span class="icon-chevron-right"></span></li>
+								<li><span class="icon-chevron-up"></span></li>
+								<li><span class="icon-chevron-down"></span></li>
+								<li><span class="icon-location"></span></li>
+								<li><span class="icon-info"></span></li>
+								<li><span class="icon-radio-button"></span></li>
+								<li><span class="icon-radio-button-selected"></span></li>
+								<li><span class="icon-triangle-down"></span></li>
+								<li><span class="icon-triangle-up"></span></li>
+								<li><span class="icon-search"></span></li>
+							</ul>
+						</td>						
+					</tr>					
+				</tbody>
 			</table>
 		</section>
 		<section>
@@ -206,19 +253,19 @@
 								<td>1</td>
 								<td>2</td>
 								<td>3</td>
-								<td>4</td>
+								<td><span class="negative-asset">4%</span></td>
 							</tr>
 							<tr>
 								<td>1</td>
 								<td>2</td>
 								<td>3</td>
-								<td>4</td>
+								<td><span class="negative-asset">20%</span></td>
 							</tr>
 							<tr>
 								<td>1</td>
 								<td>2</td>
 								<td>3</td>
-								<td>4</td>
+								<td><span class="positive-asset">400%</span></td>
 							</tr>						
 						</tbody>					
 					</table>
@@ -247,19 +294,19 @@
 								<td>1</td>
 								<td>2</td>
 								<td>3</td>
-								<td>4</td>
+								<td><span class="negative-asset">4%</span></td>
 							</tr>
 							<tr>
 								<td>1</td>
 								<td>2</td>
 								<td>3</td>
-								<td>4</td>
+								<td><span class="positive-asset">400%</span></td>
 							</tr>
 							<tr>
 								<td>1</td>
 								<td>2</td>
 								<td>3</td>
-								<td>4</td>
+								<td><span class="negative-asset">4%</span></td>
 							</tr>						
 						</tbody>					
 					</table>
@@ -376,7 +423,7 @@
 				</tr>
 								
 			</table>
-			<p class="styleguide-p">Inside a <strong>div.form-group</strong> as a wrapper, an <strong>input.search-field</strong> will display a complete search field with a magnifier icon (on mouse over will show the pointer). The information tooltip icon works only with <strong>bootstrap</strong>, the attribute <strong>data-label</strong> will display the label before the icon and the <strong>title</strong> attribute will show the tooltip content. Checkbox and radio buttons need a wrapper as <strong>div.radio-asset</strong> and <strong>div.check-asset</strong> to generates the style change</p>
+			<p class="styleguide-p">Inside a <strong>div.form-group</strong> as a wrapper, an <strong>input.search-field</strong> will display a complete search field with a magnifier icon (on mouse over will show the pointer).<br>The information tooltip icon works only with <strong>bootstrap</strong>, inside a <strong>div.info-asset</strong> use a <strong>span</strong> or <strong>i</strong> element with the <strong>.icon-info</strong> class, with the attribute <strong>data-label</strong> it will display the label before the icon and the <strong>title</strong> attribute will show the tooltip content.<br>Checkbox and radio buttons need a wrapper as <strong>div.radio-asset</strong> and <strong>div.check-asset</strong> to generates the style change</p>
 			<table id="form2">
 				<tr>
 					<td>
@@ -418,9 +465,9 @@
 				</tr>
 				<tr>
 					<td>
-						<span data-label="Information" data-toggle="tooltip" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam molestie blandit erat a venenatis. Aenean quis quam quis leo tincidunt mattis in nec erat. Proin in quam id est accumsan tristique id ac risus." class="icon-info"></span>
-
-						
+						<div class="form-group info-asset">
+							<span data-label="Information" data-toggle="tooltip" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam molestie blandit erat a venenatis. Aenean quis quam quis leo tincidunt mattis in nec erat. Proin in quam id est accumsan tristique id ac risus." class="icon-info"></span>
+						</div>						
 					</td>					
 				</tr>
 			</table>
@@ -490,7 +537,18 @@
 		$('.color-palette dd').each(function(){
 			var bgColor = $(this).text();
 			$('.color-box', this).css('background-color', bgColor);	
-		});		
+		});
+		// triplicate icons
+		$('#icons-grid > tbody td > ul > li').each(function(){
+			var iconTri = $(this).html();
+			var theClass = $(this).find('span').attr('class');
+			var theCode = '<code>.' + theClass + '</code>';
+			console.log(theClass);
+			$(this).append(iconTri + iconTri + iconTri);
+			$(this).append(theCode);
+
+			
+		});	
 	});
 </script>
 </body>

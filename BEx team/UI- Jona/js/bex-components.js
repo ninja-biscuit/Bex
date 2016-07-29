@@ -45,7 +45,7 @@ $(document).ready(function(){
 	var originalContent = $('input.search-field').parents('.form-group').html();
 	$('input.search-field').parents('.form-group').html(searchStructureFront + originalContent + searchStructureBack);
 // tooltip
-	$('.icon-info').each(function(){
+	$('.info-asset .icon-info').each(function(){
 		var dataLabel = $(this).attr('data-label');		
 		var dataInfo = $(this).attr('data-info');
 		$(this).before('<p class="inline tooltip-label">' + dataLabel + '</p>');
@@ -89,5 +89,16 @@ $(document).ready(function(){
 			}
 		});
 	});
+// positive and negative numbers
+	$('.negative-asset, .negative-asset-alt').each(function(){
+		var tipDown = '<i class="icon-triangle-down"></i>';
+		$(this).append(tipDown);
+	});	
+	$('.positive-asset, .positive-asset-alt').each(function(){
+		var tipUp = '<i class="icon-triangle-up"></i>';
+		$(this).append(tipUp);
+	});	
+
+		
 
 });

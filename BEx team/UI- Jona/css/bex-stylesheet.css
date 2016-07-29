@@ -10,11 +10,11 @@ button {cursor: pointer}
 
 html {font-family: 'Open Sans', sans-serif; margin: 0; padding: 0}
 .bex-styles .no-block {display: inline-block;}
-.bex-styles h1 {font-family: 'Yanone Kaffeesatz', sans-serif; font-size:34px ; font-weight:400 ; color: #2c7bc7; text-transform: uppercase;}
-.bex-styles h2 {font-family: 'Yanone Kaffeesatz', sans-serif; font-size:32px; color: #586c8f; font-weight:400; margin-top: 0}
-.bex-styles h3 {color: #586c8f; font-family: 'Fjalla One', sans-serif; font-size: 20px; font-weight:400; display: block;}
-.bex-styles h4 {color: #2c7bc7; font-family: 'Fjalla One', sans-serif; font-size: 16px;  font-weight:400; display: block;}
-.bex-styles h5, .bex-styles h6 {color: #2c7bc7; font-family: 'Fjalla One', sans-serif; font-size: 16px;  font-weight:400; display: block;}
+.bex-styles h1 {font-family: 'Yanone Kaffeesatz', sans-serif; font-size:34px ; font-weight:400 ; color: #2c7bc7; text-transform: uppercase; margin-top: 0;}
+.bex-styles h2 {font-family: 'Yanone Kaffeesatz', sans-serif; font-size:32px; color: #586c8f; font-weight:400; margin-top: 0; margin-top: 0;}
+.bex-styles h3 {color: #586c8f; font-family: 'Fjalla One', sans-serif; font-size: 20px; font-weight:400; display: block; margin-top: 0;}
+.bex-styles h4 {color: #2c7bc7; font-family: 'Fjalla One', sans-serif; font-size: 16px;  font-weight:400; display: block; margin-top: 0;}
+.bex-styles h5, .bex-styles h6 {color: #2c7bc7; font-family: 'Fjalla One', sans-serif; font-size: 16px;  font-weight:400; display: block; margin-top: 0;}
 .bex-styles p {color: #999; display: block; font-size: 14px; margin-bottom: 14px}
 .bex-styles p.inline {display: inline-block;}
 .bex-styles a {color: #2c7bc7; font-size: 16px; font-family: Arial, Helvetica, sans-serif; text-decoration: none;}
@@ -91,9 +91,9 @@ html {font-family: 'Open Sans', sans-serif; margin: 0; padding: 0}
 .bex-styles .search-field-content {background-color: #fff; display: inline-block; border: 1px solid #2c7bc7; border-radius: 5px; padding: 1px}
 .bex-styles .search-field-content .search-field {border:none; background-color: none; padding: 4px 5px 4px 12px;}
 .bex-styles .search-field-content span {cursor: pointer; display: inline-block; width:16px; height:16px; vertical-align: middle; margin-right: 3px}
-.bex-styles .icon-search:before {color: #2c7bc7;}
+.bex-styles .search-field-content .icon-search:before {color: #2c7bc7;}
 .bex-styles .icon-info {position: relative;}
-.bex-styles .icon-info:before {color: #2c7bc7; font-size: 1.6em; position: relative; top: 4px; cursor: pointer}
+.bex-styles .info-asset .icon-info:before {color: #2c7bc7; font-size: 1.6em; position: relative; top: 4px; cursor: pointer}
 .bex-styles .tooltip-label {font-size: 16px; font-family: Arial, Helvetica, sans-serif; margin-right: 5px;  text-align: middle; margin-bottom: 0}
 .bex-styles .tooltip.top {margin-top: -10px}
 .bex-styles .tooltip.top .tooltip-arrow {border-top-color:#2c7bc7; bottom: 0px}
@@ -113,3 +113,9 @@ html {font-family: 'Open Sans', sans-serif; margin: 0; padding: 0}
 .bex-styles .bg-dark .panel {background-color: #586c8f; border-color: #586c8f}
 .bex-styles .bg-dark p {color: #fff}
 .bex-styles .bg-blue {background-color:#142e5d;}
+.bex-styles .negative-asset, .bex-styles .positive-asset {font-size: 12px}
+.bex-styles .negative-asset .icon-triangle-down, .bex-styles .positive-asset .icon-triangle-up, .bex-styles .negative-asset-alt .icon-triangle-down, .bex-styles .positive-asset-alt .icon-triangle-up {font-size: 8px; margin-left: 3px}
+.bex-styles .negative-asset .icon-triangle-down, .bex-styles .negative-asset {color:#e8101f;}
+.bex-styles .positive-asset .icon-triangle-up, .bex-styles .positive-asset {color:#12c862;}
+.bex-styles .negative-asset-alt, .bex-styles .negative-asset-alt .icon-triangle-down {color:#e8134a;}
+.bex-styles .positive-asset-alt, .bex-styles .positive-asset-alt .icon-triangle-up {color:#1dcbb8;}

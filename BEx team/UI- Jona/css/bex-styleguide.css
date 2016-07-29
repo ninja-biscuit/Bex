@@ -37,3 +37,10 @@ dl.color-palette dd span.color-box {display: block; width:64px; height:53px; bac
 
 #backgrounds td > div {padding: 15%}
 .alt-panel1 {background:url("../img/chicago-skyline-from-navy-pier.jpg") no-repeat center; background-size: cover}
+#icons-grid {width: 100% !important; margin-right: 0 !important}
+#icons-grid > tbody td > ul > li {padding: 5px 15px; float: left; color:#2c7bc7;}
+#icons-grid > tbody td > ul > li span {margin-right: 10px}
+#icons-grid > tbody td > ul > li span:nth-child(2) {font-size:25px}
+#icons-grid > tbody td > ul > li span:nth-child(3) {font-size:35px}
+#icons-grid > tbody td > ul > li span:nth-child(4) {font-size:50px}
+#icons-grid > tbody td > ul > li > code {display:block; margin-top: 10px}
