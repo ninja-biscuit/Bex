@@ -66,10 +66,16 @@
 							<dd><span class="captions">Captions</span><span class="font-style-descrption">Arial, Helvetica, 14px</span></dd>
 							<dd><span class="declaimers">Declaimers</span><span class="font-style-descrption">Arial, Helvetica, 12px</span></dd>
 						</dl>
+					</td>								
+				</tr>
+				<tr>
+					<td style="padding-top:60px">
+						<dl class="body-txt">
+							<dt><span class="styleguide-h4">Body text</span></dt>
+							<dd><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do <a href="#">eiusmod tempor</a> incididunt ut labore et dolore magna aliqua.</p></dd>
+							<dd><span class="font-style-descrption">Arial, Helvetica, 14px</span></dd>							
+						</dl>	
 					</td>
-					<td>
-
-					</td>				
 				</tr>
 			</table>
 			<table>
@@ -93,16 +99,7 @@
 							<dd><code>.positive-asset-alt</code></dd>
 						</dl>
 					</td>					
-				</tr>
-				<tr>
-					<td  style="padding-top:60px">
-						<dl class="body-txt">
-							<dt><span class="styleguide-h4">Body text</span></dt>
-							<dd><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></dd>
-							<dd><span class="font-style-descrption">Arial, Helvetica, 14px</span></dd>							
-						</dl>						
-					</td>
-				</tr>
+				</tr>				
 			</table>
 
 			
@@ -154,12 +151,12 @@
 				<tr>
 					<td><button class="button blue-button">Primary</button></td>
 					<td><button class="button gray-button">Secondary</button></td>
-					<td><a href="#">Link</a></td>
+					<td><a href="#" class="action-link">Link</a></td>
 				</tr>
 				<tr>
 					<td><code>.button .blue-button</code></td>
 					<td><code>.button .gray-button</code></td>
-					<td><code>N/A</code></td>
+					<td><code>.action-link</code></td>
 				</tr>
 			</table>
 			<table id="action-buttons-icon">
@@ -171,12 +168,12 @@
 				<tr>
 					<td><button class="button blue-button"><i class="icon-location"></i>Primary</button></td>
 					<td><button class="button gray-button"><i class="icon-location"></i>Secondary</button></td>
-					<td><a href="#">Link</a></td>
+					<td><a href="#" class="action-link">Link</a></td>
 				</tr>
 				<tr>
 					<td><code>&#60;i class="icon-location">&#60;/i></code></td>
 					<td><code>&#60;i class="icon-location">&#60;/i></code></td>
-					<td><code>N/A</code></td>
+					<td><code>.action-link</code></td>
 				</tr>
 			</table>
 		</section>
@@ -543,7 +540,6 @@
 			var iconTri = $(this).html();
 			var theClass = $(this).find('span').attr('class');
 			var theCode = '<code>.' + theClass + '</code>';
-			console.log(theClass);
 			$(this).append(iconTri + iconTri + iconTri);
 			$(this).append(theCode);
 

@@ -39,6 +39,10 @@ $(document).ready(function(){
 // error
 	var errorMessage = 'Error message displayed here';
 	$('.form-control.error').after('<span class="text-error">' + errorMessage + '</span>');
+	$('.form-control.error').keypress(function(){
+		$(this).removeClass('error');
+		$(this).next('span').remove();
+	});
 // search 	
 	var searchStructureFront = '<div class="search-field-content">';
 	var searchStructureBack = '<span class="icon-search"></span></div>';
@@ -49,7 +53,7 @@ $(document).ready(function(){
 		var dataLabel = $(this).attr('data-label');		
 		var dataInfo = $(this).attr('data-info');
 		$(this).before('<p class="inline tooltip-label">' + dataLabel + '</p>');
-		//console.log(dataInfo);
+		
 	});	
 // radio buttons
 	$('.radio-asset').each(function(){
@@ -62,12 +66,9 @@ $(document).ready(function(){
 		
 		$(thisAsset).on('click', function(){
 			var dummyRadio = $('span', this);
+			var trueCheck = $('input[type="radio"]', this);
 			$(dummyRadio).toggleClass('icon-radio-button icon-radio-button-selected');
-			if($(dummyRadio).siblings('input[type=radio]').prop('checked')){
-				$(this).prop('checked', false);
-			} else {
-				$(this).prop('checked', true);
-			}
+			trueCheck.attr("checked", !trueCheck.attr("checked"));
 		});
 	});
 // checkboxes
@@ -81,12 +82,12 @@ $(document).ready(function(){
 		
 		$(thisAsset).on('click', function(){
 			var dummyCheck = $('span', this);
-			$(dummyCheck).toggleClass('icon-uncheck-mark icon-check-mark');
-			if($(dummycheck).siblings('input[type=checkbox]').prop('checked')){
-				$(this).prop('checked', false);
-			} else {
-				$(this).prop('checked', true);
-			}
+			var trueCheck = $('input[type="checkbox"]', this);
+			$(dummyCheck).toggleClass('icon-uncheck-mark icon-check-mark');	
+			trueCheck.attr("checked", !trueCheck.attr("checked"));
+			
+
+			
 		});
 	});
 // positive and negative numbers

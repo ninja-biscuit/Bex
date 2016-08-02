@@ -17,7 +17,7 @@ html {font-family: 'Open Sans', sans-serif; margin: 0; padding: 0; height: 100%}
 .bex-styles h5, .bex-styles h6 {color: #2c7bc7; font-family: 'Fjalla One', sans-serif; font-size: 16px;  font-weight:400; display: block; margin-top: 0;}
 .bex-styles p {color: #999; display: block; font-size: 14px; margin-bottom: 14px}
 .bex-styles p.inline {display: inline-block;}
-.bex-styles a {color: #2c7bc7; /*font-size: 16px;*/ font-family: Arial, Helvetica, sans-serif; text-decoration: none;}
+.bex-styles a {color: #2c7bc7; font-family: Arial, Helvetica, sans-serif; text-decoration: none;}
 .bex-styles a:hover {color: #23629e; text-decoration: underline;}
 .bex-styles code {background-color: #223a67; color: #adbfde; font-size: 12px; width: 100%; padding: 8px 10px;}
 .bex-styles label {display: inline-block; font-weight: 400; margin-bottom: 5px; max-width: 100%; color: #2c7bc7}
@@ -30,6 +30,7 @@ html {font-family: 'Open Sans', sans-serif; margin: 0; padding: 0; height: 100%}
 .bex-styles .gray-button {background-color: #ececec; border: 1px solid #586c8f; color: #586c8f; padding: 5px 50px;}
 .bex-styles .blue-button:hover {background-color: #23629e; color: #fff;}
 .bex-styles .gray-button:hover {background-color: #586c8f; border: 1px solid #586c8f; color: #fff; padding: 5px 50px;}
+.bex-styles .action-link {font-size: 16px;}
 .bex-styles #action-buttons-icon {float: right;}
 .bex-styles #action-buttons-icon td {padding-right: 30px}
 /*.bex-styles .blue-button .bex-icon-pin {display: inline-block; width: 14px; height: 20px; background-image: url("../img/iconmonstr-location-1.svg"); background-size: cover; margin-right: 15px; position: relative; top: 2px}
@@ -88,7 +89,7 @@ html {font-family: 'Open Sans', sans-serif; margin: 0; padding: 0; height: 100%}
 
 .bex-styles input.form-control {/*height: 20px; */background-color: #fff; background-image: none; border: 1px solid #2c7bc7; border-radius: 4px; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset; color: #555; display: block; font-size: 14px; line-height: 1.42857; padding: 6px 12px; transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s; width: 100%; margin-bottom: 5px}
 .bex-styles .form-control.error {background-color: #f4e9ea; border: 1px solid #e8101f;}
-.bex-styles .text-error {color:#e8101f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; display: block; margin-top: 8px}
+.bex-styles .text-error {color:#e8101f; font-size: 13px; font-family: Arial, Helvetica, sans-serif; display: block; margin-top: 8px; margin-bottom: 5px}
 .bex-styles .form-control.success {background-color: #fff; border: 1px solid #12c862;}
 .bex-styles textarea.form-control {background-color: #fff; background-image: none; border: 1px solid #2c7bc7; border-radius: 4px; box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset; color: #555; display: block; font-size: 14px; line-height: 1.42857; padding: 6px 12px; transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s; width: 100%;}
 
