@@ -179,18 +179,74 @@
 		</section>
 		<section>
 			<span class="styleguide-h2"><span>04</span>Interactions</span>
-			<p class="styleguide-p">Any <strong>select</strong> with the class <strong>bex-assets</strong> must be wrapped by a <strong>div.drop</strong> and will be replaced for the component.</p>
-			<dl class="headers-list">
+			<p class="styleguide-p">A button with a dropdown list</p>
+			<dl class="drop-list">
 				<dt><span class="styleguide-h4">Dropdown</span></dt>
 				<dd>
-					<div class="drop">
-						<select class="bex-assets">
-							<option>Hello</option>
-							<option>It's me</option>
-							<option>I was wondering if after all these years you'd like to meet</option>
-						</select>
+					<div class="drop blue-button" tabindex="0">
+						<span class="drop-label">Options <i class="icon-chevron-down"><span class="icon-triangle-up"></span></i></span>
+						<div class="hidden-panel">
+							<ul>
+								<li>Option 1</li>
+								<li>Option 2</li>
+								<li>Option 3</li>
+							</ul>
+						</div>		
 					</div>					
 				</dd>
+				<dd>
+					<div class="drop red-button" tabindex="0">
+						<span class="drop-label">Options <i class="icon-chevron-down"><span class="icon-triangle-up"></span></i></span>
+						<div class="hidden-panel">
+							<ul>
+								<li>Option 1</li>
+								<li>Option 2</li>
+								<li>Option 3</li>
+							</ul>
+						</div>		
+					</div>
+				</dd>
+				<dd>
+					<div class="drop green-button" tabindex="0">
+						<span class="drop-label">Options <i class="icon-chevron-down"><span class="icon-triangle-up"></span></i></span>
+						<div class="hidden-panel">
+							<ul>
+								<li>Option 1</li>
+								<li>Option 2</li>
+								<li>Option 3</li>
+							</ul>
+						</div>		
+					</div>
+				</dd>
+				<dd>
+					<div class="drop red-alt-button" tabindex="0">
+						<span class="drop-label">Options <i class="icon-chevron-down"><span class="icon-triangle-up"></span></i></span>
+						<div class="hidden-panel">
+							<ul>
+								<li>Option 1</li>
+								<li>Option 2</li>
+								<li>Option 3</li>
+							</ul>
+						</div>		
+					</div>
+				</dd>
+				<dd>
+					<div class="drop green-alt-button" tabindex="0">
+						<span class="drop-label">Options <i class="icon-chevron-down"><span class="icon-triangle-up"></span></i></span>
+						<div class="hidden-panel">
+							<ul>
+								<li>Option 1</li>
+								<li>Option 2</li>
+								<li>Option 3</li>
+							</ul>
+						</div>		
+					</div>
+				</dd>
+			</dl>
+			<dl class="-list">
+				<dt><span class="styleguide-h4">Select</span></dt>
+				<dd><p class="styleguide-p">Any <strong>select</strong> with the class <strong>bex-assets</strong> must be wrapped by a <strong>div.drop</strong> and will be replaced for the component.</p></dd>
+				<dd></dd>
 			</dl>
 			<p class="styleguide-p">Tabs are simple <strong>ul</strong> with two classes: Always <strong>.tabs</strong>, and <strong>.light</strong> (in case you want the lighter one) or <strong>.dark</strong>. That <strong>ul</strong> will need always the attribute <strong>tabindex</strong> set on <strong>0</strong>.</p>
 			<dl class="tabs-list">

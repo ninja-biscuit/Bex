@@ -1,7 +1,7 @@
 $(document).ready(function(){
 // drop down
-	$('.drop').each(function(){
-		var dropStructure = '<span class="button"><span class="selected_option"></span><i class="drop-trigger ion-chevron-down"></i></span><div class="list-container"><span class="tip"></span><ul></ul></div>';
+/*	$('.drop').each(function(){
+		var dropStructure = '<span class="button"><span class="selected_option"></span><i class="drop-trigger icon-chevron-down"></i></span><div class="list-container"><span class="tip"></span><ul></ul></div>';
 		var $drop = $(this);
 		$drop.prepend(dropStructure);
 
@@ -13,7 +13,7 @@ $(document).ready(function(){
 			var textoOption = $(this).text();
 			$drop.find('.list-container ul').append('<li>' + textoOption + '</li>');
 		});
-	});
+	}); */
 
 // show the list with arrow
 	$('.drop-trigger').on('click', function(){

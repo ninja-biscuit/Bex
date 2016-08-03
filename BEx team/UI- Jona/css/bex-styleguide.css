@@ -44,3 +44,6 @@ dl.color-palette dd span.color-box {display: block; width:64px; height:53px; bac
 #icons-grid > tbody td > ul > li span:nth-child(3) {font-size:35px}
 #icons-grid > tbody td > ul > li span:nth-child(4) {font-size:50px}
 #icons-grid > tbody td > ul > li > code {display:block; margin-top: 10px}
+
+.drop-list {clear: both}
+.drop-list dd {float: left; padding: 10px}
