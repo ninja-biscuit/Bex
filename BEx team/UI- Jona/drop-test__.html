@@ -21,7 +21,30 @@
 		.hidden-panel ul li:last-child { margin-bottom: 0px}
 		.hidden-panel table {color:#888; border: 1px solid #888; border-spacing: 0; border-collapse: collapse;}
 		.hidden-panel table td {border: 1px solid #888}
-		.drop:focus .hidden-panel, .drop:focus .icon-chevron-down span {display: block;}		
+		.drop:focus .hidden-panel, .drop:focus .icon-chevron-down span {display: block;}	
+		/* select */
+		.blue-button {background-color: #2c7bc7; border: none; color: #fff;}
+		.gray-button {background-color: #ececec; border: 1px solid #586c8f; color: #586c8f; padding: 5px 50px;}
+		.blue-button:hover {background-color: #23629e; color: #fff;}
+		.gray-button:hover {background-color: #586c8f; border: 1px solid #586c8f; color: #fff; padding: 5px 50px;}
+		.red-button {background-color: #e8101f; border: none; color: #fff;}
+		.green-button {background-color: #12c862; border: none; color: #fff;}
+		.red-alt-button {background-color: #e8134a; border: none; color: #fff;}
+		.green-alt-button {background-color: #1dcbb8; border: none; color: #fff;}
+
+		div.select-asset {border-radius: 5px; display: inline-block; font-family: "Fjalla One",sans-serif; font-size: 16px; padding: 8px 23px; position: relative;}
+		select.select-asset {display:none;}
+		.select-asset .selected_option {position: relative; text-transform: uppercase;}
+		.select-asset .icon-chevron-down {cursor: pointer}
+		.select-asset .select-asset-list-container {display: none; position: absolute; right: 0; top: 57px}
+		.select-asset .select-asset-list-container i.icon-triangle-up:before {position: absolute; top: -14px; right: 22px;}
+		.select-asset .select-asset-list {background-color: #fff; padding: 15px; border-radius: 5px; list-style: none; margin:0; font-size: 14px}
+		.select-asset .select-asset-list li {color: #888; font-family: arial,helvetica, sans-serif; cursor:pointer;}
+
+
+
+
+
 	</style>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 </head>
@@ -69,5 +92,63 @@
 		</div>
 	</div>
 </div>
+
+<div style="width:100%; height:150px">
+
+	<div class="select-asset red-button" tabindex="0">		
+		<select class="select-asset">
+			<option>This is the first option</option>
+			<option>Second place is not that bad</option>
+			<option>I'm still on the podium!</option>
+		</select>
+	</div>
+
+</div>
+
+
+<script type="text/javascript">
+	$('div.select-asset').each(function(){
+		assetStructure = '<span class="selected_option">holis</span><i class="icon-chevron-down"></i><div class="select-asset-list-container"><i class="icon-triangle-up"></i><ul class="select-asset-list"></ul></div>';
+		assetSelect = $(this);
+		assetSelect.prepend(assetStructure);
+
+		// take first value of the select
+		var setFirstOption = assetSelect.find('select.select-asset > option:first-child()').text();
+		//console.log(setFirstOption);
+		$('.selected_option', this).text(setFirstOption);
+	
+		// clone the options in a new list		
+		assetSelect.find('select.select-asset > option').each(function(){
+			var textoOption = $(this).text();
+			//console.log(textoOption);
+			assetSelect.find('.select-asset-list').append('<li>' + textoOption + '</li>');			
+		});
+	}); 
+
+	// max width
+	var maxWidth = $('.select-asset-list li:first-child').width();
+	console.log(maxWidth);
+	//$('.selected_option').width(maxWidth);
+
+	// show the list with arrow
+	$('.icon-chevron-down').on('click', function(){
+		$(this).siblings('.select-asset-list-container').toggle();		
+	});
+
+	// on selection, change display, close list and add the selection on select
+	$('.select-asset-list li').on('click', function(){
+		var selected = $(this).text(); // get text inside the li
+		var assetSelect = $(this).parents('div.select-asset');
+		var childrenOrder = $(this).index() + 1;
+
+		assetSelect.find('.selected_option').text(selected); // change the text
+		assetSelect.find('select option').attr("selected",false); // remove attr selected on every option
+		assetSelect.find('select option:nth-child(' + childrenOrder + ')').attr("selected",true); // add attr selected
+		assetSelect.find('.select-asset-list-container').toggle(); // hide the list
+		
+	});
+
+
+</script>
 </body>
 </html>

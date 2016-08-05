@@ -47,3 +47,6 @@ dl.color-palette dd span.color-box {display: block; width:64px; height:53px; bac
 
 .drop-list {clear: both}
 .drop-list dd {float: left; padding: 10px}
+
+#drop-table, #select-table, #tabs-table {margin-bottom:15px}
+#drop-table td, #select-table td, #tabs-table td {padding: 15px 10px}

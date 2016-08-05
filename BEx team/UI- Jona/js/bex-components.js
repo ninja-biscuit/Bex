@@ -1,35 +1,39 @@
 $(document).ready(function(){
 // drop down
-/*	$('.drop').each(function(){
-		var dropStructure = '<span class="button"><span class="selected_option"></span><i class="drop-trigger icon-chevron-down"></i></span><div class="list-container"><span class="tip"></span><ul></ul></div>';
-		var $drop = $(this);
-		$drop.prepend(dropStructure);
+	$('div.select-asset').each(function(){
+		assetStructure = '<span class="selected_option">holis</span><i class="icon-chevron-down"></i><div class="select-asset-list-container"><i class="icon-triangle-up"></i><ul class="select-asset-list"></ul></div>';
+		assetSelect = $(this);
+		assetSelect.prepend(assetStructure);
 
 		// take first value of the select
-		var setFirstOption = $drop.find('select.bex-assets > option:first-child()').text();
-		$drop.find('.selected_option').text(setFirstOption);
-		// clone the option in a new list
-		$drop.find('select.bex-assets option').each(function(){
+		var setFirstOption = assetSelect.find('select.select-asset > option:first-child()').text();
+		//console.log(setFirstOption);
+		$('.selected_option', this).text(setFirstOption);
+	
+		// clone the options in a new list		
+		assetSelect.find('select.select-asset > option').each(function(){
 			var textoOption = $(this).text();
-			$drop.find('.list-container ul').append('<li>' + textoOption + '</li>');
+			//console.log(textoOption);
+			assetSelect.find('.select-asset-list').append('<li>' + textoOption + '</li>');			
 		});
-	}); */
+	}); 
 
-// show the list with arrow
-	$('.drop-trigger').on('click', function(){
-		var dropMaster = $(this).parents('.drop');
-		dropMaster.find('.list-container').toggle();
+	// show the list with arrow
+	$('.icon-chevron-down').on('click', function(){
+		$(this).siblings('.select-asset-list-container').toggle();		
 	});
-// on selection, change display, close list and add the selection on select
-	$('.list-container li').on('click', function(){
+
+	// on selection, change display, close list and add the selection on select
+	$('.select-asset-list li').on('click', function(){
 		var selected = $(this).text(); // get text inside the li
-		var dropMaster = $(this).parents('.drop');
+		var assetSelect = $(this).parents('div.select-asset');
 		var childrenOrder = $(this).index() + 1;
 
-		dropMaster.find('.selected_option').text(selected); // change the text
-		dropMaster.find('.list-container').toggle(); // hide the list
-		dropMaster.find('select option').attr("selected",false); // remove attr selected on every option
-		dropMaster.find('select option:nth-child(' + childrenOrder + ')').attr("selected",true); // add attr selected
+		assetSelect.find('.selected_option').text(selected); // change the text
+		assetSelect.find('select option').attr("selected",false); // remove attr selected on every option
+		assetSelect.find('select option:nth-child(' + childrenOrder + ')').attr("selected",true); // add attr selected
+		assetSelect.find('.select-asset-list-container').toggle(); // hide the list
+		
 	});
 // tabs
 	$('.tabs li').on('click', function(){

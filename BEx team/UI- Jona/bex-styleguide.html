@@ -6,14 +6,18 @@
 	<link rel="stylesheet" href="css/bex-stylesheet.css">
 	<link rel="stylesheet" href="css/fonts.css">
 	<link rel="stylesheet" href="css/bex-styleguide.css">
-
+	<style type="text/css">
+		#icons-grid li .icon-tooltip {display:none; min-width:180px; text-align: center; position: absolute; z-index: 2; top: 30px; left: -70px; background-color: #ececec; color: #888; font-family: Arial, Helvetica, sans-serif !important; font-size: 14px !important; padding: 8px 15px; box-shadow: 0px 2px 3px #888}
+		#icons-grid li:hover .icon-tooltip {display:block;}
+		#icons-grid > tbody li {position: relative; z-index: 0}
+		#icons-grid li {cursor: pointer};
+	</style>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
 
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
-	<link href='http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css' rel='stylesheet' type='text/css'>
 	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	
 	
@@ -179,98 +183,176 @@
 		</section>
 		<section>
 			<span class="styleguide-h2"><span>04</span>Interactions</span>
-			<p class="styleguide-p">A button with a dropdown list</p>
-			<dl class="drop-list">
-				<dt><span class="styleguide-h4">Dropdown</span></dt>
-				<dd>
-					<div class="drop blue-button" tabindex="0">
-						<span class="drop-label">Options <i class="icon-chevron-down"><span class="icon-triangle-up"></span></i></span>
-						<div class="hidden-panel">
-							<ul>
-								<li>Option 1</li>
-								<li>Option 2</li>
-								<li>Option 3</li>
-							</ul>
-						</div>		
-					</div>					
-				</dd>
-				<dd>
-					<div class="drop red-button" tabindex="0">
-						<span class="drop-label">Options <i class="icon-chevron-down"><span class="icon-triangle-up"></span></i></span>
-						<div class="hidden-panel">
-							<ul>
-								<li>Option 1</li>
-								<li>Option 2</li>
-								<li>Option 3</li>
-							</ul>
-						</div>		
-					</div>
-				</dd>
-				<dd>
-					<div class="drop green-button" tabindex="0">
-						<span class="drop-label">Options <i class="icon-chevron-down"><span class="icon-triangle-up"></span></i></span>
-						<div class="hidden-panel">
-							<ul>
-								<li>Option 1</li>
-								<li>Option 2</li>
-								<li>Option 3</li>
-							</ul>
-						</div>		
-					</div>
-				</dd>
-				<dd>
-					<div class="drop red-alt-button" tabindex="0">
-						<span class="drop-label">Options <i class="icon-chevron-down"><span class="icon-triangle-up"></span></i></span>
-						<div class="hidden-panel">
-							<ul>
-								<li>Option 1</li>
-								<li>Option 2</li>
-								<li>Option 3</li>
-							</ul>
-						</div>		
-					</div>
-				</dd>
-				<dd>
-					<div class="drop green-alt-button" tabindex="0">
-						<span class="drop-label">Options <i class="icon-chevron-down"><span class="icon-triangle-up"></span></i></span>
-						<div class="hidden-panel">
-							<ul>
-								<li>Option 1</li>
-								<li>Option 2</li>
-								<li>Option 3</li>
-							</ul>
-						</div>		
-					</div>
-				</dd>
-			</dl>
-			<dl class="-list">
-				<dt><span class="styleguide-h4">Select</span></dt>
-				<dd><p class="styleguide-p">Any <strong>select</strong> with the class <strong>bex-assets</strong> must be wrapped by a <strong>div.drop</strong> and will be replaced for the component.</p></dd>
-				<dd></dd>
-			</dl>
-			<p class="styleguide-p">Tabs are simple <strong>ul</strong> with two classes: Always <strong>.tabs</strong>, and <strong>.light</strong> (in case you want the lighter one) or <strong>.dark</strong>. That <strong>ul</strong> will need always the attribute <strong>tabindex</strong> set on <strong>0</strong>.</p>
-			<dl class="tabs-list">
-				<dt><span class="styleguide-h4">Tabs</span></dt>
-				<dd>
-					<ul class="tabs light" tabindex="0">
-						<li class="active">Item 1</li>
-						<li>Item 2</li>
-						<li>Item 3</li>
-						<li>Item 4</li>
-						<li>Item 5</li>
-					</ul>
-				</dd>
-				<dd>
-					<ul class="tabs dark" tabindex="0">
-						<li class="active">Item 1</li>
-						<li>Item 2</li>
-						<li>Item 3</li>
-						<li>Item 4</li>
-						<li>Item 5</li>
-					</ul>
-				</dd>
-			</dl>			
+			<table style="margin-bottom:5px">
+				<tr>
+					<td>
+						<span class="styleguide-h4">Dropdown</span>
+						<p class="styleguide-p">A button with a dropdown list</p>
+					</td>
+				</tr>
+			</table>
+			<table id="drop-table">
+				<tr>
+					<td>
+						<div class="drop blue-button" tabindex="0">
+							<span class="drop-label">Options <i class="icon-chevron-down"><span class="icon-triangle-up"></span></i></span>
+							<div class="hidden-panel">
+								<ul>
+									<li>Option 1</li>
+									<li>Option 2</li>
+									<li>Option 3</li>
+								</ul>
+							</div>		
+						</div>
+					</td>
+					<td>
+						<div class="drop red-button" tabindex="0">
+							<span class="drop-label">Options <i class="icon-chevron-down"><span class="icon-triangle-up"></span></i></span>
+							<div class="hidden-panel">
+								<ul>
+									<li>Option 1</li>
+									<li>Option 2</li>
+									<li>Option 3</li>
+								</ul>
+							</div>		
+						</div>
+					</td>
+					<td>
+						<div class="drop green-button" tabindex="0">
+							<span class="drop-label">Options <i class="icon-chevron-down"><span class="icon-triangle-up"></span></i></span>
+							<div class="hidden-panel">
+								<ul>
+									<li>Option 1</li>
+									<li>Option 2</li>
+									<li>Option 3</li>
+								</ul>
+							</div>		
+						</div>
+					</td>
+					<td>
+						<div class="drop red-alt-button" tabindex="0">
+							<span class="drop-label">Options <i class="icon-chevron-down"><span class="icon-triangle-up"></span></i></span>
+							<div class="hidden-panel">
+								<ul>
+									<li>Option 1</li>
+									<li>Option 2</li>
+									<li>Option 3</li>
+								</ul>
+							</div>		
+						</div>
+					</td>
+					<td>
+						<div class="drop green-alt-button" tabindex="0">
+							<span class="drop-label">Options <i class="icon-chevron-down"><span class="icon-triangle-up"></span></i></span>
+							<div class="hidden-panel">
+								<ul>
+									<li>Option 1</li>
+									<li>Option 2</li>
+									<li>Option 3</li>
+								</ul>
+							</div>		
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td><code>.blue-button</code></td>
+					<td><code>.red-button</code></td>
+					<td><code>.green-button</code></td>
+					<td><code>.red-alt-button</code></td>
+					<td><code>.green-alt-button</code></td>
+				</tr>
+				<tr>
+					<td colspan="5">
+						<code>
+							&#60;div class="drop red-alt-button" tabindex="0"><br>
+								&#60;span class="drop-label">Options &#60;i class="icon-chevron-down">&#60;span class="icon-triangle-up">&#60;/span>&#60;/i>&#60;/span><br>
+								&#60;div class="hidden-panel"><br>
+									&#60;ul><rb>
+										&#60;li>Option 1&#60;/li><br>
+										...<br>
+									&#60;/ul><br>
+								&#60;/div><br>
+							&#60;/div>
+						</code>
+					</td>
+				</tr>
+			</table>
+			<table style="margin-bottom:5px">
+				<tr>
+					<td>
+						<span class="styleguide-h4">Select</span>
+						<p class="styleguide-p">Any <strong>select</strong> with <strong>.select-asset</strong> must be wrapped by a <strong>div.select-asset</strong> and will be replaced for the component.</p>
+					</td>
+				</tr>
+			</table>
+			<table id="select-table">
+				<tr>
+					<td>
+						<div class="select-asset red-button" tabindex="0">		
+							<select class="select-asset">
+								<option>This is the first option</option>
+								<option>Second place is not that bad</option>
+								<option>I'm still on the podium!</option>
+							</select>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<code>&#60;div class="select-asset red-button" tabindex="0"><br>
+								&#60;select class="select-asset"><br>
+									&#60;option>This is the first option&#60;/option><br>
+									...<br>
+								&#60;/select><br>
+							&#60;/div>
+						</code>	
+					</td>
+				</tr>
+			</table>
+			
+			<table style="margin-bottom:5px">
+				<tr>
+					<td colspan="2">
+						<span class="styleguide-h4">Tabs</span>
+						<p class="styleguide-p">Tabs are simple <strong>ul</strong> with two classes: Always <strong>.tabs</strong>, and <strong>.light</strong> (in case you want the lighter one) or <strong>.dark</strong>. That <strong>ul</strong> will need always the attribute <strong>tabindex</strong> set on <strong>0</strong>.</p>
+					</td>
+				</tr>
+			</table>
+			<table id="tabs-table">
+				<tr>
+					<td>
+						<ul class="tabs light" tabindex="0">
+							<li class="active">Item 1</li>
+							<li>Item 2</li>
+							<li>Item 3</li>
+							<li>Item 4</li>
+							<li>Item 5</li>
+						</ul>
+					</td>
+					<td>
+						<ul class="tabs dark" tabindex="0">
+							<li class="active">Item 1</li>
+							<li>Item 2</li>
+							<li>Item 3</li>
+							<li>Item 4</li>
+							<li>Item 5</li>
+						</ul>	
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<code>
+							&#60;ul class="tabs light/dark" tabindex="0"><br>
+								&#60;li class="active">Item 1&#60;/li><br>
+								&#60;li>Item 2&#60;/li><br>
+								...<br>
+							&#60;/ul>
+						</code>
+					</td>
+				</tr>
+			</table>
 		</section>
+
 		<section>
 			<span class="styleguide-h2"><span>05</span>Tables</span>
 			<div style="clear:both">
@@ -281,13 +363,13 @@
 						<h2 class="no-block">Table headline</h2>
 						<div class="pull-right no-block">
 							<label>Sort by</label>
-							<div class="drop">
-								<select class="bex-assets">
-									<option>Hello</option>
-									<option>It's me</option>
-									<option>I was wondering if after all these years...</option>
+							<div class="select-asset blue-button" tabindex="0">		
+								<select class="select-asset">
+									<option>Date</option>
+									<option>Low - Hight</option>
+									<option>Hight - Low</option>
 								</select>
-							</div>	
+							</div>
 							
 						</div>
 					</div>
@@ -591,6 +673,20 @@
 			var bgColor = $(this).text();
 			$('.color-box', this).css('background-color', bgColor);	
 		});
+
+		$('#icons-grid > tbody li').each(function(){
+			var getIconClass = $('span', this).attr('class');
+			var iconTooltip = '<span class="icon-tooltip">.' + getIconClass + '</span>';
+			$(this).append(iconTooltip);
+		});	
+
+		/*$('#icons-grid > tbody li').on('mouseover', function(){
+			var getIconClass = $('span', this).attr('class');
+			var iconTooltip = '<span class="icon-tooltip">.' + getIconClass + '</span>';			
+			$(this).append(iconTooltip);
+			//console.log(getIconClass);
+
+		});
 		// triplicate icons
 		$('#icons-grid > tbody td > ul > li').each(function(){
 			var iconTri = $(this).html();
@@ -600,7 +696,7 @@
 			$(this).append(theCode);
 
 			
-		});	
+		});	*/
 	});
 </script>
 </body>

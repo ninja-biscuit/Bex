@@ -19,7 +19,7 @@ html {font-family: 'Open Sans', sans-serif; margin: 0; padding: 0; height: 100%}
 .bex-styles p.inline {display: inline-block;}
 .bex-styles a {color: #2c7bc7; font-family: Arial, Helvetica, sans-serif; text-decoration: none;}
 .bex-styles a:hover {color: #23629e; text-decoration: underline;}
-.bex-styles code {background-color: #223a67; color: #adbfde; font-size: 12px; width: 100%; padding: 8px 10px;}
+.bex-styles code {background-color: #223a67; color: #adbfde; font-size: 12px; width: 100%; padding: 8px 10px; display: inline-block}
 .bex-styles label {display: inline-block; font-weight: 400; margin-bottom: 5px; max-width: 100%; color: #2c7bc7}
 .bex-styles .captions {font-size: 14px; font-family: Arial, Helvetica, sans-serif; color: #888; font-weight: 400}
 .bex-styles .declaimers {font-size: 12px; font-family: Arial, Helvetica, sans-serif; color: #888;}
@@ -46,7 +46,7 @@ html {font-family: 'Open Sans', sans-serif; margin: 0; padding: 0; height: 100%}
 .bex-styles .gray-button:hover .icon-location {margin-right: 15px;}
 
 /* Regular drop */
-.bex-styles .drop {padding: 8px 23px; display: table; font-family: arial, helvetica, sans-serif; border-radius: 5px; position: relative; min-width: 110px}
+.bex-styles .drop {padding: 8px 23px; font-family: arial, helvetica, sans-serif; border-radius: 5px; position: relative; min-width: 110px}
 .bex-styles .drop-label {font-family: 'Fjalla One', sans-serif; font-size: 16px; text-transform: uppercase;}
 .bex-styles .icon-chevron-down {margin-left: 15px; float: right; position: relative;}
 .bex-styles .icon-chevron-down span {display:none;}
@@ -59,6 +59,16 @@ html {font-family: 'Open Sans', sans-serif; margin: 0; padding: 0; height: 100%}
 .bex-styles .hidden-panel table {color:#888; border: 1px solid #888; border-spacing: 0; border-collapse: collapse;}
 .bex-styles .hidden-panel table td {border: 1px solid #888}
 .drop:focus .hidden-panel, .drop:focus .icon-chevron-down span {display: block;}
+
+/* Select drop */
+.bex-styles div.select-asset {border-radius: 5px; display: inline-block; font-family: "Fjalla One",sans-serif; font-size: 16px; padding: 8px 23px; position: relative;}
+.bex-styles	select.select-asset {display:none;}
+.bex-styles .select-asset .selected_option {position: relative; text-transform: uppercase;}
+.bex-styles	.select-asset .icon-chevron-down {cursor: pointer}
+.bex-styles	.select-asset .select-asset-list-container {display: none; position: absolute; right: 0; top: 57px; width: -moz-max-content; width: -webkit-max-content; width: max-content; min-width: 126px;}
+.bex-styles	.select-asset .select-asset-list-container i.icon-triangle-up:before {position: absolute; top: -14px; right: 22px;}
+.bex-styles	.select-asset .select-asset-list {background-color: #fff; padding: 15px; border-radius: 5px; list-style: none; margin:0; font-size: 14px}
+.bex-styles	.select-asset .select-asset-list li {color: #888; font-family: arial,helvetica, sans-serif; cursor:pointer; font-size:16px; margin-bottom: 10px}
 
 .bex-styles ul.tabs {border-radius: 5px; display: table; box-shadow:0 3px 4px 0px #c5c5c5}
 .bex-styles ul.tabs li {float: left; font-family: 'Fjalla One', sans-serif; font-size:16px; padding:24px;}
