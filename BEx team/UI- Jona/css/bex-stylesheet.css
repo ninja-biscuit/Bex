@@ -29,6 +29,7 @@ html {font-family: 'Open Sans', sans-serif; margin: 0; padding: 0; height: 100%}
 .bex-styles .blue-button {background-color: #2c7bc7; border: none; color: #fff;}
 .bex-styles .gray-button {background-color: #ececec; border: 1px solid #586c8f; color: #586c8f; padding: 5px 50px;}
 .bex-styles .blue-button:hover {background-color: #23629e; color: #fff;}
+.bex-styles .blue-alt-button{background-color: #adbfde; color: #fff;}
 .bex-styles .gray-button:hover {background-color: #586c8f; border: 1px solid #586c8f; color: #fff; padding: 5px 50px;}
 .bex-styles .red-button {background-color: #e8101f; border: none; color: #fff;}
 .bex-styles .green-button {background-color: #12c862; border: none; color: #fff;}
@@ -50,14 +51,26 @@ html {font-family: 'Open Sans', sans-serif; margin: 0; padding: 0; height: 100%}
 .bex-styles .drop-label {font-family: 'Fjalla One', sans-serif; font-size: 16px; text-transform: uppercase;}
 .bex-styles .icon-chevron-down {margin-left: 15px; float: right; position: relative;}
 .bex-styles .icon-chevron-down span {display:none;}
-.bex-styles .icon-chevron-down span:before  {color:#fff; font-size: 12px; position: absolute; top: 37px; left: 3px; z-index: 10}
+.bex-styles .icon-chevron-down span:before  {color:#fff; font-size: 12px; position: absolute; top: 38px; left: 3px; z-index: 10}
 .bex-styles .icon-chevron-down:before {top: 3px; position: relative;}
-.bex-styles .hidden-panel {width: -moz-max-content; width: -webkit-max-content; width: max-content; min-width: 126px; display: none; position: absolute; top: 56px; right: 0; background-color: #fff; box-shadow: 0 4px 6px -1px #888; padding: 15px; border-radius: 5px; z-index:9}
-.bex-styles .hidden-panel ul {list-style: none; margin: 0; padding: 0; z-index: 10}
+.bex-styles .hidden-panel {width: -moz-max-content; width: -webkit-max-content; width: max-content; min-width: 126px; display: none; position: absolute; top: 56px; right: 0; background-color: #fff; box-shadow: 0 4px 6px -1px #888; border-radius: 5px; z-index:9}
+.bex-styles.bex-dark .hidden-panel {box-shadow:none;}
+.bex-styles .hidden-panel ul {list-style: none; margin: 0; padding: 15px; z-index: 10}
 .bex-styles .hidden-panel ul li {color: #888; cursor: pointer; z-index: 11; margin-bottom: 10px}
 .bex-styles .hidden-panel ul li:last-child { margin-bottom: 0px}
-.bex-styles .hidden-panel table {color:#888; border: 1px solid #888; border-spacing: 0; border-collapse: collapse;}
-.bex-styles .hidden-panel table td {border: 1px solid #888}
+
+.bex-styles.bex-dark .drop .hidden-panel
+.bex-styles .drop .hidden-panel .table-rows {border-radius: 5px; color:#888; border: 1px solid #888; border-spacing: 0; border-collapse: collapse;}
+.bex-styles .drop .hidden-panel .table-rows tr td {border:none; border-bottom:1px solid #ebebeb; background-color: #fff; padding: 6px 13px}
+.bex-styles .drop .hidden-panel .table-rows tr:last-child td {border:none;}
+.bex-styles .drop .hidden-panel .table-rows tr td {color:#5e6c8c; font-size: 16px}
+.bex-styles .drop .hidden-panel .table-rows tr:nth-child(even) td {background-color: #f7f8fb}
+.bex-styles .drop .hidden-panel .table-rows tr:nth-child(1) td:nth-child(1) {border-top-left-radius:5px;} 
+.bex-styles .drop .hidden-panel .table-rows tr:nth-child(1) td:nth-child(2) {border-top-right-radius:5px;} 
+.bex-styles .drop .hidden-panel .table-rows tr:last-child td:nth-child(1) {border-bottom-left-radius:5px;} 
+.bex-styles .drop .hidden-panel .table-rows tr:last-child td:nth-child(2) {border-bottom-right-radius:5px;} 
+/*.bex-styles .hidden-panel table {color:#888; border: 1px solid #888; border-spacing: 0; border-collapse: collapse;}
+.bex-styles .hidden-panel table td {border: 1px solid #888}*/
 .drop:focus .hidden-panel, .drop:focus .icon-chevron-down span {display: block;}
 
 /* Select drop */
@@ -78,6 +91,14 @@ html {font-family: 'Open Sans', sans-serif; margin: 0; padding: 0; height: 100%}
 .bex-styles ul.light li {color: #2c7bc7; transition: background 0.3s ease; cursor: pointer}
 .bex-styles ul.light li:hover, .bex-styles ul.light li.active {background-color: #f7f8fc;}
 .bex-styles ul.light li.active {border-bottom: 6px solid #2c7bc7;  padding-bottom:18px;}
+
+.bex-styles ul.tabs-small {border-radius: 5px; display: table;}
+.bex-styles ul.tabs-small li {float: left; font-family: 'Fjalla One', sans-serif; font-size:16px; padding:9px 19px 9px; background-color: #fff;}
+.bex-styles ul.tabs-small li:first-child {border-bottom-left-radius:5px;; border-top-left-radius:5px;}
+.bex-styles ul.tabs-small li:last-child {border-bottom-right-radius:5px;; border-top-right-radius:5px;}
+.bex-styles ul.tabs-small li {color: #2c7bc7; transition: background 0.3s ease; cursor: pointer}
+.bex-styles ul.tabs-small li:hover, .bex-styles ul.light li.active {background-color: #f7f8fc;}
+.bex-styles ul.tabs-small li.active {border-bottom: 4px solid #2c7bc7;  padding-bottom:4px;}
 
 .bex-styles ul.dark {background-color: #142e5d}
 .bex-styles ul.dark li {color: #adbfde; transition: background 0.3s ease; cursor: pointer}
@@ -122,6 +143,14 @@ html {font-family: 'Open Sans', sans-serif; margin: 0; padding: 0; height: 100%}
 .bex-styles .tooltip.top {margin-top: -10px}
 .bex-styles .tooltip.top .tooltip-arrow {border-top-color:#2c7bc7; bottom: 0px}
 .bex-styles .tooltip-inner {background-color: #2c7bc7; padding: 12px 18px; text-align: left}
+
+.bex-styles.bex-dark .search-field-content {background-color: transparent; display: inline-block; border:none; border-bottom: 1px solid #adbfde; border-radius: 0px; padding: 1px}
+.bex-styles.bex-dark .search-field-content .search-field {border:none; background-color: transparent; padding: 4px 5px 4px 12px; outline: none; color: #adbfde}
+.bex-styles.bex-dark .mini-table-panel .search-field-content .search-field  {max-width: 80px}
+.bex-styles.bex-dark .mini-table-panel .form-group {margin-bottom: 15px}
+.bex-styles.bex-dark .search-field-content span {cursor: pointer; display: inline-block; width:16px; height:16px; vertical-align: middle; margin-right: 3px}
+.bex-styles.bex-dark .search-field-content .icon-search:before {color: #fff;}
+
 
 .bex-styles .radio-asset .icon-radio-button:before {color:#888;}
 .bex-styles .radio-asset .icon-radio-button-selected:before {color:#2c7bc7;}

@@ -125,11 +125,6 @@
 		});
 	}); 
 
-	// max width
-	var maxWidth = $('.select-asset-list li:first-child').width();
-	console.log(maxWidth);
-	//$('.selected_option').width(maxWidth);
-
 	// show the list with arrow
 	$('.icon-chevron-down').on('click', function(){
 		$(this).siblings('.select-asset-list-container').toggle();		
@@ -144,11 +139,8 @@
 		assetSelect.find('.selected_option').text(selected); // change the text
 		assetSelect.find('select option').attr("selected",false); // remove attr selected on every option
 		assetSelect.find('select option:nth-child(' + childrenOrder + ')').attr("selected",true); // add attr selected
-		assetSelect.find('.select-asset-list-container').toggle(); // hide the list
-		
+		assetSelect.find('.select-asset-list-container').toggle(); // hide the list		
 	});
-
-
 </script>
 </body>
 </html>
