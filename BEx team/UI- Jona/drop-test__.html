@@ -3,11 +3,14 @@
 <head>
 	<meta charset="utf-8">
 	<title>Drop example</title>
+	<link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<style type="text/css">
 		* {outline: none}
-		html, body {margin:0; padding: 0;}
+		html, body {margin:0; padding: 0; height: 100%}
+		/*
 		body {background-color: #d1d1d1}
 		.drop {border: none; background-color:#2c7bc7; color: #fff; padding: 8px 23px; display: table; font-family: arial, helvetica, sans-serif; border-radius: 5px; position: relative; min-width: 110px}
 		.drop-label {font-family: 'Fjalla One', sans-serif; font-size: 16px; text-transform: uppercase;}
@@ -22,7 +25,7 @@
 		.hidden-panel table {color:#888; border: 1px solid #888; border-spacing: 0; border-collapse: collapse;}
 		.hidden-panel table td {border: 1px solid #888}
 		.drop:focus .hidden-panel, .drop:focus .icon-chevron-down span {display: block;}	
-		/* select */
+		
 		.blue-button {background-color: #2c7bc7; border: none; color: #fff;}
 		.gray-button {background-color: #ececec; border: 1px solid #586c8f; color: #586c8f; padding: 5px 50px;}
 		.blue-button:hover {background-color: #23629e; color: #fff;}
@@ -40,20 +43,119 @@
 		.select-asset .select-asset-list-container i.icon-triangle-up:before {position: absolute; top: -14px; right: 22px;}
 		.select-asset .select-asset-list {background-color: #fff; padding: 15px; border-radius: 5px; list-style: none; margin:0; font-size: 14px}
 		.select-asset .select-asset-list li {color: #888; font-family: arial,helvetica, sans-serif; cursor:pointer;}
+		*/
+		
 
+		
+		
+			
+		
 
+		/* retocados de bootstrap */
+		.panel table.asset {width: 100%; border-spacing: 0; border: 0;}
+		.panel table.asset tbody, table.asset thead {display: block;}
+		.panel thead tr th {height: 30px; line-height: 30px;}
+		
+		.panel.panel-type1 {background-color: #fff; border: 0px; border-radius: 5px; box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5); margin-bottom: 0px;}
+		.panel-type1 > .panel-heading {background-color: #2c7bc7; border-color: transparent; padding: 11px 19px}
+		.panel-type1 > .panel-heading > h3 {font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 26px; color: #fff;}
+		.panel-type1 > .panel-body {padding:0;}
+		.panel-type1 > .panel-body table.asset {width: 100%; border-spacing: 0; border: 0;}
+		.panel-type1 > .panel-body table.asset thead {height: 53px; border-top:1px solid #dddfe5; border-bottom:1px solid #dddfe5; background-color: #f0f2f8; padding-right: 17px}
+		.panel-type1 > .panel-body table.asset thead td {color: #4e7ac3; font-family: "Fjalla One",sans-serif; font-size: 16px; height: 53px; text-align: center;}
+		.panel-type1 > .panel-body table.asset tbody {height: 280px; overflow-y: auto; overflow-x: hidden; border-bottom-left-radius:5px, border-bottom-right-radius:5px}
+		.panel-type1 > .panel-body table.asset tbody tr {width: 100%; display: table;}
+		.panel-type1 > .panel-body table.asset tbody td {text-align: center; height: 35px; color:#5e6c8c; background-color:#f7f8fb; border-bottom: 1px solid #ebebeb;}
+		.panel-type1 > .panel-body table.asset tbody tr.active td {background-color:#2c7bc7; color:#fff;}
+		.panel-type1 > .panel-body table.asset tbody tr:last-child td {border-bottom: 0 transparent}
+		.panel-type1 > .panel-body table.asset tbody tr td a {color:#2c7bc7; text-decoration: underline;}
+		.panel-type1 > .panel-body table.asset tbody tr.active td {background-color:#2c7bc7; color:#fff;}
+		.panel-type1 > .panel-body table.asset tbody tr.active td > a {color:#fff;}		
+		.panel-type1 > .panel-body table.asset tbody td:nth-child(1), .panel-type1 > .panel-body table.asset thead td:nth-child(1) {width: 40px}
+		.panel-type1 > .panel-body table.asset tbody td:nth-child(2), .panel-type1 > .panel-body table.asset thead td:nth-child(2) {width: 50px}
+		.panel-type1 > .panel-body table.asset tbody td:nth-child(3), .panel-type1 > .panel-body table.asset thead td:nth-child(3) {width: 50px}
+		.panel-type1 > .panel-body table.asset tbody td:nth-child(4), .panel-type1 > .panel-body table.asset thead td:nth-child(4) {width: 50px}
+		.panel-type1 > .panel-body table.asset tbody td:nth-child(5), .panel-type2 > .panel-body table.asset thead td:nth-child(5) {width: 63px}
 
+		/* type 2 */
+		.panel.panel-type2 {background-color: #fff; border: 0px; border-radius: 5px; box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5); margin-bottom: 0px;}
+		.panel-type2 > .panel-heading {background-color: #f7f8fb; border-color: transparent; padding: 11px 19px}
+		.panel-type2 > .panel-heading > h3 {font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 26px; color: #586c8f;}
+		.panel-type2 > .panel-body {padding:0;}
+		.panel-type2 > .panel-body table.asset {width: 100%;}
+		.panel-type2 > .panel-body table.asset thead {height: 53px; border-top:1px solid #dddfe5; border-bottom:1px solid #dddfe5; background-color: #f0f2f8; padding-right: 17px}
+		.panel-type2 > .panel-body table.asset thead td {color: #4e7ac3; font-family: "Fjalla One",sans-serif; font-size: 16px; height: 53px; text-align: center;}
+		.panel-type2 > .panel-body table.asset tbody {height: 280px; overflow-y: auto; overflow-x: hidden; border-bottom-left-radius:5px, border-bottom-right-radius:5px}
+		.panel-type2 > .panel-body table.asset tbody tr {width: 100%; display: table;}
+		.panel-type2 > .panel-body table.asset tbody td {text-align: center; height: 35px; color:#5e6c8c; background-color:#f7f8fb; border-bottom: 1px solid #ebebeb;}
+		.panel-type2 > .panel-body table.asset tbody tr.active td {background-color:#2c7bc7; color:#fff;}
+		.panel-type2 > .panel-body table.asset tbody tr:last-child td {border-bottom: 0 transparent}
+		.panel-type2 > .panel-body table.asset tbody tr td a {color:#2c7bc7; text-decoration: underline;}
+		.panel-type2 > .panel-body table.asset tbody tr.active td {background-color:#2c7bc7; color:#fff;}
+		.panel-type2 > .panel-body table.asset tbody tr.active td > a {color:#fff;}		
+		.panel-type2 > .panel-body table.asset tbody td:nth-child(1), .panel-type2 > .panel-body table.asset thead td:nth-child(1) {width: 9.868%}
+		.panel-type2 > .panel-body table.asset tbody td:nth-child(2), .panel-type2 > .panel-body table.asset thead td:nth-child(2) {width: 10.745%}
+		.panel-type2 > .panel-body table.asset tbody td:nth-child(3), .panel-type2 > .panel-body table.asset thead td:nth-child(3) {width: 34.377%}
+		.panel-type2 > .panel-body table.asset tbody td:nth-child(4), .panel-type2 > .panel-body table.asset thead td:nth-child(4) {width: 18.421%}
+		.panel-type2 > .panel-body table.asset tbody td:nth-child(5), .panel-type2 > .panel-body table.asset thead td:nth-child(5) {width: 22.368%}
+		/* type 3 */
+		.panel.panel-type3 {background-color: #fff; border: 0px; border-radius: 5px; box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5); margin-bottom: 0px;}
+		.panel-type3 > .panel-heading {background-color: #f7f8fb; border-color: transparent; padding: 11px 19px}
+		.panel-type3 > .panel-heading > h3 {font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 26px; color: #586c8f;}
+		.panel-type3 > .panel-body {padding:0;}
+		.panel-type3 > .panel-body table.asset {width: 100%;}
+		.panel-type3 > .panel-body table.asset thead {height: 53px; border-top:1px solid #dddfe5; border-bottom:1px solid #dddfe5; background-color: #f0f2f8; padding-right: 17px}
+		.panel-type3 > .panel-body table.asset thead td {color: #4e7ac3; font-family: "Fjalla One",sans-serif; font-size: 16px; height: 53px; text-align: center;}
+		.panel-type3 > .panel-body table.asset tbody {height: 280px; overflow-y: auto; overflow-x: hidden; border-bottom-left-radius:5px, border-bottom-right-radius:5px}
+		.panel-type3 > .panel-body table.asset tbody tr {width: 100%; display: table;}
+		.panel-type3 > .panel-body table.asset tbody tr td {text-align: center; height: 35px; color:#5e6c8c; background-color:#f7f8fb; border-bottom: 1px solid #ebebeb;}
+		.panel-type3 > .panel-body table.asset tbody tr.active td {background-color:#2c7bc7;}
+		.panel-type3 > .panel-body table.asset tbody tr:last-child td {border-bottom: 0 transparent}
+		.panel-type3 > .panel-body table.asset tbody td a {color:#2c7bc7; text-decoration: underline;}		
+		.panel-type3 > .panel-body table.asset tbody td:nth-child(1), .panel-type3 > .panel-body table.asset thead td:nth-child(1) {width: 14.367%}
+		.panel-type3 > .panel-body table.asset tbody td:nth-child(2), .panel-type3 > .panel-body table.asset thead td:nth-child(2) {width: 40.229%}
+		.panel-type3 > .panel-body table.asset tbody td:nth-child(3), .panel-type3 > .panel-body table.asset thead td:nth-child(3) {width: 23.988%}
+		.panel-type3 > .panel-body table.asset tbody td:nth-child(4), .panel-type3 > .panel-body table.asset thead td:nth-child(4) {width: 22.413%}	
+
+		/* type 4 */
+		.panel.panel-type4 {background-color: #fff; border: 0px; border-radius: 5px; box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5); margin-bottom: 0px;}
+		.panel-type4 > .panel-heading {background-color: #f7f8fb; border-color: transparent; padding: 11px 19px}
+		.panel-type4 > .panel-heading > h3 {font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 26px; color: #586c8f;}
+		.panel-type4 > .panel-body {padding:0;}
+		.panel-type4 > .panel-body table.asset {width: 100%;}
+		.panel-type4 > .panel-body table.asset thead {height: 53px; border-top:1px solid #dddfe5; border-bottom:1px solid #345c90; background-color: #377cc0; padding-right: 17px}
+		.panel-type4 > .panel-body table.asset thead td {color: #fff; font-family: "Fjalla One",sans-serif; font-size: 16px; height: 53px; text-align: center;}
+		.panel-type4 > .panel-body table.asset tbody {height: 280px; overflow-y: auto; overflow-x: hidden; border-bottom-left-radius:5px, border-bottom-right-radius:5px; background: -moz-linear-gradient(top,  #276ab0 0%, #142e5d 100%); background: -webkit-linear-gradient(top,  #276ab0 0%,#142e5d 100%); background: linear-gradient(to bottom,  #276ab0 0%,#142e5d 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#276ab0', endColorstr='#142e5d',GradientType=0 );}
+		.panel-type4 > .panel-body table.asset tbody tr {width: 100%; display: table;}
+		.panel-type4 > .panel-body table.asset tbody tr td {text-align: center; height: 35px; color:#fff; border-bottom: 1px solid #345c90;}
+		.panel-type4 > .panel-body table.asset tbody tr:last-child td {border-bottom: 0 transparent}
+		.panel-type4 > .panel-body table.asset tbody td a {color:#fff; text-decoration: underline;}		
+		.panel-type4 > .panel-body table.asset tbody td:nth-child(1), .panel-type4 > .panel-body table.asset thead td:nth-child(1) {width: 110px}
+		.panel-type4 > .panel-body table.asset tbody td:nth-child(2), .panel-type4 > .panel-body table.asset thead td:nth-child(2) {width: 145px}
+		.panel-type4 > .panel-body table.asset tbody td:nth-child(3), .panel-type4 > .panel-body table.asset thead td:nth-child(3) {width: 93px}
+		/* type 5 */
+		.panel.panel-type5 {background-color: #fff; border: 0px; border-radius: 5px; box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5); margin-bottom: 0px;}
+		.panel-type5 > .panel-heading {background-color: #f7f8fb; border-color: transparent; padding: 11px 19px}
+		.panel-type5 > .panel-heading > h3 {font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 26px; color: #586c8f;}
+		.panel-type5 > .panel-body {padding:0; background: -moz-linear-gradient(top,  #276ab0 0%, #142e5d 100%); background: -webkit-linear-gradient(top,  #276ab0 0%,#142e5d 100%); background: linear-gradient(to bottom,  #276ab0 0%,#142e5d 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#276ab0', endColorstr='#142e5d',GradientType=0 );}
+
+		/* type 6 */
+		.panel.panel-type6 {background-color: #fff; border: 0px; border-radius: 5px; box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.5); margin-bottom: 0px;}
+		.panel-type6 > .panel-heading {background-color: #f7f8fb; border-color: transparent; padding: 11px 19px}
+		.panel-type6 > .panel-heading > h3 {font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 26px; color: #586c8f;}
+		.panel-type6 > .panel-body {padding:0; background: #fff;}
 
 
 	</style>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </head>
 <body>
-<div style="width:100%; height:150px">
+<!--div style="width:100%; height:150px">
 	<div class="drop" tabindex="0">
 		<span class="drop-label">$1.987.622,829<i class="icon-chevron-down"><span class="icon-triangle-up"></span></i></span>
 		<div class="hidden-panel">
-				<!--span class="tip"></span-->
+	
 				<ul>
 					<li>Option 1</li>
 					<li>Option 2</li>
@@ -92,7 +194,6 @@
 		</div>
 	</div>
 </div>
-
 <div style="width:100%; height:150px">
 
 	<div class="select-asset red-button" tabindex="0">		
@@ -102,12 +203,382 @@
 			<option>I'm still on the podium!</option>
 		</select>
 	</div>
+</div-->
+<div style="margin: 50px; width:270px; float:left">
+	<div class="panel panel-type1">
+		<div class="panel-heading">
+			<h3 class="panel-title">Service Quality</h3>
+		</div>
+		<div class="panel-body">
+			<table class="asset" width="100%">
+				<thead>
+					<tr>
+						<td>LP</td>
+						<td>Pairs</td>
+						<td>Combo</td>
+						<td>AVG Tier</td>
+						<td>Liq. Quotient</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a href="#">01</a></td>
+						<td>520</td>
+						<td>23</td>
+						<td>8.2</td>
+						<td>230</td>
+					</tr>
+					<tr>
+						<td><a href="#">02</a></td>
+						<td>520</td>
+						<td>23</td>
+						<td>8.2</td>
+						<td>230</td>
+					</tr>
+					<tr>
+						<td><a href="#">03</a></td>
+						<td>520</td>
+						<td>23</td>
+						<td>8.2</td>
+						<td>230</td>
+					</tr>
+					<tr>
+						<td><a href="#">04</a></td>
+						<td>520</td>
+						<td>23</td>
+						<td>8.2</td>
+						<td>230</td>
+					</tr>
+					<tr>
+						<td><a href="#">05</a></td>
+						<td>520</td>
+						<td>23</td>
+						<td>8.2</td>
+						<td>230</td>
+					</tr>
+					<tr class="active">
+						<td><a href="#">06</a></td>
+						<td>520</td>
+						<td>23</td>
+						<td>8.2</td>
+						<td>230</td>
+					</tr>
+					<tr>
+						<td><a href="#">07</a></td>
+						<td>520</td>
+						<td>23</td>
+						<td>8.2</td>
+						<td>230</td>
+					</tr>
+					<tr>
+						<td><a href="#">08</a></td>
+						<td>520</td>
+						<td>23</td>
+						<td>8.2</td>
+						<td>230</td>
+					</tr>
+					<tr>
+						<td><a href="#">09</a></td>
+						<td>520</td>
+						<td>23</td>
+						<td>8.2</td>
+						<td>230</td>
+					</tr>
+					<tr>
+						<td><a href="#">10</a></td>
+						<td>520</td>
+						<td>23</td>
+						<td>8.2</td>
+						<td>230</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
 
+<div style="margin: 50px; width:475px; float:left">
+	<div class="panel panel-type2">
+		<div class="panel-heading">
+			<h3 class="panel-title">Liquidity Stats - LP02</h3>
+		</div>
+		<div class="panel-body">
+			<table class="asset" width="100%">
+				<thead>
+					<tr>
+						<td>Pair</td>
+						<td>Date</td>
+						<td>Rank Type</td>
+						<td>Component Value</td>
+						<td>Tier for Rank Type</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a href="#">01</a></td>
+						<td>08:45</td>
+						<td>% Time inside Bid</td>
+						<td>3.1</td>
+						<td>510</td>
+					</tr>
+					<tr>
+						<td><a href="#">02</a></td>
+						<td>08:45</td>
+						<td>% Time inside Bid</td>
+						<td>3.1</td>
+						<td>510</td>
+					</tr>
+					<tr>
+						<td><a href="#">03</a></td>
+						<td>08:45</td>
+						<td>% Time inside Bid</td>
+						<td>3.1</td>
+						<td>510</td>
+					</tr>
+					<tr>
+						<td><a href="#">04</a></td>
+						<td>08:45</td>
+						<td>% Time inside Bid</td>
+						<td>3.1</td>
+						<td>510</td>
+					</tr>
+					<tr class="active">
+						<td><a href="#">05</a></td>
+						<td>08:45</td>
+						<td>% Time inside Bid</td>
+						<td>3.1</td>
+						<td>510</td>
+					</tr>
+					<tr>
+						<td><a href="#">06</a></td>
+						<td>08:45</td>
+						<td>% Time inside Bid</td>
+						<td>3.1</td>
+						<td>510</td>
+					</tr>
+					<tr>
+						<td><a href="#">07</a></td>
+						<td>08:45</td>
+						<td>% Time inside Bid</td>
+						<td>3.1</td>
+						<td>510</td>
+					</tr>
+					<tr>
+						<td><a href="#">08</a></td>
+						<td>08:45</td>
+						<td>% Time inside Bid</td>
+						<td>3.1</td>
+						<td>510</td>
+					</tr>
+					<tr>
+						<td><a href="#">09</a></td>
+						<td>08:45</td>
+						<td>% Time inside Bid</td>
+						<td>3.1</td>
+						<td>510</td>
+					</tr>
+					<tr>
+						<td><a href="#">10</a></td>
+						<td>08:45</td>
+						<td>% Time inside Bid</td>
+						<td>3.1</td>
+						<td>510</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+	
+<div style="margin: 50px; width:365px; float:left">
+	<div class="panel panel-type3">
+		<div class="panel-heading">
+			<h3 class="panel-title">Liquidity Stats - LP01/Pair 03</h3>
+		</div>
+		<div class="panel-body">
+			<table class="asset" width="100%">
+				<thead>
+					<tr>
+						<td>Date</td>
+						<td>Rank Type</td>
+						<td>Component Value</td>
+						<td>Tier for Rank Type</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>08:45</td>
+						<td>% Time inside Bid</td>
+						<td>3.1</td>
+						<td>510</td>
+					</tr>
+					<tr>
+						<td>08:45</td>
+						<td>% Time inside Bid</td>
+						<td>3.1</td>
+						<td>510</td>
+					</tr>
+					<tr>
+						<td>08:45</td>
+						<td>% Time inside Bid</td>
+						<td>3.1</td>
+						<td>510</td>
+					</tr>
+					<tr>
+						<td>08:45</td>
+						<td>% Time inside Bid</td>
+						<td>3.1</td>
+						<td>510</td>
+					</tr>
+					<tr>
+						<td>08:45</td>
+						<td>% Time inside Bid</td>
+						<td>3.1</td>
+						<td>510</td>
+					</tr>
+					<tr>
+						<td>08:45</td>
+						<td>% Time inside Bid</td>
+						<td>3.1</td>
+						<td>510</td>
+					</tr>
+					<tr>
+						<td>08:45</td>
+						<td>% Time inside Bid</td>
+						<td>3.1</td>
+						<td>510</td>
+					</tr>
+					<tr>
+						<td>08:45</td>
+						<td>% Time inside Bid</td>
+						<td>3.1</td>
+						<td>510</td>
+					</tr>
+					<tr>
+						<td>08:45</td>
+						<td>% Time inside Bid</td>
+						<td>3.1</td>
+						<td>510</td>
+					</tr>
+					<tr>
+						<td>08:45</td>
+						<td>% Time inside Bid</td>
+						<td>3.1</td>
+						<td>510</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+<div style="margin: 50px; width:349px; float:left">
+	<div class="panel panel-type4">
+		<div class="panel-heading">
+			<h3 class="panel-title">Median Spreads Table</h3>
+		</div>
+		<div class="panel-body">
+			<table class="asset" width="100%">
+				<thead>
+					<tr>
+						<td>LP</td>
+						<td>Time</td>
+						<td>Med 1M</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a heref="#">01</a></td>
+						<td>08:45</td>
+						<td>420</td>					
+					</tr>
+					<tr>
+						<td><a heref="#">02</a></td>
+						<td>08:45</td>
+						<td>420</td>					
+					</tr>
+					<tr>
+						<td><a heref="#">03</a></td>
+						<td>08:45</td>
+						<td>420</td>					
+					</tr>
+					<tr>
+						<td><a heref="#">04</a></td>
+						<td>08:45</td>
+						<td>420</td>					
+					</tr>
+					<tr>
+						<td><a heref="#">05</a></td>
+						<td>08:45</td>
+						<td>420</td>					
+					</tr>
+					<tr>
+						<td><a heref="#">06</a></td>
+						<td>08:45</td>
+						<td>420</td>					
+					</tr>
+					<tr>
+						<td><a heref="#">07</a></td>
+						<td>08:45</td>
+						<td>420</td>					
+					</tr>
+					<tr>
+						<td><a heref="#">08</a></td>
+						<td>08:45</td>
+						<td>420</td>					
+					</tr>
+					<tr>
+						<td><a heref="#">09</a></td>
+						<td>08:45</td>
+						<td>420</td>					
+					</tr>
+					<tr>
+						<td><a heref="#">10</a></td>
+						<td>08:45</td>
+						<td>420</td>					
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</div>
+</div>
+
+<div style="margin: 50px; width:729px; float:left">
+	<div class="panel panel-type5">
+		<div class="panel-heading">
+			<h3 class="panel-title">Median Spreads Graphic</h3>
+		</div>
+		<div class="panel-body">
+			<br><br><br><br><br><br><br><br><br><br><br><br><br>
+			
+		</div>
+	</div>
+</div>
+
+<div style="margin: 50px; width:1108px; float:left">
+	<div class="panel panel-type6">
+		<div class="panel-heading">
+			<h3 class="panel-title">Average Spreads Change: Last Week x This Week </h3>
+		</div>
+		<div class="panel-body">
+			<br><br><br><br><br><br><br><br><br><br><br><br><br>
+			
+		</div>
+	</div>
 </div>
 
 
+
 <script type="text/javascript">
-	$('div.select-asset').each(function(){
+
+
+
+
+
+
+
+
+	/*$('div.select-asset').each(function(){
 		assetStructure = '<span class="selected_option">holis</span><i class="icon-chevron-down"></i><div class="select-asset-list-container"><i class="icon-triangle-up"></i><ul class="select-asset-list"></ul></div>';
 		assetSelect = $(this);
 		assetSelect.prepend(assetStructure);
@@ -140,7 +611,7 @@
 		assetSelect.find('select option').attr("selected",false); // remove attr selected on every option
 		assetSelect.find('select option:nth-child(' + childrenOrder + ')').attr("selected",true); // add attr selected
 		assetSelect.find('.select-asset-list-container').toggle(); // hide the list		
-	});
+	});*/
 </script>
 </body>
 </html>

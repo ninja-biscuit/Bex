@@ -15,73 +15,39 @@
 .bex-styles.bex-dark .navbar a.alerts {font-size: 28px; color: #fff; padding: 22px 10px}
 .bex-styles.bex-dark .navbar .badge {background-color: #2c7bc7; border-radius: 500px; color: #fff; font-size: 12px;  padding: 4px; position: relative; top:-13px; left:-11px;}
 
-.bex-styles.bex-dark .second_top {padding-right:0 ; padding-left: 0;}
-.second_top .second-top_drops-container .drop-label {}
-.second_top .second-top_drops-container li {width: 33.3%; float: left; padding: 3px 1%}
-#l-home h3.date {color:#fff;}
+.bex-styles.bex-dark header {padding-right:0 ; padding-left: 0;}
+header .second-top_drops-container {margin-top: 10px}
+header .second-top_drops-container li {width: 33.3%; float: left; padding: 3px 1%}
+#l-home h3.date {color:#fff; margin-bottom: 17px}
 h4.top-labels {color:#fff;}
 
 .drop .hidden-panel .table-rows {border-radius: 5px}
 .drop .hidden-panel .table-rows tr td {border:none; border-bottom:1px solid #ebebeb; background-color: #fff}
 .drop .hidden-panel .table-rows tr:nth-child(even) td {background-color: #f7f8fb}
-.bex-styles.bex-dark .main-content .head-tab {background-color: #f7f8fb; text-align: center; font-size: 18px; font-family: 'Fjalla One', sans-serif; color:#adbfde; padding: 28px 0 21px}
-.bex-styles.bex-dark .main-content .head-tab.active {color:#4e7ac3 ; background-color: #fff;  padding: 28px 0 17px; border-bottom:4px solid #4e7ac3;}
+.bex-styles.bex-dark .main-content .head-tab {background-color: #f7f8fb; text-align: center; font-size: 18px; font-family: 'Fjalla One', sans-serif; color:#adbfde; padding: 28px 0 21px; cursor: pointer;}
+.bex-styles.bex-dark .main-content .head-tab.active {color:#4e7ac3 ; background-color: #fff;  padding: 28px 0 17px; border-bottom:4px solid #4e7ac3; cursor: default}
 .bex-styles.bex-dark .main-content .head-tab:first-child {border-top-left-radius: 5px}
 .bex-styles.bex-dark .main-content .head-tab:last-child {border-top-right-radius: 5px}
 
 .bex-styles.bex-dark .tab-content {padding-top: 60px; background-color: #fff; display: table; width: 100%}
 #tab1 {padding-bottom: 45px}
 
-#three-tables > div:first-child {padding-left: 0}
-#three-tables > div:nth-child(2) {padding-left: 0; padding-right: 0}
-#three-tables > div:last-child {padding-right: 0}
+#three-tables, #bottom-panels {display:block; padding-bottom:20px; margin-bottom: 20px; float: left; width: 100%;}
 
-.panel.mini-table-panel {border:none;}
+/* Large desktop */
+@media (min-width: 768px) {
+	#three-tables > div:first-child {padding-left: 0}
+	#three-tables > div:nth-child(2) {padding-left: 0; padding-right: 0}
+	#three-tables > div:last-child {padding-right: 0}
+}
 
-.bex-styles.bex-dark .mini-table-panel.type-1 .panel-heading h2 {color:#fff; font-size:28px;}
-.bex-styles.bex-dark .mini-table-panel.type-2 .panel-heading h2, .mini-table-panel.type-3 .panel-heading h2 {color:#586c8f; font-size:28px; margin-bottom: 0}
-.bex-styles.bex-dark .mini-table-panel.type-3 .panel-heading h2 {color: #586c8f; margin-bottom: 0; font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 26px}
-.mini-table-panel .panel-heading {padding: 8px 18px}
-.bex-styles.bex-dark .type-1 .panel-heading {background-color: #2c7bc7;}
-.bex-styles.bex-dark .type-2 .panel-heading {background-color: #f7f8fb;}
-.bex-styles.bex-dark .type-3 .panel-heading {background-color: #f7f8fc;  padding: 8px 18px;}
+#bottom-panels > .panel {padding-bottom: 20px}
 
-
-.bex-styles.bex-dark .mini-table-panel table {width: 100%;}
-.bex-styles.bex-dark .mini-table-panel.type-1 table thead tr {background-color: #f7f8fc}
-.bex-styles.bex-dark .mini-table-panel.type-2 table thead tr {background-color: #f0f2f8}
-.bex-styles.bex-dark .mini-table-panel.type-2 table tbody tr {background-color: #f7f8fb}
-
-.bex-styles.bex-dark .mini-table-panel.type-3 table {background: #235fa0; background: -moz-linear-gradient(top,  #235fa0 0%, #142e5d 100%); background: -webkit-linear-gradient(top,  #235fa0 0%,#142e5d 100%); background: linear-gradient(to bottom,  #235fa0 0%,#142e5d 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#235fa0', endColorstr='#142e5d',GradientType=0 );}
-.bex-styles.bex-dark .mini-table-panel.type-3 table thead {background-color: #326aa8}
-.bex-styles.bex-dark .mini-table-panel.type-3 table thead h4 {color: #fff}
-.bex-styles.bex-dark .mini-table-panel.type-3 table tbody a {color: #fff}
-
-
-.bex-styles.bex-dark .mini-table-panel table thead tr td {text-align: center; padding: 7px 2%; height:60px; vertical-align: middle; white-space: pre-wrap}
-.bex-styles.bex-dark .mini-table-panel table tbody tr td {border-bottom: 1px solid #ececec; padding: 8px 7px; text-align: center; vertical-align: middle; color: #586c8f;}
-.bex-styles.bex-dark .mini-table-panel.type-3 table tbody tr td {border-bottom: 1px solid #345c90; color: #fff}
-.bex-styles.bex-dark .mini-table-panel table tbody tr td a {color: #2c7bc7; text-decoration: underline;}
-.bex-styles.bex-dark .mini-table-panel table tbody tr:last-child td {border-bottom:none}
-
-.bex-styles.bex-dark .mini-table-panel table tbody tr.active {background-color:#2c7bc7;} 
-.bex-styles.bex-dark .mini-table-panel table tbody tr.active td , .bex-styles.bex-dark .mini-table-panel table tbody tr.active td a {color: #fff;}
-
-.bex-styles.bex-dark .mini-table-panel.panel {box-shadow: 0 2px 3px -1px #999;}
-
-.bex-styles .panel-blue {border-color:none;}
-.bex-styles .panel-blue > .panel-heading {background-color: #2c7bc7; padding: 5px 15px 10px}
-.bex-styles .panel-blue > .panel-heading h3 {color: #fff; margin-bottom: 0; padding: 9px 0 0}
-.bex-styles .panel-blue .panel-heading label {color: #fff; margin-right: 10px; margin-left: 35px}
-.bex-styles .panel-blue .panel-heading div.select-asset {padding: 8px 10px}
-.bex-styles .panel-blue > .panel-body {padding-left:0; padding-right:0;}
-.bex-styles .panel-blue #graphs {margin-top: 40px} 
-
-.bex-styles .blue-bar {background-color: #2c7bc7; border-radius: 5px; padding: 5px 15px !important}
-.bex-styles .blue-bar h3 {color: #fff; margin-bottom: 0; padding: 8px 0 0}
-.bex-styles .blue-bar label {color: #fff; margin-right: 10px; margin-left: 35px}
-.bex-styles .blue-bar div.select-asset {padding: 8px 10px}
-#graphs {margin-top: 40px}
 .bex-styles footer {margin-top: 65px; background-color: #000;}
-.bex-styles footer .declaimer {color: #fff; font-size: 14px; padding: 8px 0; display: inline-block}
+.bex-styles footer .declaimer {color: #fff; font-size: 14px; padding: 7px 0; display: inline-block}
+.bex-styles footer ul {margin:0;}
 .bex-styles footer a {color: #fff;}
+.bex-styles footer .reverse-drop {padding: 6px 23px; font-family: arial, helvetica, sans-serif; border-radius: 5px 5px 0 0; position: relative; min-width: 110px}
+.bex-styles footer .reverse-drop .drop-label {font-size: 16px}
+.online-items li:before {content:'\2022'; position: relative; left: -7px; font-size: 50px; line-height: 0px; top: 12px; color: #ececec;}
+.online-items li.active:before {color: #12c862}

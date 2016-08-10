@@ -36,7 +36,7 @@ $(document).ready(function(){
 		
 	});
 // tabs
-	$('.tabs li').on('click', function(){
+	$('.tabs li, .tabs-small li').on('click', function(){
 		$(this).siblings().removeClass('active');
 		$(this).addClass('active');
 	});

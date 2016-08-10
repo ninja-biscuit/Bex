@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>BEx liquidity</title>
+	<link rel="stylesheet" href="css/bex-stylesheet.css">
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/bex-liquidity.css">
+	<link rel="stylesheet" href="css/liquidity-panels.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+	<script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body class="bex-styles bex-dark" id="l-home">
+	<nav class="navbar  navbar-fixed-top">
+		<div class="container">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="#"><img src="img/logo.png" alt="BEx"></a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+				<ul class="nav navbar-nav">
+					<li class="contact-container"><a href="#">Contact us</a></li>
+				</ul>
+				<ul class="nav navbar-nav navbar-right">
+					<li>
+						<form class="navbar-form navbar-left">
+							<div class="form-group">
+								<input type="text" class="search-field" placeholder="Search">							
+							</div>
+							
+						</form>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle menu" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="icon-menu"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">MTD Activity</a></li>
+							<li><a href="#">MTD Reject</a></li>
+							<li><a href="#">Client Hit Rate</a></li>
+							<li><a href="#">Volume Status</a></li>
+							<li><a href="#">Buy and Sells</a></li>
+							<li><a href="#">Trader Position</a></li>
+							<li><a href="#">Liquidity</a></li>
+							<li><a href="#">LS Pair</a></li>							
+						</ul>
+					</li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle alerts" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><i class="icon-notification"></i><span class="badge">14</span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">Action</a></li>
+							<li><a href="#">Another action</a></li>
+							<li><a href="#">Something else here</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">Separated link</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- /.navbar-collapse -->
+		</div><!-- /.container-fluid -->
+	</nav>
+	<header>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-5">
+					<h3 class="date">July 22, 2016</h3>
+					<ul class="tabs-small">
+						<li class="active">Today</li>
+						<li>Week</li>
+						<li>Month</li>
+						<li>Year</li>
+						<li>Custom</li>
+					</ul>
+				</div>
+				<div class="col-md-7">
+					<ul class="second-top_drops-container">
+						<li>
+							<h4 class="top-labels">Reject Items / MTD</h4>
+							<div class="drop green-button" tabindex="0">
+								<span class="drop-label">$1.987.622,829<i class="icon-chevron-down"><span class="icon-triangle-up"></span></i></span>
+								<div class="hidden-panel">								
+									<table class="table-rows">
+										<tbody>
+											<tr>
+												<td>VWAP</td>
+												<td>$3,898,500,705</td>
+											</tr>
+											<tr>
+												<td>ALGO</td>
+												<td>$150,122,124</td>
+											</tr>
+											<tr>
+												<td>Lower Q</td>
+												<td>$24,294,599,443</td>
+											</tr>
+											<tr>
+												<td>Median</td>
+												<td>$26,268,624,353</td>
+											</tr>
+											<tr>
+												<td>Upper Q.</td>
+												<td>$32,332,781,642</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</li>
+						<li>
+							<h4 class="top-labels">Reject Items / MTD</h4>
+							<div class="drop red-button" tabindex="0">
+								<span class="drop-label">125 (7%)<i class="icon-chevron-down"><span class="icon-triangle-up"></span></i></span>
+								<div class="hidden-panel">								
+									<table class="table-rows">
+										<tbody>
+											<tr>
+												<td>VWAP</td>
+												<td>$3,898,500,705</td>
+											</tr>
+											<tr>
+												<td>ALGO</td>
+												<td>$150,122,124</td>
+											</tr>
+											<tr>
+												<td>Lower Q</td>
+												<td>$24,294,599,443</td>
+											</tr>
+											<tr>
+												<td>Median</td>
+												<td>$26,268,624,353</td>
+											</tr>
+											<tr>
+												<td>Upper Q.</td>
+												<td>$32,332,781,642</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</li>
+						<li>
+							<h4 class="top-labels">Trader Action Counts</h4>
+							<div class="drop blue-alt-button" tabindex="0">
+								<span class="drop-label">3563<i class="icon-chevron-down"><span class="icon-triangle-up"></span></i></span>
+								<div class="hidden-panel">								
+									<table class="table-rows">
+										<tbody>
+											<tr>
+												<td>VWAP</td>
+												<td>$3,898,500,705</td>
+											</tr>
+											<tr>
+												<td>ALGO</td>
+												<td>$150,122,124</td>
+											</tr>
+											<tr>
+												<td>Lower Q</td>
+												<td>$24,294,599,443</td>
+											</tr>
+											<tr>
+												<td>Median</td>
+												<td>$26,268,624,353</td>
+											</tr>
+											<tr>
+												<td>Upper Q.</td>
+												<td>$32,332,781,642</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</li> 
+					</ul>
+				</div>
+			</div>		
+		</div>
+	</header>
+	<div class="container main-content">
+		<div class="row">
+			<div class="head-tab active col-md-6" for="tab1">
+				New York Liquidity Providers
+			</div>
+			<div class="head-tab col-md-6" for="tab2">
+				London Liquidity Providers
+			</div>
+		</div>
+		<div class="row">
+			<div class="tab-content col-md-12" id="tab1">
+				<section id="three-tables">
+					<div class="col-md-3">
+						<div class="panel panel-type1">
+							<div class="panel-heading">
+								<h3 class="panel-title no-block">Service Quality</h3>
+								<div class="form-group no-block pull-right">
+									<input type="text" class="search-field" placeholder="Search">							
+								</div>
+							</div>
+							<div class="panel-body">
+								<table class="asset" width="100%">
+									<thead>
+										<tr>
+											<td>LP</td>
+											<td>Pairs</td>
+											<td>Combo</td>
+											<td>AVG Tier</td>
+											<td>Liq. Quotient</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><a href="#">01</a></td>
+											<td>520</td>
+											<td>23</td>
+											<td>8.2</td>
+											<td>230</td>
+										</tr>
+										<tr>
+											<td><a href="#">02</a></td>
+											<td>520</td>
+											<td>23</td>
+											<td>8.2</td>
+											<td>230</td>
+										</tr>
+										<tr>
+											<td><a href="#">03</a></td>
+											<td>520</td>
+											<td>23</td>
+											<td>8.2</td>
+											<td>230</td>
+										</tr>
+										<tr>
+											<td><a href="#">04</a></td>
+											<td>520</td>
+											<td>23</td>
+											<td>8.2</td>
+											<td>230</td>
+										</tr>
+										<tr>
+											<td><a href="#">05</a></td>
+											<td>520</td>
+											<td>23</td>
+											<td>8.2</td>
+											<td>230</td>
+										</tr>
+										<tr class="active">
+											<td><a href="#">06</a></td>
+											<td>520</td>
+											<td>23</td>
+											<td>8.2</td>
+											<td>230</td>
+										</tr>
+										<tr>
+											<td><a href="#">07</a></td>
+											<td>520</td>
+											<td>23</td>
+											<td>8.2</td>
+											<td>230</td>
+										</tr>
+										<tr>
+											<td><a href="#">08</a></td>
+											<td>520</td>
+											<td>23</td>
+											<td>8.2</td>
+											<td>230</td>
+										</tr>
+										<tr>
+											<td><a href="#">09</a></td>
+											<td>520</td>
+											<td>23</td>
+											<td>8.2</td>
+											<td>230</td>
+										</tr>
+										<tr>
+											<td><a href="#">10</a></td>
+											<td>520</td>
+											<td>23</td>
+											<td>8.2</td>
+											<td>230</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>		
+					</div>
+					<div class="col-md-5">					
+						<div class="panel panel-type2">
+							<div class="panel-heading">
+								<h3 class="panel-title">Liquidity Stats - LP02</h3>
+							</div>
+							<div class="panel-body">
+								<table class="asset" width="100%">
+									<thead>
+										<tr>
+											<td>Pair</td>
+											<td>Date</td>
+											<td>Rank Type</td>
+											<td>Component Value</td>
+											<td>Tier for Rank Type</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td><a href="#">01</a></td>
+											<td>08:45</td>
+											<td>% Time inside Bid</td>
+											<td>3.1</td>
+											<td>510</td>
+										</tr>
+										<tr>
+											<td><a href="#">02</a></td>
+											<td>08:45</td>
+											<td>% Time inside Bid</td>
+											<td>3.1</td>
+											<td>510</td>
+										</tr>
+										<tr>
+											<td><a href="#">03</a></td>
+											<td>08:45</td>
+											<td>% Time inside Bid</td>
+											<td>3.1</td>
+											<td>510</td>
+										</tr>
+										<tr>
+											<td><a href="#">04</a></td>
+											<td>08:45</td>
+											<td>% Time inside Bid</td>
+											<td>3.1</td>
+											<td>510</td>
+										</tr>
+										<tr class="active">
+											<td><a href="#">05</a></td>
+											<td>08:45</td>
+											<td>% Time inside Bid</td>
+											<td>3.1</td>
+											<td>510</td>
+										</tr>
+										<tr>
+											<td><a href="#">06</a></td>
+											<td>08:45</td>
+											<td>% Time inside Bid</td>
+											<td>3.1</td>
+											<td>510</td>
+										</tr>
+										<tr>
+											<td><a href="#">07</a></td>
+											<td>08:45</td>
+											<td>% Time inside Bid</td>
+											<td>3.1</td>
+											<td>510</td>
+										</tr>
+										<tr>
+											<td><a href="#">08</a></td>
+											<td>08:45</td>
+											<td>% Time inside Bid</td>
+											<td>3.1</td>
+											<td>510</td>
+										</tr>
+										<tr>
+											<td><a href="#">09</a></td>
+											<td>08:45</td>
+											<td>% Time inside Bid</td>
+											<td>3.1</td>
+											<td>510</td>
+										</tr>
+										<tr>
+											<td><a href="#">10</a></td>
+											<td>08:45</td>
+											<td>% Time inside Bid</td>
+											<td>3.1</td>
+											<td>510</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="panel panel-type3">
+							<div class="panel-heading">
+								<h3 class="panel-title">Liquidity Stats - LP01/Pair 03</h3>
+							</div>
+							<div class="panel-body">
+								<table class="asset" width="100%">
+									<thead>
+										<tr>
+											<td>Date</td>
+											<td>Rank Type</td>
+											<td>Component Value</td>
+											<td>Tier for Rank Type</td>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>08:45</td>
+											<td>% Time inside Bid</td>
+											<td>3.1</td>
+											<td>510</td>
+										</tr>
+										<tr>
+											<td>08:45</td>
+											<td>% Time inside Bid</td>
+											<td>3.1</td>
+											<td>510</td>
+										</tr>
+										<tr>
+											<td>08:45</td>
+											<td>% Time inside Bid</td>
+											<td>3.1</td>
+											<td>510</td>
+										</tr>
+										<tr>
+											<td>08:45</td>
+											<td>% Time inside Bid</td>
+											<td>3.1</td>
+											<td>510</td>
+										</tr>
+										<tr>
+											<td>08:45</td>
+											<td>% Time inside Bid</td>
+											<td>3.1</td>
+											<td>510</td>
+										</tr>
+										<tr>
+											<td>08:45</td>
+											<td>% Time inside Bid</td>
+											<td>3.1</td>
+											<td>510</td>
+										</tr>
+										<tr>
+											<td>08:45</td>
+											<td>% Time inside Bid</td>
+											<td>3.1</td>
+											<td>510</td>
+										</tr>
+										<tr>
+											<td>08:45</td>
+											<td>% Time inside Bid</td>
+											<td>3.1</td>
+											<td>510</td>
+										</tr>
+										<tr>
+											<td>08:45</td>
+											<td>% Time inside Bid</td>
+											<td>3.1</td>
+											<td>510</td>
+										</tr>
+										<tr>
+											<td>08:45</td>
+											<td>% Time inside Bid</td>
+											<td>3.1</td>
+											<td>510</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+				</section>
+				<section id="bottom-panels">
+					<div class="panel panel-type-container col-md-12">
+						<div class="panel-heading">
+							<h3 class="no-block">Product Quality - Pair 1</h3>
+							<div class="pull-right no-block">
+								<label>Pair</label>
+								<div class="select-asset white-button" tabindex="0">
+									<select class="select-asset">
+										<option>01</option>
+										<option>02</option>
+										<option>03</option>								
+									</select>
+								</div> 
+								<label>Level</label>
+								<div class="select-asset white-button" tabindex="0">
+									<select class="select-asset">
+										<option>3m spread</option>
+										<option>4m spread</option>
+										<option>5m spread</option>								
+									</select>
+								</div>							
+							</div>
+						</div>
+						<div class="panel-body">
+							<div class="col-md-4">
+								<div class="panel panel-type4">
+									<div class="panel-heading">
+										<h3 class="panel-title">Median Spreads Table</h3>
+									</div>
+									<div class="panel-body">
+										<table class="asset" width="100%">
+											<thead>
+												<tr>
+													<td>
+														LP
+														<div class="select-asset white-button no-block" tabindex="0">
+															<select class="select-asset">
+																<option>ALL</option>
+																<option>01</option>
+																<option>02</option>
+																<option>03</option>
+																<option>04</option>
+																<option>05</option>								
+															</select>
+														</div>
+													</td>
+													<td>
+														Time
+														<div class="select-asset white-button no-block" tabindex="0">
+															<select class="select-asset">
+																<option>08:45</option>
+																<option>09:00</option>
+																<option>09:15</option>								
+															</select>
+														</div>
+													</td>
+													<td>Med 1M</td>
+												</tr>
+											</thead>
+											<tbody>
+												<tr>
+													<td><a heref="#">01</a></td>
+													<td>08:45</td>
+													<td>420</td>					
+												</tr>
+												<tr>
+													<td><a heref="#">02</a></td>
+													<td>08:45</td>
+													<td>420</td>					
+												</tr>
+												<tr>
+													<td><a heref="#">03</a></td>
+													<td>08:45</td>
+													<td>420</td>					
+												</tr>
+												<tr>
+													<td><a heref="#">04</a></td>
+													<td>08:45</td>
+													<td>420</td>					
+												</tr>
+												<tr>
+													<td><a heref="#">05</a></td>
+													<td>08:45</td>
+													<td>420</td>					
+												</tr>
+												<tr>
+													<td><a heref="#">06</a></td>
+													<td>08:45</td>
+													<td>420</td>					
+												</tr>
+												<tr>
+													<td><a heref="#">07</a></td>
+													<td>08:45</td>
+													<td>420</td>					
+												</tr>
+												<tr>
+													<td><a heref="#">08</a></td>
+													<td>08:45</td>
+													<td>420</td>					
+												</tr>
+												<tr>
+													<td><a heref="#">09</a></td>
+													<td>08:45</td>
+													<td>420</td>					
+												</tr>
+												<tr>
+													<td><a heref="#">10</a></td>
+													<td>08:45</td>
+													<td>420</td>					
+												</tr>
+											</tbody>
+										</table>
+									</div>
+								</div>								
+							</div>
+							<div class="col-md-8">
+								<div class="panel panel-type5">
+									<div class="panel-heading">
+										<h3 class="panel-title">Median Spreads Graphic</h3>
+									</div>
+									<div class="panel-body">
+										<br><br><br><br><br><br><br><br><br><br><br><br><br>
+										
+									</div>
+								</div>
+							</div>																				
+						</div>
+						<div class="col-md-12">
+							<div class="col-md-12">
+								<div class="panel panel-type6">
+									<div class="panel-heading">
+										<h3 class="panel-title">Average Spreads Change: Last Week x This Week </h3>
+									</div>
+									<div class="panel-body">
+										<br><br><br><br><br><br><br><br><br><br><br><br><br>
+										
+									</div>
+								</div>
+							</div>
+						</div>	
+					</div>					
+				</section>						
+			</div>			
+		</div>		
+	</div>
+	<footer>
+		<div class="container-fluid">
+			<div class="container">
+				<div class="row">
+					<span class="declaimer">Copyright © 2016 BEX LLC. All rights reserved.</span>
+					<div class="pull-right">
+						<ul class="list-unstyled list-inline">
+							<li>
+								<a href="#">FAQ</a>
+							</li>
+							<li>
+								<a href="">Contact Us</a>
+							</li>
+							<li>
+								<div class="reverse-drop blue-button" tabindex="0">
+									<span class="drop-label">User Status <i class="icon-chevron-up"><span class="icon-triangle-down"></span></i></span>
+									<div class="hidden-panel">
+										<ul class="online-items">
+											<li class="active">Cobia</li>
+											<li class="active">Cod</li>
+											<li class="active">Koi</li>
+											<li>Mike the blue guy</li>
+											<li>Coho the animal</li>
+											<li>Tang the fruit juice powder</li>
+											<li>Wahoo</li>
+										</ul>
+									</div>
+								</div> 
+							</li>
+						</ul>
+
+					</div>
+				</div>
+			</div>			
+		</div>
+	</footer>
+<script type="text/javascript" src="js/bex-components.js"></script>
+</body>
+</html>
