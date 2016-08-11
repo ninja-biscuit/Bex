@@ -63,7 +63,7 @@ html {font-family: 'Open Sans', sans-serif; margin: 0; padding: 0; height: 100%}
 .bex-styles .hidden-panel ul li:last-child { margin-bottom: 0px}
 
 /* reverse drop */
-.bex-styles .reverse-drop {padding: 8px 23px; font-family: arial, helvetica, sans-serif; border-radius: 5px; position: relative; min-width: 110px}
+.bex-styles .reverse-drop {padding: 8px 23px; font-family: arial, helvetica, sans-serif; border-radius: 5px; position: relative; min-width: 110px; display: inline-block}
 /*.bex-styles .drop-label {font-family: 'Fjalla One', sans-serif; font-size: 16px; text-transform: uppercase;}*/
 .bex-styles .reverse-drop .icon-chevron-up {margin-left: 15px; float: right; position: relative;}
 .bex-styles .reverse-drop .icon-chevron-up span {display:none;}

@@ -104,6 +104,41 @@ $(document).ready(function(){
 		$(this).append(tipUp);
 	});	
 
+// close button for type 3 table
+	$('.close-button').on('click', function(){
+		$(this).parents('#type3-parent').hide();
+	});
+
+// TEMPORAL/DUMMY FUNCTIONS > change title of tables : All this behavior must be generated after retreaving the data
+	var sqlp;
+	var ls1;
+	$('.panel-type1 table.asset tbody tr td:first-child a').on('click', function(event){
+		event.preventDefault();
+		$('#type3-parent').hide(1);
+		$('.panel-type2 table.asset tbody tr').removeClass('active');
+		sqlp = $(this).text();
+		$('.panel-type1 table.asset tbody tr').removeClass('active');
+		$(this).parents('tr').addClass('active');
+		$('.panel-type2 > .panel-heading > .panel-title > span.lp-selected').text(sqlp);
+	});
+	$('.panel-type2 table.asset tbody tr td:first-child a').on('click', function(event){
+		event.preventDefault();
+		ls1 = $(this).text();
 		
+		$('.panel-type2 table.asset tbody tr').removeClass('active');
+		$(this).parents('tr').addClass('active');
+		$('#type3-parent').show(1);
+		$('.panel-type3 > .panel-heading > .panel-title > span.lp-selected').text(sqlp);
+		$('.panel-type3 > .panel-heading > .panel-title > span.pair-selected').text(ls1);
+	});
+
+	var levelOp = $('#level .selected_option').text();
+	var getLEvel = levelOp.substring(0,2);
+	$('#pair-level').text(getLEvel);
+
+	$('#level .select-asset-list li').on('click', function(){
+		var opClicked = $(this).text().substring(0,2);
+		$('#pair-level').text(opClicked);		
+	});
 
 });
