@@ -102,14 +102,28 @@ $(document).ready(function(){
 	$('.positive-asset, .positive-asset-alt').each(function(){
 		var tipUp = '<i class="icon-triangle-up"></i>';
 		$(this).append(tipUp);
-	});	
+	});
+
+// Navbar submenu 
+	$('.blue-menu-top-button a').on('click', function(){
+		$(this).siblings('.blue-menu-top-container').toggle();
+		$('span.tip', this).toggle();
+	});
 
 // close button for type 3 table
 	$('.close-button').on('click', function(){
 		$(this).parents('#type3-parent').hide();
 	});
 
-// TEMPORAL/DUMMY FUNCTIONS > change title of tables : All this behavior must be generated after retreaving the data
+// DUMMY FUNCTIONS > All this behavior must be generated after retreaving the data, this is just an example of interaction
+	$('.head-tab-container .head-tab').on('click', function(){
+		$('.head-tab-container .head-tab').removeClass('active');
+		$(this).addClass('active');
+		var target = $(this).index() + 1;
+		$('.tab-container .tab-content').removeClass("active-tab");
+		$('.tab-container .tab-content:nth-child(' + target +')').addClass("active-tab");
+	});
+	
 	var sqlp;
 	var ls1;
 	$('.panel-type1 table.asset tbody tr td:first-child a').on('click', function(event){

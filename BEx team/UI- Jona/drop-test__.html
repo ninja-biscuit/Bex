@@ -6,6 +6,7 @@
 	<link href='https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:400,300,700' rel='stylesheet' type='text/css'>
 	<link href='https://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/bex-stylesheet.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<style type="text/css">
 		* {outline: none}
@@ -144,6 +145,19 @@
 		.panel-type6 > .panel-heading {background-color: #f7f8fb; border-color: transparent; padding: 11px 19px}
 		.panel-type6 > .panel-heading > h3 {font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 26px; color: #586c8f;}
 		.panel-type6 > .panel-body {padding:0; background: #fff;}
+
+
+		/* new drop asset */
+
+		.drop-container {border-radius: 5px; min-width: 110px; padding: 8px 23px; position: relative; display: inline-block; z-index: 0}
+		.drop-container > .drop_label {font-family: "Fjalla One",sans-serif; font-size: 16px; text-transform: uppercase;}
+		.drop-container > .drop_button {cursor: pointer}
+		.drop-container > .drop_button > .panel_tip {}
+		.drop-container > .hidden_panel {display: none; position: absolute; top: 53px; right: 0; z-index: 1000}
+		.drop-container:focus > .hidden_panel {display:block;}
+		.drop-container > .hidden_panel ul {background-color: #fff; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0, 0.33); padding: 20px 18px}
+		.icon-size-med {font-size: 30px}
+
 
 
 	</style>
@@ -567,16 +581,65 @@
 	</div>
 </div>
 
+<div class="bex-styles">
+	<div style="margin: 50px; width:1108px; float:left">
+		<div class="drop-container blue-button" tabindex="0">
+			<span class="drop_label">Option</span>
+			<span class="drop_button icon-chevron-down">
+				<i class="panel_tip"></i>
+			</span>
+			<div class="hidden_panel">
+				<i class="panel_tip"></i>
+				<ul>
+					<li>option 1</li>
+					<li>option 2</li>
+					<li>option 3</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div style="margin: 50px; width:1108px; float:left">
+		<div class="drop-container red-button" tabindex="0">
+			<span class="drop_label">Option</span>
+			<span class="drop_button icon-chevron-down">
+				<i class="panel_tip"></i>
+			</span>
+			<div class="hidden_panel">
+				<table>
+					<tr>
+						<td>Col 1</td>
+						<td>Col 2</td>
+					</tr>
+					<tr>
+						<td>Item 1</td>
+						<td>Item 2</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div style="margin: 50px; width:1108px; float:left">
+		<div class="drop-container" tabindex="0">
+			<span class="drop_button icon-size-med icon-user">
+				<i class="panel_tip"></i>
+			</span>
+			<div class="hidden_panel">
+				<i class="panel_tip"></i>
+				<ul>
+					<li>option 1</li>
+					<li>option 2</li>
+					<li>option 3</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
 
 
 <script type="text/javascript">
-
-
-
-
-
-
-
 
 	/*$('div.select-asset').each(function(){
 		assetStructure = '<span class="selected_option">holis</span><i class="icon-chevron-down"></i><div class="select-asset-list-container"><i class="icon-triangle-up"></i><ul class="select-asset-list"></ul></div>';

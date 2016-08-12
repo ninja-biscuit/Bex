@@ -1,5 +1,5 @@
 .bex-styles.bex-dark {background-color: #142e5d;}
-#l-home {padding-top: 124px}
+#l-home {padding-top: 140px}
 .bex-styles.bex-dark .navbar {background-color: #0e2041; border: none;}
 .bex-styles.bex-dark .navbar-fixed-top {border-width:0;}
 
@@ -8,10 +8,21 @@
 #l-home .navbar a.navbar-brand {padding: 14px 21px 21px 0px; width: 107px; height: 73px; display:block;}
 #l-home .navbar .navbar-brand img {width: 86px; height: 41px; display: block;}
 #l-home .navbar .contact-container a {background-color: #14325c; color: #fff; text-align: center; padding: 27px 0; min-width: 136px}
+.bex-styles.bex-dark .nav > li > a:focus, .bex-styles.bex-dark .nav > li > a:hover {background-color: transparent}
 .bex-styles.bex-dark .nav .menu {padding: 20px 15px}
 .bex-styles.bex-dark .nav .icon-menu {color: #fff; font-size:30px;}
+.bex-styles.bex-dark .nav .open > a, .bex-styles.bex-dark .nav .open > a:focus, .bex-styles.bex-dark .nav .open > a:hover {background-color: transparent; border-color: transparent}
 
-.bex-styles.bex-dark .nav > li > a:focus, .bex-styles.bex-dark .nav > li > a:hover {background-color:#0e2041;}
+.bex-styles.bex-dark .blue-menu-top-button {position:;}
+.bex-styles.bex-dark .blue-menu-top-button a {padding:20px 15px; width:61px;  position: relative;}
+.bex-styles.bex-dark .blue-menu-top-button a span.tip  {color:#2c7bc7; position: absolute; top: 60px; left:24px ; z-index: 1100; display: none;}
+.bex-styles.bex-dark .blue-menu-top-container {position: fixed; top: auto; left: 0; background-color:#2c7bc7; width: 100%; display: none;}
+.bex-styles.bex-dark .blue-menu-top-container > .blue-menu-top {margin: 0 auto; max-width: 1140px}
+.bex-styles.bex-dark .blue-menu-top-container > .blue-menu-top > li {float: left;}
+.bex-styles.bex-dark .blue-menu-top-container > .blue-menu-top > li > a {color: #fff; font-size: 16px; font-family: Arial, Helvetica, sans-serif; padding: 14px 0; display: inline-block; width: 142px; text-align: center;}
+.bex-styles.bex-dark .blue-menu-top-container > .blue-menu-top > li > a:hover {text-decoration: none;}
+.bex-styles.bex-dark .blue-menu-top-container > .blue-menu-top > li > a.active {border-bottom: 4px solid #fff; padding: 14px 0 10px;}
+
 .bex-styles.bex-dark .navbar a.alerts {font-size: 28px; color: #fff; padding: 22px 10px}
 .bex-styles.bex-dark .navbar .badge {background-color: #2c7bc7; border-radius: 500px; color: #fff; font-size: 12px;  padding: 4px; position: relative; top:-13px; left:-11px;}
 .user-area {border-left:1px solid #fff; margin: 12px 0; padding-left: 23px; height: 49px}
@@ -19,7 +30,7 @@
 .user-area .user-name, .user-area .user-id {font-family:Arial, helvetica, sans-serif; margin-left: 65px}
 .user-area .user-name {color: #fff; font-size: 14px; font-weight: 600; display: block; padding-top:8px}
 .user-area .user-id {color:#adbfde; font-size: 13px; font-weight: 600; display: block}
-.user-menu {color: #fff; font-size: 11px; margin:24px 0 0 15px; display: block; cursor: pointer}
+.user-menu {color: #fff; font-size: 11px; margin:24px 0 0 15px; display: block; cursor: pointer; padding-bottom: 38px}
 
 .bex-styles.bex-dark header {padding-right:0 ; padding-left: 0;}
 header .second-top_drops-container {margin-top: 10px}
@@ -47,8 +58,109 @@ h4.top-labels {color:#fff;}
 	#three-tables > div:nth-child(2) {padding-left: 0; padding-right: 0}
 	#three-tables > div:last-child {padding-right: 0}
 }
-
 #bottom-panels > .panel {padding-bottom: 20px}
+
+.panel table.asset {width: 100%; border-spacing: 0; border: 0;}
+.panel table.asset tbody, table.asset thead {display: block;}
+.panel thead tr th {height: 30px; line-height: 30px;}
+.panel table.asset thead tr td, .panel table.asset tbody tr td {vertical-align: middle;}
+/* type 1 */
+.panel.panel-type1 {background-color: #fff; border: 0px; border-radius: 5px; box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.33); margin-bottom: 0px;}
+.panel-type1 > .panel-heading {background-color: #2c7bc7; border-color: transparent; padding: 11px 19px}
+.panel-type1 > .panel-heading > h3 {font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 26px; color: #fff;}
+.panel-type1 > .panel-heading > .form-control {margin-bottom:0px !important;}
+.panel-type1 > .panel-body {padding:0;}
+.panel-type1 > .panel-body table.asset {width: 100%; border-spacing: 0; border: 0;}
+.panel-type1 > .panel-body table.asset thead {height: 53px; border-top:1px solid #dddfe5; border-bottom:1px solid #dddfe5; background-color: #f0f2f8; padding-right: 17px}
+.panel-type1 > .panel-body table.asset thead td {color: #4e7ac3; font-family: "Fjalla One",sans-serif; font-size: 16px; height: 53px; text-align: center;}
+.panel-type1 > .panel-body table.asset tbody {height: 280px; overflow-y: auto; overflow-x: hidden; border-bottom-left-radius:5px, border-bottom-right-radius:5px}
+.panel-type1 > .panel-body table.asset tbody tr {width: 100%; display: table;}
+.panel-type1 > .panel-body table.asset tbody td {text-align: center; height: 35px; color:#5e6c8c; background-color:#f7f8fb; border-bottom: 1px solid #ebebeb;}
+.panel-type1 > .panel-body table.asset tbody tr.active td {background-color:#2c7bc7; color:#fff;}
+.panel-type1 > .panel-body table.asset tbody tr:last-child td {border-bottom: 0 transparent}
+.panel-type1 > .panel-body table.asset tbody tr td a {color:#2c7bc7; text-decoration: underline;}
+.panel-type1 > .panel-body table.asset tbody tr.active td {background-color:#2c7bc7; color:#fff;}
+.panel-type1 > .panel-body table.asset tbody tr.active td > a {color:#fff;}		
+.panel-type1 > .panel-body table.asset tbody td:nth-child(1), .panel-type1 > .panel-body table.asset thead td:nth-child(1) {width: 40px}
+.panel-type1 > .panel-body table.asset tbody td:nth-child(2), .panel-type1 > .panel-body table.asset thead td:nth-child(2) {width: 50px}
+.panel-type1 > .panel-body table.asset tbody td:nth-child(3), .panel-type1 > .panel-body table.asset thead td:nth-child(3) {width: 50px}
+.panel-type1 > .panel-body table.asset tbody td:nth-child(4), .panel-type1 > .panel-body table.asset thead td:nth-child(4) {width: 50px}
+.panel-type1 > .panel-body table.asset tbody td:nth-child(5), .panel-type2 > .panel-body table.asset thead td:nth-child(5) {width: 63px}
+/* type 2 */
+.panel.panel-type2 {background-color: #fff; border: 0px; border-radius: 5px; box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.33); margin-bottom: 0px;}
+.panel-type2 > .panel-heading {background-color: #f7f8fb; border-color: transparent; padding: 11px 19px}
+.panel-type2 > .panel-heading > h3 {font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 26px; color: #586c8f;}
+.panel-type2 > .panel-body {padding:0;}
+.panel-type2 > .panel-body table.asset {width: 100%;}
+.panel-type2 > .panel-body table.asset thead {height: 53px; border-top:1px solid #dddfe5; border-bottom:1px solid #dddfe5; background-color: #f0f2f8; padding-right: 17px}
+.panel-type2 > .panel-body table.asset thead td {color: #4e7ac3; font-family: "Fjalla One",sans-serif; font-size: 16px; height: 53px; text-align: center;}
+.panel-type2 > .panel-body table.asset tbody {height: 280px; overflow-y: auto; overflow-x: hidden; border-bottom-left-radius:5px, border-bottom-right-radius:5px}
+.panel-type2 > .panel-body table.asset tbody tr {width: 100%; display: table;}
+.panel-type2 > .panel-body table.asset tbody td {text-align: center; height: 35px; color:#5e6c8c; background-color:#f7f8fb; border-bottom: 1px solid #ebebeb;}
+.panel-type2 > .panel-body table.asset tbody tr.active td {background-color:#2c7bc7; color:#fff;}
+.panel-type2 > .panel-body table.asset tbody tr:last-child td {border-bottom: 0 transparent}
+.panel-type2 > .panel-body table.asset tbody tr td a {color:#2c7bc7; text-decoration: underline;}
+.panel-type2 > .panel-body table.asset tbody tr.active td {background-color:#2c7bc7; color:#fff;}
+.panel-type2 > .panel-body table.asset tbody tr.active td > a {color:#fff;}		
+.panel-type2 > .panel-body table.asset tbody td:nth-child(1), .panel-type2 > .panel-body table.asset thead td:nth-child(1) {width: 9.868%}
+.panel-type2 > .panel-body table.asset tbody td:nth-child(2), .panel-type2 > .panel-body table.asset thead td:nth-child(2) {width: 10.745%}
+.panel-type2 > .panel-body table.asset tbody td:nth-child(3), .panel-type2 > .panel-body table.asset thead td:nth-child(3) {width: 34.377%}
+.panel-type2 > .panel-body table.asset tbody td:nth-child(4), .panel-type2 > .panel-body table.asset thead td:nth-child(4) {width: 18.421%}
+.panel-type2 > .panel-body table.asset tbody td:nth-child(5), .panel-type2 > .panel-body table.asset thead td:nth-child(5) {width: 22.368%}
+/* type 3 */
+#type3-parent {display: none}
+.panel.panel-type3 {background-color: #fff; border: 0px; border-radius: 5px; box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.33); margin-bottom: 0px;}
+.panel-type3 > .panel-heading {background-color: #f7f8fb; border-color: transparent; padding: 11px 10px 11px 19px}
+.panel-type3 > .panel-heading > h3 {font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 26px; color: #586c8f;}
+.panel-type3 > .panel-body {padding:0;}
+.panel-type3 > .panel-body table.asset {width: 100%;}
+.panel-type3 > .panel-body table.asset thead {height: 53px; border-top:1px solid #dddfe5; border-bottom:1px solid #dddfe5; background-color: #f0f2f8; padding-right: 17px}
+.panel-type3 > .panel-body table.asset thead td {color: #4e7ac3; font-family: "Fjalla One",sans-serif; font-size: 16px; height: 53px; text-align: center;}
+.panel-type3 > .panel-body table.asset tbody {height: 280px; overflow-y: auto; overflow-x: hidden; border-bottom-left-radius:5px, border-bottom-right-radius:5px}
+.panel-type3 > .panel-body table.asset tbody tr {width: 100%; display: table;}
+.panel-type3 > .panel-body table.asset tbody tr td {text-align: center; height: 35px; color:#5e6c8c; background-color:#f7f8fb; border-bottom: 1px solid #ebebeb;}
+.panel-type3 > .panel-body table.asset tbody tr.active td {background-color:#2c7bc7;}
+.panel-type3 > .panel-body table.asset tbody tr:last-child td {border-bottom: 0 transparent}
+.panel-type3 > .panel-body table.asset tbody td a {color:#2c7bc7; text-decoration: underline;}		
+.panel-type3 > .panel-body table.asset tbody td:nth-child(1), .panel-type3 > .panel-body table.asset thead td:nth-child(1) {width: 14.367%}
+.panel-type3 > .panel-body table.asset tbody td:nth-child(2), .panel-type3 > .panel-body table.asset thead td:nth-child(2) {width: 40.229%}
+.panel-type3 > .panel-body table.asset tbody td:nth-child(3), .panel-type3 > .panel-body table.asset thead td:nth-child(3) {width: 23.988%}
+.panel-type3 > .panel-body table.asset tbody td:nth-child(4), .panel-type3 > .panel-body table.asset thead td:nth-child(4) {width: 22.413%}
+
+.icon-move.close-button {color:#888; font-size: 16px; display: block; cursor: pointer; padding: 1px}
+.icon-move.close-button:hover {background-color: #ececec}
+/* panel container */
+.panel.panel-type-container {box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.33); border:none;}
+.panel.panel-type-container > .panel-heading {background-color: #2c7bc7; border-color: transparent; padding: 8px 19px; height: 55px}
+.panel.panel-type-container > .panel-heading > h3 {font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 26px; color: #fff; padding-top:4px}
+#bottom-panels label {color: #fff; margin-right: 10px; margin-left: 35px}
+/* type 4 */
+.panel.panel-type4 {background-color: #fff; border: 0px; border-radius: 5px; box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.33); margin-bottom: 0px;}
+.panel-type4 > .panel-heading {background-color: #f7f8fb; border-color: transparent; padding: 11px 19px}
+.panel-type4 > .panel-heading > h3 {font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 26px; color: #586c8f;}
+.panel-type4 > .panel-body {padding:0;}
+.panel-type4 > .panel-body table.asset {width: 100%;}
+.panel-type4 > .panel-body table.asset thead {height: 53px; border-top:1px solid #dddfe5; border-bottom:1px solid #345c90; background-color: #377cc0; padding-right: 17px}
+.panel-type4 > .panel-body table.asset thead td {color: #fff; font-family: "Fjalla One",sans-serif; font-size: 16px; height: 53px; text-align: center;}
+.panel-type4 > .panel-body table.asset thead td div.select-asset {padding: 8px; margin-left: 5px}
+.panel-type4 > .panel-body table.asset tbody {height: 280px; overflow-y: auto; overflow-x: hidden; border-bottom-left-radius:5px, border-bottom-right-radius:5px; background: -moz-linear-gradient(top,  #276ab0 0%, #142e5d 100%); background: -webkit-linear-gradient(top,  #276ab0 0%,#142e5d 100%); background: linear-gradient(to bottom,  #276ab0 0%,#142e5d 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#276ab0', endColorstr='#142e5d',GradientType=0 );}
+.panel-type4 > .panel-body table.asset tbody tr {width: 100%; display: table;}
+.panel-type4 > .panel-body table.asset tbody tr td {text-align: center; height: 35px; color:#fff; border-bottom: 1px solid #345c90;}
+.panel-type4 > .panel-body table.asset tbody tr:last-child td {border-bottom: 0 transparent}
+.panel-type4 > .panel-body table.asset tbody td a {color:#fff; text-decoration: underline;}		
+.panel-type4 > .panel-body table.asset tbody td:nth-child(1), .panel-type4 > .panel-body table.asset thead td:nth-child(1) {width: 103px}
+.panel-type4 > .panel-body table.asset tbody td:nth-child(2), .panel-type4 > .panel-body table.asset thead td:nth-child(2) {width: 135px}
+.panel-type4 > .panel-body table.asset tbody td:nth-child(3), .panel-type4 > .panel-body table.asset thead td:nth-child(3) {width: 85px}
+/* type 5 */
+.panel.panel-type5 {background-color: #fff; border: 0px; border-radius: 5px; box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.33); margin-bottom: 0px;}
+.panel-type5 > .panel-heading {background-color: #f7f8fb; border-color: transparent; padding: 11px 19px}
+.panel-type5 > .panel-heading > h3 {font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 26px; color: #586c8f;}
+.panel-type5 > .panel-body {padding:0; background: -moz-linear-gradient(top,  #276ab0 0%, #142e5d 100%); background: -webkit-linear-gradient(top,  #276ab0 0%,#142e5d 100%); background: linear-gradient(to bottom,  #276ab0 0%,#142e5d 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#276ab0', endColorstr='#142e5d',GradientType=0 );}
+/* type 6 */
+.panel.panel-type6 {background-color: #fff; border: 0px; border-radius: 5px; box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.33); margin-bottom: 0px;}
+.panel-type6 > .panel-heading {background-color: #f7f8fb; border-color: transparent; padding: 11px 19px}
+.panel-type6 > .panel-heading > h3 {font-family: 'Yanone Kaffeesatz', sans-serif; font-size: 26px; color: #586c8f;}
+.panel-type6 > .panel-body {padding:0; background: #fff;}
 
 .bex-styles footer {margin-top: 65px; background-color: #000; position: relative;}
 .bex-styles footer .declaimer {color: #fff; font-size: 14px; padding: 7px 0; display: inline-block}
