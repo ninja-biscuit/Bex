@@ -10,7 +10,7 @@
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<style type="text/css">
 		* {outline: none}
-		html, body {margin:0; padding: 0; height: 100%}
+		html, body {margin:0; padding: 0; height: 100%; background-color: #ececec}
 		/*
 		body {background-color: #d1d1d1}
 		.drop {border: none; background-color:#2c7bc7; color: #fff; padding: 8px 23px; display: table; font-family: arial, helvetica, sans-serif; border-radius: 5px; position: relative; min-width: 110px}
@@ -151,11 +151,14 @@
 
 		.drop-container {border-radius: 5px; min-width: 110px; padding: 8px 23px; position: relative; display: inline-block; z-index: 0}
 		.drop-container > .drop_label {font-family: "Fjalla One",sans-serif; font-size: 16px; text-transform: uppercase;}
-		.drop-container > .drop_button {cursor: pointer}
-		.drop-container > .drop_button > .panel_tip {}
-		.drop-container > .hidden_panel {display: none; position: absolute; top: 53px; right: 0; z-index: 1000}
-		.drop-container:focus > .hidden_panel {display:block;}
-		.drop-container > .hidden_panel ul {background-color: #fff; border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0, 0.33); padding: 20px 18px}
+		.drop-container > .drop_button {cursor: pointer; position: relative;}
+		.drop-container > .drop_button > .panel_tip {position: absolute; bottom: -43px; left:-8px; top: auto; z-index: 1001; display: none}
+		.drop-container > .drop_button > .panel_tip:before {font-size: 26px}
+		.drop-container > .hidden_panel {display: none; position: absolute; top: 58px; right: 0; z-index: 1000}
+		.drop-container:focus > .hidden_panel, .drop-container:focus > .drop_button > .panel_tip {display:block;}
+		.drop-container > .hidden_panel ul, .drop-container > .hidden_panel table {background-color: #fff;} 
+		.drop-container > .hidden_panel ul {border-radius: 5px; box-shadow: 0 2px 5px rgba(0,0,0, 0.33); padding: 10px 19px}
+		.drop-container > .hidden_panel ul li {color: #888;}
 		.icon-size-med {font-size: 30px}
 
 
@@ -218,7 +221,7 @@
 		</select>
 	</div>
 </div-->
-<div style="margin: 50px; width:270px; float:left">
+<!--div style="margin: 50px; width:270px; float:left">
 	<div class="panel panel-type1">
 		<div class="panel-heading">
 			<h3 class="panel-title">Service Quality</h3>
@@ -309,9 +312,9 @@
 			</table>
 		</div>
 	</div>
-</div>
+</div-->
 
-<div style="margin: 50px; width:475px; float:left">
+<!--div style="margin: 50px; width:475px; float:left">
 	<div class="panel panel-type2">
 		<div class="panel-heading">
 			<h3 class="panel-title">Liquidity Stats - LP02</h3>
@@ -402,9 +405,9 @@
 			</table>
 		</div>
 	</div>
-</div>
+</div-->
 	
-<div style="margin: 50px; width:365px; float:left">
+<!--div style="margin: 50px; width:365px; float:left">
 	<div class="panel panel-type3">
 		<div class="panel-heading">
 			<h3 class="panel-title">Liquidity Stats - LP01/Pair 03</h3>
@@ -484,9 +487,9 @@
 			</table>
 		</div>
 	</div>
-</div>
+</div-->
 
-<div style="margin: 50px; width:349px; float:left">
+<!--div style="margin: 50px; width:349px; float:left">
 	<div class="panel panel-type4">
 		<div class="panel-heading">
 			<h3 class="panel-title">Median Spreads Table</h3>
@@ -555,9 +558,9 @@
 			</table>
 		</div>
 	</div>
-</div>
+</div-->
 
-<div style="margin: 50px; width:729px; float:left">
+<!--div style="margin: 50px; width:729px; float:left">
 	<div class="panel panel-type5">
 		<div class="panel-heading">
 			<h3 class="panel-title">Median Spreads Graphic</h3>
@@ -567,9 +570,9 @@
 			
 		</div>
 	</div>
-</div>
+</div-->
 
-<div style="margin: 50px; width:1108px; float:left">
+<!--div style="margin: 50px; width:1108px; float:left">
 	<div class="panel panel-type6">
 		<div class="panel-heading">
 			<h3 class="panel-title">Average Spreads Change: Last Week x This Week </h3>
@@ -579,19 +582,18 @@
 			
 		</div>
 	</div>
-</div>
+</div-->
 
 <div class="bex-styles">
 	<div style="margin: 50px; width:1108px; float:left">
 		<div class="drop-container blue-button" tabindex="0">
 			<span class="drop_label">Option</span>
 			<span class="drop_button icon-chevron-down">
-				<i class="panel_tip"></i>
+				<i class="panel_tip icon-tip"></i>
 			</span>
 			<div class="hidden_panel">
-				<i class="panel_tip"></i>
 				<ul>
-					<li>option 1</li>
+					<li>Noption 1</li>
 					<li>option 2</li>
 					<li>option 3</li>
 				</ul>
@@ -621,10 +623,9 @@
 	<div style="margin: 50px; width:1108px; float:left">
 		<div class="drop-container" tabindex="0">
 			<span class="drop_button icon-size-med icon-user">
-				<i class="panel_tip"></i>
+				<i class="panel_tip icon-tip"></i>
 			</span>
 			<div class="hidden_panel">
-				<i class="panel_tip"></i>
 				<ul>
 					<li>option 1</li>
 					<li>option 2</li>

@@ -1,0 +1,68 @@
+@font-face {
+    font-family: 'equiplight';
+    src: url('fonts/equiplig-webfont.woff2') format('woff2'),
+         url('fonts/equiplig-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'equipcondw03-boldregular';
+    src: url('fonts/equipcond-webfont.woff2') format('woff2'),
+         url('fonts/equipcond-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'equipw03-mediumregular';
+    src: url('fonts/equipw03-medium_regular-webfont.woff2') format('woff2'),
+         url('fonts/equipw03-medium_regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+
+
+.mip_styles {}
+.mip_styles h1, .mip_styles h2, .mip_styles h3, .mip_styles h4 {margin: 0}
+.mip_styles h1, .mip_styles h2, .declaimer, .mip_styles .num-med, .mip_styles .num-sma, .mip_styles p {font-family: 'equiplight', sans-serif;}
+.mip_styles h1 {font-size:44px; font-weight:100; color:#343434;}
+.mip_styles h2 {font-size:22px; font-weight:100; color:#343434;}
+.mip_styles h3 {font-family: 'equipw03-mediumregular', sans-serif; font-size:18px; font-weight:400; color:#115740;}
+.mip_styles h4 {font-family: 'equipcondw03-boldregular', sans-serif; text-transform: uppercase; font-size:16px; font-weight:100 ; color:#343434;}
+.mip_styles .declaimer {color: #343434; font-size:16px;}
+.mip_styles .num-med {font-size:20px;}
+.mip_styles .num-sma {font-size:13px;}
+.mip_styles p {font-size: 14px}
+.mip_styles .cta-link {color:#343434;}
+.mip_styles .cta-link.icon-fw [class^="icon-"] {color:#bc9c36;}
+.mip_styles a.cta-link.icon-fw {color: #343434; font-family: 'equipw03-mediumregular', sans-serif; text-transform: uppercase; font-size:14px;}

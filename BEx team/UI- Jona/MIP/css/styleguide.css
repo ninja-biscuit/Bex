@@ -1,0 +1,22 @@
+/*
+font-family: 'Open Sans', sans-serif;
+
+*/
+body {padding: 60px}
+section {display: table; float: left; width: 100%; margin-bottom: 40px}
+.header1, .header2, .heading4 {font-family: 'Open Sans', sans-serif; display: block;}
+.header1 {font-size: 54px; color: #999999; font-weight: 200}
+.header1 > small {font-size: 26px; color: #333333; margin-left:30px}
+.gray-content {background-color:#f5f5f5; padding: 50px 55px; display: table;}
+.header2 {font-size: 30px; color: #333333; font-weight: 100; margin-bottom: 30px; border-bottom: 1px solid #dcdcdc; width: 100%;}
+.header2 > small {font-size: 18px; color: #999999; margin-right: 10px}
+.mip_styles dl {margin-bottom: 35px}
+.mip_styles dl dt {clear: both; color: #999999; font-size: 16px; font-weight: 100; padding-bottom: 12px}
+.mip_styles dd {background-color: #fff; float: left; margin-right: 15px; font-family: 'Open Sans', sans-serif; font-size: 12px; color:#999999; padding-bottom: 3px; text-align: center;}
+.mip_styles .colors {display: inline-block; margin-right: 60px}
+.color-palette {display: block; width: 65px; height: 65px; margin-bottom: 3px}
+dl.lighter .color-palette {border:1px solid #dadada; width: 63px; padding-top: 63px}
+.heading4 {color: #999999; margin-bottom: 25px}
+.mip_styles h1, .mip_styles h2, .mip_styles h3, .mip_styles h4 {margin-bottom: 25px}
+.description {font-family: 'Open Sans', sans-serif; display: block; font-size: 14px; color: #999999;}
+#fonts table {float: left;}
