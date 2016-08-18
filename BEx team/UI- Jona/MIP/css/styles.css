@@ -84,8 +84,10 @@ table {
 .mip_styles .drop-container {position: relative; cursor: pointer; z-index: 1000}
 .mip_styles .drop-container.drop-button-shape {padding:14px 50px; background-image: none; border: 1px solid transparent; display: inline-block; font-family:'equiplight'; font-size: 14px; text-transform: uppercase;}
 .mip_styles .drop-container > .drop-button {position: relative; margin-left: 5px; font-size: 10px}
-.mip_styles .drop-container > .drop-button > .panel-tip {position: absolute; top: auto; bottom: -53px; display: none}
-.mip_styles .drop-container > .hidden-panel {display: none; margin: 0; padding:0; position: absolute; top: 85px; left:0; z-index: 1001; cursor: default; box-shadow: 0px 0px 6px rgba(0,0,0, 0.17); width: -moz-max-content; width: -webkit-max-content; width: max-content; min-width: 126px;}
+.mip_styles .drop-container > .drop-button > .panel-tip {bottom: -35px; display: none; font-size: 30px; position: absolute; top: auto; z-index: 1002; left: -13px; color: #fff}
+.mip_styles .drop-container.button-green > .drop-button > .panel-tip {bottom: -59px; display: none; font-size: 30px; position: absolute; top: auto; z-index: 1002; left: -13px; color: #fff}
+.mip_styles .drop-container > .hidden-panel {display: none; margin: 0; padding:0; position: absolute; top: 57px; left:0; z-index: 1001; cursor: default; box-shadow: 0px 0px 6px rgba(0,0,0, 0.17); width: -moz-max-content; width: -webkit-max-content; width: max-content; min-width: 126px;}
+.mip_styles .drop-container.button-green > .hidden-panel {display: none; margin: 0; padding:0; position: absolute; top: 81px; left:-50%; z-index: 1001; cursor: default; box-shadow: 0px 0px 6px rgba(0,0,0, 0.17); width: -moz-max-content; width: -webkit-max-content; width: max-content; min-width: 126px;}
 .mip_styles .drop-container > .hidden-panel a {cursor: pointer; color:#115740; text-decoration: underline; -moz-text-decoration-color:#343434; text-decoration-color:#343434; }
 .mip_styles .drop-container:focus > .hidden-panel, .mip_styles .drop-container:focus > .drop-button > .panel-tip {display: block;}
 .mip_styles .drop-container > .hidden-panel > ul {background-color: #fff; padding:25px; margin: 0}
@@ -97,10 +99,6 @@ table {
 .mip_styles .tabs li:last-child {border-right:none;}
 .mip_styles .tabs li.active {background-color: #fff; color: rgba(188,156,54,0.7); border-top: 1; border-top:3px solid rgba(188,156,54,0.7);}
 
-.mip_styles .panel-body .tabs {border:1px solid transparent; border: none; display: table; width: 100%; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; margin-bottom: 0}
-.mip_styles .panel-body .tabs li {text-align:center; display:table-cell; float: inherit; padding: 10px 8px; background-color: #6c9f8b; color: #fff; font-family:'equiplight', sans-serif; font-size: 16px; border-top:none; cursor: pointer; border-right:none}
-.mip_styles .panel-body .tabs li.active {background-color: #115740; color: #fff; border-top:1px solid transparent;}
-
 /* panel + tables */
 .mip_styles .panel {background-color: transparent; border: 1px solid transparent; border-radius: 0px; box-shadow: 0 1px 1px rgba(0, 0, 0, 0); margin-bottom: 20px;}
 .mip_styles .panel-default {border-color: transparent;}
@@ -109,10 +107,22 @@ table {
 .mip_styles .panel-heading h2 {margin: 13px 0}
 .mip_styles .declaimer + .drop-container {margin-left:10px;}
 .mip_styles .panel-body {padding: 0px;}
+.mip_styles .panel-body table {width: 100%}
 .mip_styles .panel-body table tr {background-color: #fff;}
 .mip_styles .panel-body table tr:nth-child(even) {background-color:#f4f2ec}
 .mip_styles .panel-body table tr td {text-align: center;}
-.mip_styles .panel-body table tr td:first-child {text-align: left;}
+.mip_styles .panel-body table thead {padding-right: 17px; background-color:#6c9f8b;}
+.mip_styles .panel-body table thead, .mip_styles .panel-body table tbody {display: block}
+.mip_styles .panel-body table thead tr, .mip_styles .panel-body table tbody tr {display: inline-table; width: 100%}
+.mip_styles .panel-body table thead tr td {background-color:#6c9f8b; color: #fff; font-family:'equiplight'; font-size: 16px; border-right: 1px solid #fff;}
+.mip_styles .panel-body table thead tr td:last-child {border-right:none;}
+.mip_styles .panel-body table tbody {height: 320px; overflow-y: auto; overflow-x: hidden;}
+.mip_styles .panel-body table tbody tr td:first-child {text-align: left;}
+.mip_styles .panel-body table tbody tr td {color: #343434; font-size: 16px; font-family:'equiplight';}
+.mip_styles .positive-digit {color:#b5bd00; font-family: 'equipw03-mediumregular', sans-serif;  font-size:14px; display: inline-block; margin-left: 15px}
+.mip_styles .negative-digit {color:#e78322; font-family: 'equipw03-mediumregular', sans-serif; font-size:14px; display: inline-block; margin-left: 15px}
+.mip_styles .panel-body table tbody .progress {margin:0;}
+
 /* panel */
 .mip_styles .panel-green {border-color: transparent; border-bottom: 2px solid #999;}
 .mip_styles .panel-green > .panel-heading {background-color: #115740; border-color: transparent; color:#fff; padding:13px 25px; border-bottom: 1px solid #999;}
