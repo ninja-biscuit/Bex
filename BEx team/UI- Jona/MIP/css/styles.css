@@ -52,17 +52,69 @@ table {
 
 
 
-.mip_styles {}
+
 .mip_styles h1, .mip_styles h2, .mip_styles h3, .mip_styles h4 {margin: 0}
 .mip_styles h1, .mip_styles h2, .declaimer, .mip_styles .num-med, .mip_styles .num-sma, .mip_styles p {font-family: 'equiplight', sans-serif;}
-.mip_styles h1 {font-size:44px; font-weight:100; color:#343434;}
-.mip_styles h2 {font-size:22px; font-weight:100; color:#343434;}
+.mip_styles h1 {font-size:44px; font-weight:100; color:#343434; text-transform: uppercase;}
+.mip_styles h2 {font-size:22px; font-weight:100; color:#343434; text-transform: uppercase;}
 .mip_styles h3 {font-family: 'equipw03-mediumregular', sans-serif; font-size:18px; font-weight:400; color:#115740;}
 .mip_styles h4 {font-family: 'equipcondw03-boldregular', sans-serif; text-transform: uppercase; font-size:16px; font-weight:100 ; color:#343434;}
+.mip_styles .no-block {display: inline-block;}
 .mip_styles .declaimer {color: #343434; font-size:16px;}
 .mip_styles .num-med {font-size:20px;}
 .mip_styles .num-sma {font-size:13px;}
 .mip_styles p {font-size: 14px}
-.mip_styles .cta-link {color:#343434;}
-.mip_styles .cta-link.icon-fw [class^="icon-"] {color:#bc9c36;}
-.mip_styles a.cta-link.icon-fw {color: #343434; font-family: 'equipw03-mediumregular', sans-serif; text-transform: uppercase; font-size:14px;}
+.mip_styles p a {color:#115740; text-decoration: underline; -moz-text-decoration-color:#343434; text-decoration-color:#343434;}
+.mip_styles .cta-link {color:#115740; font-family:'equiplight'; font-size:14px;}
+.mip_styles .cta-link.icon-fw {text-transform: uppercase; color: #343434; font-family: 'equipw03-mediumregular', sans-serif !important; text-decoration: none !important; display: inline-block;}
+.mip_styles .cta-link.icon-fw [class^="icon-"] {color:#bc9c36; margin-right: 4px}
+.mip_styles a.cta-link.icon-fw:hover, .mip_styles a.cta-link.icon-fw:hover [class^="icon-"] {color:#b5bd00;}
+.mip_styles .cta-link.icon-fw-alt {text-transform: uppercase; color: #343434; font-family: 'equipw03-mediumregular', sans-serif !important; text-decoration: none !important; display: inline-block;}
+.mip_styles .cta-link.icon-fw-alt [class^="icon-"] {color:#999999; margin-right: 4px}
+.mip_styles a.cta-link.icon-fw-alt:hover, .mip_styles a.cta-link.icon-fw-alt:hover [class^="icon-"] {color:#b5bd00;}
+
+.mip_styles .button.cta {padding:14px 50px; background-image: none; border: 1px solid transparent; border-radius: 0px; cursor: pointer; display: inline-block; font-family: 'equipw03-mediumregular', sans-serif; font-size: 14px; font-weight: 100; text-transform: uppercase; line-height: 1.42857; margin-bottom: 0; text-align: center; vertical-align: middle; white-space: nowrap;}
+.mip_styles .button-gold.button.cta {background-color: #bc9c36; color: #fff;}
+.mip_styles .button-hollow.button.cta {background-color: transparent; border-color:#565a5c; color: #565a5c;}
+
+.mip_styles .button-gold.button.cta:hover {background-color: #b5bd00; color: #fff;}
+.mip_styles .button-hollow.button.cta:hover {background-color: #b5bd00; border-color:transparent; color: #fff;}
+.mip_styles .cta-link:hover {color:#b5bd00; text-decoration: underline;}
+/* drops */
+.mip_styles .drop-container {position: relative; cursor: pointer; z-index: 1000}
+.mip_styles .drop-container.drop-button-shape {padding:14px 50px; background-image: none; border: 1px solid transparent; display: inline-block; font-family:'equiplight'; font-size: 14px; text-transform: uppercase;}
+.mip_styles .drop-container > .drop-button {position: relative; margin-left: 5px; font-size: 10px}
+.mip_styles .drop-container > .drop-button > .panel-tip {position: absolute; top: auto; bottom: -53px; display: none}
+.mip_styles .drop-container > .hidden-panel {display: none; margin: 0; padding:0; position: absolute; top: 85px; left:0; z-index: 1001; cursor: default; box-shadow: 0px 0px 6px rgba(0,0,0, 0.17); width: -moz-max-content; width: -webkit-max-content; width: max-content; min-width: 126px;}
+.mip_styles .drop-container > .hidden-panel a {cursor: pointer; color:#115740; text-decoration: underline; -moz-text-decoration-color:#343434; text-decoration-color:#343434; }
+.mip_styles .drop-container:focus > .hidden-panel, .mip_styles .drop-container:focus > .drop-button > .panel-tip {display: block;}
+.mip_styles .drop-container > .hidden-panel > ul {background-color: #fff; padding:25px; margin: 0}
+.mip_styles .drop-container > .hidden-panel > ul > li, .mip_styles .button-green.drop-button-shape > .hidden-panel > ul > li {color: #565a5c; margin-bottom: 15px; cursor: text;}
+.mip_styles .button-green.drop-button-shape {background-color: #115740; color: #fff;}
+/* tabs */
+.mip_styles .tabs {border:1px solid #ccc; border-top: none; display: table;}
+.mip_styles .tabs li {float: left; padding: 10px 45px; background-color: #f5f5f5; color: #c6d0c6; font-family: 'equipcondw03-boldregular', sans-serif; font-size: 16px; border-top:3px solid rgba(176,191,176,0.7); cursor: pointer; border-right:1px solid #ccc;}
+.mip_styles .tabs li:last-child {border-right:none;}
+.mip_styles .tabs li.active {background-color: #fff; color: rgba(188,156,54,0.7); border-top: 1; border-top:3px solid rgba(188,156,54,0.7);}
+
+.mip_styles .panel-body .tabs {border:1px solid transparent; border: none; display: table; width: 100%; box-sizing:border-box; -moz-box-sizing:border-box; -webkit-box-sizing:border-box; margin-bottom: 0}
+.mip_styles .panel-body .tabs li {text-align:center; display:table-cell; float: inherit; padding: 10px 8px; background-color: #6c9f8b; color: #fff; font-family:'equiplight', sans-serif; font-size: 16px; border-top:none; cursor: pointer; border-right:none}
+.mip_styles .panel-body .tabs li.active {background-color: #115740; color: #fff; border-top:1px solid transparent;}
+
+/* panel + tables */
+.mip_styles .panel {background-color: transparent; border: 1px solid transparent; border-radius: 0px; box-shadow: 0 1px 1px rgba(0, 0, 0, 0); margin-bottom: 20px;}
+.mip_styles .panel-default {border-color: transparent;}
+.mip_styles .panel-default > .panel-heading {background-color: none; border-color: transparent; color: inherit;}
+.mip_styles .panel-heading {border-bottom: 1px solid transparent; border-top-left-radius: 0px; border-top-right-radius: 0px; padding: 10px 0px;}
+.mip_styles .panel-heading h2 {margin: 13px 0}
+.mip_styles .declaimer + .drop-container {margin-left:10px;}
+.mip_styles .panel-body {padding: 0px;}
+.mip_styles .panel-body table tr {background-color: #fff;}
+.mip_styles .panel-body table tr:nth-child(even) {background-color:#f4f2ec}
+.mip_styles .panel-body table tr td {text-align: center;}
+.mip_styles .panel-body table tr td:first-child {text-align: left;}
+/* panel */
+.mip_styles .panel-green {border-color: transparent; border-bottom: 2px solid #999;}
+.mip_styles .panel-green > .panel-heading {background-color: #115740; border-color: transparent; color:#fff; padding:13px 25px; border-bottom: 1px solid #999;}
+.mip_styles .panel-green > .panel-heading h2 {color: #fff; margin: 0}
+

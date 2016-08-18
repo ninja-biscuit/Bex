@@ -71,8 +71,14 @@
 						<td><span class="description">Equip Bold, 16px, Uppercase</span></td>
 					</tr>
 					<tr>
+						<td colspan="2"><code>h1, h2, h3, h4</code></td>
+					</tr>
+					<tr>
 						<td><span class="declaimer">Captions & disclaimers</span></td>
 						<td><span class="description">Equip Light, 16px</span></td>
+					</tr>
+					<tr>
+						<td colspan="2"><code>.declaimer</code></td>
 					</tr>
 				</tbody>
 			</table>
@@ -89,9 +95,15 @@
 						<td><span class="description">Equip Light, 20px</span></td>
 					</tr>
 					<tr>
+						<td colspan="2"><code>.num-med</code></td>
+					</tr>
+					<tr>
 						<td style="padding-bottom:30px"><span class="num-sma">12.736</span></td>
 						<td><span class="description">Equip Light, 13px</span></td>
-					</tr>					
+					</tr>
+					<tr>
+						<td colspan="2"><code>.num-sma</code></td>
+					</tr>
 				</tbody>
 			</table>
 
@@ -103,7 +115,7 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></td>
+						<td><p>Lorem ipsum dolor sit amet, <a href="#">consectetur</a> adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p></td>
 					</tr>
 					<tr>
 						<td><span class="description">Equip Light, 16px</span></td>
@@ -123,9 +135,14 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td><button class="button cta">NORMAL</button></td>
-						<td><button class="button cta-alt">NORMAL</button></td>
-						<td><a href="#" class="cta-link">NORMAL</a></td>
+						<td><button class="button-gold button cta">NORMAL</button></td>
+						<td><button class="button-hollow button cta">NORMAL</button></td>
+						<td><a href="#" class="cta-link">Normal</a></td>
+					</tr>
+					<tr>
+						<td><code>.button-gold .button .cta</code></td>
+						<td><code>.button-hollow .button .cta</code></td>
+						<td><code>.cta-link</code></td>
 					</tr>
 				</tbody>
 			</table>
@@ -140,15 +157,10 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td><button class="button cta">NORMAL</button></td>
-						<td><button class="button cta-alt">NORMAL</button></td>
-						<td><a href="#" class="cta-link">NORMAL</a></td>
-					</tr>
-					<tr>
-						<td><code></code></td>
-						<td><code></code></td>
-						<td><code></code></td>
-					</tr>
+						<td class="sim-hover"><button class="button-gold button cta">HOVER</button></td>
+						<td class="sim-hover"><button class="button-hollow button cta">HOVER</button></td>
+						<td class="sim-hover"><a href="#" class="cta-link">Hover</a></td>
+					</tr>					
 				</tbody>
 			</table>
 			<table>
@@ -160,15 +172,210 @@
 				<tbody>
 					<tr>
 						<td><a href="#" class="cta-link icon-fw"><i class="icon-mail"></i> NORMAL</a></td>
-						<td></td>
+						<td class="sim-hover"><a href="#" class="cta-link icon-fw"><i class="icon-mail"></i> HOVER</a></td>
 					</tr>
 					<tr>
-						<td><code></code></td>
-						<td><code></code></td>
+						<td colspan="2"><code>.cta-link .icon-fw > i.icon-mail</code></td>						
 					</tr>
 				</tbody>
 			</table>
 
+			<table>
+				<thead>
+					<tr>
+						<td><span class="heading4">With icons Beta</span></td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a href="#" class="cta-link icon-fw-alt"><i class="icon-mail"></i> NORMAL</a></td>
+						<td class="sim-hover"><a href="#" class="cta-link icon-fw-alt"><i class="icon-mail"></i> HOVER</a></td>
+					</tr>
+					<tr>
+						<td colspan="2"><code>.cta-link .icon-fw-alt > i.icon-mail</code></td>						
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section>
+			<span class="header2"><small>04</small>Interactions</span>
+			<table style="float:left; margin:0 100px 50px 0">
+				<thead>
+					<tr>
+						<td><span class="heading4">Dropdown</span></td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td style="padding-bottom:50px">
+							<div class="drop-container drop-button-shape" tabindex="0">
+								<span class="drop-label">options</span>
+								<span class="drop-button icon-arrowdown"><i class="panel-tip"></i></span>
+								<dir class="hidden-panel">
+									<ul>
+										<li>Item 1 est pulvinar congue</li>
+										<li>Item 2 curabitur facilisis felis</li>
+										<li>Item 3 magna varius convallis et a velit</li>
+										<li>Item 4 suscipit maximus mi eu rutrum</li>
+									</ul>
+								</dir>
+							</div>
+						</td>						
+					</tr>
+					<tr>
+						<td>
+							<code>&lt;div class="drop-container drop-button-shape" tabindex="0"><br>
+								<span style="margin-left:30px"></span>&lt;span class="drop-label">options&lt;/span><br>
+								<span style="margin-left:30px"></span>&lt;span class="drop-button icon-arrowdown">&lt;i class="panel-tip">&lt;/i>&lt;/span><br>
+								<span style="margin-left:30px"></span>&lt;dir class="hidden-panel"><br>
+								<span style="margin-left:30px"></span><span style="margin-left:30px"></span>	&lt;ul><br>
+								<span style="margin-left:30px"></span><span style="margin-left:30px"></span><span style="margin-left:30px"></span>&lt;li>Item 1 est pulvinar congue&lt;/li><br>	
+								<span style="margin-left:30px"></span><span style="margin-left:30px"></span>&lt;/ul><br>
+								<span style="margin-left:30px"></span>&lt;/dir><br>
+							&lt;/div></code>
+						</td>						
+					</tr>
+				</tbody>
+			</table>
+
+
+			<table style="float:left; margin:0px 0px 50px 0">
+				<thead>
+					<tr>
+						<td><span class="heading4">Dropdown alt</span></td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td style="padding-bottom:50px">
+							<div class="drop-container drop-button-shape button-green" tabindex="0">
+								<span class="drop-label">options</span>
+								<span class="drop-button icon-arrowdown"><i class="panel-tip"></i></span>
+								<dir class="hidden-panel">
+									<ul>
+										<li>Item 1 est pulvinar congue</li>
+										<li><a href="#">Item 2 curabitur facilisis felis</a></li>
+										<li>Item 3 magna varius convallis et a velit</li>
+										<li>Item 4 suscipit maximus mi eu rutrum</li>
+									</ul>
+								</dir>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<code>&lt;div class="drop-container drop-button-shape" tabindex="0"><br>
+								<span style="margin-left:30px"></span>&lt;span class="drop-label">options&lt;/span><br>
+								<span style="margin-left:30px"></span>&lt;span class="drop-button icon-arrowdown">&lt;i class="panel-tip">&lt;/i>&lt;/span><br>
+								<span style="margin-left:30px"></span>&lt;dir class="hidden-panel"><br>
+								<span style="margin-left:30px"></span><span style="margin-left:30px"></span>&lt;ul><br>
+								<span style="margin-left:30px"></span><span style="margin-left:30px"></span><span style="margin-left:30px"></span>&lt;li>Item 1 est pulvinar congue&lt;/li><br>
+								<span style="margin-left:30px"></span><span style="margin-left:30px"></span>&lt;/ul><br>
+								<span style="margin-left:30px"></span>&lt;/dir><br>
+							&lt;/div></code>
+						</td>						
+					</tr>
+				</tbody>
+			</table>
+			<table width="100%">
+				<thead>
+					<tr>
+						<td><span class="heading4">Tabs</span></td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<ul class="tabs">
+								<li class="active">item1</li>
+								<li>item2</li>
+								<li>item3</li>
+								<li>item4</li>								
+							</ul>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								&lt;ul class="tabs"><br>
+								<span style="margin-left:30px"></span>&lt;li class="active">item1&lt;/li><br>
+								<span style="margin-left:30px"></span>&lt;li>item2&lt;/li><br>	
+								&lt;/ul>
+							</code>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section>
+			<span class="header2"><small>05</small>Tables</span>
+
+			
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h2 class="no-block">Table headline</h2>
+					<div class="no-block pull-right">
+						<span class="declaimer">Sort</span>
+						<div class="drop-container drop-button-shape button-green" tabindex="0">
+							<span class="drop-label">options</span>
+							<span class="drop-button icon-arrowdown"><i class="panel-tip"></i></span>
+							<dir class="hidden-panel">
+								<ul>
+									<li>Item 1 est pulvinar congue</li>
+									<li>Item 2 curabitur facilisis felis</li>
+									<li>Item 3 magna varius convallis et a velit</li>
+									<li>Item 4 suscipit maximus mi eu rutrum</li>
+								</ul>
+							</dir>
+						</div>
+					</div>
+				</div>
+				<div class="panel-body">
+					<ul class="tabs">
+						<li class="active">Category 1</li>						
+						<li>Category 2</li>						
+						<li>Category 3</li>						
+						<li>Category 4</li>						
+					</ul>
+					<table class="table">
+						<tbody>
+							<tr>
+								<td>Item 1</td>
+								<td>120658</td>
+								<td>9856</td>
+								<td>1.48751 <span class="positive-digit"></span></td>								
+							</tr>
+							<tr>
+								<td>Item 1</td>
+								<td>120658</td>
+								<td>9856</td>
+								<td>1.48751 <span class="negative-digit"></span></td>								
+							</tr>
+							<tr>
+								<td>Item 1</td>
+								<td>120658</td>
+								<td>9856</td>
+								<td>1.48751 <span class="positive-digit"></span></td>								
+							</tr>
+							<tr>
+								<td>Item 1</td>
+								<td>120658</td>
+								<td>9856</td>
+								<td>1.48751 <span class="negative-digit"></span></td>								
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+		</section>
+		<section>
+			<span class="header2"><small>06</small>Graphics</span>
+			<div class="panel panel-green">
+				<div class="panel-heading"><h2>graphic headline</h2></div>
+				<div class="panel-body">
+					<br><br><br><br><br><br>
+				</div>
+			</div>
 		</section>
 		
 	</div>
@@ -179,6 +386,7 @@
 			var takeColor = $(this).text();
 			$('.color-palette', this).css('background-color', takeColor);
 		});
+		//
 	});
 </script>	
 </body>

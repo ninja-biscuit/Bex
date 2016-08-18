@@ -20,3 +20,11 @@ dl.lighter .color-palette {border:1px solid #dadada; width: 63px; padding-top: 6
 .mip_styles h1, .mip_styles h2, .mip_styles h3, .mip_styles h4 {margin-bottom: 25px}
 .description {font-family: 'Open Sans', sans-serif; display: block; font-size: 14px; color: #999999;}
 #fonts table {float: left;}
+.sim-hover a.cta-link.icon-fw, .sim-hover a.cta-link.icon-fw [class^="icon-"], .sim-hover a.cta-link.icon-fw-alt, .sim-hover a.cta-link.icon-fw-alt [class^="icon-"] {color:#b5bd00;}
+.mip_styles .sim-hover .button-gold.button.cta {background-color: #b5bd00; color: #fff;}
+.mip_styles .sim-hover .button-hollow.button.cta {background-color: #b5bd00; border-color:transparent; color: #fff;}
+.mip_styles .sim-hover .cta-link {color:#b5bd00; text-decoration: underline;}
+.mip_styles code {background-color: #115740; color:#b3beaf; display: inline-block; padding: 8px 10px; border-radius: 0; font-size: 11px; font-family: 'Lucida Console'}
+.mip_styles .sim-hover .drop-container > .hidden-panel, .mip_styles .sim-hover .drop-container > .drop-button > .panel-tip {display: block; z-index: 900}
+
+ 
