@@ -29,29 +29,12 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-	display: block;
-}
-body {
-	line-height: 1;
-}
-ol, ul {
-	list-style: none;
-}
-blockquote, q {
-	quotes: none;
-}
-blockquote:before, blockquote:after, q:before, q:after {
-	content: '';
-	content: none;
-}
-table {
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
-
-
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+body {line-height: 1;}
+ol, ul {list-style: none;}
+blockquote, q {quotes: none;}
+blockquote:before, blockquote:after, q:before, q:after {content: ''; content: none;}
+table {border-collapse: collapse; border-spacing: 0;}
 
 .mip_styles h1, .mip_styles h2, .mip_styles h3, .mip_styles h4 {margin: 0}
 .mip_styles h1, .mip_styles h2, .declaimer, .mip_styles .num-med, .mip_styles .num-sma, .mip_styles p {font-family: 'equiplight', sans-serif;}
@@ -66,10 +49,10 @@ table {
 .mip_styles p {font-size: 14px}
 .mip_styles p a {color:#115740; text-decoration: underline; -moz-text-decoration-color:#343434; text-decoration-color:#343434;}
 .mip_styles .cta-link {color:#115740; font-family:'equiplight'; font-size:14px;}
-.mip_styles .cta-link.icon-fw {text-transform: uppercase; color: #343434; font-family: 'equipw03-mediumregular', sans-serif !important; text-decoration: none !important; display: inline-block;}
+.mip_styles .cta-link.icon-fw {text-transform: uppercase; color: #343434; font-family: 'equipw03-mediumregular', sans-serif !important; text-decoration: none !important; display: inline-block; padding: 14px 50px}
 .mip_styles .cta-link.icon-fw [class^="icon-"] {color:#bc9c36; margin-right: 4px}
 .mip_styles a.cta-link.icon-fw:hover, .mip_styles a.cta-link.icon-fw:hover [class^="icon-"] {color:#b5bd00;}
-.mip_styles .cta-link.icon-fw-alt {text-transform: uppercase; color: #343434; font-family: 'equipw03-mediumregular', sans-serif !important; text-decoration: none !important; display: inline-block;}
+.mip_styles .cta-link.icon-fw-alt {text-transform: uppercase; color: #343434; font-family: 'equipw03-mediumregular', sans-serif !important; text-decoration: none !important; display: inline-block; padding: 14px 50px}
 .mip_styles .cta-link.icon-fw-alt [class^="icon-"] {color:#999999; margin-right: 4px}
 .mip_styles a.cta-link.icon-fw-alt:hover, .mip_styles a.cta-link.icon-fw-alt:hover [class^="icon-"] {color:#b5bd00;}
 
@@ -87,7 +70,7 @@ table {
 .mip_styles .drop-container > .drop-button > .panel-tip {bottom: -35px; display: none; font-size: 30px; position: absolute; top: auto; z-index: 1002; left: -13px; color: #fff}
 .mip_styles .drop-container.button-green > .drop-button > .panel-tip {bottom: -59px; display: none; font-size: 30px; position: absolute; top: auto; z-index: 1002; left: -13px; color: #fff}
 .mip_styles .drop-container > .hidden-panel {display: none; margin: 0; padding:0; position: absolute; top: 57px; left:0; z-index: 1001; cursor: default; box-shadow: 0px 0px 6px rgba(0,0,0, 0.17); width: -moz-max-content; width: -webkit-max-content; width: max-content; min-width: 126px;}
-.mip_styles .drop-container.button-green > .hidden-panel {display: none; margin: 0; padding:0; position: absolute; top: 81px; left:-50%; z-index: 1001; cursor: default; box-shadow: 0px 0px 6px rgba(0,0,0, 0.17); width: -moz-max-content; width: -webkit-max-content; width: max-content; min-width: 126px;}
+.mip_styles .drop-container.button-green > .hidden-panel {display: none; margin: 0; padding:0; position: absolute; top: 81px; left:auto; right:0; z-index: 1001; cursor: default; box-shadow: 0px 0px 6px rgba(0,0,0, 0.17); width: -moz-max-content; width: -webkit-max-content; width: max-content; min-width: 126px;}
 .mip_styles .drop-container > .hidden-panel a {cursor: pointer; color:#115740; text-decoration: underline; -moz-text-decoration-color:#343434; text-decoration-color:#343434; }
 .mip_styles .drop-container:focus > .hidden-panel, .mip_styles .drop-container:focus > .drop-button > .panel-tip {display: block;}
 .mip_styles .drop-container > .hidden-panel > ul {background-color: #fff; padding:25px; margin: 0}
@@ -98,7 +81,6 @@ table {
 .mip_styles .tabs li {float: left; padding: 10px 45px; background-color: #f5f5f5; color: #c6d0c6; font-family: 'equipcondw03-boldregular', sans-serif; font-size: 16px; border-top:3px solid rgba(176,191,176,0.7); cursor: pointer; border-right:1px solid #ccc;}
 .mip_styles .tabs li:last-child {border-right:none;}
 .mip_styles .tabs li.active {background-color: #fff; color: rgba(188,156,54,0.7); border-top: 1; border-top:3px solid rgba(188,156,54,0.7);}
-
 /* panel + tables */
 .mip_styles .panel {background-color: transparent; border: 1px solid transparent; border-radius: 0px; box-shadow: 0 1px 1px rgba(0, 0, 0, 0); margin-bottom: 20px;}
 .mip_styles .panel-default {border-color: transparent;}
@@ -122,9 +104,57 @@ table {
 .mip_styles .positive-digit {color:#b5bd00; font-family: 'equipw03-mediumregular', sans-serif;  font-size:14px; display: inline-block; margin-left: 15px}
 .mip_styles .negative-digit {color:#e78322; font-family: 'equipw03-mediumregular', sans-serif; font-size:14px; display: inline-block; margin-left: 15px}
 .mip_styles .panel-body table tbody .progress {margin:0;}
-
 /* panel */
 .mip_styles .panel-green {border-color: transparent; border-bottom: 2px solid #999;}
 .mip_styles .panel-green > .panel-heading {background-color: #115740; border-color: transparent; color:#fff; padding:13px 25px; border-bottom: 1px solid #999;}
 .mip_styles .panel-green > .panel-heading h2 {color: #fff; margin: 0}
-
+/* progress bar */
+.mip_styles .progress-bar-container {display:inline-block; width: 100%; height: 11px; background-color: #115740;}
+.mip_styles .progress-bar {display:inline-block; height: 11px; background-color: #b5bd00;}
+/* list */
+.mip_styles .list-asset {display: block; height: 254px; overflow-y: auto; margin-bottom: 0}
+.mip_styles .list-asset dt {padding:5px 10px 4px 30px; background-color: #6c9f8b; border-top:1px solid #115740; border-bottom: 1px solid #115740; font-family:'equiplight', sans-serif; font-size: 16px; line-height:16px; text-transform: uppercase; color: #fff;}
+.mip_styles .list-asset dd {float: none; background-color: #f5f5f5; border-top: 1px solid #999; margin-right: 0; padding: 7px 5px 5px 15px; text-align: left;}
+.mip_styles .list-asset dd:nth-child(odd) {background-color: #f4f2ec;}
+.mip_styles .list-asset dt + dd {border-top: none;}
+.mip_styles .list-asset label {font-family: 'equipw03-mediumregular', sans-serif; color:#115740; font-size:16px; font-weight: 100; display: block; line-height: 16px}
+.mip_styles .list-asset .declaimer {color: #115740; font-weight: 100}
+/* modal */
+.mip_styles .modal-content {border-radius: 0}
+.mip_styles .modal-header { border-bottom:1px solid transparent; padding:12px }
+.mip_styles .modal-header h2 {margin-top:6px; margin-bottom: 0px; padding:6px 0 0 17px;}
+.mip_styles .modal-content .close {opacity: 1}
+.mip_styles .modal-content .icon-x-mark:before {color:#e78322;}
+.mip_styles .modal-body {padding: 5px 30px 30px}
+/* form */
+.mip_styles .form-inline .form-group label {font-family: 'equipw03-mediumregular', sans-serif; color:#565a5c; font-size:16px; font-weight: 100; margin-right: 10px}
+.mip_styles .form-control {border: 1px solid #ccc; border-radius: 0px; box-shadow: none; color: #999999; display: block; font-size: 16px; height: 34px; line-height: 1.42857; padding: 6px 12px; transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s; width: 100%;}
+.mip_styles .form-control:focus {border-color: #6c9f8b; box-shadow: 0 1px 1px rgba(108, 159, 139, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6); outline: 0 none;}
+.mip_styles .error .form-control {border-color: #e78322; box-shadow: 0 1px 1px rgba(231, 131, 34, 0.075) inset, 0 0 8px rgba(231, 131, 34, 0.5);}
+.mip_styles .error-message {display: none; color:#e78322; font-family:'equiplight', sans-serif; font-size: 16px}
+.mip_styles .error .error-message {display: block; clear: both; text-align: right}
+.mip_styles .form-inline .search.form-group label {color:#999999; font-family:'equiplight', sans-serif; font-size: 16px}
+.mip_styles .search.form-group .form-control {border-right: none; font-family:'equiplight', sans-serif; font-size: 16px}
+.mip_styles .search-button {background-color: #115740; color: #fff; font-size: 20px; left: -4px; padding: 6px 10px; position: relative; top: 5px; cursor: pointer}
+.mip_styles .form-group textarea { min-height: 150px}
+.mip_styles .tooltip-label {font-family: 'equipw03-mediumregular', sans-serif; font-size: 16px; margin-bottom: 0; margin-right: 5px; color: #343434; text-transform: uppercase;}
+.mip_styles .info-asset .icon-info::before {color: #e78322; cursor: pointer; font-size: 1.6em; position: relative; top: 4px;}
+.mip_styles .tooltip-inner {background-color: #6c9f8b; padding: 12px 18px; text-align: left; border-radius: 0}
+.mip_styles .tooltip.top .tooltip-arrow {border-top-color:#6c9f8b; bottom: 0px}
+/* radio check */
+.mip_styles .radio-asset, .mip_styles .check-asset {display: inline-block;}
+.mip_styles .radio-asset .icon-radio-button {font-size: 23px; color:#888; cursor: pointer; position: relative; top: 4px}
+.mip_styles .radio-asset .icon-radio-button-selected {font-size: 23px; color:#115740; cursor: pointer; position: relative; top: 4px}
+.mip_styles .radio-asset [type="radio"] {display: none}
+.mip_styles .check-asset .icon-edit {font-size: 23px; color:#888; cursor: pointer; position: relative; top: 4px}
+.mip_styles .check-asset .icon-check-mark {font-size: 23px; color: #115740; left: 1px; position: relative; cursor:pointer; top: 4px}
+.mip_styles .check-asset .icon-uncheck-mark {font-size: 23px; color:#888; cursor: pointer; position: relative; top: 4px}
+.mip_styles .check-asset [type="checkbox"] {display: none}
+.mip_styles .radio-asset p, .mip_styles .check-asset p {margin-bottom: 0}
+/* backgrounds */
+.mip_styles .bg-green {background-color:#115740;}
+.mip_styles .bg-dark-gray {background-color:#343434;}
+.mip_styles .bg-lite-gray {background-color:#eeeeee;}
+.mip_styles .bg-green > div, .bg-dark-gray > div, .bg-lite-gray > div {background-color: #fff;}
+.mip_styles .bg-white {background-color: #fff;}
+.mip_styles .bg-white > div {background-color:#eee;}

@@ -3,9 +3,9 @@
 <head>
 	<meta charset="utf-8">
 	<title>MIP style guide</title>
+	<link rel="stylesheet" href="css/imp_icons.css">
 	<link rel="stylesheet" href="css/styles.css">
 	<link rel="stylesheet" href="css/styleguide.css">
-	<link rel="stylesheet" href="css/imp_icons.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400" rel="stylesheet">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
@@ -50,7 +50,7 @@
 			<table width="473" style="margin-right:120px;">
 				<thead>
 					<tr>
-						<td rowspan="2"><span class="heading4">Titles & headings</span></td>
+						<td><span class="heading4">Titles & headings</span></td>
 					</tr>
 				</thead>
 				<tbody>
@@ -125,7 +125,7 @@
 		</section>
 		<section>
 			<span class="header2"><small>03</small>Call to actions</span>
-			<table>
+			<table style="margin:0 100px 50px 0; float:left">
 				<thead>
 					<tr>
 						<td><span class="heading4">Alpha</span></td>
@@ -135,34 +135,19 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td><button class="button-gold button cta">NORMAL</button></td>
-						<td><button class="button-hollow button cta">NORMAL</button></td>
-						<td><a href="#" class="cta-link">Normal</a></td>
+						<td style="padding:0px 15px 0 0"><button class="button-gold button cta">NORMAL</button></td>
+						<td style="padding:0px 15px 0 0"><button class="button-hollow button cta">NORMAL</button></td>
+						<td style="padding:0px 15px 0 0"><a href="#" class="cta-link">Normal</a></td>
 					</tr>
 					<tr>
-						<td><code>.button-gold .button .cta</code></td>
-						<td><code>.button-hollow .button .cta</code></td>
-						<td><code>.cta-link</code></td>
+						<td style="padding:15px 15px 0 0"><code>.button-gold.button.cta</code></td>
+						<td style="padding:15px 15px 0 0"><code>.button-hollow.button.cta</code></td>
+						<td style="padding:15px 15px 0 0"><code>.cta-link</code></td>
 					</tr>
 				</tbody>
 			</table>
 
-			<table id="overExample">
-				<thead>
-					<tr>
-						<td><span class="heading4">Alpha</span></td>
-						<td><span class="heading4">Beta</span></td>
-						<td><span class="heading4">Gamma</span></td>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td class="sim-hover"><button class="button-gold button cta">HOVER</button></td>
-						<td class="sim-hover"><button class="button-hollow button cta">HOVER</button></td>
-						<td class="sim-hover"><a href="#" class="cta-link">Hover</a></td>
-					</tr>					
-				</tbody>
-			</table>
+			
 			<table>
 				<thead>
 					<tr>
@@ -171,31 +156,21 @@
 				</thead>
 				<tbody>
 					<tr>
-						<td><a href="#" class="cta-link icon-fw"><i class="icon-mail"></i> NORMAL</a></td>
-						<td class="sim-hover"><a href="#" class="cta-link icon-fw"><i class="icon-mail"></i> HOVER</a></td>
+						<td style="padding:0px 15px 0 0">
+							<a href="#" class="cta-link icon-fw"><i class="icon-mail"></i> NORMAL</a>
+						</td>
+						<td style="padding:0px 15px 0 0">
+							<a href="#" class="cta-link icon-fw-alt"><i class="icon-mail"></i> NORMAL</a>
+						</td>
 					</tr>
 					<tr>
-						<td colspan="2"><code>.cta-link .icon-fw > i.icon-mail</code></td>						
+						<td style="padding:15px 15px 0 0"><code>.cta-link.icon-fw > i.icon-mail</code></td>						
+						<td style="padding:15px 15px 0 0"><code>.cta-link.icon-fw-alt > i.icon-mail</code></td>
 					</tr>
 				</tbody>
 			</table>
 
-			<table>
-				<thead>
-					<tr>
-						<td><span class="heading4">With icons Beta</span></td>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td><a href="#" class="cta-link icon-fw-alt"><i class="icon-mail"></i> NORMAL</a></td>
-						<td class="sim-hover"><a href="#" class="cta-link icon-fw-alt"><i class="icon-mail"></i> HOVER</a></td>
-					</tr>
-					<tr>
-						<td colspan="2"><code>.cta-link .icon-fw-alt > i.icon-mail</code></td>						
-					</tr>
-				</tbody>
-			</table>
+			
 		</section>
 		<section>
 			<span class="header2"><small>04</small>Interactions</span>
@@ -211,27 +186,27 @@
 							<div class="drop-container drop-button-shape" tabindex="0">
 								<span class="drop-label">options</span>
 								<span class="drop-button icon-arrowdown"><i class="panel-tip icon-arrowup"></i></span>
-								<dir class="hidden-panel">
+								<div class="hidden-panel">
 									<ul>
 										<li>Item 1 est pulvinar congue</li>
 										<li>Item 2 curabitur facilisis felis</li>
 										<li>Item 3 magna varius convallis et a velit</li>
 										<li>Item 4 suscipit maximus mi eu rutrum</li>
 									</ul>
-								</dir>
+								</div>
 							</div>
 						</td>						
 					</tr>
 					<tr>
 						<td>
 							<code>&lt;div class="drop-container drop-button-shape" tabindex="0"><br>
-								<span style="margin-left:30px"></span>&lt;span class="drop-label">options&lt;/span><br>
-								<span style="margin-left:30px"></span>&lt;span class="drop-button icon-arrowdown">&lt;i class="panel-tip icon-arrowup">&lt;/i>&lt;/span><br>
-								<span style="margin-left:30px"></span>&lt;dir class="hidden-panel"><br>
-								<span style="margin-left:30px"></span><span style="margin-left:30px"></span>	&lt;ul><br>
-								<span style="margin-left:30px"></span><span style="margin-left:30px"></span><span style="margin-left:30px"></span>&lt;li>Item 1 est pulvinar congue&lt;/li><br>	
-								<span style="margin-left:30px"></span><span style="margin-left:30px"></span>&lt;/ul><br>
-								<span style="margin-left:30px"></span>&lt;/dir><br>
+								<span class="indent-1"></span>&lt;span class="drop-label">options&lt;/span><br>
+								<span class="indent-1"></span>&lt;span class="drop-button icon-arrowdown">&lt;i class="panel-tip icon-arrowup">&lt;/i>&lt;/span><br>
+								<span class="indent-1"></span>&lt;dir class="hidden-panel"><br>
+								<span class="indent-2"></span>	&lt;ul><br>
+								<span class="indent-3"></span>&lt;li>Item 1 est pulvinar congue&lt;/li><br>	
+								<span class="indent-2"></span>&lt;/ul><br>
+								<span class="indent-1"></span>&lt;/dir><br>
 							&lt;/div></code>
 						</td>						
 					</tr>
@@ -251,27 +226,27 @@
 							<div class="drop-container drop-button-shape button-green" tabindex="0">
 								<span class="drop-label">options</span>
 								<span class="drop-button icon-arrowdown"><i class="panel-tip icon-arrowup"></i></span>
-								<dir class="hidden-panel">
+								<div class="hidden-panel">
 									<ul>
 										<li>Item 1 est pulvinar congue</li>
 										<li><a href="#">Item 2 curabitur facilisis felis</a></li>
 										<li>Item 3 magna varius convallis et a velit</li>
 										<li>Item 4 suscipit maximus mi eu rutrum</li>
 									</ul>
-								</dir>
+								</div>
 							</div>
 						</td>
 					</tr>
 					<tr>
 						<td>
-							<code>&lt;div class="drop-container drop-button-shape" tabindex="0"><br>
-								<span style="margin-left:30px"></span>&lt;span class="drop-label">options&lt;/span><br>
-								<span style="margin-left:30px"></span>&lt;span class="drop-button icon-arrowdown">&lt;i class="panel-tip icon-arrowup">&lt;/i>&lt;/span><br>
-								<span style="margin-left:30px"></span>&lt;dir class="hidden-panel"><br>
-								<span style="margin-left:30px"></span><span style="margin-left:30px"></span>&lt;ul><br>
-								<span style="margin-left:30px"></span><span style="margin-left:30px"></span><span style="margin-left:30px"></span>&lt;li>Item 1 est pulvinar congue&lt;/li><br>
-								<span style="margin-left:30px"></span><span style="margin-left:30px"></span>&lt;/ul><br>
-								<span style="margin-left:30px"></span>&lt;/dir><br>
+							<code>&lt;div class="drop-container drop-button-shape button-green" tabindex="0"><br>
+								<span class="indent-1"></span>&lt;span class="drop-label">options&lt;/span><br>
+								<span class="indent-1"></span>&lt;span class="drop-button icon-arrowdown">&lt;i class="panel-tip icon-arrowup">&lt;/i>&lt;/span><br>
+								<span class="indent-1"></span>&lt;dir class="hidden-panel"><br>
+								<span class="indent-2"></span>&lt;ul><br>
+								<span class="indent-3"></span>&lt;li>Item 1 est pulvinar congue&lt;/li><br>
+								<span class="indent-2"></span>&lt;/ul><br>
+								<span class="indent-1"></span>&lt;/dir><br>
 							&lt;/div></code>
 						</td>						
 					</tr>
@@ -298,8 +273,8 @@
 						<td>
 							<code>
 								&lt;ul class="tabs"><br>
-								<span style="margin-left:30px"></span>&lt;li class="active">item1&lt;/li><br>
-								<span style="margin-left:30px"></span>&lt;li>item2&lt;/li><br>	
+								<span class="indent-1"></span>&lt;li class="active">item1&lt;/li><br>
+								<span class="indent-1"></span>&lt;li>item2&lt;/li><br>	
 								&lt;/ul>
 							</code>
 						</td>
@@ -310,247 +285,380 @@
 		<section>
 			<span class="header2"><small>05</small>Tables</span>
 
-			
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h2 class="no-block">Table headline</h2>
-					<div class="no-block pull-right">
-						<span class="declaimer">Sort by</span>
-						<div class="drop-container drop-button-shape button-green" tabindex="0">
-							<span class="drop-label">options</span>
-							<span class="drop-button icon-arrowdown"><i class="panel-tip icon-arrowup"></i></span>
-							<dir class="hidden-panel">
-								<ul>
-									<li>Item 1 est pulvinar congue</li>
-									<li>Item 2 curabitur facilisis felis</li>
-									<li>Item 3 magna varius convallis et a velit</li>
-									<li>Item 4 suscipit maximus mi eu rutrum</li>
-								</ul>
-							</dir>
-						</div>
-					</div>
-				</div>
-				<div class="panel-body">
-					<table class="table">
-						<thead>
-							<tr>
-								<td>Category 1</td>
-								<td>Category 2</td>
-								<td>Category 3</td>
-								<td>Category 4</td>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Item 1</td>
-								<td>120658</td>
-								<td>9856</td>
-								<td>1.48751 <span class="positive-digit">8%</span></td>								
-							</tr>
-							<tr>
-								<td>Item 1</td>
-								<td>120658</td>
-								<td>9856</td>
-								<td>1.48751 <span class="negative-digit">56%</span></td>								
-							</tr>
-							<tr>
-								<td>Item 1</td>
-								<td>120658</td>
-								<td>9856</td>
-								<td>1.48751 <span class="positive-digit">20%</span></td>								
-							</tr>
-							<tr>
-								<td>Item 1</td>
-								<td>120658</td>
-								<td>9856</td>
-								<td>1.48751 <span class="negative-digit">30%</span></td>								
-							</tr>
-							<tr>
-								<td>Item 1</td>
-								<td>120658</td>
-								<td>9856</td>
-								<td>1.48751 <span class="positive-digit">15%</span></td>								
-							</tr>
-							<tr>
-								<td>Item 1</td>
-								<td>120658</td>
-								<td>9856</td>
-								<td>1.48751 <span class="negative-digit">9%</span></td>								
-							</tr>
-							<tr>
-								<td>Item 1</td>
-								<td>120658</td>
-								<td>9856</td>
-								<td>1.48751 <span class="positive-digit">20%</span></td>								
-							</tr>
-							<tr>
-								<td>Item 1</td>
-								<td>120658</td>
-								<td>9856</td>
-								<td>1.48751 <span class="negative-digit">1%</span></td>								
-							</tr>
-							<tr>
-								<td>Item 1</td>
-								<td>120658</td>
-								<td>9856</td>
-								<td>1.48751 <span class="positive-digit">65%</span></td>								
-							</tr>
-							<tr>
-								<td>Item 1</td>
-								<td>120658</td>
-								<td>9856</td>
-								<td>1.48751 <span class="negative-digit">5%</span></td>								
-							</tr>
-							<tr>
-								<td>Item 1</td>
-								<td>120658</td>
-								<td>9856</td>
-								<td>1.48751 <span class="positive-digit">1%</span></td>								
-							</tr>
-							<tr>
-								<td>Item 1</td>
-								<td>120658</td>
-								<td>9856</td>
-								<td>1.48751 <span class="negative-digit">8%</span></td>								
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-
-			<div class="panel panel-default">
-				<div class="panel-heading">
-					<h2 class="no-block">Table headline</h2>
-					<div class="no-block pull-right">
-						<span class="declaimer">Sort by</span>
-						<div class="drop-container drop-button-shape button-green" tabindex="0">
-							<span class="drop-label">options</span>
-							<span class="drop-button icon-arrowdown"><i class="panel-tip icon-arrowup"></i></span>
-							<dir class="hidden-panel">
-								<ul>
-									<li>Item 1 est pulvinar congue</li>
-									<li>Item 2 curabitur facilisis felis</li>
-									<li>Item 3 magna varius convallis et a velit</li>
-									<li>Item 4 suscipit maximus mi eu rutrum</li>
-								</ul>
-							</dir>
-						</div>
-					</div>
-				</div>
-				<div class="panel-body">
-					<table class="table">
-						<thead>
-							<tr>
-								<td>Category 1</td>
-								<td>Category 2</td>
-								<td>Category 3</td>
-								<td></td>
-							</tr>
-						</thead>
-						<tbody>
-							<tr>
-								<td>Item 1</td>
-								<td>120658</td>
-								<td>9856</td>
-								<td>
-									<div class="progress">
-										<div class="progress-bar" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 60%;">
-											<span class="sr-only">60% Complete</span>
+			<table>
+				<thead>
+					<tr>
+						<td>
+							<span class="heading4">Type 1</span>
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h2 class="no-block">Table headline</h2>
+									<div class="no-block pull-right">
+										<span class="declaimer">Sort by</span>
+										<div class="drop-container drop-button-shape button-green" tabindex="0">
+											<span class="drop-label">options</span>
+											<span class="drop-button icon-arrowdown"><i class="panel-tip icon-arrowup"></i></span>
+											<div class="hidden-panel">
+												<ul>
+													<li>Item 1 est pulvinar congue</li>
+													<li>Item 2 curabitur facilisis felis</li>
+													<li>Item 3 magna varius convallis et a velit</li>
+													<li>Item 4 suscipit maximus mi eu rutrum</li>
+												</ul>
+											</div>
 										</div>
 									</div>
-								</td>								
-							</tr>
-							<tr>
-								<td>Item 1</td>
-								<td>120658</td>
-								<td>9856</td>
-								<td>
-									
-								</td>
-							</tr>
-							<tr>
-								<td>Item 1</td>
-								<td>120658</td>
-								<td>9856</td>
-								<td></td>
-							</tr>
-							<tr>
-								<td>Item 1</td>
-								<td>120658</td>
-								<td>9856</td>
-								<td>
-									
-								</td>
-							</tr>
-							<tr>
-								<td>Item 1</td>
-								<td>120658</td>
-								<td>9856</td>
-								<td>
-									
-								</td>
-							</tr>
-							<tr>
-								<td>Item 1</td>
-								<td>120658</td>
-								<td>9856</td>
-								<td>
-									
-								</td>
-							</tr>
-							<tr>
-								<td>Item 1</td>
-								<td>120658</td>
-								<td>9856</td>
-								<td>
-									
-								</td>
-							</tr>
-							<tr>
-								<td>Item 1</td>
-								<td>120658</td>
-								<td>9856</td>
-								<td>
-									
-								</td>
-							</tr>
-							<tr>
-								<td>Item 1</td>
-								<td>120658</td>
-								<td>9856</td>
-								<td>
-									
-								</td>
-							</tr>
-							<tr>
-								<td>Item 1</td>
-								<td>120658</td>
-								<td>9856</td>
-								<td>
-									
-								</td>
-							</tr>
-							<tr>
-								<td>Item 1</td>
-								<td>120658</td>
-								<td>9856</td>
-								<td>
-									
-								</td>
-							</tr>
-							<tr>
-								<td>Item 1</td>
-								<td>120658</td>
-								<td>9856</td>
-								<td>
-									
-								</td>
-							</tr>
-						</tbody>
-					</table>
-				</div>
-			</div>
-
+								</div>
+								<div class="panel-body">
+									<table class="table">
+										<thead>
+											<tr>
+												<td>Category 1</td>
+												<td>Category 2</td>
+												<td>Category 3</td>
+												<td>Category 4</td>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Item 1</td>
+												<td>120658</td>
+												<td>9856</td>
+												<td>1.48751 <span class="positive-digit">8%</span></td>								
+											</tr>
+											<tr>
+												<td>Item 1</td>
+												<td>120658</td>
+												<td>9856</td>
+												<td>1.48751 <span class="negative-digit">56%</span></td>								
+											</tr>
+											<tr>
+												<td>Item 1</td>
+												<td>120658</td>
+												<td>9856</td>
+												<td>1.48751 <span class="positive-digit">20%</span></td>								
+											</tr>
+											<tr>
+												<td>Item 1</td>
+												<td>120658</td>
+												<td>9856</td>
+												<td>1.48751 <span class="negative-digit">30%</span></td>								
+											</tr>
+											<tr>
+												<td>Item 1</td>
+												<td>120658</td>
+												<td>9856</td>
+												<td>1.48751 <span class="positive-digit">15%</span></td>								
+											</tr>
+											<tr>
+												<td>Item 1</td>
+												<td>120658</td>
+												<td>9856</td>
+												<td>1.48751 <span class="negative-digit">9%</span></td>								
+											</tr>
+											<tr>
+												<td>Item 1</td>
+												<td>120658</td>
+												<td>9856</td>
+												<td>1.48751 <span class="positive-digit">20%</span></td>								
+											</tr>
+											<tr>
+												<td>Item 1</td>
+												<td>120658</td>
+												<td>9856</td>
+												<td>1.48751 <span class="negative-digit">1%</span></td>								
+											</tr>
+											<tr>
+												<td>Item 1</td>
+												<td>120658</td>
+												<td>9856</td>
+												<td>1.48751 <span class="positive-digit">65%</span></td>								
+											</tr>
+											<tr>
+												<td>Item 1</td>
+												<td>120658</td>
+												<td>9856</td>
+												<td>1.48751 <span class="negative-digit">5%</span></td>								
+											</tr>
+											<tr>
+												<td>Item 1</td>
+												<td>120658</td>
+												<td>9856</td>
+												<td>1.48751 <span class="positive-digit">1%</span></td>								
+											</tr>
+											<tr>
+												<td>Item 1</td>
+												<td>120658</td>
+												<td>9856</td>
+												<td>1.48751 <span class="negative-digit">8%</span></td>								
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+							&lt;div class="panel panel-default"><br>
+							  <span class="indent-1"></span>&lt;div class="panel-heading"><br>
+								  <span class="indent-2"></span>&lt;h2 class="no-block">Table headline&lt;/h2><br>
+								  <span class="indent-2"></span>&lt;div class="no-block pull-right"><br>
+								  <span class="indent-3"></span>&lt;span class="declaimer">Sort by&lt;/span><br>
+								  <span class="indent-3"></span> &lt;div class="drop-container drop-button-shape button-green" tabindex="0"><br>
+								  <span class="indent-3"></span>...<br>
+								  <span class="indent-3"></span>&lt;/div><br>
+								  <span class="indent-2"></span>&lt;/div><br>
+							  <span class="indent-1"></span>&lt;/div><br>
+							  <span class="indent-1"></span>&lt;div class="panel-body"><br>
+							  	<span class="indent-2"></span>&lt;table class="table"><br>
+							      <span class="indent-3"></span>&lt;thead><br>
+							        <span class="indent-4"></span>&lt;tr><br>
+							          <span class="indent-5"></span>&lt;td>Category 1&lt;/td><br>
+							          <span class="indent-5"></span>&lt;td>Category 2&lt;/td><br>
+							          <span class="indent-5"></span>&lt;td>Category 3&lt;/td><br>
+							          <span class="indent-5"></span>&lt;td>Category 4&lt;/td><br>
+							        <span class="indent-4"></span>&lt;/tr><br>
+							      <span class="indent-3"></span>&lt;/thead><br>
+							      <span class="indent-3"></span>&lt;tbody><br>
+							        <span class="indent-4"></span>&lt;tr><br>
+							          <span class="indent-5"></span>&lt;td>Item 1&lt;/td><br>
+							          <span class="indent-5"></span>&lt;td>120658&lt;/td><br>
+							          <span class="indent-5"></span>&lt;td>9856&lt;/td><br>
+							          <span class="indent-5"></span>&lt;td>1.48751 &lt;span class="positive-digit">8%&lt;/span>&lt;/td><br>
+							        <span class="indent-4"></span>&lt;/tr><br>
+							        <span class="indent-4"></span>&lt;tr><br>
+							          <span class="indent-5"></span>&lt;td>Item 1&lt;/td><br>
+							          <span class="indent-5"></span>&lt;td>120658&lt;/td><br>
+							          <span class="indent-5"></span>&lt;td>9856&lt;/td><br>
+							          <span class="indent-5"></span>&lt;td>1.48751 &lt;span class="negative-digit">56%&lt;/span>&lt;/td><br>
+							        <span class="indent-4"></span>&lt;/tr><br>
+							      <span class="indent-3"></span>&lt;/tbody><br>
+							    <span class="indent-2"></span>&lt;/table><br>
+							  <span class="indent-1"></span>&lt;/div><br>
+							&lt;/div><br>
+							</code>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+			<table>
+				<thead>
+					<tr>
+						<td>
+							<span class="heading4">Type 2</span>
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<div class="panel panel-default">
+								<div class="panel-heading">
+									<h2 class="no-block">Table headline</h2>
+									<div class="no-block pull-right">
+										<span class="declaimer">Sort by</span>
+										<div class="drop-container drop-button-shape button-green" tabindex="0">
+											<span class="drop-label">options</span>
+											<span class="drop-button icon-arrowdown"><i class="panel-tip icon-arrowup"></i></span>
+											<div class="hidden-panel">
+												<ul>
+													<li>Item 1 est pulvinar congue</li>
+													<li>Item 2 curabitur facilisis felis</li>
+													<li>Item 3 magna varius convallis et a velit</li>
+													<li>Item 4 suscipit maximus mi eu rutrum</li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="panel-body">
+									<table class="table">
+										<thead>
+											<tr>
+												<td>Category 1</td>
+												<td>Category 2</td>
+												<td>Category 3</td>
+												<td></td>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>Item 1</td>
+												<td>120658</td>
+												<td>9856</td>
+												<td>
+													<div class="progress-bar-container" data-progress="10">
+														<span class="progress-bar"></span>
+													</div>
+												</td>								
+											</tr>
+											<tr>
+												<td>Item 1</td>
+												<td>120658</td>
+												<td>9856</td>
+												<td>
+													<div class="progress-bar-container" data-progress="80">
+														<span class="progress-bar"></span>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>Item 1</td>
+												<td>120658</td>
+												<td>9856</td>
+												<td>
+													<div class="progress-bar-container" data-progress="25">
+														<span class="progress-bar"></span>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>Item 1</td>
+												<td>120658</td>
+												<td>9856</td>
+												<td>
+													<div class="progress-bar-container" data-progress="5">
+														<span class="progress-bar"></span>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>Item 1</td>
+												<td>120658</td>
+												<td>9856</td>
+												<td>
+													<div class="progress-bar-container" data-progress="62">
+														<span class="progress-bar"></span>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>Item 1</td>
+												<td>120658</td>
+												<td>9856</td>
+												<td>
+													<div class="progress-bar-container" data-progress="87">
+														<span class="progress-bar"></span>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>Item 1</td>
+												<td>120658</td>
+												<td>9856</td>
+												<td>
+													<div class="progress-bar-container" data-progress="100">
+														<span class="progress-bar"></span>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>Item 1</td>
+												<td>120658</td>
+												<td>9856</td>
+												<td>
+													<div class="progress-bar-container" data-progress="60">
+														<span class="progress-bar"></span>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>Item 1</td>
+												<td>120658</td>
+												<td>9856</td>
+												<td>
+													<div class="progress-bar-container" data-progress="52">
+														<span class="progress-bar"></span>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>Item 1</td>
+												<td>120658</td>
+												<td>9856</td>
+												<td>
+													<div class="progress-bar-container" data-progress="28">
+														<span class="progress-bar"></span>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>Item 1</td>
+												<td>120658</td>
+												<td>9856</td>
+												<td>
+													<div class="progress-bar-container" data-progress="99">
+														<span class="progress-bar"></span>
+													</div>
+												</td>
+											</tr>
+											<tr>
+												<td>Item 1</td>
+												<td>120658</td>
+												<td>9856</td>
+												<td>
+													<div class="progress-bar-container" data-progress="45">
+														<span class="progress-bar"></span>
+													</div>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+							&lt;div class="panel panel-default"><br>
+							  <span class="indent-1"></span>&lt;div class="panel-heading"><br>
+							    <span class="indent-2"></span>&lt;h2 class="no-block">Table headline&lt;/h2><br>
+							    <span class="indent-2"></span>&lt;div class="no-block pull-right"><br>
+							      <span class="indent-3"></span>&lt;span class="declaimer">Sort by&lt;/span><br>
+							     <span class="indent-3"></span> &lt;div class="drop-container drop-button-shape button-green" tabindex="0"><br>
+							     <span class="indent-3"></span>...<br>
+							     <span class="indent-3"></span>&lt;/div><br>
+							    <span class="indent-2"></span>&lt;/div><br>
+							  <span class="indent-1"></span>&lt;/div><br>
+							  <span class="indent-1"></span>&lt;div class="panel-body"><br>
+							    <span class="indent-2"></span>&lt;table class="table"><br>
+							      <span class="indent-3"></span>&lt;thead><br>
+							        <span class="indent-4"></span>&lt;tr><br>
+							          <span class="indent-5"></span>&lt;td>Category 1&lt;/td><br>
+							          <span class="indent-5"></span>&lt;td>Category 2&lt;/td><br>
+							          <span class="indent-5"></span>&lt;td>Category 3&lt;/td><br>
+							          <span class="indent-5"></span>&lt;td>Category 4&lt;/td><br>
+							        <span class="indent-4"></span>&lt;/tr><br>
+							      <span class="indent-3"></span>&lt;/thead><br>
+							      <span class="indent-3"></span>&lt;tbody><br>
+							        <span class="indent-4"></span>&lt;tr><br>
+							          <span class="indent-5"></span>&lt;td>Item 1&lt;/td><br>
+							          <span class="indent-5"></span>&lt;td>120658&lt;/td><br>
+							          <span class="indent-5"></span>&lt;td>9856&lt;/td><br>
+							          <span class="indent-5"></span>&lt;td><br>
+							       <span class="indent-5"></span><span class="indent-1"></span>&lt;div class="progress-bar-container" data-progress="62"><br>
+									<span class="indent-5"></span><span class="indent-2"></span>&lt;span class="progress-bar">&lt;/div><br>
+									<span class="indent-5"></span><span class="indent-1"></span>&lt;/div><br>
+							          <span class="indent-5"></span>&lt;/td><br>
+							        <span class="indent-4"></span>&lt;/tr><br>							        
+							      <span class="indent-3"></span>&lt;/tbody><br>
+							    <span class="indent-2"></span>&lt;/table><br>
+							  <span class="indent-1"></span>&lt;/div><br>
+							&lt;/div><br>
+							</code>
+						</td>
+					</tr>
+				</tbody>
+			</table>
 		</section>
 		<section>
 			<span class="header2"><small>06</small>Graphics</span>
@@ -561,24 +669,329 @@
 				</div>
 			</div>
 		</section>
+		<section>
+			<span class="header2"><small>07</small>List & lightbox</span>
+			<table width="450px" style="float:left; margin-right:100px;">
+				<thead>
+					<tr>
+						<td>
+							<span class="heading4">List</span>
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<div class="panel">
+								<div class="panel-heading"><h2>List headline</h2></div>
+								<div class="panel-body">
+									<dl class="list-asset">
+										<dt>
+											Category 1	
+										</dt>
+										<dd>
+											<label>Item 1</label>
+											<span class="declaimer">Description</span>
+										</dd>
+										<dd>
+											<label>Item 2</label>
+											<span class="declaimer">Description</span>
+										</dd>
+										<dd>
+											<label>Item 3</label>
+											<span class="declaimer">Description</span>
+										</dd>
+										<dd>
+											<label>Item 4</label>
+											<span class="declaimer">Description</span>
+										</dd>
+										<dt>
+											Category 2
+										</dt>
+										<dd>
+											<label>Item 1</label>
+											<span class="declaimer">Description</span>							
+										</dd>
+										<dd>
+											<label>Item 2</label>
+											<span class="declaimer">Description</span>
+										</dd>
+										<dt>
+											Category 3
+										</dt>
+										<dd>
+											<label>Item 1</label>
+											<span class="declaimer">Description</span>							
+										</dd>
+										<dd>
+											<label>Item 2</label>
+											<span class="declaimer">Description</span>
+										</dd>
+									</dl>
+								</div>
+							</div>
+							
+						</td>						
+					</tr>
+					<tr>
+						<td>
+							<code>&lt;div class="panel"><br>
+							  <span class="indent-1"></span>&lt;div class="panel-heading"><br>
+							  <span class="indent-2"></span>&lt;h2>List headline&lt;/h2><br>
+							  <span class="indent-1"></span>&lt;/div><br>
+							  <span class="indent-1"></span>&lt;div class="panel-body"><br>
+							    <span class="indent-2"></span>&lt;dl class="list-asset"><br>
+							      <span class="indent-3"></span>&lt;dt><br>
+							        <span class="indent-4"></span>Category 1<br>
+							      <span class="indent-3"></span>&lt;/dt><br>
+							      <span class="indent-3"></span>&lt;dd><br>
+							        <span class="indent-4"></span>&lt;label>Item 1&lt;/label><br>
+							        <span class="indent-4"></span>&lt;span class="declaimer">Description&lt;/span><br>
+							      <span class="indent-3"></span>&lt;/dd>      <br>
+							    <span class="indent-2"></span>&lt;/dl><br>
+							  <span class="indent-1"></span>&lt;/div><br>
+							&lt;/div>
+							</code>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<table width="700px" style="float:left">
+				<thead>
+					<tr>
+						<td>
+							<span class="heading4">Lightbox</span>
+						</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>
+							<div class="modal-dialog" role="document" style="width:auto">
+								<div class="modal-content">
+									<div class="modal-header">
+										<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="icon-x-mark"></span></button>
+										<h2 class="modal-title">Heading 2</h2>
+									</div>
+									<div class="modal-body">
+										<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi consectetur adipiscing elit, sed do eiusmod t et dolore magna aliqua.</p>
+									</div>									
+								</div><!-- /.modal-content -->
+							</div><!-- /.modal-dialog -->							
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<span data-toggle="modal" data-target="#modal" style="cursor:pointer; display:inline-block; text-decoration:underline; margin-bottom:15px">Launch modal</span>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							<code>
+								&lt;span data-toggle="modal" data-target="#modal"><br>
+									<span class="indent-1"></span>Launch modal<br>
+								&lt;/span><br><br>
+								&lt;div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"><br>
+								  <span class="indent-1"></span>&lt;div class="modal-dialog modal-lg" role="document"><br>
+								    <span class="indent-2"></span>&lt;div class="modal-content"><br>
+								      <span class="indent-3"></span>&lt;div class="modal-header"><br>
+								        <span class="indent-4"></span>&lt;button type="button" class="close" data-dismiss="modal" aria-label="Close">&lt;span aria-hidden="true" class="icon-x-mark">&lt;/span>&lt;/button><br>
+								        <span class="indent-4"></span>&lt;h2 class="modal-title">Heading 2&lt;/h2><br>
+								      <span class="indent-3"></span>&lt;/div><br>
+								      <span class="indent-3"></span>&lt;div class="modal-body"><br>
+								        <span style="margin-left:30px"><span style="margin-left:30px"><span style="margin-left:30px"><span style="margin-left:30px">&lt;p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi consectetur adipiscing elit, sed do eiusmod t et dolore magna aliqua.&lt;/p><br>
+								      <span class="indent-3"></span>&lt;/div><br>
+								    <span class="indent-2"></span>&lt;/div><br>
+								  <span class="indent-1"></span>&lt;/div><br>
+								&lt;/div>
+							</code>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+		<section>
+			<span class="header2"><small>08</small>Forms</span>
+			<table style="width:100%">
+				<tr>
+					<td style="vertical-align:top; height:70px;">
+						<form class="form-inline">
+							<div class="form-group">
+								<label>Data</label>
+								<input type="text" class="form-control">
+							</div>
+						</form>
+					</td>
+					<td style="vertical-align:top">
+						<form class="form-inline">
+							<div class="form-group error">
+								<label>Data</label>								
+								<input type="text" class="form-control">
+								<span class="error-message">Error message displayed here</span>																
+							</div>
+						</form>
+					</td>					
+				</tr>
+				<tr>
+					<td style="padding-bottom:50px; vertical-align:top">
+						<code>
+							&lt;form class="form-inline"><br>
+								<span class="indent-1"></span>&lt;div class="form-group"><br>
+									<span class="indent-2"></span>&lt;label>Data&lt;/label><br>						
+									<span class="indent-2"></span>&lt;input type="text" class="form-control" id="" placeholder=""><br>
+								<span class="indent-1"></span>&lt;/div><br>
+							&lt;/form>
+						</code>
+					</td>
+					<td style="padding-bottom:50px; vertical-align:top">
+						<code>
+							&lt;form class="form-inline"><br>
+								<span class="indent-1"></span>&lt;div class="form-group error"><br>
+									<span class="indent-2"></span>&lt;label>Data&lt;/label><br>						
+									<span class="indent-2"></span>&lt;input type="text" class="form-control" id="" placeholder=""><br>
+									<span class="indent-2"></span>&lt;span class="error-message">Error message displayed here&lt;/span><br>
+								<span class="indent-1"></span>&lt;/div><br>
+							&lt;/form>
+						</code>
+					</td>
+				</tr>
+				<tr>
+					<td style="padding-bottom:30px">
+						<form class="form-inline">
+							<div class="form-group search">
+								<label>SEARCH</label>
+								<input type="text" class="search-field form-control">
+								<i class="icon-search search-button"></i>
+							</div>
+						</form>
+					</td>
+					<td rowspan="2" style="vertical-align:top;">
+						<div class="form-group">
+							<label>Enter information (textarea)</label>
+							<textarea class="form-control" rows="3"></textarea>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td style="padding-bottom:25px; vertical-align:top">
+						<code>
+							&lt;form class="form-inline"><br>
+								<span class="indent-1"></span>&lt;div class="form-group search"><br>
+									<span class="indent-2"></span>&lt;label>SEARCH&lt;/label><br>
+									<span class="indent-2"></span>&lt;input type="text" class="search-field form-control" name=""><br>
+									<span class="indent-2"></span>&lt;i class="icon-search search-button">&lt;/i><br>
+								<span class="indent-1"></span>&lt;/div><br>
+							&lt;/form>
+						</code>
+					</td>
+				</tr>
+				<tr>
+					<td style="padding-bottom:25px; vertical-align:top">
+						<div class="form-group info-asset">
+							<p class="no-block tooltip-label">Information</p>
+							<span class="icon-info" title="" data-toggle="tooltip" data-label="Information" data-original-title="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam molestie blandit erat a venenatis. Aenean quis quam quis leo tincidunt mattis in nec erat. Proin in quam id est accumsan tristique id ac risus."></span>
+						</div>
+					</td>
+					<td>
+						<div class="radio-asset">
+							<p class="no-block">Option 1</p>
+							<input type="radio">
+						</div>
+						<div class="radio-asset">
+							<input type="radio" checked="checked">
+							<p class="no-block">Option 1</p>
+						</div>
+						<span class="indent-2"></span>
+						<div class="check-asset">
+							<p class="no-block">Option 2</p>
+							<input type="checkbox">
+						</div>
+						<div class="check-asset">
+							<p class="no-block">Option 2</p>
+							<input type="checkbox" checked="checked">
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td style="padding-bottom:50px; vertical-align:top">
+						<code>
+							&lt;div class="form-group info-asset"><br>
+							<span class="indent-1"></span>&lt;p class="no-block tooltip-label">Information&lt;/p><br>
+							<span class="indent-1"></span>&lt;span class="icon-info" data-toggle="tooltip" data-label="Information" data-original-title="Lorem ipsum "><br>
+							&lt;/span><br>
+							&lt;/div>
+						</code>
+					</td>
+					<td style="padding-bottom:50px; vertical-align:top">
+						<code>
+							&lt;div class="radio-asset"><br>
+								<span class="indent-1"></span>&lt;p class="no-block">Option 1&lt;/p><br>
+								<span class="indent-1"></span>&lt;input type="radio"><br>
+							&lt;/div>
+							<br><br>
+							&lt;div class="check-asset"><br>
+								<span class="indent-1"></span>&lt;p class="no-block">Option 2&lt;/p><br>
+								<span class="indent-1"></span>&lt;input type="checkbox" checked="checked"><br>
+							&lt;/div>
+						</code>
+					</td>
+				</tr>
+				
+			</table>
+		</section>
+		<section>
+			<span class="header2"><small>09</small>Backgrounds</span>
+			<table id="bg-colors">
+				<tr>
+					<td>
+						<div class="bg-green">
+							<div><br><br><br><br><br><br><br><br></div>
+						</div>
+					</td>
+					<td>
+						<div class="bg-dark-gray">
+							<div><br><br><br><br><br><br><br><br></div>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="bg-lite-gray">
+							<div><br><br><br><br><br><br><br><br></div>
+						</div>
+					</td>
+					<td>
+						<div class="bg-white">
+							<div><br><br><br><br><br><br><br><br></div>
+						</div>
+					</td>
+				</tr>
+			</table>
+		</section>
 		
 	</div>
+	<div class="modal fade" id="modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+		<div class="modal-dialog modal-lg" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true" class="icon-x-mark"></span></button>
+					<h2 class="modal-title">Heading 2</h2>
+				</div>
+				<div class="modal-body">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incidi consectetur adipiscing elit, sed do eiusmod t et dolore magna aliqua.</p>
+				</div>                  
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal-dialog -->     
+	</div>
+<script src="js/imp_components.js"></script>
 <script>
 	$(document).ready(function(){
 		// color palette
 		$('.colors dd').each(function(){
 			var takeColor = $(this).text();
 			$('.color-palette', this).css('background-color', takeColor);
-		});
-		// tablas
-		$('.panel-body > table').each(function(){
-			var colAmount = $('tbody > tr:first-child > td', this).length;
-			$('tbody > tr > td', this).css('width', colAmount + '%');
-			$('thead > tr > td', this).css('width', colAmount + '%');
-		});
-		$('.positive-digit').append('<i class="icon-arrowup"></i>');
-		$('.negative-digit').append('<i class="icon-arrowdown"></i>');
-		
+		});		
 	});
 </script>	
 </body>
