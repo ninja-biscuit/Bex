@@ -128,7 +128,7 @@ table {border-collapse: collapse; border-spacing: 0;}
 .mip_styles .modal-body {padding: 5px 30px 30px}
 /* form */
 .mip_styles .form-inline .form-group label {font-family: 'equipw03-mediumregular', sans-serif; color:#565a5c; font-size:16px; font-weight: 100; margin-right: 10px}
-.mip_styles .form-control {border: 1px solid #ccc; border-radius: 0px; box-shadow: none; color: #999999; display: block; font-size: 16px; height: 34px; line-height: 1.42857; padding: 6px 12px; transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s; width: 100%;}
+.mip_styles .form-control {min-width:250px;border: 1px solid #ccc; border-radius: 0px; box-shadow: none; color: #999999; display: block; font-size: 16px; height: 34px; line-height: 1.42857; padding: 6px 12px; transition: border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s; width: 100%;}
 .mip_styles .form-control:focus {border-color: #6c9f8b; box-shadow: 0 1px 1px rgba(108, 159, 139, 0.075) inset, 0 0 8px rgba(102, 175, 233, 0.6); outline: 0 none;}
 .mip_styles .error .form-control {border-color: #e78322; box-shadow: 0 1px 1px rgba(231, 131, 34, 0.075) inset, 0 0 8px rgba(231, 131, 34, 0.5);}
 .mip_styles .error-message {display: none; color:#e78322; font-family:'equiplight', sans-serif; font-size: 16px}
